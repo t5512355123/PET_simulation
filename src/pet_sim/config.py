@@ -1,8 +1,7 @@
 """集中管理單位與研究參數；內部時間一律為整數 ps，距離為 mm。"""
 
-from dataclasses import asdict, dataclass
 import math
-
+from dataclasses import asdict, dataclass
 
 C_MM_PER_PS = 0.299792458
 POSITION_COLUMNS = ["x_mm", "y_mm", "z_mm"]
@@ -29,17 +28,37 @@ class SimulationConfig:
     hemisphere_offset_ps: int = 0
 
     def __post_init__(self):
-        positive = ("n_events", "radius_mm", "n_rings", "detectors_per_ring",
-                    "ring_pitch_mm", "activity_bq", "n_lanes")
+        positive = (
+            "n_events",
+            "radius_mm",
+            "n_rings",
+            "detectors_per_ring",
+            "ring_pitch_mm",
+            "activity_bq",
+            "n_lanes",
+        )
         for name in positive:
             if not math.isfinite(getattr(self, name)) or getattr(self, name) <= 0:
                 raise ValueError(f"{name} 必須為正值")
-        for name in ("n_events", "n_rings", "detectors_per_ring", "background_singles",
-                     "n_lanes", "max_lane_delay_ps", "arrival_jitter_ps", "hemisphere_offset_ps"):
+        for name in (
+            "n_events",
+            "n_rings",
+            "detectors_per_ring",
+            "background_singles",
+            "n_lanes",
+            "max_lane_delay_ps",
+            "arrival_jitter_ps",
+            "hemisphere_offset_ps",
+        ):
             if not isinstance(getattr(self, name), int):
                 raise ValueError(f"{name} 必須為整數")
-        for name in ("timing_sigma_ps", "energy_sigma_kev", "background_singles",
-                     "max_lane_delay_ps", "arrival_jitter_ps"):
+        for name in (
+            "timing_sigma_ps",
+            "energy_sigma_kev",
+            "background_singles",
+            "max_lane_delay_ps",
+            "arrival_jitter_ps",
+        ):
             if not math.isfinite(getattr(self, name)) or getattr(self, name) < 0:
                 raise ValueError(f"{name} 不可為負值")
         if not 0 < self.detection_efficiency <= 1:
@@ -64,8 +83,8 @@ class CoincidenceConfig:
     min_angle_deg: float = 120.0
 
     def __post_init__(self):
-        if not isinstance(self.window_ps, int) or self.window_ps < 0:
-            raise ValueError("window_ps 必須為非負整數")
+        if not isinstance(self.window_ps, int) or not 0 <= self.window_ps <= 2**63 - 1:
+            raise ValueError("window_ps 必須為 int64 範圍內的非負整數")
         if not (0 <= self.energy_min_kev < self.energy_max_kev < math.inf):
             raise ValueError("能量範圍無效")
         if not 0 <= self.min_angle_deg <= 180:

@@ -11,14 +11,18 @@ from pet_sim.validation import pair_ids
 
 def make_frame(times, angles=None, energies=None, ids=None):
     n = len(times)
-    angle = np.deg2rad(angles if angles is not None else np.arange(n)*180)
-    return pd.DataFrame({
-        "single_id": np.arange(n, dtype=np.int64),
-        "timestamp_ps": np.asarray(times, dtype=np.int64),
-        "detector_id": ids if ids is not None else np.arange(n),
-        "x_mm": 400*np.cos(angle), "y_mm": 400*np.sin(angle), "z_mm": 0.0,
-        "energy_kev": energies if energies is not None else np.full(n, 511.0),
-    })
+    angle = np.deg2rad(angles if angles is not None else np.arange(n) * 180)
+    return pd.DataFrame(
+        {
+            "single_id": np.arange(n, dtype=np.int64),
+            "timestamp_ps": np.asarray(times, dtype=np.int64),
+            "detector_id": ids if ids is not None else np.arange(n),
+            "x_mm": 400 * np.cos(angle),
+            "y_mm": 400 * np.sin(angle),
+            "z_mm": 0.0,
+            "energy_kev": energies if energies is not None else np.full(n, 511.0),
+        }
+    )
 
 
 def test_inclusive_time_energy_and_angle_edges():
@@ -40,7 +44,7 @@ def test_detector_and_energy_filter():
 
 def test_no_float_precision_or_int64_overflow_in_matcher():
     base = 2**60
-    assert len(find_coincidences(make_frame([base, base+1]), CoincidenceConfig(window_ps=1))) == 1
+    assert len(find_coincidences(make_frame([base, base + 1]), CoincidenceConfig(window_ps=1))) == 1
     edge = np.iinfo(np.int64)
     assert find_coincidences(make_frame([edge.min, edge.max])).empty
 
@@ -49,8 +53,12 @@ def test_no_float_precision_or_int64_overflow_in_matcher():
 def test_randomized_oracle_and_arrival_permutation(seed):
     rng = np.random.default_rng(seed)
     n = 50
-    frame = make_frame(rng.integers(0, 20000, n), rng.uniform(0, 360, n),
-                       rng.uniform(250, 750, n), rng.integers(0, 20, n))
+    frame = make_frame(
+        rng.integers(0, 20000, n),
+        rng.uniform(0, 360, n),
+        rng.uniform(250, 750, n),
+        rng.integers(0, 20, n),
+    )
     cfg = CoincidenceConfig(window_ps=1700)
     reference = brute_force_pair_ids(frame, cfg)
     assert pair_ids(find_coincidences(frame, cfg)) == reference
@@ -85,8 +93,10 @@ def test_empty_and_bad_inputs():
         validate_singles(frame)
 
 
-@pytest.mark.parametrize("kwargs", [{"window_ps": -1}, {"min_angle_deg": 181},
-                                   {"energy_min_kev": 700}])
+@pytest.mark.parametrize(
+    "kwargs",
+    [{"window_ps": -1}, {"min_angle_deg": 181}, {"energy_min_kev": 700}, {"window_ps": 2**63}],
+)
 def test_invalid_cuts(kwargs):
     with pytest.raises(ValueError):
         CoincidenceConfig(**kwargs)

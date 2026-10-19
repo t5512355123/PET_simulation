@@ -15,8 +15,10 @@ def summarize(singles, ror, dataset_kind="imported", source_mm=None):
         order = singles.sort_values(["arrival_time_ps", "single_id"])
         times = order.timestamp_ps.tolist()
         metrics["adjacent_timestamp_inversions"] = sum(
-            int(times[i]) < int(times[i-1]) for i in range(1, len(times)))
-    if "same_truth_event" in ror:
+            int(times[i]) < int(times[i - 1]) for i in range(1, len(times))
+        )
+    has_truth = "same_truth_event" in ror
+    if has_truth:
         mask = ror.same_truth_event.astype(bool)
         metrics["same_truth_event_pairs"] = int(mask.sum())
         metrics["same_truth_event_fraction"] = float(mask.mean()) if len(mask) else None
@@ -28,7 +30,8 @@ def summarize(singles, ror, dataset_kind="imported", source_mm=None):
             complete = int((ids == 2).sum())
             metrics["two_detected_photon_events_before_cuts"] = complete
             metrics["recall_before_energy_time_geometry_cuts"] = (
-                int(mask.sum()) / complete if complete else None)
+                int(mask.sum()) / complete if complete else None
+            )
     else:
         mask = np.ones(len(ror), dtype=bool)
     valid = ror.loc[ror.physical_tof_valid.astype(bool)]
@@ -42,10 +45,23 @@ def summarize(singles, ror, dataset_kind="imported", source_mm=None):
             points = truth_ror.to_numpy(float)
             error = points - np.asarray(source_mm)
             centroid = points.mean(axis=0)
-            metrics.update({
-                "truth_valid_centroid_mm": centroid.tolist(),
-                "truth_centroid_error_mm": float(np.linalg.norm(centroid-source_mm)),
-                "truth_event_rmse_mm": float(np.sqrt(np.mean(np.sum(error**2, axis=1)))),
-                "truth_event_median_error_mm": float(np.median(np.linalg.norm(error, axis=1))),
-            })
+            # 外部資料無 truth 時只報所有有效 pair 相對指定參考點的誤差。
+            # GATE event ID 也只能證明同事件，故不用 synthetic 真配對的標籤。
+            prefix = (
+                "truth"
+                if dataset_kind == "synthetic" and has_truth
+                else "same_event"
+                if has_truth
+                else "all_valid_source_reference"
+            )
+            metrics.update(
+                {
+                    f"{prefix}_valid_centroid_mm": centroid.tolist(),
+                    f"{prefix}_centroid_error_mm": float(np.linalg.norm(centroid - source_mm)),
+                    f"{prefix}_event_rmse_mm": float(np.sqrt(np.mean(np.sum(error**2, axis=1)))),
+                    f"{prefix}_event_median_error_mm": float(
+                        np.median(np.linalg.norm(error, axis=1))
+                    ),
+                }
+            )
     return metrics

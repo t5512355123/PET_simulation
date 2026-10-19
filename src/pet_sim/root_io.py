@@ -1,19 +1,26 @@
 """以明確分支與單位映射匯入 ROOT Singles；不推測儀器或 GATE 版本。"""
 
-from decimal import Decimal, InvalidOperation, ROUND_HALF_EVEN, localcontext
+from decimal import ROUND_HALF_EVEN, Decimal, InvalidOperation, localcontext
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 import uproot
 
-
 REQUIRED_FIELDS = (
-    "timestamp_ps", "detector_id", "x_mm", "y_mm", "z_mm", "energy_kev",
+    "timestamp_ps",
+    "detector_id",
+    "x_mm",
+    "y_mm",
+    "z_mm",
+    "energy_kev",
 )
 OPTIONAL_FIELDS = (
-    "truth_event_id", "truth_run_id",
-    "truth_source_x_mm", "truth_source_y_mm", "truth_source_z_mm",
+    "truth_event_id",
+    "truth_run_id",
+    "truth_source_x_mm",
+    "truth_source_y_mm",
+    "truth_source_z_mm",
 )
 TIME_FACTORS = {"s": 1_000_000_000_000, "ns": 1_000, "ps": 1}
 POSITION_FACTORS = {"mm": 1.0, "cm": 10.0, "m": 1_000.0}
@@ -31,16 +38,18 @@ def inspect_root(path) -> dict:
                 continue
             tree = root_file[name]
             branches = list(tree.keys())
-            trees.append({
-                "name": name,
-                "class_name": class_name,
-                "num_entries": int(tree.num_entries),
-                "branches": branches,
-                "branch_types": {
-                    branch: str(getattr(tree[branch], "typename", "unknown"))
-                    for branch in branches
-                },
-            })
+            trees.append(
+                {
+                    "name": name,
+                    "class_name": class_name,
+                    "num_entries": int(tree.num_entries),
+                    "branches": branches,
+                    "branch_types": {
+                        branch: str(getattr(tree[branch], "typename", "unknown"))
+                        for branch in branches
+                    },
+                }
+            )
     return {"path": str(Path(path).resolve()), "trees": trees}
 
 
@@ -102,8 +111,7 @@ def _timestamps(values: np.ndarray, factor: int, origin: Decimal) -> np.ndarray:
             )
             if not INT64_MIN <= time_ps <= INT64_MAX:
                 raise ValueError(
-                    f"timestamp_ps 第 {i} 筆換算後超出 int64；"
-                    "請以輸入時間單位明訂 time_origin"
+                    f"timestamp_ps 第 {i} 筆換算後超出 int64；請以輸入時間單位明訂 time_origin"
                 )
             result[i] = int(time_ps)
     return result
@@ -176,6 +184,8 @@ def load_gate_singles(
         isinstance(entry_stop, bool) or not isinstance(entry_stop, int) or entry_stop < 0
     ):
         raise ValueError("entry_stop 必須為非負整數或 None")
+    source_path = Path(path).resolve()
+    source_stat = source_path.stat()
     with uproot.open(path) as root_file:
         if tree not in root_file:
             raise ValueError(f"ROOT 中找不到資料樹：{tree}")
@@ -186,7 +196,8 @@ def load_gate_singles(
         missing = sorted(set(fields.values()) - available)
         if missing:
             raise ValueError(
-                "缺少映射的 Singles 分支：" + ", ".join(missing)
+                "缺少映射的 Singles 分支："
+                + ", ".join(missing)
                 + "；若此檔案只有已配對的 Coincidences，無法還原原始 Singles"
             )
         # 使用分支逐一讀取可同時支援 TTree 與 RNTuple，避免 record-array 差異。
@@ -229,19 +240,21 @@ def load_gate_singles(
     for field in OPTIONAL_FIELDS:
         if field in raw:
             columns[field] = (
-                _integer_array(raw[field], field) if field.endswith("_id")
+                _integer_array(raw[field], field)
+                if field.endswith("_id")
                 else _finite_array(raw[field], field, position_factor)
             )
     result = pd.DataFrame(columns)
     result.attrs["provenance"] = {
-        "source_file": str(Path(path).resolve()),
+        "source_file": str(source_path),
+        "source_file_size_bytes": source_stat.st_size,
+        "source_file_mtime_ns": source_stat.st_mtime_ns,
         "source_tree": tree,
         "entries_in_tree": entries_in_tree,
         "entries_loaded": n_rows,
+        "entry_stop": entry_stop,
         "fields": dict(fields),
-        "input_units": {key: mapping[key] for key in (
-            "time_unit", "position_unit", "energy_unit"
-        )},
+        "input_units": {key: mapping[key] for key in ("time_unit", "position_unit", "energy_unit")},
         "time_origin_input_unit": str(origin),
         "timestamp_rounding": "ROUND_HALF_EVEN",
         "placeholder_columns": {"arrival_time_ps": "timestamp_ps 的複本", "lane_id": 0},
@@ -251,7 +264,8 @@ def load_gate_singles(
         "detector_id_label_map": detector_label_map,
         "detector_id_encoding_scope": (
             "單次載入選取範圍；跨檔案或不同 entry_stop 必須依表重編碼"
-            if detector_encoding == "categorical" else "來源整數 ID"
+            if detector_encoding == "categorical"
+            else "來源整數 ID"
         ),
     }
     return result

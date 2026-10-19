@@ -1,14 +1,14 @@
 """命令列入口：模擬、匯入、重建、驗證與時間同步誤差掃描。"""
 
 import argparse
-from dataclasses import replace
 import json
+from dataclasses import replace
 from pathlib import Path
 
 import pandas as pd
 
 from .config import CoincidenceConfig, SimulationConfig
-from .pipeline import run_pipeline, write_json
+from .pipeline import file_sha256, run_pipeline, write_json
 from .root_io import inspect_root, load_gate_singles
 from .simulation import simulate_singles
 from .validation import run_sweep, validate_software
@@ -66,9 +66,13 @@ def main(argv=None):
             if args.config:
                 cfg = SimulationConfig(**json.loads(args.config.read_text(encoding="utf-8-sig")))
             else:
-                cfg = replace(SimulationConfig(), n_events=args.events, seed=args.seed,
-                              timing_sigma_ps=args.timing_sigma_ps,
-                              hemisphere_offset_ps=args.hemisphere_offset_ps)
+                cfg = replace(
+                    SimulationConfig(),
+                    n_events=args.events,
+                    seed=args.seed,
+                    timing_sigma_ps=args.timing_sigma_ps,
+                    hemisphere_offset_ps=args.hemisphere_offset_ps,
+                )
             frame = simulate_singles(cfg)
             source = cfg.source_mm
         else:
@@ -77,10 +81,15 @@ def main(argv=None):
             provenance = args.input.with_suffix(".provenance.json")
             if provenance.exists():
                 frame.attrs.update(json.loads(provenance.read_text(encoding="utf-8-sig")))
+            frame.attrs["input_csv"] = {
+                "path": str(args.input.resolve()),
+                "sha256": file_sha256(args.input),
+            }
             source = args.source_mm
         cuts = CoincidenceConfig(args.window_ps, *args.energy_kev, args.min_angle_deg)
-        result = run_pipeline(frame, args.out, cuts,
-            "synthetic" if cfg else "imported", source, cfg)
+        result = run_pipeline(
+            frame, args.out, cuts, "synthetic" if cfg else "imported", source, cfg
+        )
     print(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False))
 
 

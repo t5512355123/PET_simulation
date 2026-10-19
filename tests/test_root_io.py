@@ -11,11 +11,16 @@ from pet_sim.root_io import inspect_root, load_gate_singles
 def mapping():
     return {
         "fields": {
-            "timestamp_ps": "time", "detector_id": "crystalID",
-            "x_mm": "globalPosX", "y_mm": "globalPosY", "z_mm": "globalPosZ",
+            "timestamp_ps": "time",
+            "detector_id": "crystalID",
+            "x_mm": "globalPosX",
+            "y_mm": "globalPosY",
+            "z_mm": "globalPosZ",
             "energy_kev": "energy",
         },
-        "time_unit": "s", "position_unit": "cm", "energy_unit": "MeV",
+        "time_unit": "s",
+        "position_unit": "cm",
+        "energy_unit": "MeV",
     }
 
 
@@ -31,11 +36,19 @@ def write_root(path, **replacements):
     }
     arrays.update(replacements)
     with uproot.recreate(path) as root_file:
-        root_file.mktree("DetectorHits", {
-            name: "string" if values.dtype.kind in "OUS" else values.dtype
-            for name, values in arrays.items()
-        })
-        root_file["DetectorHits"].extend(arrays)
+        root_file.mktree(
+            "DetectorHits",
+            {
+                name: "string" if values.dtype.kind in "OUS" else values.dtype
+                for name, values in arrays.items()
+            },
+        )
+        root_file["DetectorHits"].extend(
+            {
+                name: values.tolist() if values.dtype.kind in "OUS" else values
+                for name, values in arrays.items()
+            }
+        )
     return path
 
 
@@ -56,6 +69,8 @@ def test_inspect_and_convert_units(tmp_path, mapping):
     assert frame.lane_id.tolist() == [0, 0]
     assert "truth_event_id" not in frame
     assert frame.attrs["provenance"]["placeholder_columns"]["lane_id"] == 0
+    assert frame.attrs["provenance"]["source_file_size_bytes"] == path.stat().st_size
+    assert frame.attrs["provenance"]["source_file_mtime_ns"] == path.stat().st_mtime_ns
 
 
 def test_large_integer_times_do_not_pass_through_float(tmp_path, mapping):
@@ -91,10 +106,15 @@ def test_invalid_entry_stop(tmp_path, mapping, bad_stop):
         load_gate_singles(tmp_path / "unused.root", "DetectorHits", mapping, bad_stop)
 
 
-@pytest.mark.parametrize("key,value", [
-    ("time_unit", "us"), ("position_unit", "inch"), ("energy_unit", ""),
-    ("time_origin", "NaN"),
-])
+@pytest.mark.parametrize(
+    "key,value",
+    [
+        ("time_unit", "us"),
+        ("position_unit", "inch"),
+        ("energy_unit", ""),
+        ("time_origin", "NaN"),
+    ],
+)
 def test_requires_explicit_valid_units(tmp_path, mapping, key, value):
     mapping[key] = value
     with pytest.raises(ValueError, match=key):
@@ -116,12 +136,15 @@ def test_missing_required_mapping(tmp_path, mapping):
         load_gate_singles(tmp_path / "unused.root", "DetectorHits", mapping)
 
 
-@pytest.mark.parametrize("branch,values,match", [
-    ("time", [float("nan"), 0], "有限"),
-    ("energy", [float("inf"), 0.511], "非有限"),
-    ("globalPosY", [0, float("nan")], "非有限"),
-    ("crystalID", [1.5, 3.0], "不是整數"),
-])
+@pytest.mark.parametrize(
+    "branch,values,match",
+    [
+        ("time", [float("nan"), 0], "有限"),
+        ("energy", [float("inf"), 0.511], "非有限"),
+        ("globalPosY", [0, float("nan")], "非有限"),
+        ("crystalID", [1.5, 3.0], "不是整數"),
+    ],
+)
 def test_reject_malformed_values(tmp_path, mapping, branch, values, match):
     path = write_root(tmp_path / "invalid.root", **{branch: np.array(values)})
     with pytest.raises(ValueError, match=match):
@@ -130,15 +153,22 @@ def test_reject_malformed_values(tmp_path, mapping, branch, values, match):
 
 def test_optional_truth_is_explicit_and_preserved(tmp_path, mapping):
     path = write_root(
-        tmp_path / "truth.root", eventID=np.array([4, 4]), runID=np.array([0, 1]),
-        sourceX=np.array([1.0, 1.0]), sourceY=np.array([2.0, 2.0]),
+        tmp_path / "truth.root",
+        eventID=np.array([4, 4]),
+        runID=np.array([0, 1]),
+        sourceX=np.array([1.0, 1.0]),
+        sourceY=np.array([2.0, 2.0]),
         sourceZ=np.array([3.0, 3.0]),
     )
-    mapping["fields"].update({
-        "truth_event_id": "eventID", "truth_run_id": "runID",
-        "truth_source_x_mm": "sourceX", "truth_source_y_mm": "sourceY",
-        "truth_source_z_mm": "sourceZ",
-    })
+    mapping["fields"].update(
+        {
+            "truth_event_id": "eventID",
+            "truth_run_id": "runID",
+            "truth_source_x_mm": "sourceX",
+            "truth_source_y_mm": "sourceY",
+            "truth_source_z_mm": "sourceZ",
+        }
+    )
     frame = load_gate_singles(path, "DetectorHits", mapping)
     assert frame.truth_event_id.tolist() == [4, 4]
     assert frame.truth_run_id.tolist() == [0, 1]
@@ -167,7 +197,8 @@ def test_explicit_categorical_detector_labels(tmp_path, mapping):
     frame = load_gate_singles(path, "DetectorHits", mapping)
     assert frame.detector_id.tolist() == [1, 0]
     assert frame.attrs["provenance"]["detector_id_label_map"] == {
-        "ring_0/crystal_2": 0, "ring_1/crystal_2": 1,
+        "ring_0/crystal_2": 0,
+        "ring_1/crystal_2": 1,
     }
     # 有界載入只針對選取內容編碼，對照表明確記錄新的識別碼範圍。
     bounded = load_gate_singles(path, "DetectorHits", mapping, entry_stop=1)
@@ -187,3 +218,20 @@ def test_unknown_detector_encoding(tmp_path, mapping):
     mapping["detector_id_encoding"] = "guess"
     with pytest.raises(ValueError, match="detector_id_encoding"):
         load_gate_singles(tmp_path / "unused.root", "DetectorHits", mapping)
+
+
+def test_default_uproot_container_is_inspected_and_read(tmp_path, mapping):
+    # 新版 uproot 預設產生 RNTuple；較舊支援版本可能仍產生 TTree。
+    path = tmp_path / "default_container.root"
+    with uproot.recreate(path) as root_file:
+        root_file["Events"] = {
+            "time": np.array([1e-9]),
+            "crystalID": np.array([3]),
+            "globalPosX": np.array([40.0]),
+            "globalPosY": np.array([0.0]),
+            "globalPosZ": np.array([0.0]),
+            "energy": np.array([0.511]),
+        }
+    assert inspect_root(path)["trees"][0]["name"] == "Events"
+    frame = load_gate_singles(path, "Events", mapping)
+    assert frame.timestamp_ps.tolist() == [1000]

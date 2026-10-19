@@ -29,8 +29,9 @@ def reconstruct_ror(pairs: pd.DataFrame) -> pd.DataFrame:
     # Python 整數不溢位；先做差再轉浮點也保留大絕對時間下的 ps 差值解析度。
     if np.issubdtype(times_1.dtype, np.integer) and np.issubdtype(times_2.dtype, np.integer):
         dt = np.fromiter(
-            (int(t2) - int(t1) for t1, t2 in zip(times_1, times_2)),
-            dtype=float, count=len(pairs),
+            (int(t2) - int(t1) for t1, t2 in zip(times_1, times_2, strict=True)),
+            dtype=float,
+            count=len(pairs),
         )
     else:
         dt = times_2.astype(float) - times_1.astype(float)
@@ -62,6 +63,8 @@ def histogram_ror(ror: pd.DataFrame, bins: int = 64, extent_mm: float = 100):
     if not np.isfinite(points).all():
         raise ValueError("ROR 座標必須為有限數值")
     volume, edges = np.histogramdd(
-        points, bins=bins, range=[(-extent_mm, extent_mm)] * 3,
+        points,
+        bins=bins,
+        range=[(-extent_mm, extent_mm)] * 3,
     )
     return volume, edges

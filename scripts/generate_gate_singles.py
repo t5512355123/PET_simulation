@@ -8,11 +8,12 @@
 from __future__ import annotations
 
 import argparse
-from importlib.metadata import version
+import hashlib
 import json
 import math
-from pathlib import Path
 import platform
+from importlib.metadata import PackageNotFoundError, version
+from pathlib import Path
 from typing import Any
 
 
@@ -62,7 +63,11 @@ def describe(args: argparse.Namespace) -> dict[str, Any]:
             "crystal_size_radial_tangential_axial_mm": [20.0, 10.0, 100.0],
         },
         "root_file": "singles.root",
-        "trees": {"Hits": "Geant4 能量沉積", "SinglesIdeal": "逐事件逐晶體 adder", "Singles": "加上時間誤差的未配對 Singles"},
+        "trees": {
+            "Hits": "Geant4 能量沉積",
+            "SinglesIdeal": "逐事件逐晶體 adder",
+            "Singles": "加上時間誤差的未配對 Singles",
+        },
         "root_units": {"GlobalTime": "ns", "TotalEnergyDeposit": "MeV", "PostPosition_X/Y/Z": "mm"},
         "coincidence_timing_fwhm_ps": args.ctr_ps,
         "single_channel_timing_fwhm_ps": args.ctr_ps / math.sqrt(2),
@@ -81,7 +86,9 @@ def build_simulation(args: argparse.Namespace) -> Any:
     try:
         import opengate as gate
     except ImportError as exc:
-        raise SystemExit("請在 pet-simulation 環境安裝：python -m pip install opengate==10.1.1") from exc
+        raise SystemExit(
+            "請在 pet-simulation 環境安裝：python -m pip install opengate==10.1.1"
+        ) from exc
 
     mm, sec = gate.g4_units.mm, gate.g4_units.s
     sim = gate.Simulation()
@@ -128,8 +135,14 @@ def build_simulation(args: argparse.Namespace) -> Any:
     hits.authorize_repeated_volumes = True
     hits.output_filename = "singles.root"
     hits.attributes = [
-        "EventID", "RunID", "ThreadID", "PostPosition", "TotalEnergyDeposit",
-        "PreStepUniqueVolumeID", "GlobalTime", "EventPosition",
+        "EventID",
+        "RunID",
+        "ThreadID",
+        "PostPosition",
+        "TotalEnergyDeposit",
+        "PreStepUniqueVolumeID",
+        "GlobalTime",
+        "EventPosition",
     ]
     adder = sim.add_actor("DigitizerAdderActor", "SinglesIdeal")
     adder.attached_to = crystal.name
@@ -160,7 +173,16 @@ def inspect_root(path: Path) -> dict[str, Any]:
         summary = {}
         for name in ["Hits", "SinglesIdeal", "Singles"]:
             tree = root[name]
-            needed = ["GlobalTime", "TotalEnergyDeposit", "PostPosition_X", "PostPosition_Y", "PostPosition_Z", "EventID", "RunID", "PreStepUniqueVolumeID"]
+            needed = [
+                "GlobalTime",
+                "TotalEnergyDeposit",
+                "PostPosition_X",
+                "PostPosition_Y",
+                "PostPosition_Z",
+                "EventID",
+                "RunID",
+                "PreStepUniqueVolumeID",
+            ]
             missing = set(needed) - set(tree.keys())
             if missing:
                 raise RuntimeError(f"{name} 缺少必要欄位：{sorted(missing)}")
@@ -172,8 +194,14 @@ def inspect_root(path: Path) -> dict[str, Any]:
             summary[name] = {
                 "entries": tree.num_entries,
                 "branches": list(tree.keys()),
-                "time_range_ns": [float(arrays["GlobalTime"].min()), float(arrays["GlobalTime"].max())],
-                "energy_range_mev": [float(arrays["TotalEnergyDeposit"].min()), float(arrays["TotalEnergyDeposit"].max())],
+                "time_range_ns": [
+                    float(arrays["GlobalTime"].min()),
+                    float(arrays["GlobalTime"].max()),
+                ],
+                "energy_range_mev": [
+                    float(arrays["TotalEnergyDeposit"].min()),
+                    float(arrays["TotalEnergyDeposit"].max()),
+                ],
             }
     return summary
 
@@ -211,15 +239,37 @@ def main() -> None:
     if (args.output / "singles.root").exists():
         raise SystemExit("輸出 singles.root 已存在；請指定新的 --output 資料夾以保留原始資料。")
     args.output.mkdir(parents=True, exist_ok=True)
-    metadata["opengate_version"] = version("opengate")
+    try:
+        metadata["opengate_version"] = version("opengate")
+    except PackageNotFoundError as exc:
+        raise SystemExit(
+            "請在 pet-simulation 環境安裝：python -m pip install opengate==10.1.1"
+        ) from exc
     sim = build_simulation(args)
     # Windows multiprocessing 必須放在 main 保護之下；本例使用單執行緒確保可重現。
     sim.run()
     metadata["actual_generated_events"] = int(sim.get_actor("Stats").counts.events)
     metadata["root_inspection"] = inspect_root(args.output / "singles.root")
-    (args.output / "metadata.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8")
-    (args.output / "mapping.json").write_text(json.dumps(import_mapping(), ensure_ascii=False, indent=2), encoding="utf-8")
-    print(json.dumps({"output": str(args.output.resolve()), "actual_generated_events": metadata["actual_generated_events"], "singles": metadata["root_inspection"]["Singles"]["entries"]}, ensure_ascii=False, indent=2))
+    with (args.output / "singles.root").open("rb") as raw_file:
+        metadata["root_sha256"] = hashlib.file_digest(raw_file, "sha256").hexdigest()
+    metadata["opengate_core_version"] = version("opengate-core")
+    (args.output / "metadata.json").write_text(
+        json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    (args.output / "mapping.json").write_text(
+        json.dumps(import_mapping(), ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    print(
+        json.dumps(
+            {
+                "output": str(args.output.resolve()),
+                "actual_generated_events": metadata["actual_generated_events"],
+                "singles": metadata["root_inspection"]["Singles"]["entries"],
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":
