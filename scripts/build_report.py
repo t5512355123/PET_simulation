@@ -104,6 +104,7 @@ def main():
     if gate_metrics.exists():
         gate = load("outputs/gate/metrics.json")
         meta = load("data/raw/gate_demo/metadata.json")
+        source_args = " ".join(str(value) for value in meta["source"]["position_mm"])
         for src, target in [
             ("outputs/gate/ror_projections.png", "gate_ror.png"),
             ("data/raw/gate_demo/metadata.json", "gate_metadata.json"),
@@ -126,10 +127,10 @@ def main():
             "重現指令（請在專案根目錄與已啟用的環境執行）：",
             "",
             "```powershell",
-            "python scripts/generate_gate_singles.py --output data/raw/gate_demo --expected-events 30000",
+            f"python scripts/generate_gate_singles.py --output data/raw/gate_demo --expected-events {meta['expected_events']} --activity-bq {meta['activity_bq']} --source-mm {source_args} --ctr-ps {meta['coincidence_timing_fwhm_ps']} --seed {meta['seed']}",
             "pet-sim inspect-root data/raw/gate_demo/singles.root",
             "pet-sim import-root data/raw/gate_demo/singles.root --tree Singles --mapping data/raw/gate_demo/mapping.json --out data/processed/gate_singles.csv",
-            "pet-sim run data/processed/gate_singles.csv --source-mm 30 -15 10 --out outputs/gate",
+            f"pet-sim run data/processed/gate_singles.csv --source-mm {source_args} --out outputs/gate",
             "```",
             "",
             "既有 singles.root 不會覆寫；重新生成請更換 --output，並同步修改後續路徑。",
