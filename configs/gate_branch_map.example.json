@@ -1,0 +1,15 @@
+{
+  "fields": {
+    "timestamp_ps": "time",
+    "detector_id": "crystalID",
+    "x_mm": "globalPosX",
+    "y_mm": "globalPosY",
+    "z_mm": "globalPosZ",
+    "energy_kev": "energy"
+  },
+  "time_unit": "s",
+  "position_unit": "mm",
+  "energy_unit": "MeV",
+  "detector_id_encoding": "integer",
+  "time_origin": "0"
+}
