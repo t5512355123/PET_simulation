@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "oracle_singles": 600,
+  "oracle_pairs": 218,
+  "oracle_matches_sliding_window": true,
+  "arrival_order_invariant": true,
+  "noiseless_true_pairs": 1000,
+  "noiseless_max_error_mm": 0.14440908355745685,
+  "integer_ps_error_bound_mm": 0.149896229,
+  "timing_rmse_mm": 16.957193623372998,
+  "timing_expected_rmse_mm": 16.958822400030655,
+  "timing_relative_error": 9.60430281795599e-05
+}

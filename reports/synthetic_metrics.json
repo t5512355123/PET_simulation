@@ -1,0 +1,34 @@
+{
+  "dataset_kind": "synthetic",
+  "singles": 15871,
+  "coincidence_pairs": 7262,
+  "physical_tof_valid_pairs": 7243,
+  "pair_policy": "all_pairs; inclusive |dt| <= window_ps; transaxial angle",
+  "adjacent_timestamp_inversions": 3495,
+  "same_truth_event_pairs": 7194,
+  "same_truth_event_fraction": 0.9906361883778574,
+  "true_pairs": 7194,
+  "false_pairs": 68,
+  "two_detected_photon_events_before_cuts": 7194,
+  "recall_before_energy_time_geometry_cuts": 1.0,
+  "all_valid_centroid_mm": [
+    19.741727895114717,
+    -12.029437633908165,
+    12.031253397114952
+  ],
+  "source_mm": [
+    20.0,
+    -12.0,
+    12.0
+  ],
+  "truth_valid_centroid_mm": [
+    19.970053412559086,
+    -12.050378444673079,
+    12.022147659797096
+  ],
+  "truth_centroid_error_mm": 0.06265225152795949,
+  "truth_event_rmse_mm": 16.916543742611267,
+  "truth_event_median_error_mm": 11.446026759583788,
+  "histogram_counts_inside_100mm_cube": 7198,
+  "histogram_valid_pairs_outside_cube": 45
+}

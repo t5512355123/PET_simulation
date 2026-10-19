@@ -1,0 +1,37 @@
+{
+  "coincidence": {
+    "window_ps": 4000,
+    "energy_min_kev": 350,
+    "energy_max_kev": 650,
+    "min_angle_deg": 120
+  },
+  "simulation": {
+    "seed": 20261019,
+    "n_events": 8000,
+    "radius_mm": 400.0,
+    "n_rings": 7,
+    "detectors_per_ring": 48,
+    "ring_pitch_mm": 30.0,
+    "source_mm": [
+      20.0,
+      -12.0,
+      12.0
+    ],
+    "activity_bq": 2000000.0,
+    "detection_efficiency": 0.95,
+    "timing_sigma_ps": 80,
+    "energy_sigma_kev": 25.0,
+    "background_singles": 700,
+    "n_lanes": 14,
+    "max_lane_delay_ps": 8000,
+    "arrival_jitter_ps": 1000,
+    "hemisphere_offset_ps": 0
+  },
+  "source_mm": [
+    20.0,
+    -12.0,
+    12.0
+  ],
+  "import_provenance": null,
+  "input_csv": null
+}
