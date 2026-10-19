@@ -43,7 +43,10 @@ def describe(args: argparse.Namespace) -> dict[str, Any]:
     """保存幾何、單位與限制，讓 ROOT 資料可以追溯到模擬設定。"""
     return {
         "generator": "OpenGATE / Geant4 electromagnetic transport",
+        "generator_source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "python": platform.python_version(),
+        "physics_list": "G4EmStandardPhysics_option4",
+        "production_cut_mm": 0.1,
         "expected_events": args.expected_events,
         "activity_bq": args.activity_bq,
         "duration_s": args.expected_events / args.activity_bq,
