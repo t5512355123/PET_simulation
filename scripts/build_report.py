@@ -26,6 +26,8 @@ def main():
     metrics = load("outputs/synthetic/metrics.json")
     valid = load("outputs/validation.json")
     manifest = load("outputs/synthetic/manifest.json")
+    settings = load("outputs/synthetic/config.json")
+    sim_cfg, cuts = settings["simulation"], settings["coincidence"]
     sweep = pd.read_csv(PROJECT / "outputs/timing_sweep.csv")
     pytest_text = (PROJECT / "outputs/pytest.txt").read_text(encoding="utf-8-sig")
     passed = re.search(r"(\d+) passed", pytest_text)
@@ -63,7 +65,7 @@ def main():
         "",
         "## 理想幾何 Singles 實驗",
         "",
-        "設定固定 seed 20261019；7×48 detector、14 lane，最大絕對時間差 4000 ps、能量 350–650 keV、橫向角差至少 120°，全配對政策。",
+        f"設定 seed {sim_cfg['seed']}；{sim_cfg['n_rings']}×{sim_cfg['detectors_per_ring']} detector、{sim_cfg['n_lanes']} lane，最大絕對時間差 {cuts['window_ps']} ps、能量 {cuts['energy_min_kev']}–{cuts['energy_max_kev']} keV、橫向角差至少 {cuts['min_angle_deg']}°，全配對政策。",
         "",
         "| 指標 | 實測結果 |",
         "|---|---|",
@@ -113,13 +115,13 @@ def main():
         lines += [
             "## 真正的 OpenGATE / Geant4 實驗",
             "",
-            f"OpenGATE {meta['opengate_version']}，96 個 BGO 晶體、偏心點光源 (30, −15, 10) mm；Geant4 電磁傳輸後產生 Hits，再經 digitizer 產生尚未配對的 Singles。",
+            f"OpenGATE {meta['opengate_version']}，{meta['detector']['crystals']} 個 BGO 晶體、偏心點光源 {coordinate(meta['source']['position_mm'])} mm；Geant4 電磁傳輸後產生 Hits，再經 digitizer 產生尚未配對的 Singles。",
             f"實際產生 {meta['actual_generated_events']:,} 個事件，輸出 {gate['singles']:,} 筆 Singles，Python 找到 {gate['coincidence_pairs']:,} 組配對，其中 {gate.get('same_truth_event_pairs', 0):,} 組屬於同一個模擬源事件。",
             "",
             "EventID 相同不能證明未發生晶體散射，因此同事件比例是檢查指標，不是經完整 scatter/random 分類的 true-coincidence precision。",
             "數值、ROOT branches、版本、設定及原始資料雜湊見 [metadata](gate_metadata.json)、[metrics](gate_metrics.json)。",
             "",
-            "![OpenGATE ROR 投影與時間差](gate_ror.png)",
+            "![OpenGATE ROR 投影與同源事件定位誤差](gate_ror.png)",
             "",
             "重現指令（請在專案根目錄與已啟用的環境執行）：",
             "",
@@ -133,11 +135,17 @@ def main():
             "既有 singles.root 不會覆寫；重新生成請更換 --output，並同步修改後續路徑。",
             "",
         ]
+        if "same_event_valid_centroid_mm" in gate:
+            lines += [
+                f"有效同源事件配對的平均重建位置為 {coordinate(gate['same_event_valid_centroid_mm'])} mm；相對已知光源的中心偏差為 {gate['same_event_centroid_error_mm']:.4f} mm，單事件三維 RMSE 為 {gate['same_event_event_rmse_mm']:.4f} mm。這些值保留晶體散射與位置加總效應。",
+                "",
+            ]
     lines += [
         "## 如何重現簡化流程",
         "",
         "```powershell",
         ". .\\scripts\\activate.ps1",
+        "New-Item -ItemType Directory -Force outputs | Out-Null",
         "python -m pytest -q | Tee-Object outputs/pytest.txt",
         "python -m pet_sim.cli validate",
         "python -m pet_sim.cli demo",
@@ -149,7 +157,7 @@ def main():
         "",
         "已建立可重現、可檢查的離線 Singles → Coincidence → TOF-ROR 中心點累積流程。排序與配對通過獨立參考，TOF 計算符合解析量化及雜訊理論；時間偏移實驗提供後續同步研究的基準。",
         "",
-        "目前尚未實作有限寬度 ROR 核、MLEM/OSEM、完整 PET 校正及串流 reorder/watermark，也未量測 FPGA 吞吐量。本機原始 ROOT 與完整事件 CSV 保存在 data/outputs；GitHub 保存程式、測試、文件與這份精簡證據。",
+        "目前尚未實作有限寬度 ROR 核、MLEM/OSEM、完整 PET 校正及串流 reorder/watermark，也未量測 FPGA 吞吐量。本機原始 ROOT 與完整事件 CSV 保存在 data/ 與 outputs/；GitHub 保存程式、測試、文件與這份精簡證據。",
         "",
         "研究模型與限制請一併閱讀 [README](../README.md) 及 [原始來源](../docs/sources.md)。",
         "",
