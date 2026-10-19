@@ -195,7 +195,7 @@ def inspect_root(path: Path) -> dict[str, Any]:
             if not all(np.all(np.isfinite(v)) for v in arrays.values()):
                 raise RuntimeError(f"{name} 包含非有限數值")
             summary[name] = {
-                "entries": tree.num_entries,
+                "entries": int(tree.num_entries),
                 "branches": list(tree.keys()),
                 "time_range_ns": [
                     float(arrays["GlobalTime"].min()),
