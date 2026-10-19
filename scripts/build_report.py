@@ -141,6 +141,13 @@ def main():
                 f"有效同源事件配對的平均重建位置為 {coordinate(gate['same_event_valid_centroid_mm'])} mm；相對已知光源的中心偏差為 {gate['same_event_centroid_error_mm']:.4f} mm，單事件三維 RMSE 為 {gate['same_event_event_rmse_mm']:.4f} mm。這些值保留晶體散射與位置加總效應。",
                 "",
             ]
+        verification = PROJECT / "data/setup/geant4_verification.json"
+        if verification.exists():
+            shutil.copyfile(verification, report_dir / "geant4_verification.json")
+            lines += [
+                "12 份必要物理資料的版本、官方來源、下載 helper 比對與 NDL 官方 MD5 校驗，見 [Geant4 資料驗證紀錄](geant4_verification.json)。",
+                "",
+            ]
     lines += [
         "## 如何重現簡化流程",
         "",

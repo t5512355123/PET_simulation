@@ -1,0 +1,20 @@
+{
+  "time_unit": "ns",
+  "position_unit": "mm",
+  "energy_unit": "MeV",
+  "time_origin": 0,
+  "detector_id_encoding": "categorical",
+  "fields": {
+    "timestamp_ps": "GlobalTime",
+    "detector_id": "PreStepUniqueVolumeID",
+    "energy_kev": "TotalEnergyDeposit",
+    "x_mm": "PostPosition_X",
+    "y_mm": "PostPosition_Y",
+    "z_mm": "PostPosition_Z",
+    "truth_event_id": "EventID",
+    "truth_run_id": "RunID",
+    "truth_source_x_mm": "EventPosition_X",
+    "truth_source_y_mm": "EventPosition_Y",
+    "truth_source_z_mm": "EventPosition_Z"
+  }
+}

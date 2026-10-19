@@ -59,6 +59,31 @@ Python：`3.11.17 | packaged by conda-forge | (main, Oct 13 2026, 16:36:10) [MSC
 
 完整數字見 [timing_sweep.csv](timing_sweep.csv)。固定時鐘偏移可造成空間中心偏差；獨立零均值時間抖動主要增加事件定位分布的寬度。
 
+## 真正的 OpenGATE / Geant4 實驗
+
+OpenGATE 10.1.1，96 個 BGO 晶體、偏心點光源 (30.000, -15.000, 10.000) mm；Geant4 電磁傳輸後產生 Hits，再經 digitizer 產生尚未配對的 Singles。
+實際產生 29,935 個事件，輸出 11,563 筆 Singles，Python 找到 1,921 組配對，其中 1,921 組屬於同一個模擬源事件。
+
+EventID 相同不能證明未發生晶體散射，因此同事件比例是檢查指標，不是經完整 scatter/random 分類的 true-coincidence precision。
+數值、ROOT branches、版本、設定及原始資料雜湊見 [metadata](gate_metadata.json)、[metrics](gate_metrics.json)。
+
+![OpenGATE ROR 投影與同源事件定位誤差](gate_ror.png)
+
+重現指令（請在專案根目錄與已啟用的環境執行）：
+
+```powershell
+python scripts/generate_gate_singles.py --output data/raw/gate_demo --expected-events 30000 --activity-bq 200000.0 --source-mm 30.0 -15.0 10.0 --ctr-ps 200.0 --seed 20261019
+pet-sim inspect-root data/raw/gate_demo/singles.root
+pet-sim import-root data/raw/gate_demo/singles.root --tree Singles --mapping data/raw/gate_demo/mapping.json --out data/processed/gate_singles.csv
+pet-sim run data/processed/gate_singles.csv --source-mm 30.0 -15.0 10.0 --out outputs/gate
+```
+
+既有 singles.root 不會覆寫；重新生成請更換 --output，並同步修改後續路徑。
+
+有效同源事件配對的平均重建位置為 (29.907, -15.366, 9.947) mm；相對已知光源的中心偏差為 0.3815 mm，單事件三維 RMSE 為 12.7667 mm。這些值保留晶體散射與位置加總效應。
+
+12 份必要物理資料的版本、官方來源、下載 helper 比對與 NDL 官方 MD5 校驗，見 [Geant4 資料驗證紀錄](geant4_verification.json)。
+
 ## 如何重現簡化流程
 
 ```powershell

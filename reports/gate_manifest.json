@@ -1,0 +1,35 @@
+{
+  "python": "3.11.17 | packaged by conda-forge | (main, Oct 13 2026, 16:36:10) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\zenbook\\anaconda3\\envs\\pet-simulation\\python.exe",
+  "platform": "Windows-10-10.0.26220-SP0",
+  "git_revision": "c9caa5583d28eb99a0e7bec5d778471a37666609",
+  "git_dirty": true,
+  "source_sha256": {
+    "__init__.py": "0cfcd161396b66cb803e849c641aae846eb124584f4ee55bb10bf5eeb8792562",
+    "cli.py": "126b0d21fd7cc60cb8d361e2231e0bed65e75149baa20a0eae9864739748bda3",
+    "coincidence.py": "946b834fd7cfac579c1efb64fb28f73b3b554791a7057505e4752462acfed3e0",
+    "config.py": "0d4c464bb8779ceb44ef9270cfe044b9c784a93d50868f1c2f513b8440e149dc",
+    "metrics.py": "095fe596fdbd07b68e407f4db0f3739a3040bbc477bdc7b55cffb2a90c27a68c",
+    "pipeline.py": "2884b9f4076dea7bdd47a8daaea8408a587e082720b0b552cdc7bd2fa5457ab7",
+    "plotting.py": "93d8eef44c7b89e3d4128704e2d5f628598cd7648fbd5baa566582dd6ff7d26e",
+    "reconstruction.py": "25a6bd5a807a3b8a46aba82537d266858858ba855d85d27f23a4bad7d3ffb482",
+    "root_io.py": "52ca8d7add18fce0479cf1f280b309a4e60298b79d31bfd65d16f9ea3af30a7f",
+    "simulation.py": "1c58c4ed9c33305921610d50f5b102b0c6394d49e8c934fdfe0e05844b8c495a",
+    "validation.py": "b8840e6a37c1b3e1250dcb4a498415a6c1fe8fd67728ee3d7192da5251851d99"
+  },
+  "dependencies": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "matplotlib": "3.11.2",
+    "uproot": "5.7.7"
+  },
+  "elapsed_seconds": 4.267963100224733,
+  "sha256": {
+    "coincidences_ror.csv": "4aead63066e8431b506697559bfbce02daef16135a1e358be5849a9c636dfabb",
+    "config.json": "7ef6e1c626e147ccc2101ddbdd6581892620ad0b5506e10c6166095bc867e3aa",
+    "metrics.json": "d0cac42b8a7d828d9993049152dac1f909919dd1f09c52fb37e49089ef593f3a",
+    "ror_projections.png": "c55044d05ee080dc60dd228a3fa6a607524144640c29a1bdf6625dbf7988d978",
+    "ror_volume.npz": "fcd0ade38b8c57625511c783d13cf706eda36b7ac2ed889117b269980ea302f4",
+    "singles_arrival_order.csv": "2a4b0ffc6673b5ae249013fa996da720d1f5503dee62d8abb4b68d5b6d53b7d2"
+  }
+}

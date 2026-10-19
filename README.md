@@ -15,6 +15,15 @@
 
 實際執行結果與限制列在 [驗證報告](reports/validation_zh_TW.md)；研究依據列在 [來源說明](docs/sources.md)。
 
+本機新環境已通過 **61 項測試**、Ruff 與套件相依檢查，並完成以下兩組實驗：
+
+| 資料來源 | Singles | Coincidence pairs | 重建平均位置 mm | 中心偏差 |
+|---|---:|---:|---|---:|
+| 理想幾何模擬 | 15,871 | 7,262（7,194 真配對） | (19.970, −12.050, 12.022)，真配對 | 0.063 mm |
+| OpenGATE / Geant4 | 11,563 | 1,921（全部為同源事件配對） | (29.907, −15.366, 9.947)，同源事件配對 | 0.381 mm |
+
+GATE 正式案例的 29,935 個來源事件產生 107,916 Hits，再經 digitizer 成為未配對 Singles。兩組幾何與時間響應不同；平均位置偏差和單事件解析度各自列於報告。同源 EventID 不足以完成散射分類。
+
 ## 啟用環境與快速重現
 
 在 PowerShell 中切換到專案資料夾：
@@ -64,7 +73,7 @@ python -m pet_sim.cli sweep --out outputs/timing_sweep.csv
 | `ror_projections.png` | XY、XZ 投影，以及定位誤差或符合時間差分布 |
 | `metrics.json` | Singles 數、pair 數、truth 關係、重建中心與單事件誤差 |
 | `config.json` | 模擬、coincidence 參數與 ROOT 匯入來源 |
-| `manifest.json` | Python/套件版本、Git revision、執行時間與各輸出 SHA-256 |
+| `manifest.json` | Python/套件版本、Git 狀態、執行時間與程式／輸出 SHA-256 |
 
 `physical_tof_valid=False` 的 pair 仍保留在 CSV，以便研究錯誤及隨機符合；它們不進入影像。影像範圍外的有效點也不計入 NPZ，數量另列於 metrics，避免把裁切誤認為事件遺失。
 
@@ -125,7 +134,11 @@ python -m pip install opengate==10.1.1
 python scripts/generate_gate_singles.py --dry-run
 python scripts/generate_gate_singles.py --output data/raw/gate_demo --expected-events 30000
 pet-sim inspect-root data/raw/gate_demo/singles.root
+pet-sim import-root data/raw/gate_demo/singles.root --tree Singles --mapping data/raw/gate_demo/mapping.json --out data/processed/gate_singles.csv
+pet-sim run data/processed/gate_singles.csv --source-mm 30 -15 10 --out outputs/gate
 ```
+
+本機已生成 `data/raw/gate_demo/singles.root`，可直接從 inspect/import/run 開始。重新生成請使用另一個 `--output` 資料夾，並修改後續路徑；生成腳本會保留既有原始檔。
 
 首次執行 OpenGATE 會下載 Geant4 資料集，耗時與磁碟使用量較大。生成腳本採活動度與時長產生有時間間隔的湮滅事件；`expected-events` 是 Poisson 流的期望事件數，實際數量以 `metadata.json` 為準。腳本避免覆寫已存在的 `singles.root`。
 

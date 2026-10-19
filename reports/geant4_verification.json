@@ -1,0 +1,93 @@
+{
+  "verification_date": "2026-10-19",
+  "opengate_core_version": "10.1.1",
+  "installed_helper_sha256": "b83e34eba2c05edecbf47cb36ec3e4f30a48f060c84d8327a1c1462530cce028",
+  "official_helper_source": "https://github.com/OpenGATE/opengate/blob/7122b26e1de6e6c09ed3e9aa16a7e315f9f6e9c0/core/opengate_core/g4DataSetup.py",
+  "helper_ast_matches_official_source": true,
+  "data_directory": "C:\\Users\\zenbook\\anaconda3\\envs\\pet-simulation\\Lib\\site-packages\\opengate_core\\geant4_data",
+  "required_datasets": [
+    {
+      "environment_variable": "G4NEUTRONHPDATA",
+      "versioned_folder": "G4NDL4.7.1",
+      "folder_present": true,
+      "source_url": "https://cern.ch/geant4-data/datasets/G4NDL.4.7.1.tar.gz"
+    },
+    {
+      "environment_variable": "G4LEDATA",
+      "versioned_folder": "G4EMLOW8.8",
+      "folder_present": true,
+      "source_url": "https://cern.ch/geant4-data/datasets/G4EMLOW.8.8.tar.gz"
+    },
+    {
+      "environment_variable": "G4LEVELGAMMADATA",
+      "versioned_folder": "PhotonEvaporation6.1.2",
+      "folder_present": true,
+      "source_url": "https://cern.ch/geant4-data/datasets/G4PhotonEvaporation.6.1.2.tar.gz"
+    },
+    {
+      "environment_variable": "G4RADIOACTIVEDATA",
+      "versioned_folder": "RadioactiveDecay6.1.2",
+      "folder_present": true,
+      "source_url": "https://cern.ch/geant4-data/datasets/G4RadioactiveDecay.6.1.2.tar.gz"
+    },
+    {
+      "environment_variable": "G4PARTICLEXSDATA",
+      "versioned_folder": "G4PARTICLEXS4.2",
+      "folder_present": true,
+      "source_url": "https://cern.ch/geant4-data/datasets/G4PARTICLEXS.4.2.tar.gz"
+    },
+    {
+      "environment_variable": "G4PIIDATA",
+      "versioned_folder": "G4PII1.3",
+      "folder_present": true,
+      "source_url": "https://cern.ch/geant4-data/datasets/G4PII.1.3.tar.gz"
+    },
+    {
+      "environment_variable": "G4REALSURFACEDATA",
+      "versioned_folder": "RealSurface2.2",
+      "folder_present": true,
+      "source_url": "https://cern.ch/geant4-data/datasets/G4RealSurface.2.2.tar.gz"
+    },
+    {
+      "environment_variable": "G4SAIDXSDATA",
+      "versioned_folder": "G4SAIDDATA2.0",
+      "folder_present": true,
+      "source_url": "https://cern.ch/geant4-data/datasets/G4SAIDDATA.2.0.tar.gz"
+    },
+    {
+      "environment_variable": "G4ABLADATA",
+      "versioned_folder": "G4ABLA3.3",
+      "folder_present": true,
+      "source_url": "https://cern.ch/geant4-data/datasets/G4ABLA.3.3.tar.gz"
+    },
+    {
+      "environment_variable": "G4INCLDATA",
+      "versioned_folder": "G4INCL1.3",
+      "folder_present": true,
+      "source_url": "https://cern.ch/geant4-data/datasets/G4INCL.1.3.tar.gz"
+    },
+    {
+      "environment_variable": "G4ENSDFSTATEDATA",
+      "versioned_folder": "G4ENSDFSTATE3.0",
+      "folder_present": true,
+      "source_url": "https://cern.ch/geant4-data/datasets/G4ENSDFSTATE.3.0.tar.gz"
+    },
+    {
+      "environment_variable": "G4CHANNELINGDATA",
+      "versioned_folder": "G4CHANNELING2.0",
+      "folder_present": true,
+      "source_url": "https://cern.ch/geant4-data/datasets/G4CHANNELING.2.0.tar.gz"
+    }
+  ],
+  "all_12_required_folders_present": true,
+  "ndl_archive_md5_verified_before_extraction": {
+    "source_url": "https://geant4-data.web.cern.ch/datasets/G4NDL.4.7.1.tar.gz",
+    "prefix_preserved_bytes": 694550528,
+    "total_bytes": 1113113881,
+    "md5": "54f0ed3995856f02433d42ec96d70bc6",
+    "md5_source": "https://github.com/Geant4/geant4/blob/v11.4.0/cmake/Modules/G4DatasetDefinitions.cmake",
+    "range_workers": 6,
+    "elapsed_seconds": 305.36362319998443
+  },
+  "runtime_verification": "OpenGATE 10.1.1 Windows Conda smoke 完整生成 Hits / SinglesIdeal / Singles ROOT 並重新讀取；實際來源事件2971、未配對 Singles1130。"
+}

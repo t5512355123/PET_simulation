@@ -1,0 +1,30 @@
+{
+  "dataset_kind": "imported",
+  "singles": 11563,
+  "coincidence_pairs": 1921,
+  "physical_tof_valid_pairs": 1921,
+  "pair_policy": "all_pairs; inclusive |dt| <= window_ps; transaxial angle",
+  "adjacent_timestamp_inversions": 0,
+  "same_truth_event_pairs": 1921,
+  "same_truth_event_fraction": 1.0,
+  "all_valid_centroid_mm": [
+    29.906717543806458,
+    -15.366076369245388,
+    9.947001839692824
+  ],
+  "source_mm": [
+    30.0,
+    -15.0,
+    10.0
+  ],
+  "same_event_valid_centroid_mm": [
+    29.906717543806458,
+    -15.366076369245388,
+    9.947001839692824
+  ],
+  "same_event_centroid_error_mm": 0.38147389130755804,
+  "same_event_event_rmse_mm": 12.766720168709833,
+  "same_event_event_median_error_mm": 8.757295041529785,
+  "histogram_counts_inside_100mm_cube": 1921,
+  "histogram_valid_pairs_outside_cube": 0
+}

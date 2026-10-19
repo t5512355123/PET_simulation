@@ -10,6 +10,7 @@
 6. [Geant4：System of units](https://geant4.web.cern.ch/documentation/pipelines/master/bfad_html/ForApplicationDevelopers/Fundamentals/unitSystem.html) 的內部基礎單位為 mm、ns、MeV。本專案標準化為 mm、ps、keV，GATE 10 ROOT 讀取時分別乘 `1`、`1000`、`1000`。外部資料應指定自己的欄位及單位，不可僅憑副檔名推測。
 7. [Fisher Information-Based Evaluation of Image Quality for Time-of-Flight PET](https://pmc.ncbi.nlm.nih.gov/articles/PMC2828326/) 說明 Gaussian TOF kernel 的空間 FWHM 為 `c × CTR / 2`。若 CTR 是兩個時間戳差值的 FWHM，而兩端誤差獨立且相同，單端 FWHM 應為 `CTR / sqrt(2)`；不能將 CTR 直接作為每一端的 FWHM。
 8. [OpenGATE GateVSource 原始碼](https://github.com/OpenGATE/opengate/blob/master/core/opengate_core/opengate_lib/GateVSource.cpp) 的 `CalcNextTime` 在活動度模式下使用指數到達間隔；固定 `number_of_primaries` 模式不增加事件生成時間。因此生成可用於 coincidence 搜尋的連續資料時，本專案採用活動度與模擬時長，不將固定事件數模式的同時刻事件誤當真實事件流。
+9. [Geant4 v11.4.0 官方資料集版本與校驗碼](https://github.com/Geant4/geant4/blob/v11.4.0/cmake/Modules/G4DatasetDefinitions.cmake) 列出 `G4NDL 4.7.1` 的 MD5 為 `54f0ed3995856f02433d42ec96d70bc6`。本次初始安裝從 CERN 下載所有 12 份 OpenGATE 必要物理資料；其中 NDL 採 HTTP Range 續傳，完整 archive 的 MD5 與官方定義完全相同後，才交由官方 helper 解壓。本機 Windows Conda 的 OpenGATE 10.1.1 已成功執行 3,000 次期望事件的 smoke 案例，實際產生 2,971 個來源事件與 1,130 筆未配對 Singles；正式結果另見專案報告。
 
 ## TOF 正負號約定
 
