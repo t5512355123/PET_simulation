@@ -1,0 +1,521 @@
+{
+  "created_at": "2026-10-24T08:46:03.109154+08:00",
+  "renderer": "matplotlib; standard static scientific figures; no new simulations",
+  "font": {
+    "family": "Microsoft JhengHei",
+    "fallback": "DejaVu Sans",
+    "files": [
+      "C:\\Windows\\Fonts\\msjh.ttc",
+      "C:\\Windows\\Fonts\\msjhbd.ttc"
+    ],
+    "svg_fonttype": "path"
+  },
+  "theme": "light",
+  "dpi": 150,
+  "git_revision_at_render": "e9efb84628d94710550ac13162874226f19820a2",
+  "git_dirty_at_render": true,
+  "generator": "scripts\\create_explainer_figures.py",
+  "generator_sha256": "ec2abb23e5ddc95f87bc0e457a5ac0cf39e433021cdb9b7069a096f5b8dc11e0",
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "matplotlib": "3.11.2"
+  },
+  "evidence_revisions": {
+    "synthetic": "c5d3298a0c5c5f8fd6ebd3c3044163b2008f4189",
+    "gate": "c9caa5583d28eb99a0e7bec5d778471a37666609"
+  },
+  "inputs": {
+    "reports/synthetic_config.json": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\reports\\synthetic_config.json",
+      "sha256": "8edd1b670e9f681384074234e51a830d035ecfa02c84b299e8f7d443e156cca2",
+      "bytes": 757
+    },
+    "reports/gate_metadata.json": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\reports\\gate_metadata.json",
+      "sha256": "ed5433b5db660006bf5c05eb2ca63420bd14d9731f3d6f40a4d7a83114a2875a",
+      "bytes": 3709
+    },
+    "reports/synthetic_metrics.json": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\reports\\synthetic_metrics.json",
+      "sha256": "2936f461e6c256375f6a1849d2b2203437360bb87837869c6dfb494eb257a91f",
+      "bytes": 1001
+    },
+    "reports/gate_metrics.json": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\reports\\gate_metrics.json",
+      "sha256": "d0cac42b8a7d828d9993049152dac1f909919dd1f09c52fb37e49089ef593f3a",
+      "bytes": 851
+    },
+    "outputs/synthetic/manifest.json": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\outputs\\synthetic\\manifest.json",
+      "sha256": "901081a2d270d09dc1d1072188555055350489923ea49e3288191b5b5129ef5c",
+      "bytes": 2077
+    },
+    "outputs/gate/manifest.json": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\outputs\\gate\\manifest.json",
+      "sha256": "cc003db041447d9fa3284101024d42465c44c89b7b3e604aa41573e32a5de27d",
+      "bytes": 2075
+    },
+    "outputs/synthetic/singles_arrival_order.csv": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\outputs\\synthetic\\singles_arrival_order.csv",
+      "sha256": "666220016ac085a3c572b53d11f26739eade1d108ed8cbf407b2768acd7f4e77",
+      "bytes": 2042707
+    },
+    "outputs/gate/singles_arrival_order.csv": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\outputs\\gate\\singles_arrival_order.csv",
+      "sha256": "2a4b0ffc6673b5ae249013fa996da720d1f5503dee62d8abb4b68d5b6d53b7d2",
+      "bytes": 1480080
+    },
+    "outputs/synthetic/coincidences_ror.csv": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\outputs\\synthetic\\coincidences_ror.csv",
+      "sha256": "4e6871c6efe176dbdf29a092752aad6408afb04ddf838d2fff29288715f1b49c",
+      "bytes": 2319565
+    },
+    "outputs/gate/coincidences_ror.csv": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\outputs\\gate\\coincidences_ror.csv",
+      "sha256": "4aead63066e8431b506697559bfbce02daef16135a1e358be5849a9c636dfabb",
+      "bytes": 588246
+    },
+    "reports/timing_sweep.csv": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\reports\\timing_sweep.csv",
+      "sha256": "4be32ed6c33c920b76e68d9ee1247f63e32c0d67d14d0b73999a6efd7c75708b",
+      "bytes": 880
+    },
+    "outputs/synthetic/ror_volume.npz": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\outputs\\synthetic\\ror_volume.npz",
+      "sha256": "8c4597a1093b876a7c276666502b5727c2f987686234a504b99885a6d85ddf0d",
+      "bytes": 6589
+    },
+    "src/pet_sim/coincidence.py": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\coincidence.py",
+      "sha256": "946b834fd7cfac579c1efb64fb28f73b3b554791a7057505e4752462acfed3e0",
+      "bytes": 6565
+    },
+    "src/pet_sim/config.py": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\config.py",
+      "sha256": "0d4c464bb8779ceb44ef9270cfe044b9c784a93d50868f1c2f513b8440e149dc",
+      "bytes": 3328
+    },
+    "src/pet_sim/reconstruction.py": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\reconstruction.py",
+      "sha256": "25a6bd5a807a3b8a46aba82537d266858858ba855d85d27f23a4bad7d3ffb482",
+      "bytes": 3134
+    },
+    "src/pet_sim/root_io.py": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\root_io.py",
+      "sha256": "52ca8d7add18fce0479cf1f280b309a4e60298b79d31bfd65d16f9ea3af30a7f",
+      "bytes": 12604
+    },
+    "src/pet_sim/simulation.py": {
+      "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\simulation.py",
+      "sha256": "1c58c4ed9c33305921610d50f5b102b0c6394d49e8c934fdfe0e05844b8c495a",
+      "bytes": 7604
+    }
+  },
+  "figures": [
+    {
+      "id": "01_pipeline",
+      "title": "兩種資料來源的共用軟體流程",
+      "caption": "架構示意圖。上游模擬只負責產生未配對 Singles；真值事件編號不參與時間窗、能量或幾何搜尋。",
+      "kind": "illustrative",
+      "svg": "01_pipeline.svg",
+      "png": "01_pipeline.png",
+      "sources": [
+        "src/pet_sim/simulation.py",
+        "src/pet_sim/coincidence.py",
+        "src/pet_sim/reconstruction.py"
+      ],
+      "details": {},
+      "output_sha256": {
+        "svg": "a31bf2e71d3bb13fe2ccb2d6d60e715502e74d64b9090c4939815618b58d9b0a",
+        "png": "1ac27dff4c706d3877cd5bbd5a37658f4d4fdd71261f39ab7274521d93c5136d"
+      }
+    },
+    {
+      "id": "02_synthetic_geometry",
+      "title": "簡化圓筒與偵測器 ID 幾何",
+      "caption": "依保存的 SimulationConfig 繪製，並非實機設計。3D 圖藍／橙色標示 lane 0／1，其餘 lane 為灰色；圖中的 detector 中心只說明 ID，實際互動座標採連續圓筒交點。",
+      "kind": "configuration_diagram",
+      "svg": "02_synthetic_geometry.svg",
+      "png": "02_synthetic_geometry.png",
+      "sources": [
+        "reports/synthetic_config.json"
+      ],
+      "details": {},
+      "output_sha256": {
+        "svg": "5b57db5c9f9006bc022fa3a4a8d2b07d234c2ae53a70d690763f2fc3d50fd6ee",
+        "png": "7d574074d63bff10cf45b85c631cb87f23da90f47c3059790e86c9010e5123c0"
+      }
+    },
+    {
+      "id": "03_gate_geometry",
+      "title": "OpenGATE 晶體配置",
+      "caption": "依實際生成 metadata 的幾何參數繪製。BGO 晶體的徑向、切向、軸向尺寸為 20 × 10 × 100 mm；直接生成背對背光子，未模擬完整衰變或受測物。",
+      "kind": "configuration_diagram",
+      "svg": "03_gate_geometry.svg",
+      "png": "03_gate_geometry.png",
+      "sources": [
+        "reports/gate_metadata.json"
+      ],
+      "details": {},
+      "output_sha256": {
+        "svg": "f04a8936ceeae2480ac9f52c7199c0aee0915434898dfc1fe0c11533b8501ed3",
+        "png": "a0cb013597cb9520698d01bffda2e662d45b3ac1e2443b061698a73bc0ebe878"
+      }
+    },
+    {
+      "id": "04_tof_sign",
+      "title": "TOF 位置公式與時間差符號",
+      "caption": "解析示意，數字由 1D 幾何直接計算，並非實驗事件。來源靠近 p2，t2 較早、dt 為負，因此定位朝 p2 移動。交換兩端會同時反轉 u 與 dt，位置不變。",
+      "kind": "illustrative",
+      "svg": "04_tof_sign.svg",
+      "png": "04_tof_sign.png",
+      "sources": [
+        "src/pet_sim/reconstruction.py"
+      ],
+      "details": {
+        "example_source_x_mm": 80,
+        "detectors_x_mm": [
+          -400,
+          400
+        ]
+      },
+      "output_sha256": {
+        "svg": "489c302275edbcaac8efe58e4d763922e22ffbd1c153dcfd56a754e32fcc171a",
+        "png": "19362e5ff472d34cda6de861d78c6e6fad700c4f107c95383972067a4e4da4b3"
+      }
+    },
+    {
+      "id": "05_arrival_order",
+      "title": "抵達順序與量測時間順序",
+      "caption": "讀取 synthetic CSV 最前 40 筆。左圖比較兩種排名；右圖直接相減得到傳輸延遲。這些延遲不應加入 coincidence 或 TOF 的量測時間差。各 lane 的分布另見下一圖。",
+      "kind": "empirical",
+      "svg": "05_arrival_order.svg",
+      "png": "05_arrival_order.png",
+      "sources": [
+        "outputs/synthetic/singles_arrival_order.csv"
+      ],
+      "details": {
+        "rows": 40
+      },
+      "output_sha256": {
+        "svg": "cc7135c37cf9463a7da6f96304c07809b5a5e41e819f16485e46b2609128fb8f",
+        "png": "0764a607506f156d269be2e877f3e343559973afccca6cf5afb2fd6f7a622975"
+      }
+    },
+    {
+      "id": "06_lane_delay",
+      "title": "各 lane 的實測模擬傳輸延遲",
+      "caption": "由所有 15,871 筆 synthetic Singles 計算，不以設定上限代替實際延遲。箱型圖展示每 lane 固定延遲之上的抖動分布；不同 lane 的樣本數不同。",
+      "kind": "empirical",
+      "svg": "06_lane_delay.svg",
+      "png": "06_lane_delay.png",
+      "sources": [
+        "outputs/synthetic/singles_arrival_order.csv"
+      ],
+      "details": {
+        "counts_by_lane": {
+          "0": 1085,
+          "1": 1072,
+          "2": 1110,
+          "3": 1103,
+          "4": 1148,
+          "5": 1124,
+          "6": 1152,
+          "7": 1158,
+          "8": 1199,
+          "9": 1152,
+          "10": 1111,
+          "11": 1166,
+          "12": 1158,
+          "13": 1133
+        }
+      },
+      "output_sha256": {
+        "svg": "db64f38f290a00ea7b34cb9ad5f33ab6a7d3e2744bad08c31f450972909941c9",
+        "png": "f4658be5d19cb27ca410648940c5dae7badc3fe7f90af8b72f80d2737a520239"
+      }
+    },
+    {
+      "id": "07_energy_window",
+      "title": "Singles 能量與篩選窗",
+      "caption": "實際 CSV 的能量分布；兩圖使用相同能量 bins 和對數計數軸。OpenGATE 中 511 keV 的峰來自完整能量沉積，其低能尾部由粒子傳輸產生；目前未另外加入能量解析度模型。",
+      "kind": "empirical",
+      "svg": "07_energy_window.svg",
+      "png": "07_energy_window.png",
+      "sources": [
+        "outputs/synthetic/singles_arrival_order.csv",
+        "outputs/gate/singles_arrival_order.csv"
+      ],
+      "details": {},
+      "output_sha256": {
+        "svg": "f59662f8bfe296de5b6920dfb4ade7198f3c7b81e237a3d16ba1fc48b3eda06e",
+        "png": "c8ea0e00733bdd0f2341ad8e558c2ce6353980afc47e438b41a1d98e06d5d300"
+      }
+    },
+    {
+      "id": "08_dt_distribution",
+      "title": "符合時間差分布",
+      "caption": "符合器將第一端定義為時間較早者，因此輸出 dt 非負。4000 ps 是最大絕對時間差；同事件分布同時包含偏心源的飛行路徑差與時間誤差，不能直接當成 CTR。",
+      "kind": "empirical",
+      "svg": "08_dt_distribution.svg",
+      "png": "08_dt_distribution.png",
+      "sources": [
+        "outputs/synthetic/coincidences_ror.csv",
+        "outputs/gate/coincidences_ror.csv",
+        "reports/synthetic_config.json"
+      ],
+      "details": {},
+      "output_sha256": {
+        "svg": "5ad69895a3bbe7c0c81700550b05272a0da5fa90e0785fb75ef260d24ea6e211",
+        "png": "d1962422b0a93be00b84c03f220c1e25a2989b1b5ecfc910c33e2336beefb8ce"
+      }
+    },
+    {
+      "id": "09_pair_composition",
+      "title": "配對 truth 關係與 TOF 檢查",
+      "caption": "只有 synthetic 的二光子理想模型能把同事件配對直接稱為真配對。GATE 同事件比例為 100%，僅代表此次選取結果；多晶體散射仍可能在同事件內產生多筆 Singles，不能宣稱實機 precision 100%。",
+      "kind": "empirical",
+      "svg": "09_pair_composition.svg",
+      "png": "09_pair_composition.png",
+      "sources": [
+        "outputs/synthetic/coincidences_ror.csv",
+        "outputs/gate/coincidences_ror.csv"
+      ],
+      "details": {
+        "synthetic_categories": {
+          "同事件・有效 TOF": 7194,
+          "不同事件・有效 TOF": 49,
+          "同事件・無效 TOF": 0,
+          "不同事件・無效 TOF": 19
+        }
+      },
+      "output_sha256": {
+        "svg": "8b7a91d926a0cb9854261b452de46a43bc3217600bb55e7a7c5ff0cdc45c7281",
+        "png": "3b62022f370a512091672d1deed8a126e498f3f006eb774b8a80c4687203dc44"
+      }
+    },
+    {
+      "id": "10_pair_matrix",
+      "title": "實際配對的鄰接矩陣",
+      "caption": "截取完整量測時間排序後最早 100 筆 Singles，僅畫兩端都在此選取內的既有 pairs。此圖不使用 truth 建立配對；truth 顏色為事後評估。本摘錄可能沒有不同事件 pair，不能用摘錄推算全資料 precision。",
+      "kind": "empirical",
+      "svg": "10_pair_matrix.svg",
+      "png": "10_pair_matrix.png",
+      "sources": [
+        "outputs/synthetic/singles_arrival_order.csv",
+        "outputs/synthetic/coincidences_ror.csv"
+      ],
+      "details": {
+        "selected_singles": 100,
+        "selected_pairs": 45
+      },
+      "output_sha256": {
+        "svg": "88ea7800581ca1a14728e359651be42c182c12a375961a6bfeaf8c165c3c85b1",
+        "png": "176499ea9052d0d01298fe406759b03c0c8d964a43df642c7e9d0bb12adb0608"
+      }
+    },
+    {
+      "id": "11_synthetic_ror",
+      "title": "簡化模型 ROR 中心的 XY 與 XZ 投影",
+      "caption": "由 7,243 對物理 TOF 有效的實際事件累積；包括同事件與不同事件，不在此圖偷偷以 truth 篩選。兩圖為各自的 2D 投影，並非完整 MLEM/OSEM 影像。白色代表零計數，顏色採對數以保留尾部。",
+      "kind": "empirical",
+      "svg": "11_synthetic_ror.svg",
+      "png": "11_synthetic_ror.png",
+      "sources": [
+        "outputs/synthetic/coincidences_ror.csv",
+        "reports/synthetic_config.json"
+      ],
+      "details": {},
+      "output_sha256": {
+        "svg": "8169cf02c3d2a4bda4d40ce25cf00b541fed48ecc2439de1c7d8a59d1292a93a",
+        "png": "c58994694e0bf29e4824958559d1c4c4c23dad2188d530559ef926b782281832"
+      }
+    },
+    {
+      "id": "12_gate_ror",
+      "title": "OpenGATE ROR 中心的 XY 與 XZ 投影",
+      "caption": "由 1,921 對物理 TOF 有效的實際事件累積；包括同事件與不同事件，不在此圖偷偷以 truth 篩選。兩圖為各自的 2D 投影，並非完整 MLEM/OSEM 影像。白色代表零計數，顏色採對數以保留尾部。",
+      "kind": "empirical",
+      "svg": "12_gate_ror.svg",
+      "png": "12_gate_ror.png",
+      "sources": [
+        "outputs/gate/coincidences_ror.csv",
+        "reports/gate_metadata.json"
+      ],
+      "details": {},
+      "output_sha256": {
+        "svg": "e12e639a89bd8c809444c46058f999a45ebf0bc56abd41cde20e344f91454f46",
+        "png": "e616d7b673d39700ec23217373da35a075ee74e1330e42e7acb8d5cffcea5906"
+      }
+    },
+    {
+      "id": "13_localization_errors",
+      "title": "單事件誤差分布與平均位置偏差",
+      "caption": "只使用同事件且物理 TOF 有效的 pairs。RMSE 取每個事件三維誤差平方的平均再開根號；平均位置偏差先將座標平均再與源位置相減。兩者不可混稱解析度。GATE 同事件不自動代表未散射。",
+      "kind": "empirical",
+      "svg": "13_localization_errors.svg",
+      "png": "13_localization_errors.png",
+      "sources": [
+        "outputs/synthetic/coincidences_ror.csv",
+        "outputs/gate/coincidences_ror.csv"
+      ],
+      "details": {},
+      "output_sha256": {
+        "svg": "44abe28b6a73bb3eb0e4a12837dd850d455a040ef1522e75197b40d0b27e1f23",
+        "png": "29b3ddef16dfc532d6c7e2c0b94089f3da70b8d25aa1d0104475a4b68ecd9e51"
+      }
+    },
+    {
+      "id": "14_centroid_vs_spread",
+      "title": "平均座標與單事件散布的尺度差",
+      "caption": "左圖畫所有同事件有效 pairs 的 XY 誤差；右圖只放大兩個平均座標，並非另一組實驗，也未聲稱此點為信賴區間。兩張圖刻意使用不同尺度，標題與軸界明確標註。",
+      "kind": "empirical",
+      "svg": "14_centroid_vs_spread.svg",
+      "png": "14_centroid_vs_spread.png",
+      "sources": [
+        "outputs/synthetic/coincidences_ror.csv",
+        "outputs/gate/coincidences_ror.csv"
+      ],
+      "details": {},
+      "output_sha256": {
+        "svg": "7f36dc7b0f2aa4249a7f5583811d4a1a07c6a999318d15c10aad34e50cbe0d91",
+        "png": "c1d62fe98e8621f2a75d87db9b5ed45d750d82dae880a171ba3b8b7233382bf4"
+      }
+    },
+    {
+      "id": "15_timing_rmse_sweep",
+      "title": "時間抖動與固定偏移對 RMSE 的影響",
+      "caption": "讀取保存的 12 個掃描設定，不重新模擬。虛線只在半環偏移為 0 時適用。固定偏移改變不同方向 LOR 的位置，不能用增加隨機 σ 完整描述。σ=0 時仍有整數 ps 量化誤差。",
+      "kind": "empirical",
+      "svg": "15_timing_rmse_sweep.svg",
+      "png": "15_timing_rmse_sweep.png",
+      "sources": [
+        "reports/timing_sweep.csv"
+      ],
+      "details": {
+        "rows": 12,
+        "events_per_configuration": 4000
+      },
+      "output_sha256": {
+        "svg": "af71cd1310cbd7ddfb2660f0bea6f2a0f6dacf3746aa129428a85a77a2de3458",
+        "png": "9a8fab3150aa1603b00ab72d3eec92f623632d86964d3353d591d75a414f136c"
+      }
+    },
+    {
+      "id": "16_clock_bias_sweep",
+      "title": "固定時鐘偏移與平均位置偏差",
+      "caption": "左右圖是同一張 timing_sweep.csv 的兩種切片。每個設定使用相同 seed 與固定方向樣本；曲線是參數情境，不是誤差棒或信賴區間。半環偏移的空間效應依 LOR 方向而變，不能一律換成單一 x 位移。",
+      "kind": "empirical",
+      "svg": "16_clock_bias_sweep.svg",
+      "png": "16_clock_bias_sweep.png",
+      "sources": [
+        "reports/timing_sweep.csv"
+      ],
+      "details": {},
+      "output_sha256": {
+        "svg": "961e3185c842f231cb6443354cc38c2b3ed60f7fb7db11f5d882d0e40f4403e4",
+        "png": "71ce6c80549f4582fe773453581eeabb87cac664b24e46dc8f595314489cde87"
+      }
+    },
+    {
+      "id": "17_voxel_slices",
+      "title": "ROR 體素計數：投影和切片的差別",
+      "caption": "直接讀取已產生的 ror_volume.npz。每軸 −100 至 +100 mm、64 bins，體素邊長 3.125 mm。投影把整個軸加總；切片只保留一層，因此計數量級不同。三圖共用相同顏色尺度，避免將各圖自動拉伸後誤認為相同強度。",
+      "kind": "empirical",
+      "svg": "17_voxel_slices.svg",
+      "png": "17_voxel_slices.png",
+      "sources": [
+        "outputs/synthetic/ror_volume.npz",
+        "reports/synthetic_config.json"
+      ],
+      "details": {
+        "shape": [
+          64,
+          64,
+          64
+        ],
+        "counts": 7198,
+        "slice_indices_xyz": [
+          38,
+          28,
+          35
+        ]
+      },
+      "output_sha256": {
+        "svg": "24c1e729b8d08e33154205c42c92c5245de7dd761f53edc8142a0bd370023f1c",
+        "png": "eea0f071cdaf6a8e6efcbf87cdb2494f6dcf832a1cc4cd4e2fa7ac194d0dfbff"
+      }
+    },
+    {
+      "id": "18_ctr_uncertainty",
+      "title": "時間解析度與 ROR 不確定度的解析關係",
+      "caption": "純解析示意，未拿 Gaussian 曲線冒充實驗分布。假設兩端獨立同 σ 的 Gaussian 誤差，σdt=√2σ，σ位置=cσ/√2。此版軟體只重建每個事件的 ROR 中心，有限寬度核是下一步。",
+      "kind": "analytical_illustration",
+      "svg": "18_ctr_uncertainty.svg",
+      "png": "18_ctr_uncertainty.png",
+      "sources": [
+        "src/pet_sim/config.py",
+        "src/pet_sim/reconstruction.py"
+      ],
+      "details": {},
+      "output_sha256": {
+        "svg": "27820aa44dc83fef64850eb50e0e9246f92e4b32c0184c5d3e2686f22ed7a158",
+        "png": "741de3dc9939e8f19938dce206de43e548ccd9c944fd98c69f2df8aa059be6ee"
+      }
+    },
+    {
+      "id": "19_timestamp_precision",
+      "title": "int64 ps 時間戳與浮點精度",
+      "caption": "數值精度示意，不是本次 acquisition 的時間跨度。圖中演算直接使用 IEEE-754 float64 的 spacing。ROOT 匯入先減共同原點並明訂單位；若來源本已浮點化而遺失時間差，之後轉成 int64 也無法恢復。",
+      "kind": "numerical_illustration",
+      "svg": "19_timestamp_precision.svg",
+      "png": "19_timestamp_precision.png",
+      "sources": [
+        "src/pet_sim/root_io.py",
+        "src/pet_sim/reconstruction.py"
+      ],
+      "details": {},
+      "output_sha256": {
+        "svg": "955e05ffbefb7fb28ffd77f9da637a14285708ba07de61c5625fef9516263eb8",
+        "png": "c8b24cb8a8468a3f0d20be5828f1edeeb26838d7e64ba06fb9f5ca72fc60afe8"
+      }
+    },
+    {
+      "id": "20_stage_counts",
+      "title": "兩條流程各階段的實際計數",
+      "caption": "事件、Hits、Singles、pairs 與體素中的有效 pairs 是不同觀測單位。GATE 一個光子可留下多個能量沉積 Hits；synthetic n_events 已條件於幾何接受，且含獨立背景。因此這張圖刻意使用分開的橫條比較，不能把相鄰條直接相除當成掃描器靈敏度。",
+      "kind": "empirical",
+      "svg": "20_stage_counts.svg",
+      "png": "20_stage_counts.png",
+      "sources": [
+        "reports/synthetic_config.json",
+        "reports/gate_metadata.json",
+        "outputs/synthetic/singles_arrival_order.csv",
+        "outputs/gate/singles_arrival_order.csv",
+        "outputs/synthetic/coincidences_ror.csv",
+        "outputs/gate/coincidences_ror.csv",
+        "reports/synthetic_metrics.json"
+      ],
+      "details": {
+        "synthetic_counts": {
+          "接受後湮滅事件": 8000,
+          "偵測 Singles + 背景": 15871,
+          "符合 pairs": 7262,
+          "其中真配對": 7194,
+          "體素範圍內有效 pairs": 7198
+        },
+        "gate_counts": {
+          "生成湮滅事件": 29935,
+          "Geant4 Hits": 107916,
+          "Digitizer Singles": 11563,
+          "符合 pairs": 1921
+        }
+      },
+      "output_sha256": {
+        "svg": "b3c151b7509fcff607d0db0ebb00d5da792f1233eab712fc4f8ebec6a1ad4da6",
+        "png": "69f84e7a267ea8cad15abf9d52db7f96a6724f95c367d4331ad9c172fce2fc97"
+      }
+    }
+  ]
+}

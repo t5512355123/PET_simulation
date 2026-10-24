@@ -1,0 +1,1385 @@
+{
+  "audit": {
+    "label": "現有成果的事實盤點",
+    "audit_date": "2026-10-24",
+    "timezone": "Asia/Taipei",
+    "original_experiment_date": "2026-10-19",
+    "method": "閱讀目前程式、既有 JSON/CSV/NPZ，重新計數與計算雜湊；本次沒有重跑完整測試、重新安裝或生成新的物理事件。",
+    "workspace": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET",
+    "scope_note": "這是 HTML 說明文件的事實底稿，不是新的獨立實驗報告。"
+  },
+  "repository": {
+    "label": "版本與同步證據",
+    "head": "e9efb84628d94710550ac13162874226f19820a2",
+    "head_summary": "e9efb84 2026-10-19T12:17:50+08:00 results: validate real OpenGATE singles through coincidence and TOF-ROR reconstruction",
+    "remote_origin": "git@github.com:t5512355123/PET_simulation.git",
+    "initial_worktree_status": "首次盤點的 git status --short 為空；產生本檔後及父代理寫入文件後需重新檢查。",
+    "history": [
+      "e9efb84 2026-10-19T12:17:50+08:00 results: validate real OpenGATE singles through coincidence and TOF-ROR reconstruction",
+      "c9caa55 2026-10-19T12:14:29+08:00 fix: serialize native ROOT entry counts as integers",
+      "7642bc0 2026-10-19T12:10:53+08:00 feat: record exact physical model and GATE generator fingerprint",
+      "be9e62a 2026-10-19T12:00:52+08:00 results: record verified singles pipeline and timing synchronization experiments",
+      "c5d3298 2026-10-19T11:55:31+08:00 docs: record exact GATE reproduction parameters in experiment report",
+      "6c510d0 2026-10-19T11:53:23+08:00 docs: derive report settings from recorded experiment configuration",
+      "c2b31dd 2026-10-19T11:51:58+08:00 docs: add reproducible Traditional Chinese experiment report generator",
+      "4ccc0c8 2026-10-19T11:43:42+08:00 fix: strengthen time precision, import provenance and verification checks",
+      "00dd5aa 2026-10-19T11:35:46+08:00 feat: establish modular PET singles to TOF-ROR research pipeline"
+    ],
+    "recorded_run_revisions": {
+      "synthetic": {
+        "git_revision": "c5d3298a0c5c5f8fd6ebd3c3044163b2008f4189",
+        "git_dirty": false
+      },
+      "gate": {
+        "git_revision": "c9caa5583d28eb99a0e7bec5d778471a37666609",
+        "git_dirty": true
+      }
+    },
+    "interpretation": "GATE 執行時 git_dirty=true，不能稱當時工作目錄完全乾淨；但兩組 manifest 的全部模組雜湊均與目前檔案一致。未以 manifest 的舊 commit ID 冒充目前 HEAD。"
+  },
+  "definitions": {
+    "raw_list_mode": {
+      "label": "本專案處理的 raw 層級",
+      "fact": "尚未符合配對的 Singles：時間、偵測器識別碼、能量、互動座標；GATE 另保留更前段能量沉積 Hits。不是 ADC 波形、原始 TDC 位元流或真實醫療掃描儀原始資料。",
+      "sources": [
+        "README.md",
+        "scripts/generate_gate_singles.py"
+      ]
+    },
+    "coincidence": {
+      "label": "全配對與邊界定義",
+      "fact": "各端350–650 keV（含端點），按 timestamp_ps、single_id 穩定排序；兩端最大絕對時間差4000 ps（含端點），不同 detector_id，橫向最小環向角差120度。每個合格無序 pair 輸出一次，同一 single 可被多個 pair 使用，沒有一對一消耗或多重事件剔除。",
+      "details": "4000 ps 是最大 |Δt|，不是把全寬再除二。角度比較容許1e-10度浮點公差；不是兩條3D向量的夾角。排序後的實際輸出 t2>=t1，因此 dt_ps>=0；幾何端點方向與時間順序一起變動。",
+      "complexity": "O(N log N + K)，K 是時間窗內候選數；高密度或同時刻輸入最壞 O(N²)，目前全部載入記憶體。",
+      "sources": [
+        "src/pet_sim/coincidence.py",
+        "src/pet_sim/config.py"
+      ]
+    },
+    "truth": {
+      "label": "真配對與同事件不可混用",
+      "fact": "主演算法只用可觀測欄位決定 pair，truth 不參與搜尋。事後 same_truth_event 要求兩端 EventID相同且非負；若有RunID也須相同。synthetic 每事件最多兩個已偵測光子且無散射，才可將此當作真配對。GATE 同EventID只表示同來源事件，跨晶體散射仍可存在，不能宣稱100% scatter-clean precision。",
+      "test_exception": "tests/test_simulation_reconstruction.py 的 _truth_pairs 故意使用真值組合已知配對，以隔離測試重建公式；這不屬於生產用 coincidence 演算法。",
+      "sources": [
+        "src/pet_sim/coincidence.py",
+        "src/pet_sim/metrics.py",
+        "tests/test_simulation_reconstruction.py"
+      ]
+    },
+    "tof": {
+      "label": "TOF 正負號、位置與物理有效性",
+      "speed_mm_per_ps": 0.299792458,
+      "formula": "u=(p2-p1)/L; m=(p1+p2)/2; Δt=t2-t1; r_ROR=m-c*Δt*u/2",
+      "sign_example": "p1=(-400,0,0),p2=(400,0,0)，源在x=30，飛行距離430與370 mm，t2<t1、Δt<0，故向p2移動30 mm；交換端點得到相同位置。",
+      "physical_flag": "|c*Δt|<=L 才標為 physical_tof_valid；這只是線段內必要條件，不能證明沒有散射或配對正確。非物理點保留在CSV，不裁切到端點；pipeline不將它們累積進體素。",
+      "sources": [
+        "src/pet_sim/reconstruction.py",
+        "tests/test_simulation_reconstruction.py"
+      ]
+    },
+    "time_precision": {
+      "label": "整數ps不是無限精度",
+      "fact": "內部時間用int64 ps。ROOT以明確單位轉換，用Decimal先減明訂time_origin、再乘倍率並ROUND_HALF_EVEN捨入，檢查int64範圍；原始整數時間不先轉float64。synthetic先以float64生成連續時間，再np.rint至ps，因此不能宣稱整個生成過程均無浮點誤差。配對與整數重建先以Python int做差避免int64溢位及大型絕對時間吞掉ps差值，再將差值用於浮點座標運算。",
+      "limits": "來源浮點時間已失去的精度無法復原；相對量化誤差與物理誤差仍存在。int64 ps範圍約±106.75日；共同原點為輸入時間單位，若使用大型絕對時間需自行明訂。",
+      "quantization_bound_mm": 0.149896229,
+      "bound_explanation": "理想直線幾何下兩端各自取整誤差至多0.5 ps，時間差誤差至多1 ps，沿LOR位置誤差至多c/2=0.149896229 mm；不是一般臨床定位誤差上限。",
+      "sources": [
+        "src/pet_sim/root_io.py",
+        "src/pet_sim/simulation.py",
+        "src/pet_sim/reconstruction.py",
+        "src/pet_sim/validation.py"
+      ]
+    },
+    "metrics": {
+      "label": "平均位置偏差、RMSE與解析度的差別",
+      "centroid_error": "||mean(r_i)-source||，量測整組有效同事件配對平均位置的偏差。",
+      "event_rmse": "sqrt(mean(||r_i-source||²))，量測每個有效同事件配對的三維定位誤差。",
+      "event_median_error": "median(||r_i-source||)，是單事件三維誤差中位數。",
+      "caution": "0.0627或0.3815 mm是平均位置偏差，不是單事件解析度、FWHM或臨床影像解析度。報告未提供誤差信賴區間、跨seed不確定度或NEMA影像品質驗證。",
+      "recall_denominator": "synthetic recall分母只含效率篩選後兩個光子均可觀測的事件，尚未做能量、時間與幾何cuts；不是所有湮滅事件的偵測效率或絕對靈敏度。",
+      "sources": [
+        "src/pet_sim/metrics.py"
+      ]
+    },
+    "histogram": {
+      "label": "ROR中心點累積與顯示",
+      "fact": "NPZ counts[x,y,z]使用64×64×64格、三軸[-100,+100]mm，格寬3.125 mm；只納入physical_tof_valid，範圍外點不計。這是ROR中心點直方圖，尚未做有限寬度核、MLEM/OSEM或完整PET校正。PNG的XY/XZ圖則是80×80的二維顯示直方圖，格寬2.5 mm，不應與NPZ64格混為一談。",
+      "sources": [
+        "src/pet_sim/pipeline.py",
+        "src/pet_sim/plotting.py",
+        "src/pet_sim/reconstruction.py"
+      ]
+    }
+  },
+  "synthetic": {
+    "label": "理想幾何模擬的確切設定與語意",
+    "recorded": {
+      "config": {
+        "coincidence": {
+          "window_ps": 4000,
+          "energy_min_kev": 350,
+          "energy_max_kev": 650,
+          "min_angle_deg": 120
+        },
+        "simulation": {
+          "seed": 20261019,
+          "n_events": 8000,
+          "radius_mm": 400.0,
+          "n_rings": 7,
+          "detectors_per_ring": 48,
+          "ring_pitch_mm": 30.0,
+          "source_mm": [
+            20.0,
+            -12.0,
+            12.0
+          ],
+          "activity_bq": 2000000.0,
+          "detection_efficiency": 0.95,
+          "timing_sigma_ps": 80,
+          "energy_sigma_kev": 25.0,
+          "background_singles": 700,
+          "n_lanes": 14,
+          "max_lane_delay_ps": 8000,
+          "arrival_jitter_ps": 1000,
+          "hemisphere_offset_ps": 0
+        },
+        "source_mm": [
+          20.0,
+          -12.0,
+          12.0
+        ],
+        "import_provenance": null,
+        "input_csv": null
+      },
+      "metrics": {
+        "dataset_kind": "synthetic",
+        "singles": 15871,
+        "coincidence_pairs": 7262,
+        "physical_tof_valid_pairs": 7243,
+        "pair_policy": "all_pairs; inclusive |dt| <= window_ps; transaxial angle",
+        "adjacent_timestamp_inversions": 3495,
+        "same_truth_event_pairs": 7194,
+        "same_truth_event_fraction": 0.9906361883778574,
+        "true_pairs": 7194,
+        "false_pairs": 68,
+        "two_detected_photon_events_before_cuts": 7194,
+        "recall_before_energy_time_geometry_cuts": 1.0,
+        "all_valid_centroid_mm": [
+          19.741727895114717,
+          -12.029437633908165,
+          12.031253397114952
+        ],
+        "source_mm": [
+          20.0,
+          -12.0,
+          12.0
+        ],
+        "truth_valid_centroid_mm": [
+          19.970053412559086,
+          -12.050378444673079,
+          12.022147659797096
+        ],
+        "truth_centroid_error_mm": 0.06265225152795949,
+        "truth_event_rmse_mm": 16.916543742611267,
+        "truth_event_median_error_mm": 11.446026759583788,
+        "histogram_counts_inside_100mm_cube": 7198,
+        "histogram_valid_pairs_outside_cube": 45
+      },
+      "manifest": {
+        "python": "3.11.17 | packaged by conda-forge | (main, Oct 13 2026, 16:36:10) [MSC v.1944 64 bit (AMD64)]",
+        "executable": "C:\\Users\\zenbook\\anaconda3\\envs\\pet-simulation\\python.exe",
+        "platform": "Windows-10-10.0.26220-SP0",
+        "git_revision": "c5d3298a0c5c5f8fd6ebd3c3044163b2008f4189",
+        "git_dirty": false,
+        "source_sha256": {
+          "__init__.py": "0cfcd161396b66cb803e849c641aae846eb124584f4ee55bb10bf5eeb8792562",
+          "cli.py": "126b0d21fd7cc60cb8d361e2231e0bed65e75149baa20a0eae9864739748bda3",
+          "coincidence.py": "946b834fd7cfac579c1efb64fb28f73b3b554791a7057505e4752462acfed3e0",
+          "config.py": "0d4c464bb8779ceb44ef9270cfe044b9c784a93d50868f1c2f513b8440e149dc",
+          "metrics.py": "095fe596fdbd07b68e407f4db0f3739a3040bbc477bdc7b55cffb2a90c27a68c",
+          "pipeline.py": "2884b9f4076dea7bdd47a8daaea8408a587e082720b0b552cdc7bd2fa5457ab7",
+          "plotting.py": "93d8eef44c7b89e3d4128704e2d5f628598cd7648fbd5baa566582dd6ff7d26e",
+          "reconstruction.py": "25a6bd5a807a3b8a46aba82537d266858858ba855d85d27f23a4bad7d3ffb482",
+          "root_io.py": "52ca8d7add18fce0479cf1f280b309a4e60298b79d31bfd65d16f9ea3af30a7f",
+          "simulation.py": "1c58c4ed9c33305921610d50f5b102b0c6394d49e8c934fdfe0e05844b8c495a",
+          "validation.py": "b8840e6a37c1b3e1250dcb4a498415a6c1fe8fd67728ee3d7192da5251851d99"
+        },
+        "dependencies": {
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "matplotlib": "3.11.2",
+          "uproot": "5.7.7"
+        },
+        "elapsed_seconds": 16.134463800117373,
+        "sha256": {
+          "coincidences_ror.csv": "4e6871c6efe176dbdf29a092752aad6408afb04ddf838d2fff29288715f1b49c",
+          "config.json": "8edd1b670e9f681384074234e51a830d035ecfa02c84b299e8f7d443e156cca2",
+          "metrics.json": "2936f461e6c256375f6a1849d2b2203437360bb87837869c6dfb494eb257a91f",
+          "ror_projections.png": "7b261522ef438daec0db9ffb8d8518f29b5dce2e3c3e1d3af34efcaa1d918a2f",
+          "ror_volume.npz": "8c4597a1093b876a7c276666502b5727c2f987686234a504b99885a6d85ddf0d",
+          "singles_arrival_order.csv": "666220016ac085a3c572b53d11f26739eade1d108ed8cbf407b2768acd7f4e77"
+        }
+      }
+    },
+    "audited": {
+      "label": "直接讀取現有 CSV、NPZ 與 SHA-256 的盤點結果；未重跑模擬或測試",
+      "paths": {
+        "singles": "outputs/synthetic/singles_arrival_order.csv",
+        "pairs": "outputs/synthetic/coincidences_ror.csv",
+        "volume": "outputs/synthetic/ror_volume.npz"
+      },
+      "single_rows": 15871,
+      "pair_rows": 7262,
+      "same_event_pairs": 7194,
+      "physical_valid_pairs": 7243,
+      "valid_same_event_pairs": 7194,
+      "valid_other_event_pairs": 49,
+      "invalid_pairs": 19,
+      "energy_cut_surviving_singles": 15460,
+      "distinct_source_events_observed": 7977,
+      "singles_per_observed_event_histogram": {
+        "1": 783,
+        "2": 7194
+      },
+      "distinct_same_event_pair_event_ids": 7194,
+      "dt_minmax_ps": [
+        0,
+        3999
+      ],
+      "timestamp_range_ps": [
+        189363,
+        3988043727
+      ],
+      "arrival_column_is_timestamp_copy": false,
+      "distinct_lanes": 14,
+      "volume_shape": [
+        64,
+        64,
+        64
+      ],
+      "volume_count_sum": 7198,
+      "volume_axis_range_mm": [
+        -100.0,
+        100.0
+      ],
+      "recomputed_valid_same_event_centroid_mm": [
+        19.970053412559086,
+        -12.05037844467308,
+        12.022147659797096
+      ],
+      "recomputed_centroid_error_mm": 0.0626522515279609,
+      "recomputed_event_rmse_mm": 16.916543742611267,
+      "source_module_hashes_match_current": {
+        "__init__.py": true,
+        "cli.py": true,
+        "coincidence.py": true,
+        "config.py": true,
+        "metrics.py": true,
+        "pipeline.py": true,
+        "plotting.py": true,
+        "reconstruction.py": true,
+        "root_io.py": true,
+        "simulation.py": true,
+        "validation.py": true
+      },
+      "output_hashes_match_manifest": {
+        "coincidences_ror.csv": true,
+        "config.json": true,
+        "metrics.json": true,
+        "ror_projections.png": true,
+        "ror_volume.npz": true,
+        "singles_arrival_order.csv": true
+      },
+      "report_copies_match_outputs": {
+        "metrics": true,
+        "config": true,
+        "manifest": true,
+        "image": true
+      }
+    },
+    "model_notes": [
+      "8000個事件是兩光子均打中有限軸向圓筒後、效率篩選前的接受事件數；2,000,000 Bq在此是幾何接受事件率，不能推估絕對掃描儀靈敏度。",
+      "半徑400 mm、7層×48個ID、層距30 mm、有效軸向±105 mm；只將detector_id量化，重建仍使用連續圓筒交點，並未將座標吸附晶體中心。",
+      "每光子獨立0.95偵測效率；信號實際15171筆、背景700筆；8000事件中7194有雙端、783只有單端、23完全未偵測。",
+      "單端時間高斯σ=80 ps；能量為mean511 keV、σ25 keV且負值設0的左設限高斯。背景時間獨立、圓筒表面位置隨機、能量100–800 keV均勻、truth_event_id=-1、源座標NaN。",
+      "detector_id%14決定lane；每個lane固定隨機延遲0..8000 ps，每筆再加0..1000 ps非負均勻整數抖動。到達順序與量測timestamp分開。3495是到達排序下的相鄰timestamp下降次數，不是全部逆序對數，也不是資料遺失。",
+      "無散射、衰減、非共線性、晶體深度或真實晶體位置讀出誤差。"
+    ],
+    "source_paths": [
+      "src/pet_sim/simulation.py",
+      "reports/synthetic_config.json",
+      "reports/synthetic_metrics.json",
+      "outputs/synthetic/singles_arrival_order.csv"
+    ]
+  },
+  "gate": {
+    "label": "真正OpenGATE/Geant4物理傳輸案例，並非實機資料",
+    "metadata": {
+      "generator": "OpenGATE / Geant4 electromagnetic transport",
+      "generator_source_sha256": "6c43f6c7fd0ba164807abbce0f2369f6eddd96e834871feeb4b91ab19f7d74cc",
+      "python": "3.11.17",
+      "physics_list": "G4EmStandardPhysics_option4",
+      "production_cut_mm": 0.1,
+      "expected_events": 30000,
+      "activity_bq": 200000.0,
+      "duration_s": 0.15,
+      "seed": 20261019,
+      "number_of_threads": 1,
+      "source": {
+        "particle": "back_to_back",
+        "photon_energy_kev": 511.0,
+        "position_mm": [
+          30.0,
+          -15.0,
+          10.0
+        ],
+        "angular_distribution": "isotropic 3D",
+        "accolinearity": false
+      },
+      "detector": {
+        "material": "BGO",
+        "crystals": 96,
+        "center_radius_mm": 200.0,
+        "crystal_size_radial_tangential_axial_mm": [
+          20.0,
+          10.0,
+          100.0
+        ]
+      },
+      "root_file": "singles.root",
+      "trees": {
+        "Hits": "Geant4 能量沉積",
+        "SinglesIdeal": "逐事件逐晶體 adder",
+        "Singles": "加上時間誤差的未配對 Singles"
+      },
+      "root_units": {
+        "GlobalTime": "ns",
+        "TotalEnergyDeposit": "MeV",
+        "PostPosition_X/Y/Z": "mm"
+      },
+      "coincidence_timing_fwhm_ps": 200.0,
+      "single_channel_timing_fwhm_ps": 141.42135623730948,
+      "limitations": [
+        "光子傳輸使用 Geant4；光源直接產生背對背光子，未模擬正電子飛行與衰變。",
+        "晶體位置使用能量加權互動座標，未模擬完整實機讀出與 DOI 誤差。",
+        "無受測物、衰減修正、隨機修正、死時間或能量解析度模型。",
+        "CTR 是兩個獨立單通道時間誤差的差值 FWHM；單通道 FWHM = CTR / sqrt(2)。",
+        "EventID / RunID 僅供事後真值評估，不能用來建立 coincidence。"
+      ],
+      "opengate_version": "10.1.1",
+      "actual_generated_events": 29935,
+      "root_inspection": {
+        "Hits": {
+          "entries": 107916,
+          "branches": [
+            "EventID",
+            "RunID",
+            "ThreadID",
+            "PostPosition_X",
+            "PostPosition_Y",
+            "PostPosition_Z",
+            "TotalEnergyDeposit",
+            "PreStepUniqueVolumeID",
+            "GlobalTime",
+            "EventPosition_X",
+            "EventPosition_Y",
+            "EventPosition_Z"
+          ],
+          "time_range_ns": [
+            6402.0773223455435,
+            149997470.6354716
+          ],
+          "energy_range_mev": [
+            1.3139597584422335e-07,
+            0.40736146163562076
+          ]
+        },
+        "SinglesIdeal": {
+          "entries": 11563,
+          "branches": [
+            "EventID",
+            "RunID",
+            "ThreadID",
+            "PostPosition_X",
+            "PostPosition_Y",
+            "PostPosition_Z",
+            "TotalEnergyDeposit",
+            "PreStepUniqueVolumeID",
+            "GlobalTime",
+            "EventPosition_X",
+            "EventPosition_Y",
+            "EventPosition_Z"
+          ],
+          "time_range_ns": [
+            6402.0773223455435,
+            149997470.63439518
+          ],
+          "energy_range_mev": [
+            0.0003788752360634771,
+            0.5110000000000002
+          ]
+        },
+        "Singles": {
+          "entries": 11563,
+          "branches": [
+            "EventID",
+            "RunID",
+            "ThreadID",
+            "PostPosition_X",
+            "PostPosition_Y",
+            "PostPosition_Z",
+            "TotalEnergyDeposit",
+            "PreStepUniqueVolumeID",
+            "GlobalTime",
+            "EventPosition_X",
+            "EventPosition_Y",
+            "EventPosition_Z"
+          ],
+          "time_range_ns": [
+            6402.015896561254,
+            149997470.7029922
+          ],
+          "energy_range_mev": [
+            0.0003788752360634771,
+            0.5110000000000002
+          ]
+        }
+      },
+      "root_sha256": "bb5167460b0c6259bd44ba0c6cfdb192963132513cee7f49b50b8f0e50371143",
+      "opengate_core_version": "10.1.1"
+    },
+    "mapping": {
+      "time_unit": "ns",
+      "position_unit": "mm",
+      "energy_unit": "MeV",
+      "time_origin": 0,
+      "detector_id_encoding": "categorical",
+      "fields": {
+        "timestamp_ps": "GlobalTime",
+        "detector_id": "PreStepUniqueVolumeID",
+        "energy_kev": "TotalEnergyDeposit",
+        "x_mm": "PostPosition_X",
+        "y_mm": "PostPosition_Y",
+        "z_mm": "PostPosition_Z",
+        "truth_event_id": "EventID",
+        "truth_run_id": "RunID",
+        "truth_source_x_mm": "EventPosition_X",
+        "truth_source_y_mm": "EventPosition_Y",
+        "truth_source_z_mm": "EventPosition_Z"
+      }
+    },
+    "recorded": {
+      "config": {
+        "coincidence": {
+          "window_ps": 4000,
+          "energy_min_kev": 350,
+          "energy_max_kev": 650,
+          "min_angle_deg": 120
+        },
+        "simulation": null,
+        "source_mm": [
+          30.0,
+          -15.0,
+          10.0
+        ],
+        "import_provenance": {
+          "source_file": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\data\\raw\\gate_demo\\singles.root",
+          "source_file_size_bytes": 6575366,
+          "source_file_mtime_ns": 1792383290235195700,
+          "source_tree": "Singles",
+          "entries_in_tree": 11563,
+          "entries_loaded": 11563,
+          "entry_stop": null,
+          "fields": {
+            "timestamp_ps": "GlobalTime",
+            "detector_id": "PreStepUniqueVolumeID",
+            "energy_kev": "TotalEnergyDeposit",
+            "x_mm": "PostPosition_X",
+            "y_mm": "PostPosition_Y",
+            "z_mm": "PostPosition_Z",
+            "truth_event_id": "EventID",
+            "truth_run_id": "RunID",
+            "truth_source_x_mm": "EventPosition_X",
+            "truth_source_y_mm": "EventPosition_Y",
+            "truth_source_z_mm": "EventPosition_Z"
+          },
+          "input_units": {
+            "time_unit": "ns",
+            "position_unit": "mm",
+            "energy_unit": "MeV"
+          },
+          "time_origin_input_unit": "0",
+          "timestamp_rounding": "ROUND_HALF_EVEN",
+          "placeholder_columns": {
+            "arrival_time_ps": "timestamp_ps 的複本",
+            "lane_id": 0
+          },
+          "truth_id_scope": "單一 ROOT 檔案；跨 run 請映射 truth_run_id，跨檔案需額外識別碼",
+          "source_float_precision": "不會復原來源浮點數已失去的時間精度",
+          "detector_id_encoding": "categorical",
+          "detector_id_label_map": {
+            "crystal_rep_0-0_0": 0,
+            "crystal_rep_1-0_1": 1,
+            "crystal_rep_10-0_10": 2,
+            "crystal_rep_11-0_11": 3,
+            "crystal_rep_12-0_12": 4,
+            "crystal_rep_13-0_13": 5,
+            "crystal_rep_14-0_14": 6,
+            "crystal_rep_15-0_15": 7,
+            "crystal_rep_16-0_16": 8,
+            "crystal_rep_17-0_17": 9,
+            "crystal_rep_18-0_18": 10,
+            "crystal_rep_19-0_19": 11,
+            "crystal_rep_2-0_2": 12,
+            "crystal_rep_20-0_20": 13,
+            "crystal_rep_21-0_21": 14,
+            "crystal_rep_22-0_22": 15,
+            "crystal_rep_23-0_23": 16,
+            "crystal_rep_24-0_24": 17,
+            "crystal_rep_25-0_25": 18,
+            "crystal_rep_26-0_26": 19,
+            "crystal_rep_27-0_27": 20,
+            "crystal_rep_28-0_28": 21,
+            "crystal_rep_29-0_29": 22,
+            "crystal_rep_3-0_3": 23,
+            "crystal_rep_30-0_30": 24,
+            "crystal_rep_31-0_31": 25,
+            "crystal_rep_32-0_32": 26,
+            "crystal_rep_33-0_33": 27,
+            "crystal_rep_34-0_34": 28,
+            "crystal_rep_35-0_35": 29,
+            "crystal_rep_36-0_36": 30,
+            "crystal_rep_37-0_37": 31,
+            "crystal_rep_38-0_38": 32,
+            "crystal_rep_39-0_39": 33,
+            "crystal_rep_4-0_4": 34,
+            "crystal_rep_40-0_40": 35,
+            "crystal_rep_41-0_41": 36,
+            "crystal_rep_42-0_42": 37,
+            "crystal_rep_43-0_43": 38,
+            "crystal_rep_44-0_44": 39,
+            "crystal_rep_45-0_45": 40,
+            "crystal_rep_46-0_46": 41,
+            "crystal_rep_47-0_47": 42,
+            "crystal_rep_48-0_48": 43,
+            "crystal_rep_49-0_49": 44,
+            "crystal_rep_5-0_5": 45,
+            "crystal_rep_50-0_50": 46,
+            "crystal_rep_51-0_51": 47,
+            "crystal_rep_52-0_52": 48,
+            "crystal_rep_53-0_53": 49,
+            "crystal_rep_54-0_54": 50,
+            "crystal_rep_55-0_55": 51,
+            "crystal_rep_56-0_56": 52,
+            "crystal_rep_57-0_57": 53,
+            "crystal_rep_58-0_58": 54,
+            "crystal_rep_59-0_59": 55,
+            "crystal_rep_6-0_6": 56,
+            "crystal_rep_60-0_60": 57,
+            "crystal_rep_61-0_61": 58,
+            "crystal_rep_62-0_62": 59,
+            "crystal_rep_63-0_63": 60,
+            "crystal_rep_64-0_64": 61,
+            "crystal_rep_65-0_65": 62,
+            "crystal_rep_66-0_66": 63,
+            "crystal_rep_67-0_67": 64,
+            "crystal_rep_68-0_68": 65,
+            "crystal_rep_69-0_69": 66,
+            "crystal_rep_7-0_7": 67,
+            "crystal_rep_70-0_70": 68,
+            "crystal_rep_71-0_71": 69,
+            "crystal_rep_72-0_72": 70,
+            "crystal_rep_73-0_73": 71,
+            "crystal_rep_74-0_74": 72,
+            "crystal_rep_75-0_75": 73,
+            "crystal_rep_76-0_76": 74,
+            "crystal_rep_77-0_77": 75,
+            "crystal_rep_78-0_78": 76,
+            "crystal_rep_79-0_79": 77,
+            "crystal_rep_8-0_8": 78,
+            "crystal_rep_80-0_80": 79,
+            "crystal_rep_81-0_81": 80,
+            "crystal_rep_82-0_82": 81,
+            "crystal_rep_83-0_83": 82,
+            "crystal_rep_84-0_84": 83,
+            "crystal_rep_85-0_85": 84,
+            "crystal_rep_86-0_86": 85,
+            "crystal_rep_87-0_87": 86,
+            "crystal_rep_88-0_88": 87,
+            "crystal_rep_89-0_89": 88,
+            "crystal_rep_9-0_9": 89,
+            "crystal_rep_90-0_90": 90,
+            "crystal_rep_91-0_91": 91,
+            "crystal_rep_92-0_92": 92,
+            "crystal_rep_93-0_93": 93,
+            "crystal_rep_94-0_94": 94,
+            "crystal_rep_95-0_95": 95
+          },
+          "detector_id_encoding_scope": "單次載入選取範圍；跨檔案或不同 entry_stop 必須依表重編碼"
+        },
+        "input_csv": {
+          "path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\data\\processed\\gate_singles.csv",
+          "sha256": "d0e5dd1f6dcaf6ef70536565a712ffc4aa9a190a7e04ae1ea8adc14c54edbcd9"
+        }
+      },
+      "metrics": {
+        "dataset_kind": "imported",
+        "singles": 11563,
+        "coincidence_pairs": 1921,
+        "physical_tof_valid_pairs": 1921,
+        "pair_policy": "all_pairs; inclusive |dt| <= window_ps; transaxial angle",
+        "adjacent_timestamp_inversions": 0,
+        "same_truth_event_pairs": 1921,
+        "same_truth_event_fraction": 1.0,
+        "all_valid_centroid_mm": [
+          29.906717543806458,
+          -15.366076369245388,
+          9.947001839692824
+        ],
+        "source_mm": [
+          30.0,
+          -15.0,
+          10.0
+        ],
+        "same_event_valid_centroid_mm": [
+          29.906717543806458,
+          -15.366076369245388,
+          9.947001839692824
+        ],
+        "same_event_centroid_error_mm": 0.38147389130755804,
+        "same_event_event_rmse_mm": 12.766720168709833,
+        "same_event_event_median_error_mm": 8.757295041529785,
+        "histogram_counts_inside_100mm_cube": 1921,
+        "histogram_valid_pairs_outside_cube": 0
+      },
+      "manifest": {
+        "python": "3.11.17 | packaged by conda-forge | (main, Oct 13 2026, 16:36:10) [MSC v.1944 64 bit (AMD64)]",
+        "executable": "C:\\Users\\zenbook\\anaconda3\\envs\\pet-simulation\\python.exe",
+        "platform": "Windows-10-10.0.26220-SP0",
+        "git_revision": "c9caa5583d28eb99a0e7bec5d778471a37666609",
+        "git_dirty": true,
+        "source_sha256": {
+          "__init__.py": "0cfcd161396b66cb803e849c641aae846eb124584f4ee55bb10bf5eeb8792562",
+          "cli.py": "126b0d21fd7cc60cb8d361e2231e0bed65e75149baa20a0eae9864739748bda3",
+          "coincidence.py": "946b834fd7cfac579c1efb64fb28f73b3b554791a7057505e4752462acfed3e0",
+          "config.py": "0d4c464bb8779ceb44ef9270cfe044b9c784a93d50868f1c2f513b8440e149dc",
+          "metrics.py": "095fe596fdbd07b68e407f4db0f3739a3040bbc477bdc7b55cffb2a90c27a68c",
+          "pipeline.py": "2884b9f4076dea7bdd47a8daaea8408a587e082720b0b552cdc7bd2fa5457ab7",
+          "plotting.py": "93d8eef44c7b89e3d4128704e2d5f628598cd7648fbd5baa566582dd6ff7d26e",
+          "reconstruction.py": "25a6bd5a807a3b8a46aba82537d266858858ba855d85d27f23a4bad7d3ffb482",
+          "root_io.py": "52ca8d7add18fce0479cf1f280b309a4e60298b79d31bfd65d16f9ea3af30a7f",
+          "simulation.py": "1c58c4ed9c33305921610d50f5b102b0c6394d49e8c934fdfe0e05844b8c495a",
+          "validation.py": "b8840e6a37c1b3e1250dcb4a498415a6c1fe8fd67728ee3d7192da5251851d99"
+        },
+        "dependencies": {
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "matplotlib": "3.11.2",
+          "uproot": "5.7.7"
+        },
+        "elapsed_seconds": 4.267963100224733,
+        "sha256": {
+          "coincidences_ror.csv": "4aead63066e8431b506697559bfbce02daef16135a1e358be5849a9c636dfabb",
+          "config.json": "7ef6e1c626e147ccc2101ddbdd6581892620ad0b5506e10c6166095bc867e3aa",
+          "metrics.json": "d0cac42b8a7d828d9993049152dac1f909919dd1f09c52fb37e49089ef593f3a",
+          "ror_projections.png": "c55044d05ee080dc60dd228a3fa6a607524144640c29a1bdf6625dbf7988d978",
+          "ror_volume.npz": "fcd0ade38b8c57625511c783d13cf706eda36b7ac2ed889117b269980ea302f4",
+          "singles_arrival_order.csv": "2a4b0ffc6673b5ae249013fa996da720d1f5503dee62d8abb4b68d5b6d53b7d2"
+        }
+      }
+    },
+    "audited": {
+      "label": "直接讀取現有 CSV、NPZ 與 SHA-256 的盤點結果；未重跑模擬或測試",
+      "paths": {
+        "singles": "outputs/gate/singles_arrival_order.csv",
+        "pairs": "outputs/gate/coincidences_ror.csv",
+        "volume": "outputs/gate/ror_volume.npz"
+      },
+      "single_rows": 11563,
+      "pair_rows": 1921,
+      "same_event_pairs": 1921,
+      "physical_valid_pairs": 1921,
+      "valid_same_event_pairs": 1921,
+      "valid_other_event_pairs": 0,
+      "invalid_pairs": 0,
+      "energy_cut_surviving_singles": 8383,
+      "distinct_source_events_observed": 7451,
+      "singles_per_observed_event_histogram": {
+        "1": 4012,
+        "2": 2802,
+        "3": 602,
+        "4": 34,
+        "5": 1
+      },
+      "distinct_same_event_pair_event_ids": 1921,
+      "dt_minmax_ps": [
+        0,
+        450
+      ],
+      "timestamp_range_ps": [
+        6402016,
+        149997470703
+      ],
+      "arrival_column_is_timestamp_copy": true,
+      "distinct_lanes": 1,
+      "volume_shape": [
+        64,
+        64,
+        64
+      ],
+      "volume_count_sum": 1921,
+      "volume_axis_range_mm": [
+        -100.0,
+        100.0
+      ],
+      "recomputed_valid_same_event_centroid_mm": [
+        29.906717543806455,
+        -15.366076369245388,
+        9.947001839692824
+      ],
+      "recomputed_centroid_error_mm": 0.38147389130755893,
+      "recomputed_event_rmse_mm": 12.766720168709833,
+      "source_module_hashes_match_current": {
+        "__init__.py": true,
+        "cli.py": true,
+        "coincidence.py": true,
+        "config.py": true,
+        "metrics.py": true,
+        "pipeline.py": true,
+        "plotting.py": true,
+        "reconstruction.py": true,
+        "root_io.py": true,
+        "simulation.py": true,
+        "validation.py": true
+      },
+      "output_hashes_match_manifest": {
+        "coincidences_ror.csv": true,
+        "config.json": true,
+        "metrics.json": true,
+        "ror_projections.png": true,
+        "ror_volume.npz": true,
+        "singles_arrival_order.csv": true
+      },
+      "report_copies_match_outputs": {
+        "metrics": true,
+        "config": true,
+        "manifest": true,
+        "image": true
+      }
+    },
+    "model_notes": [
+      "OpenGATE/opengate-core均10.1.1，單執行緒，seed20261019；直接產生各向同性背對背511 keV光子，關閉非共線性，不模擬正電子飛行與衰變。",
+      "96顆BGO，中心半徑200 mm，晶體徑向×切向×軸向20×10×100 mm；BGO以Bi4Ge3O12、7.13 g/cm³定義；空氣world600×600×300 mm。",
+      "source=(30,-15,10) mm，activity200000 Bq、時長0.15 s，因此期望30000個Poisson來源事件，實際29935；此處沒有synthetic的先驗幾何接受篩選，兩組不可當作同條件效能排名。",
+      "G4EmStandardPhysics_option4，production cut=0.1 mm；107916 Hits→11563 SinglesIdeal→11563加入時間模糊的Singles。adder明訂EnergyWeightedCentroidPosition，保留跨晶體多重互動；未單獨驗證OpenGATE各預設聚合屬性。",
+      "CTR=200 ps FWHM是兩端時間差的FWHM；每端獨立Gaussian FWHM=200/sqrt(2)=141.421356 ps。不能把200 ps當成每一端σ或FWHM。",
+      "匯入GlobalTime(ns)×1000→ps、TotalEnergyDeposit(MeV)×1000→keV，位置mm不變。PreStepUniqueVolumeID為字串，依本次載入選取的字典序編碼，表保留在provenance；不同檔案或不同entry_stop合併前必須重編碼。",
+      "此輸入沒有實測arrival time或lane資料：arrival_time_ps是timestamp_ps複本、lane_id=0；逆序0不能當作真實硬體串流已驗證。",
+      "沒有受測物、完整電子學、能量解析度模糊、死時間、正規化、衰減/散射/隨機修正；同EventID不能證明兩端恰好各來自未散射的不同初級光子。"
+    ],
+    "integrity": {
+      "root_sha256_matches_metadata": true,
+      "generator_sha256_matches_metadata": true,
+      "report_metadata_matches_raw_metadata": true,
+      "processed_csv_sha256_matches_config": true
+    },
+    "paths": {
+      "raw": "data/raw/gate_demo/singles.root",
+      "raw_metadata": "data/raw/gate_demo/metadata.json",
+      "mapping": "data/raw/gate_demo/mapping.json",
+      "processed_csv": "data/processed/gate_singles.csv",
+      "processed_provenance": "data/processed/gate_singles.provenance.json",
+      "outputs": "outputs/gate",
+      "report_metadata": "reports/gate_metadata.json"
+    }
+  },
+  "timing_sweep": {
+    "label": "時間抖動與固定半環時間偏移",
+    "configuration": {
+      "n_events": 4000,
+      "detection_efficiency": 1.0,
+      "background_singles": 0,
+      "conditional_accepted_activity_bq": 10000,
+      "seed": 20261019,
+      "source_mm": [
+        20,
+        -12,
+        12
+      ],
+      "timing_sigma_ps": [
+        0,
+        40,
+        80,
+        160
+      ],
+      "hemisphere_offset_ps": [
+        0,
+        100,
+        300
+      ],
+      "energy_sigma_kev": 25
+    },
+    "rows": [
+      {
+        "timing_sigma_ps": 0,
+        "hemisphere_offset_ps": 0,
+        "true_pairs": 4000,
+        "centroid_error_mm": 0.0013670783064660469,
+        "event_rmse_mm": 0.06069354955019229,
+        "expected_timing_rmse_mm": 0.0
+      },
+      {
+        "timing_sigma_ps": 0,
+        "hemisphere_offset_ps": 100,
+        "true_pairs": 4000,
+        "centroid_error_mm": 9.43458944440022,
+        "event_rmse_mm": 14.792956029854167,
+        "expected_timing_rmse_mm": 0.0
+      },
+      {
+        "timing_sigma_ps": 0,
+        "hemisphere_offset_ps": 300,
+        "true_pairs": 4000,
+        "centroid_error_mm": 28.304195720154322,
+        "event_rmse_mm": 44.37982191293891,
+        "expected_timing_rmse_mm": 0.0
+      },
+      {
+        "timing_sigma_ps": 40,
+        "hemisphere_offset_ps": 0,
+        "true_pairs": 4000,
+        "centroid_error_mm": 0.06152564798253127,
+        "event_rmse_mm": 8.502888583595006,
+        "expected_timing_rmse_mm": 8.479411200015328
+      },
+      {
+        "timing_sigma_ps": 40,
+        "hemisphere_offset_ps": 100,
+        "true_pairs": 4000,
+        "centroid_error_mm": 9.480002188670134,
+        "event_rmse_mm": 17.171918581061483,
+        "expected_timing_rmse_mm": 8.479411200015328
+      },
+      {
+        "timing_sigma_ps": 40,
+        "hemisphere_offset_ps": 300,
+        "true_pairs": 4000,
+        "centroid_error_mm": 28.34954706569924,
+        "event_rmse_mm": 45.31122875036875,
+        "expected_timing_rmse_mm": 8.479411200015328
+      },
+      {
+        "timing_sigma_ps": 80,
+        "hemisphere_offset_ps": 0,
+        "true_pairs": 4000,
+        "centroid_error_mm": 0.12351797921297676,
+        "event_rmse_mm": 17.00624412964944,
+        "expected_timing_rmse_mm": 16.958822400030655
+      },
+      {
+        "timing_sigma_ps": 80,
+        "hemisphere_offset_ps": 100,
+        "true_pairs": 4000,
+        "centroid_error_mm": 9.52517315149575,
+        "event_rmse_mm": 22.704894398756867,
+        "expected_timing_rmse_mm": 16.958822400030655
+      },
+      {
+        "timing_sigma_ps": 80,
+        "hemisphere_offset_ps": 300,
+        "true_pairs": 4000,
+        "centroid_error_mm": 28.394529798272643,
+        "event_rmse_mm": 47.76183964543369,
+        "expected_timing_rmse_mm": 16.958822400030655
+      },
+      {
+        "timing_sigma_ps": 160,
+        "hemisphere_offset_ps": 0,
+        "true_pairs": 4000,
+        "centroid_error_mm": 0.24698947221197035,
+        "event_rmse_mm": 34.013327290019355,
+        "expected_timing_rmse_mm": 33.91764480006131
+      },
+      {
+        "timing_sigma_ps": 160,
+        "hemisphere_offset_ps": 100,
+        "true_pairs": 4000,
+        "centroid_error_mm": 9.616957618615515,
+        "event_rmse_mm": 37.29202597240146,
+        "expected_timing_rmse_mm": 33.91764480006131
+      },
+      {
+        "timing_sigma_ps": 160,
+        "hemisphere_offset_ps": 300,
+        "true_pairs": 4000,
+        "centroid_error_mm": 28.485587216440145,
+        "event_rmse_mm": 56.314776505259566,
+        "expected_timing_rmse_mm": 33.91764480006131
+      }
+    ],
+    "theory": "獨立同分布單端Gaussian時間σ下，時間差σ=√2σ，沿LOR位置σ=cσ/√2。這個解析預測用於無scatter且連續真實交點的理想模型，零σ仍保留整數ps量化。",
+    "bias_note": "固定偏移加在x>=0端的量測時間；僅跨偏移邊界的pair產生差值偏移。受影響pair沿LOR位移量為c|b|/2，最後三維中心偏差還依角度投影與幾何組合改變，所以100 ps不等於所有實驗中心都必然偏移14.99 mm。",
+    "sources": [
+      "src/pet_sim/validation.py",
+      "reports/timing_sweep.csv"
+    ]
+  },
+  "verification": {
+    "label": "既有測試證據與本次重新核對的範圍",
+    "pytest_record": {
+      "path": "reports/pytest.txt",
+      "summary": "61 passed in 103.42s (0:01:43)",
+      "experiment_date": "2026-10-19",
+      "date_evidence": "reports/validation_zh_TW.md宣告實驗日期；pytest.txt本身沒有時間戳記",
+      "rerun_in_this_audit": false
+    },
+    "software_validation": {
+      "passed": true,
+      "oracle_singles": 600,
+      "oracle_pairs": 218,
+      "oracle_matches_sliding_window": true,
+      "arrival_order_invariant": true,
+      "noiseless_true_pairs": 1000,
+      "noiseless_max_error_mm": 0.14440908355745685,
+      "integer_ps_error_bound_mm": 0.149896229,
+      "timing_rmse_mm": 16.957193623372998,
+      "timing_expected_rmse_mm": 16.958822400030655,
+      "timing_relative_error": 9.60430281795599e-05
+    },
+    "software_validation_scope": "600筆Singles、218 pairs的獨立暴力oracle一致；亂序輸入不變；1000個零雜訊真配對最大誤差低於整數ps界限；12000個低事件率無背景雙端可見事件的時間RMSE符合解析值5%容許範圍。實際relative error=0.0096043%。",
+    "test_coverage": [
+      "含端點的時間/能量/角度、相同時間、多重全配對、detector相同剔除",
+      "12個seed隨機50筆的暴力oracle與打亂順序",
+      "時間戳記大於2^53與int64極值、TOF正負號及交換兩端、空資料、輸入不合法",
+      "synthetic重現性、負能量左設限、時間與傳輸溢位",
+      "ROOT人工fixture之單位、分支、空/截斷載入、明訂時間原點、字串ID編碼",
+      "CSV/圖/NPZ端到端輸出、無truth輸入不冒稱真值結果"
+    ],
+    "root_fixture_caution": "tests/test_root_io.py用uproot人工建立TTree/RNTuple，不是GATE或醫療掃描資料；實際GATE資料另由已保存正式案例證明介接可用。",
+    "geant4_data_record": {
+      "verification_date": "2026-10-19",
+      "opengate_core_version": "10.1.1",
+      "installed_helper_sha256": "b83e34eba2c05edecbf47cb36ec3e4f30a48f060c84d8327a1c1462530cce028",
+      "official_helper_source": "https://github.com/OpenGATE/opengate/blob/7122b26e1de6e6c09ed3e9aa16a7e315f9f6e9c0/core/opengate_core/g4DataSetup.py",
+      "helper_ast_matches_official_source": true,
+      "data_directory": "C:\\Users\\zenbook\\anaconda3\\envs\\pet-simulation\\Lib\\site-packages\\opengate_core\\geant4_data",
+      "required_datasets": [
+        {
+          "environment_variable": "G4NEUTRONHPDATA",
+          "versioned_folder": "G4NDL4.7.1",
+          "folder_present": true,
+          "source_url": "https://cern.ch/geant4-data/datasets/G4NDL.4.7.1.tar.gz"
+        },
+        {
+          "environment_variable": "G4LEDATA",
+          "versioned_folder": "G4EMLOW8.8",
+          "folder_present": true,
+          "source_url": "https://cern.ch/geant4-data/datasets/G4EMLOW.8.8.tar.gz"
+        },
+        {
+          "environment_variable": "G4LEVELGAMMADATA",
+          "versioned_folder": "PhotonEvaporation6.1.2",
+          "folder_present": true,
+          "source_url": "https://cern.ch/geant4-data/datasets/G4PhotonEvaporation.6.1.2.tar.gz"
+        },
+        {
+          "environment_variable": "G4RADIOACTIVEDATA",
+          "versioned_folder": "RadioactiveDecay6.1.2",
+          "folder_present": true,
+          "source_url": "https://cern.ch/geant4-data/datasets/G4RadioactiveDecay.6.1.2.tar.gz"
+        },
+        {
+          "environment_variable": "G4PARTICLEXSDATA",
+          "versioned_folder": "G4PARTICLEXS4.2",
+          "folder_present": true,
+          "source_url": "https://cern.ch/geant4-data/datasets/G4PARTICLEXS.4.2.tar.gz"
+        },
+        {
+          "environment_variable": "G4PIIDATA",
+          "versioned_folder": "G4PII1.3",
+          "folder_present": true,
+          "source_url": "https://cern.ch/geant4-data/datasets/G4PII.1.3.tar.gz"
+        },
+        {
+          "environment_variable": "G4REALSURFACEDATA",
+          "versioned_folder": "RealSurface2.2",
+          "folder_present": true,
+          "source_url": "https://cern.ch/geant4-data/datasets/G4RealSurface.2.2.tar.gz"
+        },
+        {
+          "environment_variable": "G4SAIDXSDATA",
+          "versioned_folder": "G4SAIDDATA2.0",
+          "folder_present": true,
+          "source_url": "https://cern.ch/geant4-data/datasets/G4SAIDDATA.2.0.tar.gz"
+        },
+        {
+          "environment_variable": "G4ABLADATA",
+          "versioned_folder": "G4ABLA3.3",
+          "folder_present": true,
+          "source_url": "https://cern.ch/geant4-data/datasets/G4ABLA.3.3.tar.gz"
+        },
+        {
+          "environment_variable": "G4INCLDATA",
+          "versioned_folder": "G4INCL1.3",
+          "folder_present": true,
+          "source_url": "https://cern.ch/geant4-data/datasets/G4INCL.1.3.tar.gz"
+        },
+        {
+          "environment_variable": "G4ENSDFSTATEDATA",
+          "versioned_folder": "G4ENSDFSTATE3.0",
+          "folder_present": true,
+          "source_url": "https://cern.ch/geant4-data/datasets/G4ENSDFSTATE.3.0.tar.gz"
+        },
+        {
+          "environment_variable": "G4CHANNELINGDATA",
+          "versioned_folder": "G4CHANNELING2.0",
+          "folder_present": true,
+          "source_url": "https://cern.ch/geant4-data/datasets/G4CHANNELING.2.0.tar.gz"
+        }
+      ],
+      "all_12_required_folders_present": true,
+      "ndl_archive_md5_verified_before_extraction": {
+        "source_url": "https://geant4-data.web.cern.ch/datasets/G4NDL.4.7.1.tar.gz",
+        "prefix_preserved_bytes": 694550528,
+        "total_bytes": 1113113881,
+        "md5": "54f0ed3995856f02433d42ec96d70bc6",
+        "md5_source": "https://github.com/Geant4/geant4/blob/v11.4.0/cmake/Modules/G4DatasetDefinitions.cmake",
+        "range_workers": 6,
+        "elapsed_seconds": 305.36362319998443
+      },
+      "runtime_verification": "OpenGATE 10.1.1 Windows Conda smoke 完整生成 Hits / SinglesIdeal / Singles ROOT 並重新讀取；實際來源事件2971、未配對 Singles1130。"
+    },
+    "geant4_cautions": [
+      "記錄核對12個必要版本資料夾均存在、helper AST匹配官方來源；其中NDL archive有官方MD5核對，不等於所有12份archive均另算官方checksum。",
+      "runtime_verification欄記載2971事件/1130Singles是smoke，與正式29935事件/11563Singles不同。",
+      "記錄OpenGATE/core套件版本，但沒有獨立保存Geant4 C++ engine版本字串；勿從官方v11.4.0資料版本參照自行推斷engine版本。"
+    ],
+    "static_check_evidence": "README與驗證報告記載已執行Ruff及pip依賴檢查；專案沒有獨立保存完整Ruff/pip-check輸出，本次未重跑，HTML應避免冒充新檢查。",
+    "ci_scope": "存在.github/workflows/tests.yml：Ubuntu/Python3.11安裝、Ruff、pytest、解析validate；未檢查GitHub遠端Actions當前綠燈，且此workflow沒有安裝或執行OpenGATE。"
+  },
+  "versions": {
+    "label": "紀錄版本與目前讀到的套件metadata",
+    "recorded_python": "3.11.17 | packaged by conda-forge | (main, Oct 13 2026, 16:36:10) [MSC v.1944 64 bit (AMD64)]",
+    "current_audit_python": "3.11.17 | packaged by conda-forge | (main, Oct 13 2026, 16:36:10) [MSC v.1944 64 bit (AMD64)]",
+    "current_package_metadata": {
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "matplotlib": "3.11.2",
+      "uproot": "5.7.7",
+      "opengate": "10.1.1",
+      "opengate-core": "10.1.1",
+      "pytest": "9.1.1",
+      "ruff": "0.17.1"
+    },
+    "recorded_core_dependencies": {
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "matplotlib": "3.11.2",
+      "uproot": "5.7.7"
+    },
+    "source": "requirements-lock.txt與兩組manifest；目前metadata讀取不匯入OpenGATE、不執行物理模擬。"
+  },
+  "limitations_and_not_validated": {
+    "label": "尚未實作、未驗證與應避免的結論",
+    "items": [
+      "沒有真實掃描儀或病人臨床raw資料；目前是理想幾何合成與OpenGATE物理模擬。",
+      "不是完整重現J-PET論文：無雙端塑膠閃爍條/TDC原始解碼、有限寬度ROR核、FPGA/SoC即時pipeline。",
+      "無MLEM/OSEM、完整系統矩陣、正規化、衰減、散射、隨機、死時間修正或NEMA臨床影像品質量測。",
+      "沒有線上reorder/watermark、跨檔分塊完整性、大型資料吞吐量、FPGA資源/時序、White Rabbit實測同步。",
+      "沒有完整scatter/random/true分類；GATE同事件比例100%不是完美precision，沒有外部GATE sorter逐pair一致性比較。",
+      "沒有跨seed統計信賴區間或參數全面敏感度研究；固定seed重現性不等於所有情境正確。",
+      "沒有證明能從只有Coincidences的外部ROOT還原真正原始Singles。",
+      "manifest執行時間是此Windows本機整個輸出pipeline耗時，含CSV/PNG/NPZ與雜湊，不能當作純配對速率或硬體吞吐量。",
+      "只有NTuple/表格與解析假設下的時間量化驗證，不應稱完美精度或把小中心偏差等同單事件空間解析度。",
+      "目前本機data/raw只有本機生成的gate_demo與gate_smoke，不應把這些成果表述為已下載並驗證某個外部公開掃描資料集。",
+      "目前誤差統計相對傳入的單一source_mm參考點；本次兩案例均為固定點光源，尚未做分布源逐事件真實位置的誤差研究。"
+    ]
+  },
+  "source_files": [
+    {
+      "path": "src/pet_sim/config.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\config.py",
+      "sha256": "0d4c464bb8779ceb44ef9270cfe044b9c784a93d50868f1c2f513b8440e149dc",
+      "size_bytes": 3328,
+      "function_lines": {
+        "SimulationConfig": 12,
+        "CoincidenceConfig": 79
+      }
+    },
+    {
+      "path": "src/pet_sim/simulation.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\simulation.py",
+      "sha256": "1c58c4ed9c33305921610d50f5b102b0c6394d49e8c934fdfe0e05844b8c495a",
+      "size_bytes": 7604,
+      "function_lines": {
+        "_accepted_intersections": 9,
+        "_detector_ids": 43,
+        "simulate_singles": 53
+      }
+    },
+    {
+      "path": "src/pet_sim/coincidence.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\coincidence.py",
+      "sha256": "946b834fd7cfac579c1efb64fb28f73b3b554791a7057505e4752462acfed3e0",
+      "size_bytes": 6565,
+      "function_lines": {
+        "validate_singles": 30,
+        "_geometry_good": 57,
+        "find_coincidences": 66,
+        "brute_force_pair_ids": 150
+      }
+    },
+    {
+      "path": "src/pet_sim/root_io.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\root_io.py",
+      "sha256": "52ca8d7add18fce0479cf1f280b309a4e60298b79d31bfd65d16f9ea3af30a7f",
+      "size_bytes": 12604,
+      "function_lines": {
+        "inspect_root": 32,
+        "_decimal": 56,
+        "_integer_array": 69,
+        "_categorical_detectors": 82,
+        "_timestamps": 102,
+        "_finite_array": 120,
+        "_validate_mapping": 132,
+        "load_gate_singles": 161
+      }
+    },
+    {
+      "path": "src/pet_sim/reconstruction.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\reconstruction.py",
+      "sha256": "25a6bd5a807a3b8a46aba82537d266858858ba855d85d27f23a4bad7d3ffb482",
+      "size_bytes": 3134,
+      "function_lines": {
+        "reconstruct_ror": 9,
+        "histogram_ror": 52
+      }
+    },
+    {
+      "path": "src/pet_sim/metrics.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\metrics.py",
+      "sha256": "095fe596fdbd07b68e407f4db0f3739a3040bbc477bdc7b55cffb2a90c27a68c",
+      "size_bytes": 3232,
+      "function_lines": {
+        "summarize": 6
+      }
+    },
+    {
+      "path": "src/pet_sim/pipeline.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\pipeline.py",
+      "sha256": "2884b9f4076dea7bdd47a8daaea8408a587e082720b0b552cdc7bd2fa5457ab7",
+      "size_bytes": 3841,
+      "function_lines": {
+        "write_json": 22,
+        "file_sha256": 28,
+        "run_pipeline": 37
+      }
+    },
+    {
+      "path": "src/pet_sim/plotting.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\plotting.py",
+      "sha256": "93d8eef44c7b89e3d4128704e2d5f628598cd7648fbd5baa566582dd6ff7d26e",
+      "size_bytes": 1607,
+      "function_lines": {
+        "save_ror_plot": 10
+      }
+    },
+    {
+      "path": "src/pet_sim/validation.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\validation.py",
+      "sha256": "b8840e6a37c1b3e1250dcb4a498415a6c1fe8fd67728ee3d7192da5251851d99",
+      "size_bytes": 3962,
+      "function_lines": {
+        "pair_ids": 16,
+        "validate_software": 23,
+        "run_sweep": 75
+      }
+    },
+    {
+      "path": "src/pet_sim/cli.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\src\\pet_sim\\cli.py",
+      "sha256": "126b0d21fd7cc60cb8d361e2231e0bed65e75149baa20a0eae9864739748bda3",
+      "size_bytes": 4633,
+      "function_lines": {
+        "main": 17
+      }
+    },
+    {
+      "path": "scripts/generate_gate_singles.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\scripts\\generate_gate_singles.py",
+      "sha256": "6c43f6c7fd0ba164807abbce0f2369f6eddd96e834871feeb4b91ab19f7d74cc",
+      "size_bytes": 11774,
+      "function_lines": {
+        "parse_args": 20,
+        "describe": 42,
+        "build_simulation": 87,
+        "inspect_root": 170,
+        "import_mapping": 212,
+        "main": 236
+      }
+    },
+    {
+      "path": "scripts/build_report.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\scripts\\build_report.py",
+      "sha256": "d0263509f7722444f1dfecc8285e2cdb419c28dfd5caea780eb6128717874861",
+      "size_bytes": 10765,
+      "function_lines": {
+        "load": 15,
+        "coordinate": 19,
+        "main": 23
+      }
+    },
+    {
+      "path": "scripts/activate.ps1",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\scripts\\activate.ps1",
+      "sha256": "7267cbf894288df6fb6cabea612a91f8505b6767ba279487b5d6ff0206b5f905",
+      "size_bytes": 625
+    },
+    {
+      "path": "scripts/reproduce.ps1",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\scripts\\reproduce.ps1",
+      "sha256": "2edecf2e4d7d9150f5ecc5a889e3b9b5465d862cc2cff90e85aed4f1fd568025",
+      "size_bytes": 685
+    },
+    {
+      "path": "reports/validation_zh_TW.md",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\reports\\validation_zh_TW.md",
+      "sha256": "0dfaa227e7a14dcfcd9a5b41c69db76497df584a66795336dd0b0a4416d54d70",
+      "size_bytes": 5714
+    },
+    {
+      "path": "reports/pytest.txt",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\reports\\pytest.txt",
+      "sha256": "1d5a6b7a56ec21ce6b93dcaad42453ebb784a0bb1f05c480cbc96b2b14dd6840",
+      "size_bytes": 113
+    },
+    {
+      "path": "reports/software_validation.json",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\reports\\software_validation.json",
+      "sha256": "0e5329e1bd8e7bb528c772ce18f55a1c50e4cd03390a94a029bd2033db154d80",
+      "size_bytes": 419
+    },
+    {
+      "path": "reports/geant4_verification.json",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\reports\\geant4_verification.json",
+      "sha256": "5d01a06daa6e8d65980935bbfde5e3319bc2ce5a06c25726f6c3384fc8310c8c",
+      "size_bytes": 3854
+    },
+    {
+      "path": "reports/gate_metadata.json",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\reports\\gate_metadata.json",
+      "sha256": "ed5433b5db660006bf5c05eb2ca63420bd14d9731f3d6f40a4d7a83114a2875a",
+      "size_bytes": 3709
+    },
+    {
+      "path": "reports/gate_mapping.json",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\reports\\gate_mapping.json",
+      "sha256": "81eaf72939050c34365258898ff2a2d2688ff80d5d972a5697cbdf3e7e7d9ecc",
+      "size_bytes": 572
+    },
+    {
+      "path": "reports/timing_sweep.csv",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\reports\\timing_sweep.csv",
+      "sha256": "4be32ed6c33c920b76e68d9ee1247f63e32c0d67d14d0b73999a6efd7c75708b",
+      "size_bytes": 880
+    },
+    {
+      "path": "tests/test_root_io.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\tests\\test_root_io.py",
+      "sha256": "2e6d4b0467af4f56024082d1463335c6ef08f46f4cc6706fc7401342b2728482",
+      "size_bytes": 9321,
+      "function_lines": {
+        "mapping": 11,
+        "write_root": 27,
+        "test_inspect_and_convert_units": 55,
+        "test_large_integer_times_do_not_pass_through_float": 76,
+        "test_overflow_requires_explicit_origin": 86,
+        "test_empty_and_bounded_reads": 94,
+        "test_invalid_entry_stop": 104,
+        "test_requires_explicit_valid_units": 118,
+        "test_missing_tree_and_singles_branches": 124,
+        "test_missing_required_mapping": 133,
+        "test_reject_malformed_values": 148,
+        "test_optional_truth_is_explicit_and_preserved": 154,
+        "test_partial_truth_position_is_rejected": 178,
+        "test_ns_rounding_rule": 184,
+        "test_explicit_categorical_detector_labels": 190,
+        "test_categorical_detector_rejects_empty_label": 210,
+        "test_unknown_detector_encoding": 217,
+        "test_default_uproot_container_is_inspected_and_read": 223
+      }
+    },
+    {
+      "path": "tests/test_coincidence.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\tests\\test_coincidence.py",
+      "sha256": "5f969b16cea24abca6e99f9a0cc94058f0352b6c614fc8bef42cc14992bf34ad",
+      "size_bytes": 3604,
+      "function_lines": {
+        "make_frame": 12,
+        "test_inclusive_time_energy_and_angle_edges": 28,
+        "test_all_pairs_multiples_and_equal_times": 34,
+        "test_detector_and_energy_filter": 40,
+        "test_no_float_precision_or_int64_overflow_in_matcher": 45,
+        "test_randomized_oracle_and_arrival_permutation": 53,
+        "test_truth_is_not_used_for_pairing_and_runs_scope_labels": 68,
+        "test_empty_and_bad_inputs": 78,
+        "test_invalid_cuts": 100
+      }
+    },
+    {
+      "path": "tests/test_simulation_reconstruction.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\tests\\test_simulation_reconstruction.py",
+      "sha256": "40ae3633a0ab839d9e89a36cd2257564d5b52697eaf0dc58c6a3a88c276f14f0",
+      "size_bytes": 7652,
+      "function_lines": {
+        "_truth_pairs": 14,
+        "test_tof_sign_and_swap_invariance": 32,
+        "test_noiseless_simulation_reconstructs_source_with_integer_ps_bound": 67,
+        "test_simulation_is_deterministic_and_background_has_no_source_truth": 89,
+        "test_longitudinal_variance_matches_independent_single_timing_noise": 114,
+        "test_impossible_tof_is_flagged_without_clipping_and_histogram_conserves_counts": 136,
+        "test_empty_reconstruction_is_well_formed": 160,
+        "test_integer_time_difference_preserves_ps_and_does_not_overflow": 170,
+        "test_simulation_rejects_unrepresentable_timestamps": 200,
+        "test_simulation_rejects_arrival_time_overflow": 206,
+        "test_broad_energy_response_is_nonnegative_and_reproducible": 221
+      }
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\tests\\test_pipeline.py",
+      "sha256": "788efab0923ba8ba2a923e4d9e89130b3648c661b5c8ec8e003b0d818df93f3d",
+      "size_bytes": 1971,
+      "function_lines": {
+        "test_end_to_end_artifacts": 16,
+        "test_empty_pipeline": 31,
+        "test_independent_software_validation": 38,
+        "test_unlabeled_import_does_not_claim_truth_metrics": 42
+      }
+    },
+    {
+      "path": "README.md",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\README.md",
+      "sha256": "557bd757f7e4848f87e4aa0815f15f848fbd899513537aae9a07c900195e0081",
+      "size_bytes": 13113
+    },
+    {
+      "path": "docs/sources.md",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\docs\\sources.md",
+      "sha256": "f1e8c96dd3ca94a5a9f7c3e1b659b44b1035ad1158abe6cf777eaf72da648ac3",
+      "size_bytes": 5408
+    },
+    {
+      "path": "requirements-lock.txt",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\requirements-lock.txt",
+      "sha256": "33f2a2309969d9d4c07d105fc310370ddd27d66c9209baa781740d2060d7824a",
+      "size_bytes": 1592
+    },
+    {
+      "path": ".github/workflows/tests.yml",
+      "absolute_path": "C:\\Users\\zenbook\\我的雲端硬碟\\碩士班研究資料\\06_PET\\.github\\workflows\\tests.yml",
+      "sha256": "2667548dfddcaa4a9c62bbd405457a6dc10c65e2c543060dea451dbbac73dcbb",
+      "size_bytes": 398
+    }
+  ]
+}

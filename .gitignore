@@ -9,6 +9,8 @@ build/
 dist/
 data/
 outputs/
+# HTML 報告重新整理的完整逐筆資料；可由既有 outputs 再生，不重複提交。
+docs/pet_explainer_snapshot.json
 *.root
 *.zip
 *.log

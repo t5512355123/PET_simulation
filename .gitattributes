@@ -2,6 +2,8 @@
 *.py text eol=lf
 *.md text eol=lf
 *.json text eol=lf
+# 科學圖保留產生時的原始位元組，以便跨平台核對 manifest 雜湊。
+reports/explainer_assets/*.svg binary
 *.yml text eol=lf
 *.ps1 text eol=crlf
 

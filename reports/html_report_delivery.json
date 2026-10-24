@@ -1,0 +1,61 @@
+{
+  "report_created_at": "2026-10-24",
+  "experiment_evidence_as_of": "2026-10-19",
+  "html_path": "C:\\Users\\zenbook\\我的雲端硬碟\\PET_軟體驗證完整說明報告_2026-10-24.html",
+  "html_bytes": 31455941,
+  "html_sha256": "095b735c0978c074034c7f420db1d05fdd03ead7471cf705289d61e035f15fd5",
+  "delivery_matches_verified_export": true,
+  "artifact_id": "report:c7677671-404d-4971-b4e5-9130db86b652",
+  "build_status": "complete",
+  "chapter_count": 24,
+  "figure_count": 20,
+  "table_count": 13,
+  "body_character_count_including_markdown": 33307,
+  "reviewed_row_counts": {
+    "summary": 2,
+    "sweep": 12,
+    "validation": 1,
+    "synthetic_events": 40,
+    "pair_example": 1,
+    "pair_singles": 2,
+    "gate_metadata": 1,
+    "parameters": 2,
+    "synthetic_singles_all": 15871,
+    "gate_singles_all": 11563,
+    "synthetic_pairs_all": 7262,
+    "gate_pairs_all": 1921,
+    "voxel": 1355,
+    "figure_evidence": 20,
+    "illustrations": 3,
+    "audit": 1
+  },
+  "asset_hashes_checked": 40,
+  "rendered_checks": {
+    "method": "Codex in-app browser; exported single HTML served alone over loopback HTTP",
+    "all_20_embedded_png_images_loaded": true,
+    "external_http_script_or_stylesheet_elements": 0,
+    "console_errors_or_warnings_on_export_check": 0,
+    "toc_targets_present": 24,
+    "source_inspector_and_actual_pair_preview": "passed on same built content",
+    "desktop_visual_check": "1440px viewport; light palette, results table, formula demonstrator",
+    "narrow_layout_check": "390px viewport DOM; page has no horizontal overflow, wide table scrolls internally",
+    "image_visual_check": "20 figures reviewed via two contact sheets; selected figures enlarged",
+    "tof_probe_negative_100_ps": "x=+14.990mm; valid",
+    "tof_probe_positive_100_ps": "x=-14.990mm; valid",
+    "tof_probe_positive_4000_ps": "x=-599.585mm; invalid",
+    "tof_control_reset": "0ps",
+    "unperformed_checks": [
+      "No complete print/PDF pagination review",
+      "No new clinical or hardware validation"
+    ]
+  },
+  "software_checks": {
+    "ruff_check_all_current_files": "passed 2026-10-24",
+    "shared_runtime_authoring_integrity_build_and_offline_export": "passed",
+    "core_pet_modules_changed_by_report_work": false,
+    "full_local_pytest_rerun_during_report_authoring": false,
+    "historical_pytest_count": 61,
+    "historical_pytest_date": "2026-10-19",
+    "independent_read_only_fact_review": "passed; source code, metrics, units, formulas and commands compared"
+  }
+}
