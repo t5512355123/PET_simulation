@@ -57,5 +57,6 @@
     "historical_pytest_count": 61,
     "historical_pytest_date": "2026-10-19",
     "independent_read_only_fact_review": "passed; source code, metrics, units, formulas and commands compared"
-  }
+  },
+  "git_asset_blob_hashes_checked": 40
 }
