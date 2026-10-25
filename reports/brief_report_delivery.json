@@ -1,0 +1,19 @@
+{
+  "updated_at": "2026-10-25",
+  "evidence_as_of": "2026-10-19",
+  "html": "C:\\Users\\zenbook\\我的雲端硬碟\\PET_模擬簡明報告.html",
+  "sha256": "aa5f3c97d260a3f27239064dd5435a94e3267227a4c050f98eed735a9f02b297",
+  "bytes": 27078017,
+  "original_delivery_updated": true,
+  "original_long_export_preserved": true,
+  "sections": 5,
+  "result_figures": 1,
+  "flow_steps": 3,
+  "rendered_article_characters": 637,
+  "desktop_1200px_visual_review": "passed",
+  "narrow_390px_visual_review": "passed; stacked flow; no page horizontal overflow",
+  "figure_loaded": true,
+  "browser_console_errors_or_warnings": 0,
+  "shared_runtime_verified_build_and_offline_export": "passed",
+  "new_pet_simulation_or_full_tests_run": false
+}

@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-10-25",
+  "experiment_as_of": "2026-10-19",
+  "source": "outputs\\gate\\coincidences_ror.csv",
+  "source_sha256": "4aead63066e8431b506697559bfbce02daef16135a1e358be5849a9c636dfabb",
+  "selection": "physical_tof_valid; no truth-based event selection",
+  "pairs": 1921,
+  "source_xy_mm": [
+    30.0,
+    -15.0
+  ],
+  "image_sha256": "13b0d9ed20ac7c3c5067bfe052e4f71f788ceb6f11da387405c5f262dd143ffa",
+  "new_simulation_executed": false
+}
