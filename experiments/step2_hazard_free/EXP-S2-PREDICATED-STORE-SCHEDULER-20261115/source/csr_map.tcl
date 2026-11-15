@@ -1,0 +1,8 @@
+set CSR_STATUS 0x18
+set CSR_START 0x8
+set CSR_MODE 0x20
+set CSR_NEV 0x28
+set CSR_OFF 0x30
+set CSR_CNT 0x38
+set CSR_REP 0x40
+set DONE_MASK 0x2
