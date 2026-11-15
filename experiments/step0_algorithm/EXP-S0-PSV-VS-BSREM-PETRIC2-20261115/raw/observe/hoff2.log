@@ -1,0 +1,259 @@
+
+WARNING: Scanner::get_scanner_from_name: scanner'NeuroLF_15mm' not found
+
+INFO: Interfile warning: I did not recognise the scanner from 'originating_system' (NeuroLF_15mm). Hopefully there is enough information present. I will check this now.
+
+WARNING: GeometryBlocksOnCylindrical for scanner NeuroLF_15mm: block-size/spacing and ring-spacing give different scanner length, which might affect some results in the future
+from blocks: 159.991 and from ring_spacing: 155.711
+
+WARNING: Scanner: maximum number of timing positions is not yet known. We can only handle non-TOF.
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := NeuroLF_15mm
+  Number of rings                          := 48
+  Number of detectors per ring             := 256
+  Inner ring diameter (cm)                 := 27.1
+  Average depth of interaction (cm)        := 0.826007
+  Distance between rings (cm)              := 0.3313
+  Default bin size (cm)                    := 0.16565
+  View offset (degrees)                    := -178.143
+  Maximum number of non-arc-corrected bins := 180
+  Default number of arc-corrected bins     := 180
+  Energy resolution         := 0.14
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 4
+  Number of blocks per bucket in axial direction              := 6
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 8
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 1
+  Number of crystals per singles unit in transaxial direction := 1
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := BlocksOnCylindrical
+  Distance between crystals in axial direction (cm)           := 0.3313
+  Distance between crystals in transaxial direction (cm)      := 0.3313
+  Distance between blocks in axial direction (cm)             := 2.736
+  Distance between blocks in transaxial direction (cm)        := 2.736
+End scanner parameters:=
+
+
+
+WARNING: Scanner::get_scanner_from_name: scanner'NeuroLF_15mm' not found
+
+INFO: Interfile warning: I did not recognise the scanner from 'originating_system' (NeuroLF_15mm). Hopefully there is enough information present. I will check this now.
+
+WARNING: GeometryBlocksOnCylindrical for scanner NeuroLF_15mm: block-size/spacing and ring-spacing give different scanner length, which might affect some results in the future
+from blocks: 159.991 and from ring_spacing: 155.711
+
+WARNING: Scanner: maximum number of timing positions is not yet known. We can only handle non-TOF.
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := NeuroLF_15mm
+  Number of rings                          := 48
+  Number of detectors per ring             := 256
+  Inner ring diameter (cm)                 := 27.1
+  Average depth of interaction (cm)        := 0.826007
+  Distance between rings (cm)              := 0.3313
+  Default bin size (cm)                    := 0.16565
+  View offset (degrees)                    := -178.143
+  Maximum number of non-arc-corrected bins := 180
+  Default number of arc-corrected bins     := 180
+  Energy resolution         := 0.14
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 4
+  Number of blocks per bucket in axial direction              := 6
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 8
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 1
+  Number of crystals per singles unit in transaxial direction := 1
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := BlocksOnCylindrical
+  Distance between crystals in axial direction (cm)           := 0.3313
+  Distance between crystals in transaxial direction (cm)      := 0.3313
+  Distance between blocks in axial direction (cm)             := 2.736
+  Distance between blocks in transaxial direction (cm)        := 2.736
+End scanner parameters:=
+
+
+
+WARNING: Scanner::get_scanner_from_name: scanner'NeuroLF_15mm' not found
+
+INFO: Interfile warning: I did not recognise the scanner from 'originating_system' (NeuroLF_15mm). Hopefully there is enough information present. I will check this now.
+
+WARNING: GeometryBlocksOnCylindrical for scanner NeuroLF_15mm: block-size/spacing and ring-spacing give different scanner length, which might affect some results in the future
+from blocks: 159.991 and from ring_spacing: 155.711
+
+WARNING: Scanner: maximum number of timing positions is not yet known. We can only handle non-TOF.
+numba RDP enabled (checked against numpy)
+NeuroLF_Hoffman2: views 128, M_psv 8, nnz 6024882 (11.35%), beta 0.000286, setup 46s
+  psv ep 0 t=55s
+  psv ep 1 t=60s
+  psv ep 2 t=70s
+  psv ep 3 t=75s
+  psv ep 4 t=84s
+  psv ep 5 t=89s
+  psv ep 6 t=98s
+  psv ep 7 t=103s
+  psv ep 8 t=112s
+  psv ep 9 t=117s
+  psv ep 10 t=127s
+  psv ep 11 t=132s
+  psv ep 12 t=141s
+  psv ep 13 t=146s
+  psv ep 14 t=156s
+  psv ep 15 t=163s
+  psv ep 16 t=173s
+  psv ep 17 t=179s
+  psv ep 18 t=190s
+  psv ep 19 t=197s
+  psv ep 20 t=208s
+  psv ep 21 t=215s
+  psv ep 22 t=226s
+  psv ep 23 t=232s
+  psv ep 24 t=244s
+  psv ep 25 t=250s
+  psv ep 26 t=262s
+  psv ep 27 t=269s
+  psv ep 28 t=281s
+  psv ep 29 t=288s
+  psv ep 30 t=300s
+  psv ep 31 t=307s
+  psv ep 32 t=318s
+  psv ep 33 t=325s
+  psv ep 34 t=336s
+  psv ep 35 t=342s
+  psv ep 36 t=353s
+  psv ep 37 t=359s
+  psv ep 38 t=369s
+  psv ep 39 t=375s
+  psv ep 40 t=385s
+  psv ep 41 t=391s
+  psv ep 42 t=401s
+  psv ep 43 t=407s
+  psv ep 44 t=417s
+  psv ep 45 t=423s
+  psv ep 46 t=432s
+  psv ep 47 t=438s
+  psv ep 48 t=448s
+  psv ep 49 t=453s
+  psv ep 50 t=464s
+  psv ep 51 t=469s
+  psv ep 52 t=479s
+  psv ep 53 t=485s
+  psv ep 54 t=494s
+  psv ep 55 t=500s
+  psv ep 56 t=510s
+  psv ep 57 t=515s
+  psv ep 58 t=526s
+  psv ep 59 t=531s
+  psv ep 60 t=541s
+  psv ep 61 t=547s
+  psv ep 62 t=557s
+  psv ep 63 t=562s
+  psv ep 64 t=573s
+  psv ep 65 t=579s
+  psv ep 66 t=589s
+  psv ep 67 t=595s
+  psv ep 68 t=606s
+  psv ep 69 t=612s
+  psv ep 70 t=622s
+  psv ep 71 t=628s
+  psv ep 72 t=638s
+  psv ep 73 t=644s
+  psv ep 74 t=653s
+  psv ep 75 t=659s
+  psv ep 76 t=669s
+  psv ep 77 t=675s
+  psv ep 78 t=685s
+  psv ep 79 t=691s
+  psv ep 80 t=701s
+  psv ep 81 t=706s
+  psv ep 82 t=717s
+  psv ep 83 t=723s
+  psv ep 84 t=734s
+  psv ep 85 t=740s
+  psv ep 86 t=751s
+  psv ep 87 t=756s
+  psv ep 88 t=767s
+  psv ep 89 t=771s
+  psv ep 90 t=779s
+  psv ep 91 t=783s
+  psv ep 92 t=791s
+  psv ep 93 t=796s
+  psv ep 94 t=804s
+  psv ep 95 t=809s
+  psv ep 96 t=817s
+  psv ep 97 t=822s
+  psv ep 98 t=830s
+  psv ep 99 t=834s
+  psv ep 100 t=843s
+  psv ep 101 t=847s
+  psv ep 102 t=855s
+  psv ep 103 t=860s
+  psv ep 104 t=868s
+  psv ep 105 t=873s
+  psv ep 106 t=881s
+  psv ep 107 t=885s
+  psv ep 108 t=893s
+  psv ep 109 t=898s
+  psv ep 110 t=906s
+  psv ep 111 t=911s
+  psv ep 112 t=919s
+  psv ep 113 t=924s
+  psv ep 114 t=932s
+  psv ep 115 t=937s
+  psv ep 116 t=945s
+  psv ep 117 t=950s
+  psv ep 118 t=958s
+  psv ep 119 t=963s
+own reference vs official reference: {'RMSE_whole_object': 0.0041, 'RMSE_background': 0.0024, 'AEM_VOI_WM': 0.001, 'AEM_VOI_GM': 0.0004}
+psv first pass own-ref: (84, 10.5) | official ref: (86, 10.75)
+   final {'update': 320, 'epoch': 40.0, 'RMSE_whole_object': 0.0006, 'RMSE_background': 0.0004, 'AEM_VOI_WM': 0.0001, 'AEM_VOI_GM': 0.0, 'OFF_RMSE_whole_object': 0.0037, 'OFF_RMSE_background': 0.0021, 'OFF_AEM_VOI_WM': 0.001, 'OFF_AEM_VOI_GM': 0.0004}
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := NeuroLF_15mm
+  Number of rings                          := 48
+  Number of detectors per ring             := 256
+  Inner ring diameter (cm)                 := 27.1
+  Average depth of interaction (cm)        := 0.826007
+  Distance between rings (cm)              := 0.3313
+  Default bin size (cm)                    := 0.16565
+  View offset (degrees)                    := -178.143
+  Maximum number of non-arc-corrected bins := 180
+  Default number of arc-corrected bins     := 180
+  Energy resolution         := 0.14
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 4
+  Number of blocks per bucket in axial direction              := 6
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 8
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 1
+  Number of crystals per singles unit in transaxial direction := 1
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := BlocksOnCylindrical
+  Distance between crystals in axial direction (cm)           := 0.3313
+  Distance between crystals in transaxial direction (cm)      := 0.3313
+  Distance between blocks in axial direction (cm)             := 2.736
+  Distance between blocks in transaxial direction (cm)        := 2.736
+End scanner parameters:=
+
+
+Traceback (most recent call last):
+  File "/home/lucas/claude_svrg_prof/algo_study2.py", line 322, in <module>
+    _, hist = fn()
+              ^^^^
+  File "/home/lucas/claude_svrg_prof/algo_study2.py", line 319, in <lambda>
+    for name, fn in (('psv', lambda: psv(subs_psv, x0, RUN_EP, ref)), ('bsrem_petric', lambda: bsrem(subs_7, osem.astype(np.float32), RUN_EP, ref, 'petric')),
+                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/claude_svrg_prof/algo_study2.py", line 289, in bsrem
+    print(f'  {mode} ep {ep} t={time.time() - T0:.0f}s pass={passes(hist[-1])}', flush=True)
+                                                             ^^^^^^^^^^^^^^^^
+  File "/home/lucas/claude_svrg_prof/algo_study2.py", line 210, in <lambda>
+    passes = lambda mt: all(v <= THR[re.sub('^(AEM_VOI)_.*', r'\1', k)] for k, v in mt.items())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/claude_svrg_prof/algo_study2.py", line 210, in <genexpr>
+    passes = lambda mt: all(v <= THR[re.sub('^(AEM_VOI)_.*', r'\1', k)] for k, v in mt.items())
+                                 ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'update'

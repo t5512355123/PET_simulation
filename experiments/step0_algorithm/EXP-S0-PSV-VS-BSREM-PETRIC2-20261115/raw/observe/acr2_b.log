@@ -1,0 +1,218 @@
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+numba RDP enabled (checked against numpy)
+Siemens_mMR_ACR2: views 252, M_psv 14, nnz 1964805 (2.71%), beta 2.86e-05, setup 81s
+own reference vs official reference: {'RMSE_whole_object': 0.0017, 'RMSE_background': 0.0008, 'AEM_VOI_cold_cylinder': 0.0007, 'AEM_VOI_hot_cylinder': 0.001, 'AEM_VOI_rods': 0.0005}
+psv already done, skipped
+  petric ep 0 t=89s pass=False
+  petric ep 1 t=95s pass=False
+  petric ep 2 t=103s pass=False
+  petric ep 3 t=111s pass=False
+  petric ep 4 t=117s pass=False
+  petric ep 5 t=126s pass=False
+  petric ep 6 t=134s pass=False
+  petric ep 7 t=142s pass=False
+  petric ep 8 t=151s pass=False
+  petric ep 9 t=159s pass=False
+  petric ep 10 t=167s pass=False
+  petric ep 11 t=176s pass=False
+  petric ep 12 t=185s pass=False
+  petric ep 13 t=193s pass=False
+  petric ep 14 t=201s pass=False
+  petric ep 15 t=207s pass=False
+  petric ep 16 t=212s pass=False
+  petric ep 17 t=217s pass=False
+  petric ep 18 t=222s pass=False
+  petric ep 19 t=227s pass=False
+  petric ep 20 t=232s pass=False
+  petric ep 21 t=238s pass=False
+  petric ep 22 t=243s pass=False
+  petric ep 23 t=248s pass=False
+  petric ep 24 t=253s pass=False
+  petric ep 25 t=258s pass=False
+  petric ep 26 t=263s pass=False
+  petric ep 27 t=267s pass=False
+  petric ep 28 t=272s pass=False
+  petric ep 29 t=278s pass=False
+  petric ep 30 t=282s pass=False
+  petric ep 31 t=287s pass=False
+  petric ep 32 t=292s pass=False
+  petric ep 33 t=296s pass=False
+  petric ep 34 t=301s pass=False
+  petric ep 35 t=306s pass=False
+  petric ep 36 t=310s pass=False
+  petric ep 37 t=315s pass=False
+  petric ep 38 t=320s pass=False
+  petric ep 39 t=324s pass=False
+bsrem_petric first pass own-ref: None | official ref: None
+   final {'update': 280, 'epoch': 40.0, 'RMSE_whole_object': 0.0893, 'RMSE_background': 0.0496, 'AEM_VOI_cold_cylinder': 0.0262, 'AEM_VOI_hot_cylinder': 0.0272, 'AEM_VOI_rods': 0.0683, 'OFF_RMSE_whole_object': 0.0899, 'OFF_RMSE_background': 0.0502, 'OFF_AEM_VOI_cold_cylinder': 0.0269, 'OFF_AEM_VOI_hot_cylinder': 0.0282, 'OFF_AEM_VOI_rods': 0.0688}
+  online ep 0 t=332s pass=False
+  online ep 1 t=339s pass=False
+  online ep 2 t=346s pass=False
+  online ep 3 t=353s pass=False
+  online ep 4 t=359s pass=False
+  online ep 5 t=365s pass=False
+  online ep 6 t=372s pass=False
+  online ep 7 t=378s pass=False
+  online ep 8 t=385s pass=False
+  online ep 9 t=391s pass=False
+  online ep 10 t=398s pass=False
+  online ep 11 t=404s pass=False
+  online ep 12 t=411s pass=False
+  online ep 13 t=418s pass=False
+  online ep 14 t=425s pass=False
+  online ep 15 t=431s pass=False
+  online ep 16 t=437s pass=False
+  online ep 17 t=443s pass=False
+  online ep 18 t=449s pass=False
+  online ep 19 t=455s pass=False
+  online ep 20 t=460s pass=False
+  online ep 21 t=466s pass=False
+  online ep 22 t=471s pass=False
+  online ep 23 t=476s pass=False
+  online ep 24 t=481s pass=False
+  online ep 25 t=486s pass=False
+  online ep 26 t=491s pass=False
+  online ep 27 t=496s pass=False
+  online ep 28 t=501s pass=False
+  online ep 29 t=506s pass=False
+  online ep 30 t=511s pass=False
+  online ep 31 t=516s pass=False
+  online ep 32 t=521s pass=False
+  online ep 33 t=527s pass=False
+  online ep 34 t=532s pass=False
+  online ep 35 t=537s pass=False
+  online ep 36 t=542s pass=False
+  online ep 37 t=548s pass=False
+  online ep 38 t=553s pass=False
+  online ep 39 t=558s pass=False
+bsrem_online first pass own-ref: None | official ref: None
+   final {'update': 560, 'epoch': 40.0, 'RMSE_whole_object': 0.0192, 'RMSE_background': 0.0183, 'AEM_VOI_cold_cylinder': 0.0052, 'AEM_VOI_hot_cylinder': 0.0084, 'AEM_VOI_rods': 0.003, 'OFF_RMSE_whole_object': 0.019, 'OFF_RMSE_background': 0.0182, 'OFF_AEM_VOI_cold_cylinder': 0.0045, 'OFF_AEM_VOI_hot_cylinder': 0.0074, 'OFF_AEM_VOI_rods': 0.0025}
+done 557.9945268630981
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+

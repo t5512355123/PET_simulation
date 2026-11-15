@@ -1,0 +1,165 @@
+
+WARNING: Scanner::get_scanner_from_name: scanner'NeuroLF' not found
+
+INFO: Interfile warning: I did not recognise the scanner from 'originating_system' (NeuroLF). Hopefully there is enough information present. I will check this now.
+
+WARNING: GeometryBlocksOnCylindrical for scanner NeuroLF: block-size/spacing and ring-spacing give different scanner length, which might affect some results in the future
+from blocks: 159.991 and from ring_spacing: 155.711
+
+WARNING: Scanner: maximum number of timing positions is not yet known. We can only handle non-TOF.
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := NeuroLF
+  Number of rings                          := 48
+  Number of detectors per ring             := 256
+  Inner ring diameter (cm)                 := 27.1
+  Average depth of interaction (cm)        := 0.826007
+  Distance between rings (cm)              := 0.3313
+  Default bin size (cm)                    := 0.16565
+  View offset (degrees)                    := -178.143
+  Maximum number of non-arc-corrected bins := 180
+  Default number of arc-corrected bins     := 180
+  Energy resolution         := 0.14
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 4
+  Number of blocks per bucket in axial direction              := 6
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 8
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 1
+  Number of crystals per singles unit in transaxial direction := 1
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := BlocksOnCylindrical
+  Distance between crystals in axial direction (cm)           := 0.3313
+  Distance between crystals in transaxial direction (cm)      := 0.3313
+  Distance between blocks in axial direction (cm)             := 2.736
+  Distance between blocks in transaxial direction (cm)        := 2.736
+End scanner parameters:=
+
+
+
+WARNING: Scanner::get_scanner_from_name: scanner'NeuroLF' not found
+
+INFO: Interfile warning: I did not recognise the scanner from 'originating_system' (NeuroLF). Hopefully there is enough information present. I will check this now.
+
+WARNING: GeometryBlocksOnCylindrical for scanner NeuroLF: block-size/spacing and ring-spacing give different scanner length, which might affect some results in the future
+from blocks: 159.991 and from ring_spacing: 155.711
+
+WARNING: Scanner: maximum number of timing positions is not yet known. We can only handle non-TOF.
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := NeuroLF
+  Number of rings                          := 48
+  Number of detectors per ring             := 256
+  Inner ring diameter (cm)                 := 27.1
+  Average depth of interaction (cm)        := 0.826007
+  Distance between rings (cm)              := 0.3313
+  Default bin size (cm)                    := 0.16565
+  View offset (degrees)                    := -178.143
+  Maximum number of non-arc-corrected bins := 180
+  Default number of arc-corrected bins     := 180
+  Energy resolution         := 0.14
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 4
+  Number of blocks per bucket in axial direction              := 6
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 8
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 1
+  Number of crystals per singles unit in transaxial direction := 1
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := BlocksOnCylindrical
+  Distance between crystals in axial direction (cm)           := 0.3313
+  Distance between crystals in transaxial direction (cm)      := 0.3313
+  Distance between blocks in axial direction (cm)             := 2.736
+  Distance between blocks in transaxial direction (cm)        := 2.736
+End scanner parameters:=
+
+
+
+WARNING: Scanner::get_scanner_from_name: scanner'NeuroLF' not found
+
+INFO: Interfile warning: I did not recognise the scanner from 'originating_system' (NeuroLF). Hopefully there is enough information present. I will check this now.
+
+WARNING: GeometryBlocksOnCylindrical for scanner NeuroLF: block-size/spacing and ring-spacing give different scanner length, which might affect some results in the future
+from blocks: 159.991 and from ring_spacing: 155.711
+
+WARNING: Scanner: maximum number of timing positions is not yet known. We can only handle non-TOF.
+numba RDP enabled (checked against numpy)
+NeuroLF_Esser2: views 128, M_psv 8, nnz 2503978 (4.72%), beta 0.000214, setup 48s
+own reference vs official reference: {'RMSE_whole_object': 0.0126, 'RMSE_background': 0.0031, 'AEM_VOI_cold_teflon': 0.0014, 'AEM_VOI_hot_cylinder': 0.001, 'AEM_VOI_rods': 0.0024, 'AEM_VOI_cold_air': 0.0018}
+psv already done, skipped
+bsrem_petric already done, skipped
+  online ep 0 t=52s pass=False
+  online ep 1 t=55s pass=False
+  online ep 2 t=59s pass=False
+  online ep 3 t=62s pass=False
+  online ep 4 t=66s pass=False
+  online ep 5 t=70s pass=False
+  online ep 6 t=73s pass=False
+  online ep 7 t=77s pass=False
+  online ep 8 t=81s pass=False
+  online ep 9 t=85s pass=False
+  online ep 10 t=88s pass=False
+  online ep 11 t=91s pass=False
+  online ep 12 t=94s pass=False
+  online ep 13 t=98s pass=False
+  online ep 14 t=101s pass=False
+  online ep 15 t=104s pass=False
+  online ep 16 t=108s pass=False
+  online ep 17 t=112s pass=False
+  online ep 18 t=115s pass=False
+  online ep 19 t=119s pass=False
+  online ep 20 t=122s pass=False
+  online ep 21 t=126s pass=False
+  online ep 22 t=131s pass=False
+  online ep 23 t=135s pass=False
+  online ep 24 t=139s pass=False
+  online ep 25 t=143s pass=False
+  online ep 26 t=148s pass=False
+  online ep 27 t=151s pass=False
+  online ep 28 t=156s pass=False
+  online ep 29 t=160s pass=False
+  online ep 30 t=165s pass=False
+  online ep 31 t=169s pass=False
+  online ep 32 t=173s pass=False
+  online ep 33 t=177s pass=False
+  online ep 34 t=182s pass=False
+  online ep 35 t=186s pass=False
+  online ep 36 t=190s pass=False
+  online ep 37 t=193s pass=False
+  online ep 38 t=197s pass=False
+  online ep 39 t=201s pass=False
+bsrem_online first pass own-ref: None | official ref: None
+   final {'update': 320, 'epoch': 40.0, 'RMSE_whole_object': 0.0075, 'RMSE_background': 0.0058, 'AEM_VOI_cold_teflon': 0.0061, 'AEM_VOI_hot_cylinder': 0.0021, 'AEM_VOI_rods': 0.0017, 'AEM_VOI_cold_air': 0.0117, 'OFF_RMSE_whole_object': 0.0142, 'OFF_RMSE_background': 0.0055, 'OFF_AEM_VOI_cold_teflon': 0.0047, 'OFF_AEM_VOI_hot_cylinder': 0.0031, 'OFF_AEM_VOI_rods': 0.0007, 'OFF_AEM_VOI_cold_air': 0.0099}
+done 201.4009234905243
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := NeuroLF
+  Number of rings                          := 48
+  Number of detectors per ring             := 256
+  Inner ring diameter (cm)                 := 27.1
+  Average depth of interaction (cm)        := 0.826007
+  Distance between rings (cm)              := 0.3313
+  Default bin size (cm)                    := 0.16565
+  View offset (degrees)                    := -178.143
+  Maximum number of non-arc-corrected bins := 180
+  Default number of arc-corrected bins     := 180
+  Energy resolution         := 0.14
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 4
+  Number of blocks per bucket in axial direction              := 6
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 8
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 1
+  Number of crystals per singles unit in transaxial direction := 1
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := BlocksOnCylindrical
+  Distance between crystals in axial direction (cm)           := 0.3313
+  Distance between crystals in transaxial direction (cm)      := 0.3313
+  Distance between blocks in axial direction (cm)             := 2.736
+  Distance between blocks in transaxial direction (cm)        := 2.736
+End scanner parameters:=
+
+

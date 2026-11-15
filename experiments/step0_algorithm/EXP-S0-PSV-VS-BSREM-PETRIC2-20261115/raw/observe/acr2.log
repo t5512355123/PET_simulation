@@ -1,0 +1,271 @@
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+numba RDP enabled (checked against numpy)
+Siemens_mMR_ACR2: views 252, M_psv 14, nnz 1964805 (2.71%), beta 2.86e-05, setup 79s
+  psv ep 0 t=91s
+  psv ep 1 t=100s
+  psv ep 2 t=110s
+  psv ep 3 t=118s
+  psv ep 4 t=129s
+  psv ep 5 t=137s
+  psv ep 6 t=149s
+  psv ep 7 t=158s
+  psv ep 8 t=171s
+  psv ep 9 t=181s
+  psv ep 10 t=197s
+  psv ep 11 t=208s
+  psv ep 12 t=225s
+  psv ep 13 t=236s
+  psv ep 14 t=251s
+  psv ep 15 t=262s
+  psv ep 16 t=278s
+  psv ep 17 t=289s
+  psv ep 18 t=303s
+  psv ep 19 t=314s
+  psv ep 20 t=329s
+  psv ep 21 t=341s
+  psv ep 22 t=357s
+  psv ep 23 t=366s
+  psv ep 24 t=379s
+  psv ep 25 t=388s
+  psv ep 26 t=401s
+  psv ep 27 t=412s
+  psv ep 28 t=424s
+  psv ep 29 t=434s
+  psv ep 30 t=446s
+  psv ep 31 t=455s
+  psv ep 32 t=468s
+  psv ep 33 t=477s
+  psv ep 34 t=489s
+  psv ep 35 t=497s
+  psv ep 36 t=509s
+  psv ep 37 t=518s
+  psv ep 38 t=530s
+  psv ep 39 t=539s
+  psv ep 40 t=552s
+  psv ep 41 t=561s
+  psv ep 42 t=574s
+  psv ep 43 t=584s
+  psv ep 44 t=597s
+  psv ep 45 t=607s
+  psv ep 46 t=619s
+  psv ep 47 t=629s
+  psv ep 48 t=641s
+  psv ep 49 t=650s
+  psv ep 50 t=663s
+  psv ep 51 t=672s
+  psv ep 52 t=685s
+  psv ep 53 t=694s
+  psv ep 54 t=707s
+  psv ep 55 t=718s
+  psv ep 56 t=731s
+  psv ep 57 t=741s
+  psv ep 58 t=755s
+  psv ep 59 t=765s
+  psv ep 60 t=774s
+  psv ep 61 t=780s
+  psv ep 62 t=788s
+  psv ep 63 t=795s
+  psv ep 64 t=804s
+  psv ep 65 t=811s
+  psv ep 66 t=820s
+  psv ep 67 t=826s
+  psv ep 68 t=836s
+  psv ep 69 t=842s
+  psv ep 70 t=851s
+  psv ep 71 t=858s
+  psv ep 72 t=867s
+  psv ep 73 t=874s
+  psv ep 74 t=883s
+  psv ep 75 t=889s
+  psv ep 76 t=899s
+  psv ep 77 t=905s
+  psv ep 78 t=915s
+  psv ep 79 t=922s
+  psv ep 80 t=931s
+  psv ep 81 t=937s
+  psv ep 82 t=947s
+  psv ep 83 t=954s
+  psv ep 84 t=963s
+  psv ep 85 t=969s
+  psv ep 86 t=979s
+  psv ep 87 t=986s
+  psv ep 88 t=997s
+  psv ep 89 t=1004s
+  psv ep 90 t=1013s
+  psv ep 91 t=1020s
+  psv ep 92 t=1030s
+  psv ep 93 t=1037s
+  psv ep 94 t=1046s
+  psv ep 95 t=1052s
+  psv ep 96 t=1062s
+  psv ep 97 t=1068s
+  psv ep 98 t=1077s
+  psv ep 99 t=1085s
+  psv ep 100 t=1094s
+  psv ep 101 t=1101s
+  psv ep 102 t=1111s
+  psv ep 103 t=1118s
+  psv ep 104 t=1127s
+  psv ep 105 t=1133s
+  psv ep 106 t=1142s
+  psv ep 107 t=1149s
+  psv ep 108 t=1158s
+  psv ep 109 t=1164s
+  psv ep 110 t=1172s
+  psv ep 111 t=1178s
+  psv ep 112 t=1186s
+  psv ep 113 t=1192s
+  psv ep 114 t=1200s
+  psv ep 115 t=1206s
+  psv ep 116 t=1214s
+  psv ep 117 t=1220s
+  psv ep 118 t=1228s
+  psv ep 119 t=1234s
+own reference vs official reference: {'RMSE_whole_object': 0.0017, 'RMSE_background': 0.0008, 'AEM_VOI_cold_cylinder': 0.0007, 'AEM_VOI_hot_cylinder': 0.001, 'AEM_VOI_rods': 0.0005}
+psv first pass own-ref: (74, 5.29) | official ref: (69, 4.93)
+   final {'update': 560, 'epoch': 40.0, 'RMSE_whole_object': 0.0002, 'RMSE_background': 0.0001, 'AEM_VOI_cold_cylinder': 0.0001, 'AEM_VOI_hot_cylinder': 0.0001, 'AEM_VOI_rods': 0.0, 'OFF_RMSE_whole_object': 0.0016, 'OFF_RMSE_background': 0.0008, 'OFF_AEM_VOI_cold_cylinder': 0.0006, 'OFF_AEM_VOI_hot_cylinder': 0.001, 'OFF_AEM_VOI_rods': 0.0005}
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+Traceback (most recent call last):
+  File "/home/lucas/claude_svrg_prof/algo_study2.py", line 322, in <module>
+    _, hist = fn()
+              ^^^^
+  File "/home/lucas/claude_svrg_prof/algo_study2.py", line 319, in <lambda>
+    for name, fn in (('psv', lambda: psv(subs_psv, x0, RUN_EP, ref)), ('bsrem_petric', lambda: bsrem(subs_7, osem.astype(np.float32), RUN_EP, ref, 'petric')),
+                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/claude_svrg_prof/algo_study2.py", line 289, in bsrem
+    print(f'  {mode} ep {ep} t={time.time() - T0:.0f}s pass={passes(hist[-1])}', flush=True)
+                                                             ^^^^^^^^^^^^^^^^
+  File "/home/lucas/claude_svrg_prof/algo_study2.py", line 210, in <lambda>
+    passes = lambda mt: all(v <= THR[re.sub('^(AEM_VOI)_.*', r'\1', k)] for k, v in mt.items())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucas/claude_svrg_prof/algo_study2.py", line 210, in <genexpr>
+    passes = lambda mt: all(v <= THR[re.sub('^(AEM_VOI)_.*', r'\1', k)] for k, v in mt.items())
+                                 ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'update'

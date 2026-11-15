@@ -1,0 +1,23 @@
+{
+ "NeuroLF_Esser2": {
+  "nnz": 2503978,
+  "counts": 2601282.0,
+  "mean_steps": 143.3428692725835,
+  "samples_per_pass": 358927391.1154251,
+  "voxels": 2524055
+ },
+ "NeuroLF_Hoffman2": {
+  "nnz": 6024882,
+  "counts": 6882698.0,
+  "mean_steps": 150.4333348847195,
+  "samples_per_pass": 906343091.5469186,
+  "voxels": 2524055
+ },
+ "Siemens_mMR_ACR2": {
+  "nnz": 1964805,
+  "counts": 2026156.0,
+  "mean_steps": 249.4753994636528,
+  "samples_per_pass": 490170512.2431823,
+  "voxels": 10315575
+ }
+}

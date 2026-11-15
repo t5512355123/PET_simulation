@@ -1,0 +1,12 @@
+cbf5d8cf817ec6c7fd6c93412a90f65cf0a9f9e822780f09575ab39d4b8133ff  ./raw/observe/acr2_b.log
+04243396d387e5752792ed5b6513b5c9bac60c0b99339b941c05740b3841aa90  ./raw/observe/acr2.log
+d8659de71013255a0bb8b6d6299786e80cd420adc01924e5f2a7580ee1e2aa42  ./raw/observe/acr2_study.json
+2c001732279bca6fa2902fedb558733184940fe2069b549fdef7b2d0f7048fcd  ./raw/observe/esser2_b.log
+ff27c0bcb3338a015ea6e5000a4311d63caf4ce939cb6a64bbff277fdcce5c4a  ./raw/observe/esser2.log
+1512ea5109498b7ea1b1f7da16c5727076e4875961613e0892397f8ced309367  ./raw/observe/esser2_study.json
+d63d3a30596e3cdae59158250078b10696ad96b70b2f86bcb03ec76a477a8361  ./raw/observe/hoff2_b.log
+36713b01558047a691ae5c0d461da1aacee435ca400fd8bee8090430563fcd65  ./raw/observe/hoff2.log
+1b489c3653e72c902eb83d466341bd366b4de99a8ba151481c9bccc60612b61f  ./raw/observe/hoff2_study.json
+50951fdf4a1491309e14d2fdf6ce602db2e2d6325962e4fdbb334129299f17e3  ./raw/observe/samples.json
+d36b3d73c34206ee90420b91a7f9aef702896bf8befab5326b55779873e06a5e  ./source/algo_study2.py
+32583928f137b7dcb3408987b0bb35071fdcf4d94dca6e50b7ba2177b02d481a  ./source/make_lors_stir.py
