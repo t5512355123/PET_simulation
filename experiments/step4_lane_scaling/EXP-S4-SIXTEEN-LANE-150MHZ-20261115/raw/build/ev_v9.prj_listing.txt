@@ -1,0 +1,5 @@
+total 3452
+drwxr-xr-x 1 b10504072 users      42 2026-11-15T21:14 .
+drwxr-xr-x 1 b10504072 users    1410 2026-11-15T21:14 ..
+-rw-r--r-- 1 b10504072 users 3527412 2026-11-15T13:05 fpga.linked.bc
+-rw-r--r-- 1 b10504072 users     749 2026-11-15T13:05 hls.xml

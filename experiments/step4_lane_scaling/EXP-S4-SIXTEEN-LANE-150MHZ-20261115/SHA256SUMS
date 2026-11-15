@@ -1,3 +1,6 @@
+d2cbc610c9aafa1a3b7cf2a207db12b0995b488c9ce777513d0da5741fbf5968  ./raw/build/ev_v9.log
+c425dea9940463b6d88a950ec52218cbb2897a342994af944deab6e43cc732f6  ./raw/build/ev_v9.prj_listing.txt
+45e98dd0498748b55b9dc1d5f899c36001cf2cbf13ac1c10abad6ef2c6692151  ./raw/build/full.out
 1b20b2529fa3a9e55a2d7bd874b1cf7d0d217a89b9b54d80a20df56919d7b1de  ./raw/testdata/ev.bin
 35b6a4f3e92a49eaaa1f111be14ddd68a9e7ec4897647500a8dd9173b94641ad  ./raw/testdata/expect_acc.bin
 f422e05abdc5265a4ce23a8eb36f75147183c51f142421ff03140619c6333bd7  ./raw/testdata/expect_s.bin
