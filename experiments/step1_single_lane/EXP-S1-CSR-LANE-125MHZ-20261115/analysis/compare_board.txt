@@ -1,0 +1,5 @@
+events 4096, Joseph steps 240561
+forward ratio s: max rel diff 1.186e-07, bit-identical 3804/4096
+back projection: max abs diff / max 1.219e-02, bit-identical 122447/131072
+repeat run (2000x): max |acc - rep*expected| / (rep*max) = 1.219e-02
+timing: 2000 batches in 25638 ms at 125.0 MHz -> 3.330 cycles per sample (fwd+back), 37.5 M samples/s, 391.2 cycles per event (2 passes)

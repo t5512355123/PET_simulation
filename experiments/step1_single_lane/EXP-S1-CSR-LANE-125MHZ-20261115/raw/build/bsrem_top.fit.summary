@@ -1,0 +1,21 @@
+Fitter Status : Successful - Sun Nov 15 03:33:14 2026
+Quartus Prime Version : 21.3.0 Build 170 09/23/2021 SC Pro Edition
+Revision Name : bsrem_top
+Top-level Entity Name : bsrem_top
+Family : Stratix 10
+Device : 1SX280HU2F50E1VG
+Timing Models : Final
+Power Models : Final
+Device Status : Final
+Logic utilization (in ALMs) : 136,025 / 933,120 ( 15 % )
+Total dedicated logic registers : 104289
+Total pins : 6 / 1,152 ( < 1 % )
+Total block memory bits : 15,450,624 / 240,046,080 ( 6 % )
+Total RAM Blocks : 964 / 11,721 ( 8 % )
+Total DSP Blocks : 56 / 5,760 ( < 1 % )
+Total DIB Channels : 0 / 75 ( 0 % )
+Total HSSI RX channels : 0 / 96 ( 0 % )
+Total HSSI TX channels : 0 / 96 ( 0 % )
+Total HSSI HPS : 0 / 1 ( 0 % )
+Total HSSI EHIPs : 0 / 4 ( 0 % )
+Total PLLs : 1 / 184 ( < 1 % )
