@@ -1,19 +1,21 @@
-# 目前狀態（2026-11-15）
+# 目前狀態（2026-11-15 晚上）
 
-**Step 4 lane 擴充：進行中。**
+**Step 4 lane 擴充：8 lanes PASS，16 lanes INCONCLUSIVE。**
 
-- `EXP-S4-SIXTEEN-LANE-150MHZ-20261115`（v9）：HLS（aocl-opt）已執行超過 2 小時，還沒進入 Quartus。
-- `EXP-S4-EIGHT-LANE-150MHZ-20261115`（v10）：因為 v9 的 HLS 太久而加開的備案，和 v9 同時建置。
-- 兩者的軟體模擬都已通過（v10：反投影相對誤差 2×10⁻⁷）。
+| | 速度 | 能量 |
+|---|---|---|
+| v10（8 lanes，150 MHz，板上實測） | 1106 M 樣本/秒 | 10.0 nJ/樣本（Quartus 估計 11.1 W） |
+| GPU RTX 3070 Ti Laptop | 2660 M 樣本/秒 | 36 nJ/樣本 |
+
+FPGA 能量低 3.6 倍，速度是筆電 GPU 的 0.42 倍。
 
 ## 下一步
 
-1. 建置完成後檢查時序（150 MHz），燒錄並用 `boardN` 測試資料做板上比對。
-2. 執行 quartus_pow，算出每個樣本的能量。
-3. 和 GPU（36 nJ/樣本、2660 M/s）比較。
+1. 解決 HLS 編譯時間隨 lane 數暴增的問題（16 lanes 跑 8 小時沒完成）。
+2. 影像分區（slab）架構：每條 lane 只存影像的一段平面，所有 lane 共用一份影像，
+   才能放進 PETRIC 的實際影像（Esser2：95×163×163 = 2.5 M voxels，fp32 一份 81 Mb，晶片 M20K 共 234 Mb）。
 
 ## 已知限制
 
-- 測試影像只有 64×64×32；PETRIC 的實際影像有 2.5–16 M voxels，放不進片上記憶體。
-  要處理實際大小，需要分塊（tiling）或逐平面串流。這是之後的研究重點。
+- 測試影像只有 64×64×32，每條 lane 一份副本。
 - FPGA 功耗是 Quartus 估計值，不是實測值；GPU 功耗是 nvidia-smi 讀到的板上功耗。

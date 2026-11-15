@@ -8,8 +8,8 @@
 | 2 無衝突反投影 | `EXP-S2-PREDICATED-STORE-SCHEDULER-20261115` | PASS | 誤差 9×10⁻⁸；1.87 cycles/樣本；66.9 M/s；7.61 W |
 | 3 多 lane | `EXP-S3-FOUR-LANE-ROUNDROBIN-20261115` | PASS | 4 lanes 231.6 M/s；每 lane 2.14 cycles/樣本（bank 衝突） |
 | 3 多 lane | `EXP-S3-PARITY-BANK-LAYOUT-20261115` | PASS | 424.7 M/s；每 lane 1.17 cycles/樣本；Fmax 166.7 MHz；8.16 W |
-| 4 lane 擴充 | `EXP-S4-EIGHT-LANE-150MHZ-20261115` | 進行中 | — |
-| 4 lane 擴充 | `EXP-S4-SIXTEEN-LANE-150MHZ-20261115` | 進行中 | — |
+| 4 lane 擴充 | `EXP-S4-EIGHT-LANE-150MHZ-20261115` | PASS | 1106 M/s；Fmax 180 MHz；RAM 38%；11.1 W → 10.0 nJ/樣本 |
+| 4 lane 擴充 | `EXP-S4-SIXTEEN-LANE-150MHZ-20261115` | INCONCLUSIVE | HLS 8 小時未完成，停止 |
 | 基準 | `EXP-B-CPU-XEON8559C-PARALLELPROJ-20261115` | 量測 | 1 執行緒 44 M/s；24 執行緒約 500 M/s |
 | 基準 | `EXP-B-GPU-RTX3070TI-LAPTOP-20261115` | 量測 | 2660 M/s；約 95 W；36 nJ/樣本 |
 
