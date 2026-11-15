@@ -1,0 +1,165 @@
+Flow report for bsrem_top
+Sun Nov 15 11:35:24 2026
+Quartus Prime Version 21.3.0 Build 170 09/23/2021 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Parallel Compilation
+  2. Legal Notice
+  3. Flow Summary
+  4. Flow Settings
+  5. Flow Non-Default Global Settings
+  6. Flow Elapsed Time
+  7. Flow OS Summary
+  8. Flow Log
+
+
+
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 8      ;
++----------------------------+--------+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++---------------------------------+--------------------------------------------+
+; Flow Status                     ; Successful - Sun Nov 15 11:35:23 2026      ;
+; Quartus Prime Version           ; 21.3.0 Build 170 09/23/2021 SC Pro Edition ;
+; Revision Name                   ; bsrem_top                                  ;
+; Top-level Entity Name           ; bsrem_top                                  ;
+; Family                          ; Stratix 10                                 ;
+; Top-level Entity Name           ; bsrem_top                                  ;
+; Device                          ; 1SX280HU2F50E1VG                           ;
+; Timing Models                   ; Final                                      ;
+; Power Models                    ; Final                                      ;
+; Device Status                   ; Final                                      ;
+; Logic utilization (in ALMs)     ; 295,901 / 933,120 ( 32 % )                 ;
+; Total dedicated logic registers ; 274472                                     ;
+; Total pins                      ; 6 / 1,152 ( < 1 % )                        ;
+; Total block memory bits         ; 38,055,168 / 240,046,080 ( 16 % )          ;
+; Total RAM Blocks                ; 2,369 / 11,721 ( 20 % )                    ;
+; Total DSP Blocks                ; 193 / 5,760 ( 3 % )                        ;
+; Total DIB Channels              ; 0 / 75 ( 0 % )                             ;
+; Total HSSI RX channels          ; 0 / 96 ( 0 % )                             ;
+; Total HSSI TX channels          ; 0 / 96 ( 0 % )                             ;
+; Total HSSI HPS                  ; 0 / 1 ( 0 % )                              ;
+; Total HSSI EHIPs                ; 0 / 4 ( 0 % )                              ;
+; Total PLLs                      ; 1 / 184 ( < 1 % )                          ;
+; Top-level Entity Name           ; bsrem_top                                  ;
++---------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 11/15/2026 10:11:08 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; bsrem_top           ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                            ;
++-----------------------+--------------------------------------------------------------------------------------------------------------+---------------+-----------------------------------------+------------+
+; Assignment Name       ; Value                                                                                                        ; Default Value ; Entity Name                             ; Section Id ;
++-----------------------+--------------------------------------------------------------------------------------------------------------+---------------+-----------------------------------------+------------+
+; COMPILER_SIGNATURE_ID ; 49410870064769.179470866823913                                                                               ; --            ; --                                      ; --         ;
+; IP_SEARCH_PATHS       ; ../ev_v7.prj/components/ev_lane/**/*                                                                         ; --            ; --                                      ; --         ;
+; MISC_FILE             ; bsrem_sys/bsrem_sys.cmp                                                                                      ; --            ; --                                      ; --         ;
+; MISC_FILE             ; bsrem_sys/../bsrem_sys.qsys                                                                                  ; --            ; --                                      ; --         ;
+; MISC_FILE             ; ip/bsrem_sys/bsrem_sys_clk_in/bsrem_sys_clk_in.cmp                                                           ; --            ; --                                      ; --         ;
+; MISC_FILE             ; ip/bsrem_sys/bsrem_sys_clk_in/../bsrem_sys_clk_in.ip                                                         ; --            ; --                                      ; --         ;
+; MISC_FILE             ; ip/bsrem_sys/bsrem_sys_jtag/bsrem_sys_jtag.cmp                                                               ; --            ; --                                      ; --         ;
+; MISC_FILE             ; ip/bsrem_sys/bsrem_sys_jtag/../bsrem_sys_jtag.ip                                                             ; --            ; --                                      ; --         ;
+; MISC_FILE             ; ip/bsrem_sys/bsrem_sys_lane/bsrem_sys_lane.cmp                                                               ; --            ; --                                      ; --         ;
+; MISC_FILE             ; ip/bsrem_sys/bsrem_sys_lane/../bsrem_sys_lane.ip                                                             ; --            ; --                                      ; --         ;
+; MISC_FILE             ; ip/bsrem_sys/bsrem_sys_pll/bsrem_sys_pll.cmp                                                                 ; --            ; --                                      ; --         ;
+; MISC_FILE             ; ip/bsrem_sys/bsrem_sys_pll/../bsrem_sys_pll.ip                                                               ; --            ; --                                      ; --         ;
+; MISC_FILE             ; ip/bsrem_sys/bsrem_sys_rr/bsrem_sys_rr.cmp                                                                   ; --            ; --                                      ; --         ;
+; MISC_FILE             ; ip/bsrem_sys/bsrem_sys_rr/../bsrem_sys_rr.ip                                                                 ; --            ; --                                      ; --         ;
+; SDC_ENTITY_FILE       ; ip/bsrem_sys/bsrem_sys_jtag/altera_jtag_dc_streaming_191/synth/altera_avalon_st_jtag_interface.sdc           ; --            ; altera_avalon_st_jtag_interface         ; --         ;
+; SDC_ENTITY_FILE       ; bsrem_sys/altera_reset_controller_1921/synth/altera_reset_controller.sdc                                     ; --            ; altera_reset_controller                 ; --         ;
+; SDC_ENTITY_FILE       ; ip/bsrem_sys/bsrem_sys_jtag/altera_reset_controller_1921/synth/altera_reset_controller.sdc                   ; --            ; altera_reset_controller                 ; --         ;
+; SDC_ENTITY_FILE       ; ip/bsrem_sys/bsrem_sys_pll/altera_iopll_1931/synth/bsrem_sys_pll_altera_iopll_1931_6sr5ryi.sdc               ; --            ; bsrem_sys_pll_altera_iopll_1931_6sr5ryi ; --         ;
+; SLD_INFO              ; QSYS_NAME bsrem_sys HAS_SOPCINFO 1 GENERATION_ID 0                                                           ; --            ; bsrem_sys                               ; --         ;
+; SLD_INFO              ; QSYS_NAME bsrem_sys_clk_in HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; bsrem_sys_clk_in                        ; --         ;
+; SLD_INFO              ; QSYS_NAME bsrem_sys_jtag HAS_SOPCINFO 1 GENERATION_ID 0                                                      ; --            ; bsrem_sys_jtag                          ; --         ;
+; SLD_INFO              ; QSYS_NAME bsrem_sys_lane HAS_SOPCINFO 1 GENERATION_ID 0                                                      ; --            ; bsrem_sys_lane                          ; --         ;
+; SLD_INFO              ; QSYS_NAME bsrem_sys_pll HAS_SOPCINFO 1 GENERATION_ID 0                                                       ; --            ; bsrem_sys_pll                           ; --         ;
+; SLD_INFO              ; QSYS_NAME bsrem_sys_rr HAS_SOPCINFO 1 GENERATION_ID 0                                                        ; --            ; bsrem_sys_rr                            ; --         ;
+; SOPCINFO_FILE         ; bsrem_sys/bsrem_sys.sopcinfo                                                                                 ; --            ; --                                      ; --         ;
+; SOPCINFO_FILE         ; ip/bsrem_sys/bsrem_sys_clk_in/bsrem_sys_clk_in.sopcinfo                                                      ; --            ; --                                      ; --         ;
+; SOPCINFO_FILE         ; ip/bsrem_sys/bsrem_sys_jtag/bsrem_sys_jtag.sopcinfo                                                          ; --            ; --                                      ; --         ;
+; SOPCINFO_FILE         ; ip/bsrem_sys/bsrem_sys_lane/bsrem_sys_lane.sopcinfo                                                          ; --            ; --                                      ; --         ;
+; SOPCINFO_FILE         ; ip/bsrem_sys/bsrem_sys_pll/bsrem_sys_pll.sopcinfo                                                            ; --            ; --                                      ; --         ;
+; SOPCINFO_FILE         ; ip/bsrem_sys/bsrem_sys_rr/bsrem_sys_rr.sopcinfo                                                              ; --            ; --                                      ; --         ;
+; TCL_ENTITY_FILE       ; ip/bsrem_sys/bsrem_sys_pll/altera_iopll_1931/synth/bsrem_sys_pll_altera_iopll_1931_6sr5ryi_all_ip_params.tcl ; --            ; bsrem_sys_pll_altera_iopll_1931_6sr5ryi ; --         ;
+; TCL_ENTITY_FILE       ; ip/bsrem_sys/bsrem_sys_pll/altera_iopll_1931/synth/bsrem_sys_pll_altera_iopll_1931_6sr5ryi_parameters.tcl    ; --            ; bsrem_sys_pll_altera_iopll_1931_6sr5ryi ; --         ;
+; TCL_ENTITY_FILE       ; ip/bsrem_sys/bsrem_sys_pll/altera_iopll_1931/synth/bsrem_sys_pll_altera_iopll_1931_6sr5ryi_pin_map.tcl       ; --            ; bsrem_sys_pll_altera_iopll_1931_6sr5ryi ; --         ;
++-----------------------+--------------------------------------------------------------------------------------------------------------+---------------+-----------------------------------------+------------+
+
+
++------------------------------------------------------+
+; Flow Elapsed Time                                    ;
++-----------------+--------------+---------------------+
+; Module Name     ; Elapsed Time ; Peak Virtual Memory ;
++-----------------+--------------+---------------------+
+; Synthesis       ; 00:15:33     ; 40285 MB            ;
+; Fitter          ; 01:05:06     ; 33779 MB            ;
+; Timing Analyzer ; 00:01:34     ; 22466 MB            ;
+; Assembler       ; 00:01:00     ; 14265 MB            ;
+; Total           ; 01:23:13     ; --                  ;
++-----------------+--------------+---------------------+
+
+
++---------------------------------------------------------------------------------+
+; Flow OS Summary                                                                 ;
++-----------------+------------------+--------------+------------+----------------+
+; Module Name     ; Machine Hostname ; OS Name      ; OS Version ; Processor type ;
++-----------------+------------------+--------------+------------+----------------+
+; Synthesis       ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
+; Fitter          ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
+; Timing Analyzer ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
+; Assembler       ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
++-----------------+------------------+--------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_syn --read_settings_files=on --write_settings_files=off bsrem_top -c bsrem_top
+quartus_fit --read_settings_files=on --write_settings_files=off bsrem_top -c bsrem_top
+quartus_sta bsrem_top -c bsrem_top --mode=finalize
+quartus_asm --read_settings_files=on --write_settings_files=off bsrem_top -c bsrem_top
+
+
+

@@ -1,0 +1,1 @@
+d35699b8d7a1df3795df0cddcf6bea4d9ac688c993b7868d3f8bd0fb24ad6641  bsrem_top.sof (not committed: 196 MB > GitHub 100 MB limit; kept at sys7)
