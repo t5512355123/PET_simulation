@@ -1,0 +1,2 @@
+experiments/**/raw/** -text
+*.bin binary

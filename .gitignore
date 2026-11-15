@@ -1,0 +1,13 @@
+# Track only the curated layout; build workspaces (sysN/, ev_*.prj/, boardN/, emulators) stay untracked.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/STATUS.md
+!/MILESTONES.md
+!/hls/
+!/quartus/
+!/scripts/
+!/experiments/
+*.sof
+__pycache__/
