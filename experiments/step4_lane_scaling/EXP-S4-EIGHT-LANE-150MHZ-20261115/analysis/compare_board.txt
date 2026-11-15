@@ -1,0 +1,6 @@
+events 4016, Joseph steps 235310
+forward ratio s: max rel diff 1.180e-07, bit-identical 3735/4016
+back projection: max abs diff / max 1.845e-07, bit-identical 95501/131072
+repeat run (2000x): max |acc - rep*expected| / (rep*max) = 4.980e-05
+timing: 2000 batches in 850 ms at 150.0 MHz -> 0.136 cycles per sample (fwd+back), 1106.1 M samples/s, 15.9 cycles per event (2 passes)
+per lane: busiest lane has 29735 steps -> 1.072 cycles per sample in that lane; lanes=8
