@@ -1,0 +1,3 @@
+nev 4096
+steps 240561
+voxels 131072
