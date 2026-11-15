@@ -1,0 +1,50 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'u0|pll|pll_outclk0'
+Slack : 2.001
+TNS   : 0.000
+Corner: Slow 900mV 100C Model
+
+Type  : Setup 'CLK_50_B3I'
+Slack : 18.639
+TNS   : 0.000
+Corner: 1 Slow vid1 0C Model
+
+Type  : Hold 'u0|pll|pll_outclk0'
+Slack : 0.000
+TNS   : 0.000
+Corner: Fast 900mV 100C Model
+
+Type  : Hold 'CLK_50_B3I'
+Slack : 0.153
+TNS   : 0.000
+Corner: Fast 900mV 0C Model
+
+Type  : Recovery 'u0|pll|pll_outclk0'
+Slack : 3.808
+TNS   : 0.000
+Corner: 1 Slow vid1 100C Model
+
+Type  : Removal 'u0|pll|pll_outclk0'
+Slack : 0.234
+TNS   : 0.000
+Corner: Fast 900mV 0C Model
+
+Type  : Minimum Pulse Width 'u0|pll|pll_outclk0'
+Slack : 3.445
+TNS   : 0.000
+Corner: Slow 900mV 100C Model
+
+Type  : Minimum Pulse Width 'CLK_50_B3I'
+Slack : 9.635
+TNS   : 0.000
+Corner: Fast 900mV 100C Model
+
+Type  : Minimum Pulse Width 'u0|pll|pll_m_cnt_clk'
+Slack : 300.000
+TNS   : 0.000
+Corner: 1 Slow vid1 100C Model
+
+------------------------------------------------------------

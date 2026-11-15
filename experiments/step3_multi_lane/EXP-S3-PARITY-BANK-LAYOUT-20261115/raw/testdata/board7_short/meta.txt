@@ -1,0 +1,6 @@
+nev 3804
+steps 182255
+voxels 131072
+real_steps 181875
+lanes 4
+maxlane 45836
