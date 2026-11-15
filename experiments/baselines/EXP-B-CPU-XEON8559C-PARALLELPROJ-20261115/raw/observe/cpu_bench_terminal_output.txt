@@ -1,0 +1,3 @@
+threads   1: events 2503978  fwd 4.860s  back 11.562s  -> 74 M samples/s fwd, 31 M back, 22 M per fwd+back pair
+threads   8: events 2503978  fwd 0.778s  back 2.354s  -> 461 M samples/s fwd, 152 M back, 115 M per fwd+back pair
+threads  24: events 2503978  fwd 0.332s  back 1.111s  -> 1082 M samples/s fwd, 323 M back, 249 M per fwd+back pair

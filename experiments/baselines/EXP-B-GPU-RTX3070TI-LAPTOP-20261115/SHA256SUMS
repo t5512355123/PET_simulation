@@ -1,0 +1,2 @@
+b543fd0d4f79cbbd87908359f8e3261c8df5917e635d56a383953638ffb8c826  ./raw/observe/nvidia_smi_power.csv
+325c5653bc82a339e9f54fd53e32715d64cfd65085fa25d316e8042f14e4a6a4  ./source/gpu_bench.py
