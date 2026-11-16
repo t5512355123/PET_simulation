@@ -1,21 +1,27 @@
-# 目前狀態（2026-11-15 晚上）
+# 目前狀態（2026-11-17）
 
-**Step 4 lane 擴充：8 lanes PASS，16 lanes INCONCLUSIVE。**
+**list-mode online psv：演算法 PASS（GPU），硬體單元 PASS（DE10-Pro），整機比較是「實測零件 + 模型」。**
 
-| | 速度 | 能量 |
+| 到 PETRIC 門檻（Esser2） | 時間 | 能量 |
 |---|---|---|
-| v10（8 lanes，150 MHz，板上實測） | 1106 M 樣本/秒 | 10.0 nJ/樣本（Quartus 估計 11.1 W） |
-| GPU RTX 3070 Ti Laptop | 2660 M 樣本/秒 | 36 nJ/樣本 |
+| GPU RTX 3070 Ti Laptop，list-mode psv（實測，EXP-S9） | 8.62 s | 745 J |
+| FPGA v10 8 lanes + voxel 單元（兩者都板上實測，組合計算，EXP-S11） | 14.9 s | 203 J |
+| FPGA slab 32 lanes + voxel ×4（模型，EXP-S5/S11） | 5.1 s | 144 J |
+| 最後事件後的延遲：GPU / FPGA 8 lanes / FPGA slab 32（online Br 64/64，EXP-S10） | 0.70 / 1.25 / 0.42 s | 61 / 17 / 12 J |
 
-FPGA 能量低 3.6 倍，速度是筆電 GPU 的 0.42 倍。
+- 演算法：list-mode、依時間切子集的 psv 收斂和原版相同（98 次更新，EXP-S9）；
+  online「成長資料 psv + 最後事件後步長重新開始」把最後事件後的工作量從 18.4 epoch 降到 1.5 epoch（EXP-S10）。
+- 硬體：voxel 單元（RDP 3×3×3 stencil + SVRG + 更新）1.0 cycle/voxel、165 MHz、8.6 W（EXP-S11）。
 
 ## 下一步
 
-1. 解決 HLS 編譯時間隨 lane 數暴增的問題（16 lanes 跑 8 小時沒完成）。
-2. 影像分區（slab）架構：每條 lane 只存影像的一段平面，所有 lane 共用一份影像，
-   才能放進 PETRIC 的實際影像（Esser2：95×163×163 = 2.5 M voxels，fp32 一份 81 Mb，晶片 M20K 共 234 Mb）。
+1. 32-lane slab 投影引擎做成硬體（現在只有模型）。
+2. voxel 單元和投影 lanes 放進同一個 bitstream，接 DDR4，在板上跑完整 psv 更新。
+3. voxel 單元並行 4 份（V = 4）。
+4. 預條件（高斯濾波、diag Hessian）硬體化。
 
 ## 已知限制
 
-- 測試影像只有 64×64×32，每條 lane 一份副本。
-- FPGA 功耗是 Quartus 估計值，不是實測值；GPU 功耗是 nvidia-smi 讀到的板上功耗。
+- 投影 lanes 的測試影像只有 64×64×32（每條 lane 一份副本）；voxel 單元用 163×163 平面、4 個平面。
+- FPGA 功耗是 Quartus 估計值；GPU 功耗是 nvidia-smi 板上功耗。
+- GPU 基準是筆電 GPU；A100 等級 GPU 的 list-mode 寫法會再快數倍。

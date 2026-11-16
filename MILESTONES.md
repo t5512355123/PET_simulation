@@ -14,6 +14,9 @@
 | 6 list-mode 資料 | `EXP-S6-SINOGRAM-TO-LISTMODE-PETRIC2-20261116` | PASS | Esser2/Hoffman2/ACR2 重新直方圖化完全相同；梯度差 ≤ 5.5×10⁻⁶ |
 | 7 冠軍瓶頸 | `EXP-S7-PSV-BOTTLENECK-PROFILE-20261116` | PASS（量測） | SIRF 放法 170–335 ms/更新 → GPU 事件式 46 ms；剩下 72% 是 GPU 反投影 atomic |
 | 8 冠軍實跑 | `EXP-S8-PSV-LOCAL-RUN-PROFILE-20261116` | PASS（有條件） | 冠軍 psv 本機實跑：比賽計時 152.9 s 到門檻（去掉最後 2 平面）；likelihood 梯度 76%（CPU 逐 bin 31%、前投影 30%、反投影 11%）、sensitivity 15% |
+| 9 list-mode psv | `EXP-S9-LISTMODE-PSV-GPU-20261117` | PASS | 依時間切子集、s/M：98 次更新 / 12.25 epoch（和原版相同）；3070 Ti 8.62 s、約 745 J |
+| 10 online | `EXP-S10-ONLINE-PSV-LATENCY-20261117` | PASS | 成長資料 psv + 步長重新開始：最後事件後 1.5–4.6 epoch（原版 18.4） |
+| 11 voxel 單元 | `EXP-S11-PSV-VOXEL-UNIT-DE10PRO-20261117` | PASS | RDP stencil + SVRG + 更新：1.0 cycle/voxel、165 MHz、8.6 W；整機比較：能量少 3.7 倍，時間要 32-lane slab 才贏 |
 | 基準 | `EXP-B-CPU-XEON8559C-PARALLELPROJ-20261115` | 量測 | 1 執行緒 44 M/s；24 執行緒約 500 M/s |
 | 基準 | `EXP-B-GPU-RTX3070TI-LAPTOP-20261115` | 量測 | 2660 M/s；約 95 W；36 nJ/樣本 |
 
