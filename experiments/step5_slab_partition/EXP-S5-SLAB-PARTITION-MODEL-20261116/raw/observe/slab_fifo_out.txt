@@ -1,0 +1,14 @@
+image 95x163x163; events 40000; rays hitting image 1.000
+mean Joseph steps per event 143.4
+N= 8: slabs touched per event 7.28; whole-run lane balance 0.919
+   W= 16:  6.67 useful steps/cycle (ideal 8); efficiency 0.834
+   W= 64:  6.67 useful steps/cycle (ideal 8); efficiency 0.834
+   W=256:  6.67 useful steps/cycle (ideal 8); efficiency 0.834
+N=16: slabs touched per event 14.33; whole-run lane balance 0.914
+   W= 16: 12.18 useful steps/cycle (ideal 16); efficiency 0.762
+   W= 64: 12.18 useful steps/cycle (ideal 16); efficiency 0.762
+   W=256: 12.18 useful steps/cycle (ideal 16); efficiency 0.762
+N=32: slabs touched per event 28.41; whole-run lane balance 0.912
+   W= 16: 20.90 useful steps/cycle (ideal 32); efficiency 0.653
+   W= 64: 20.90 useful steps/cycle (ideal 32); efficiency 0.653
+   W=256: 20.90 useful steps/cycle (ideal 32); efficiency 0.653
