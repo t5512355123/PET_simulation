@@ -1,0 +1,6 @@
+dense LORs, all values 1      : 241.9 ms
+dense LORs, value 0 where y=0 : 16.8 ms
+only non-zero LORs (bin order): 33.6 ms  (313995 LORs)
+only non-zero LORs (random)   : 41.0 ms
+numba image update 7 arrays   : 3.31 ms
+numpy image update            : 40.08 ms

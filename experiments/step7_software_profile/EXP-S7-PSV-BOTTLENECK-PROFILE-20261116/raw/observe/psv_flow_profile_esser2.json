@@ -1,0 +1,48 @@
+{
+ "dataset": "NeuroLF_Esser2",
+ "subsets": 8,
+ "bins_per_subset": 6635520,
+ "nonzero_per_subset": 312997.25,
+ "image_shape": [
+  95,
+  163,
+  163
+ ],
+ "setup_subset_sensitivities_s": 2.2303126000333577,
+ "repeats": 3,
+ "per_update_ms": {
+  "A": {
+   "A1 prior: image host->GPU": 2.932833337884707,
+   "A2 prior: RDP gradient on GPU": 2.365504165936727,
+   "A3 prior: gradient GPU->host": 5.025933339008286,
+   "A4 like: image host->GPU": 2.6984750002156943,
+   "A5 like: forward projection GPU (all subset bins)": 82.08833333628718,
+   "A6 like: projection GPU->host": 12.86649582471,
+   "A7 like: CPU ratio m*y/yhat over all subset bins": 126.33702500655394,
+   "A7mt like: CPU ratio, numba multithread (STIR uses OpenMP)": 5.702899999353879,
+   "A8 like: ratio host->GPU": 16.77361665497301,
+   "A9 like: back projection GPU (all subset bins)": 34.430483343991604,
+   "A10 like: gradient GPU->host": 4.858141658284391,
+   "A11 CPU image algebra (SVRG combine, precond step, max 0)": 44.18441666833436,
+   "A11mt CPU image algebra, numba multithread": 0.19965834265652424,
+   "TOTAL": 334.5612583361799,
+   "TOTAL_with_multithread_CPU": 169.942375003302
+  },
+  "B": {
+   "B1 RDP gradient": 0.8654083406630283,
+   "B2 forward (all subset bins)": 38.71607500089643,
+   "B3 ratio on GPU": 2.649291665875353,
+   "B4 back (all subset bins)": 17.492462509835605,
+   "B5 image algebra on GPU": 1.546408333524596,
+   "TOTAL": 61.269645850795015
+  },
+  "C": {
+   "C1 RDP gradient": 0.7637708379964655,
+   "C2 forward (non-zero bins only)": 10.084729166313386,
+   "C3 ratio on GPU": 0.620150002456891,
+   "C4 back (non-zero bins only)": 33.027141660568304,
+   "C5 image algebra on GPU": 1.5255416680399019,
+   "TOTAL": 46.02133333537495
+  }
+ }
+}

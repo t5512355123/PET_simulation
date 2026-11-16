@@ -12,6 +12,7 @@
 | 4 lane 擴充 | `EXP-S4-SIXTEEN-LANE-150MHZ-20261115` | INCONCLUSIVE | HLS 8 小時未完成，停止 |
 | 5 slab 分區 | `EXP-S5-SLAB-PARTITION-MODEL-20261116` | PASS（模型） | 16 lanes 效率 0.76、32 lanes 0.65；32 lanes 約 3.1 G/s（150 MHz），實際影像放得下 |
 | 6 list-mode 資料 | `EXP-S6-SINOGRAM-TO-LISTMODE-PETRIC2-20261116` | PASS | Esser2/Hoffman2/ACR2 重新直方圖化完全相同；梯度差 ≤ 5.5×10⁻⁶ |
+| 7 冠軍瓶頸 | `EXP-S7-PSV-BOTTLENECK-PROFILE-20261116` | PASS（量測） | SIRF 放法 170–335 ms/更新 → GPU 事件式 46 ms；剩下 72% 是 GPU 反投影 atomic |
 | 基準 | `EXP-B-CPU-XEON8559C-PARALLELPROJ-20261115` | 量測 | 1 執行緒 44 M/s；24 執行緒約 500 M/s |
 | 基準 | `EXP-B-GPU-RTX3070TI-LAPTOP-20261115` | 量測 | 2660 M/s；約 95 W；36 nJ/樣本 |
 
