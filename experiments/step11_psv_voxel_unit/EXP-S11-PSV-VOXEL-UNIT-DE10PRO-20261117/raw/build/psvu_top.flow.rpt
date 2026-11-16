@@ -1,0 +1,314 @@
+Flow report for psvu_top
+Tue Nov 17 02:46:52 2026
+Quartus Prime Version 21.3.0 Build 170 09/23/2021 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Parallel Compilation
+  2. Legal Notice
+  3. Flow Summary
+  4. Flow Settings
+  5. Flow Non-Default Global Settings
+  6. Flow Elapsed Time
+  7. Flow OS Summary
+  8. Flow Log
+
+
+
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 8      ;
++----------------------------+--------+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++---------------------------------+--------------------------------------------+
+; Flow Status                     ; Successful - Tue Nov 17 02:46:51 2026      ;
+; Quartus Prime Version           ; 21.3.0 Build 170 09/23/2021 SC Pro Edition ;
+; Revision Name                   ; psvu_top                                   ;
+; Top-level Entity Name           ; psvu_top                                   ;
+; Family                          ; Stratix 10                                 ;
+; Top-level Entity Name           ; psvu_top                                   ;
+; Device                          ; 1SX280HU2F50E1VG                           ;
+; Timing Models                   ; Final                                      ;
+; Power Models                    ; Final                                      ;
+; Device Status                   ; Final                                      ;
+; Logic utilization (in ALMs)     ; 35,117 / 933,120 ( 4 % )                   ;
+; Total dedicated logic registers ; 66221                                      ;
+; Total pins                      ; 6 / 1,152 ( < 1 % )                        ;
+; Total block memory bits         ; 56,868,096 / 240,046,080 ( 24 % )          ;
+; Total RAM Blocks                ; 3,447 / 11,721 ( 29 % )                    ;
+; Total DSP Blocks                ; 390 / 5,760 ( 7 % )                        ;
+; Total DIB Channels              ; 0 / 75 ( 0 % )                             ;
+; Total HSSI RX channels          ; 0 / 96 ( 0 % )                             ;
+; Total HSSI TX channels          ; 0 / 96 ( 0 % )                             ;
+; Total HSSI HPS                  ; 0 / 1 ( 0 % )                              ;
+; Total HSSI EHIPs                ; 0 / 4 ( 0 % )                              ;
+; Total PLLs                      ; 1 / 184 ( < 1 % )                          ;
+; Top-level Entity Name           ; psvu_top                                   ;
+; Top-level Entity Name           ; psvu_top                                   ;
+; Top-level Entity Name           ; psvu_top                                   ;
++---------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 11/17/2026 02:15:55 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; psvu_top            ;
++-------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                              ;
++-----------------------+---------------------------------------------------------------------------------------------------------------+---------------+------------------------------------------+------------+
+; Assignment Name       ; Value                                                                                                         ; Default Value ; Entity Name                              ; Section Id ;
++-----------------------+---------------------------------------------------------------------------------------------------------------+---------------+------------------------------------------+------------+
+; COMPILER_SIGNATURE_ID ; 49410870064769.179485295503210                                                                                ; --            ; --                                       ; --         ;
+; IP_SEARCH_PATHS       ; ../psvu/psvu.prj/components/psv_update/**/*                                                                   ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_clk_in/psvu_sys_clk_in.cmp                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_clk_in/../psvu_sys_clk_in.ip                                                             ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_clk_in_0/psvu_sys_clk_in_0.cmp                                                           ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_clk_in_0/../psvu_sys_clk_in_0.ip                                                         ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_clk_in_1/psvu_sys_clk_in_1.cmp                                                           ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_clk_in_1/../psvu_sys_clk_in_1.ip                                                         ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_clk_in_2/psvu_sys_clk_in_2.cmp                                                           ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_clk_in_2/../psvu_sys_clk_in_2.ip                                                         ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_clk_in_3/psvu_sys_clk_in_3.cmp                                                           ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_clk_in_3/../psvu_sys_clk_in_3.ip                                                         ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_jtag/psvu_sys_jtag.cmp                                                                   ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_jtag/../psvu_sys_jtag.ip                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_jtag_0/psvu_sys_jtag_0.cmp                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_jtag_0/../psvu_sys_jtag_0.ip                                                             ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_jtag_1/psvu_sys_jtag_1.cmp                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_jtag_1/../psvu_sys_jtag_1.ip                                                             ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_jtag_2/psvu_sys_jtag_2.cmp                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_jtag_2/../psvu_sys_jtag_2.ip                                                             ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_jtag_3/psvu_sys_jtag_3.cmp                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_jtag_3/../psvu_sys_jtag_3.ip                                                             ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_mem/psvu_sys_mem.cmp                                                                     ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_mem/../psvu_sys_mem.ip                                                                   ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_mem_0/psvu_sys_mem_0.cmp                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_mem_0/../psvu_sys_mem_0.ip                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_mem_1/psvu_sys_mem_1.cmp                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_mem_1/../psvu_sys_mem_1.ip                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_mem_2/psvu_sys_mem_2.cmp                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_mem_2/../psvu_sys_mem_2.ip                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_mem_3/psvu_sys_mem_3.cmp                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_mem_3/../psvu_sys_mem_3.ip                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_omem/psvu_sys_omem.cmp                                                                   ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_omem/../psvu_sys_omem.ip                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_omem_0/psvu_sys_omem_0.cmp                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_omem_0/../psvu_sys_omem_0.ip                                                             ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_omem_1/psvu_sys_omem_1.cmp                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_omem_1/../psvu_sys_omem_1.ip                                                             ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_omem_2/psvu_sys_omem_2.cmp                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_omem_2/../psvu_sys_omem_2.ip                                                             ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_omem_3/psvu_sys_omem_3.cmp                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_omem_3/../psvu_sys_omem_3.ip                                                             ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_pll/psvu_sys_pll.cmp                                                                     ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_pll/../psvu_sys_pll.ip                                                                   ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_pll_0/psvu_sys_pll_0.cmp                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_pll_0/../psvu_sys_pll_0.ip                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_pll_1/psvu_sys_pll_1.cmp                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_pll_1/../psvu_sys_pll_1.ip                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_pll_2/psvu_sys_pll_2.cmp                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_pll_2/../psvu_sys_pll_2.ip                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_pll_3/psvu_sys_pll_3.cmp                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_pll_3/../psvu_sys_pll_3.ip                                                               ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_rr/psvu_sys_rr.cmp                                                                       ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_rr/../psvu_sys_rr.ip                                                                     ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_rr_0/psvu_sys_rr_0.cmp                                                                   ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_rr_0/../psvu_sys_rr_0.ip                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_rr_1/psvu_sys_rr_1.cmp                                                                   ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_rr_1/../psvu_sys_rr_1.ip                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_rr_2/psvu_sys_rr_2.cmp                                                                   ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_rr_2/../psvu_sys_rr_2.ip                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_rr_3/psvu_sys_rr_3.cmp                                                                   ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_rr_3/../psvu_sys_rr_3.ip                                                                 ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_u/psvu_sys_u.cmp                                                                         ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_u/../psvu_sys_u.ip                                                                       ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_u_0/psvu_sys_u_0.cmp                                                                     ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_u_0/../psvu_sys_u_0.ip                                                                   ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_u_1/psvu_sys_u_1.cmp                                                                     ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_u_1/../psvu_sys_u_1.ip                                                                   ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_u_2/psvu_sys_u_2.cmp                                                                     ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_u_2/../psvu_sys_u_2.ip                                                                   ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_u_3/psvu_sys_u_3.cmp                                                                     ; --            ; --                                       ; --         ;
+; MISC_FILE             ; ip/psvu_sys/psvu_sys_u_3/../psvu_sys_u_3.ip                                                                   ; --            ; --                                       ; --         ;
+; MISC_FILE             ; psvu_sys/psvu_sys.cmp                                                                                         ; --            ; --                                       ; --         ;
+; MISC_FILE             ; psvu_sys/../psvu_sys.qsys                                                                                     ; --            ; --                                       ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_jtag/altera_jtag_dc_streaming_191/synth/altera_avalon_st_jtag_interface.sdc              ; --            ; altera_avalon_st_jtag_interface          ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_jtag_0/altera_jtag_dc_streaming_191/synth/altera_avalon_st_jtag_interface.sdc            ; --            ; altera_avalon_st_jtag_interface          ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_jtag_1/altera_jtag_dc_streaming_191/synth/altera_avalon_st_jtag_interface.sdc            ; --            ; altera_avalon_st_jtag_interface          ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_jtag_2/altera_jtag_dc_streaming_191/synth/altera_avalon_st_jtag_interface.sdc            ; --            ; altera_avalon_st_jtag_interface          ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_jtag_3/altera_jtag_dc_streaming_191/synth/altera_avalon_st_jtag_interface.sdc            ; --            ; altera_avalon_st_jtag_interface          ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_jtag/altera_reset_controller_1921/synth/altera_reset_controller.sdc                      ; --            ; altera_reset_controller                  ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_jtag_0/altera_reset_controller_1921/synth/altera_reset_controller.sdc                    ; --            ; altera_reset_controller                  ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_jtag_1/altera_reset_controller_1921/synth/altera_reset_controller.sdc                    ; --            ; altera_reset_controller                  ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_jtag_2/altera_reset_controller_1921/synth/altera_reset_controller.sdc                    ; --            ; altera_reset_controller                  ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_jtag_3/altera_reset_controller_1921/synth/altera_reset_controller.sdc                    ; --            ; altera_reset_controller                  ; --         ;
+; SDC_ENTITY_FILE       ; psvu_sys/altera_reset_controller_1921/synth/altera_reset_controller.sdc                                       ; --            ; altera_reset_controller                  ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_0/altera_iopll_1931/synth/psvu_sys_pll_0_altera_iopll_1931_yktj2ni.sdc               ; --            ; psvu_sys_pll_0_altera_iopll_1931_yktj2ni ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_1/altera_iopll_1931/synth/psvu_sys_pll_1_altera_iopll_1931_paussga.sdc               ; --            ; psvu_sys_pll_1_altera_iopll_1931_paussga ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_2/altera_iopll_1931/synth/psvu_sys_pll_2_altera_iopll_1931_paussga.sdc               ; --            ; psvu_sys_pll_2_altera_iopll_1931_paussga ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_3/altera_iopll_1931/synth/psvu_sys_pll_3_altera_iopll_1931_paussga.sdc               ; --            ; psvu_sys_pll_3_altera_iopll_1931_paussga ; --         ;
+; SDC_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll/altera_iopll_1931/synth/psvu_sys_pll_altera_iopll_1931_ch3uuhy.sdc                   ; --            ; psvu_sys_pll_altera_iopll_1931_ch3uuhy   ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys HAS_SOPCINFO 1 GENERATION_ID 0                                                             ; --            ; psvu_sys                                 ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_clk_in HAS_SOPCINFO 1 GENERATION_ID 0                                                      ; --            ; psvu_sys_clk_in                          ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_clk_in_0 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; psvu_sys_clk_in_0                        ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_clk_in_1 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; psvu_sys_clk_in_1                        ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_clk_in_2 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; psvu_sys_clk_in_2                        ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_clk_in_3 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; psvu_sys_clk_in_3                        ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_jtag HAS_SOPCINFO 1 GENERATION_ID 0                                                        ; --            ; psvu_sys_jtag                            ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_jtag_0 HAS_SOPCINFO 1 GENERATION_ID 0                                                      ; --            ; psvu_sys_jtag_0                          ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_jtag_1 HAS_SOPCINFO 1 GENERATION_ID 0                                                      ; --            ; psvu_sys_jtag_1                          ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_jtag_2 HAS_SOPCINFO 1 GENERATION_ID 0                                                      ; --            ; psvu_sys_jtag_2                          ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_jtag_3 HAS_SOPCINFO 1 GENERATION_ID 0                                                      ; --            ; psvu_sys_jtag_3                          ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_mem HAS_SOPCINFO 1 GENERATION_ID 0                                                         ; --            ; psvu_sys_mem                             ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_mem_0 HAS_SOPCINFO 1 GENERATION_ID 0                                                       ; --            ; psvu_sys_mem_0                           ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_mem_1 HAS_SOPCINFO 1 GENERATION_ID 0                                                       ; --            ; psvu_sys_mem_1                           ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_mem_2 HAS_SOPCINFO 1 GENERATION_ID 0                                                       ; --            ; psvu_sys_mem_2                           ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_mem_3 HAS_SOPCINFO 1 GENERATION_ID 0                                                       ; --            ; psvu_sys_mem_3                           ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_omem HAS_SOPCINFO 1 GENERATION_ID 0                                                        ; --            ; psvu_sys_omem                            ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_omem_0 HAS_SOPCINFO 1 GENERATION_ID 0                                                      ; --            ; psvu_sys_omem_0                          ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_omem_1 HAS_SOPCINFO 1 GENERATION_ID 0                                                      ; --            ; psvu_sys_omem_1                          ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_omem_2 HAS_SOPCINFO 1 GENERATION_ID 0                                                      ; --            ; psvu_sys_omem_2                          ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_omem_3 HAS_SOPCINFO 1 GENERATION_ID 0                                                      ; --            ; psvu_sys_omem_3                          ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_pll HAS_SOPCINFO 1 GENERATION_ID 0                                                         ; --            ; psvu_sys_pll                             ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_pll_0 HAS_SOPCINFO 1 GENERATION_ID 0                                                       ; --            ; psvu_sys_pll_0                           ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_pll_1 HAS_SOPCINFO 1 GENERATION_ID 0                                                       ; --            ; psvu_sys_pll_1                           ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_pll_2 HAS_SOPCINFO 1 GENERATION_ID 0                                                       ; --            ; psvu_sys_pll_2                           ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_pll_3 HAS_SOPCINFO 1 GENERATION_ID 0                                                       ; --            ; psvu_sys_pll_3                           ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_rr HAS_SOPCINFO 1 GENERATION_ID 0                                                          ; --            ; psvu_sys_rr                              ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_rr_0 HAS_SOPCINFO 1 GENERATION_ID 0                                                        ; --            ; psvu_sys_rr_0                            ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_rr_1 HAS_SOPCINFO 1 GENERATION_ID 0                                                        ; --            ; psvu_sys_rr_1                            ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_rr_2 HAS_SOPCINFO 1 GENERATION_ID 0                                                        ; --            ; psvu_sys_rr_2                            ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_rr_3 HAS_SOPCINFO 1 GENERATION_ID 0                                                        ; --            ; psvu_sys_rr_3                            ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_u HAS_SOPCINFO 1 GENERATION_ID 0                                                           ; --            ; psvu_sys_u                               ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_u_0 HAS_SOPCINFO 1 GENERATION_ID 0                                                         ; --            ; psvu_sys_u_0                             ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_u_1 HAS_SOPCINFO 1 GENERATION_ID 0                                                         ; --            ; psvu_sys_u_1                             ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_u_2 HAS_SOPCINFO 1 GENERATION_ID 0                                                         ; --            ; psvu_sys_u_2                             ; --         ;
+; SLD_INFO              ; QSYS_NAME psvu_sys_u_3 HAS_SOPCINFO 1 GENERATION_ID 0                                                         ; --            ; psvu_sys_u_3                             ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_clk_in/psvu_sys_clk_in.sopcinfo                                                          ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_clk_in_0/psvu_sys_clk_in_0.sopcinfo                                                      ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_clk_in_1/psvu_sys_clk_in_1.sopcinfo                                                      ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_clk_in_2/psvu_sys_clk_in_2.sopcinfo                                                      ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_clk_in_3/psvu_sys_clk_in_3.sopcinfo                                                      ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_jtag/psvu_sys_jtag.sopcinfo                                                              ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_jtag_0/psvu_sys_jtag_0.sopcinfo                                                          ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_jtag_1/psvu_sys_jtag_1.sopcinfo                                                          ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_jtag_2/psvu_sys_jtag_2.sopcinfo                                                          ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_jtag_3/psvu_sys_jtag_3.sopcinfo                                                          ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_mem/psvu_sys_mem.sopcinfo                                                                ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_mem_0/psvu_sys_mem_0.sopcinfo                                                            ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_mem_1/psvu_sys_mem_1.sopcinfo                                                            ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_mem_2/psvu_sys_mem_2.sopcinfo                                                            ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_mem_3/psvu_sys_mem_3.sopcinfo                                                            ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_omem/psvu_sys_omem.sopcinfo                                                              ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_omem_0/psvu_sys_omem_0.sopcinfo                                                          ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_omem_1/psvu_sys_omem_1.sopcinfo                                                          ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_omem_2/psvu_sys_omem_2.sopcinfo                                                          ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_omem_3/psvu_sys_omem_3.sopcinfo                                                          ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_pll/psvu_sys_pll.sopcinfo                                                                ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_pll_0/psvu_sys_pll_0.sopcinfo                                                            ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_pll_1/psvu_sys_pll_1.sopcinfo                                                            ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_pll_2/psvu_sys_pll_2.sopcinfo                                                            ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_pll_3/psvu_sys_pll_3.sopcinfo                                                            ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_rr/psvu_sys_rr.sopcinfo                                                                  ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_rr_0/psvu_sys_rr_0.sopcinfo                                                              ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_rr_1/psvu_sys_rr_1.sopcinfo                                                              ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_rr_2/psvu_sys_rr_2.sopcinfo                                                              ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_rr_3/psvu_sys_rr_3.sopcinfo                                                              ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_u/psvu_sys_u.sopcinfo                                                                    ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_u_0/psvu_sys_u_0.sopcinfo                                                                ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_u_1/psvu_sys_u_1.sopcinfo                                                                ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_u_2/psvu_sys_u_2.sopcinfo                                                                ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; ip/psvu_sys/psvu_sys_u_3/psvu_sys_u_3.sopcinfo                                                                ; --            ; --                                       ; --         ;
+; SOPCINFO_FILE         ; psvu_sys/psvu_sys.sopcinfo                                                                                    ; --            ; --                                       ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_0/altera_iopll_1931/synth/psvu_sys_pll_0_altera_iopll_1931_yktj2ni_all_ip_params.tcl ; --            ; psvu_sys_pll_0_altera_iopll_1931_yktj2ni ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_0/altera_iopll_1931/synth/psvu_sys_pll_0_altera_iopll_1931_yktj2ni_parameters.tcl    ; --            ; psvu_sys_pll_0_altera_iopll_1931_yktj2ni ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_0/altera_iopll_1931/synth/psvu_sys_pll_0_altera_iopll_1931_yktj2ni_pin_map.tcl       ; --            ; psvu_sys_pll_0_altera_iopll_1931_yktj2ni ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_1/altera_iopll_1931/synth/psvu_sys_pll_1_altera_iopll_1931_paussga_all_ip_params.tcl ; --            ; psvu_sys_pll_1_altera_iopll_1931_paussga ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_1/altera_iopll_1931/synth/psvu_sys_pll_1_altera_iopll_1931_paussga_parameters.tcl    ; --            ; psvu_sys_pll_1_altera_iopll_1931_paussga ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_1/altera_iopll_1931/synth/psvu_sys_pll_1_altera_iopll_1931_paussga_pin_map.tcl       ; --            ; psvu_sys_pll_1_altera_iopll_1931_paussga ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_2/altera_iopll_1931/synth/psvu_sys_pll_2_altera_iopll_1931_paussga_all_ip_params.tcl ; --            ; psvu_sys_pll_2_altera_iopll_1931_paussga ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_2/altera_iopll_1931/synth/psvu_sys_pll_2_altera_iopll_1931_paussga_parameters.tcl    ; --            ; psvu_sys_pll_2_altera_iopll_1931_paussga ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_2/altera_iopll_1931/synth/psvu_sys_pll_2_altera_iopll_1931_paussga_pin_map.tcl       ; --            ; psvu_sys_pll_2_altera_iopll_1931_paussga ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_3/altera_iopll_1931/synth/psvu_sys_pll_3_altera_iopll_1931_paussga_all_ip_params.tcl ; --            ; psvu_sys_pll_3_altera_iopll_1931_paussga ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_3/altera_iopll_1931/synth/psvu_sys_pll_3_altera_iopll_1931_paussga_parameters.tcl    ; --            ; psvu_sys_pll_3_altera_iopll_1931_paussga ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll_3/altera_iopll_1931/synth/psvu_sys_pll_3_altera_iopll_1931_paussga_pin_map.tcl       ; --            ; psvu_sys_pll_3_altera_iopll_1931_paussga ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll/altera_iopll_1931/synth/psvu_sys_pll_altera_iopll_1931_ch3uuhy_all_ip_params.tcl     ; --            ; psvu_sys_pll_altera_iopll_1931_ch3uuhy   ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll/altera_iopll_1931/synth/psvu_sys_pll_altera_iopll_1931_ch3uuhy_parameters.tcl        ; --            ; psvu_sys_pll_altera_iopll_1931_ch3uuhy   ; --         ;
+; TCL_ENTITY_FILE       ; ip/psvu_sys/psvu_sys_pll/altera_iopll_1931/synth/psvu_sys_pll_altera_iopll_1931_ch3uuhy_pin_map.tcl           ; --            ; psvu_sys_pll_altera_iopll_1931_ch3uuhy   ; --         ;
++-----------------------+---------------------------------------------------------------------------------------------------------------+---------------+------------------------------------------+------------+
+
+
++------------------------------------------------------+
+; Flow Elapsed Time                                    ;
++-----------------+--------------+---------------------+
+; Module Name     ; Elapsed Time ; Peak Virtual Memory ;
++-----------------+--------------+---------------------+
+; Synthesis       ; 00:03:36     ; 7317 MB             ;
+; Fitter          ; 00:22:08     ; 25544 MB            ;
+; Timing Analyzer ; 00:00:42     ; 11591 MB            ;
+; Assembler       ; 00:00:47     ; 11456 MB            ;
+; Power Analyzer  ; 00:01:21     ; 16225 MB            ;
+; Total           ; 00:28:34     ; --                  ;
++-----------------+--------------+---------------------+
+
+
++---------------------------------------------------------------------------------+
+; Flow OS Summary                                                                 ;
++-----------------+------------------+--------------+------------+----------------+
+; Module Name     ; Machine Hostname ; OS Name      ; OS Version ; Processor type ;
++-----------------+------------------+--------------+------------+----------------+
+; Synthesis       ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
+; Fitter          ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
+; Timing Analyzer ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
+; Assembler       ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
+; Power Analyzer  ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
++-----------------+------------------+--------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_syn --read_settings_files=on --write_settings_files=off psvu_top -c psvu_top
+quartus_fit --read_settings_files=on --write_settings_files=off psvu_top -c psvu_top
+quartus_sta psvu_top -c psvu_top --mode=finalize
+quartus_asm --read_settings_files=on --write_settings_files=off psvu_top -c psvu_top
+quartus_pow psvu_top --default_input_io_toggle_rate=12.5%
+
+
+

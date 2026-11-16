@@ -1,0 +1,2 @@
+voxels 106276: x_new max abs diff / max 1.256e-07, bit-identical 94361/106276
+timing: 4000 passes in 5482 ms at 175.0 MHz -> 2.257 cycles per voxel, 77.5 M voxels/s

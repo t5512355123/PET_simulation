@@ -1,0 +1,21 @@
+Fitter Status : Successful - Tue Nov 17 02:06:31 2026
+Quartus Prime Version : 21.3.0 Build 170 09/23/2021 SC Pro Edition
+Revision Name : psvu_top
+Top-level Entity Name : psvu_top
+Family : Stratix 10
+Device : 1SX280HU2F50E1VG
+Timing Models : Final
+Power Models : Final
+Device Status : Final
+Logic utilization (in ALMs) : 56,623 / 933,120 ( 6 % )
+Total dedicated logic registers : 78744
+Total pins : 6 / 1,152 ( < 1 % )
+Total block memory bits : 60,143,936 / 240,046,080 ( 25 % )
+Total RAM Blocks : 3,655 / 11,721 ( 31 % )
+Total DSP Blocks : 390 / 5,760 ( 7 % )
+Total DIB Channels : 0 / 75 ( 0 % )
+Total HSSI RX channels : 0 / 96 ( 0 % )
+Total HSSI TX channels : 0 / 96 ( 0 % )
+Total HSSI HPS : 0 / 1 ( 0 % )
+Total HSSI EHIPs : 0 / 4 ( 0 % )
+Total PLLs : 1 / 184 ( < 1 % )

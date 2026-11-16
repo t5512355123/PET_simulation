@@ -1,0 +1,70 @@
+***************************************************************
+Quartus is a registered trademark of Intel Corporation in the
+US and other countries.  Portions of the Quartus Prime software
+code, and other portions of the code included in this download
+or on this DVD, are licensed to Intel Corporation and are the
+copyrighted property of third parties. For license details,
+refer to the End User License Agreement at
+http://fpgasoftware.intel.com/eula.
+***************************************************************
+
+2026.11.17.02:15:24 Info: Doing: qsys-script --script=psvu_sys_gen.tcl --quartus-project=psvu_top.qpf --search-path=../psvu/psvu.prj/components/psv_update/**/*,$
+2026.11.17.02:15:28 Info: create_system psvu_sys
+2026.11.17.02:15:28 Info: set_project_property DEVICE_FAMILY Stratix 10
+2026.11.17.02:15:28 Info: set_project_property DEVICE 1SX280HU2F50E1VG
+2026.11.17.02:15:28 Info: add_instance clk_in clock_source
+2026.11.17.02:15:28 Info: set_instance_parameter_value clk_in clockFrequency 50000000.0
+2026.11.17.02:15:28 Info: set_instance_parameter_value clk_in clockFrequencyKnown 1
+2026.11.17.02:15:28 Info: set_instance_parameter_value clk_in resetSynchronousEdges DEASSERT
+2026.11.17.02:15:28 Info: add_instance pll altera_iopll
+2026.11.17.02:15:29 Info: set_instance_parameter_value pll gui_reference_clock_frequency 50.0
+2026.11.17.02:15:29 Info: set_instance_parameter_value pll gui_number_of_clocks 1
+2026.11.17.02:15:29 Info: set_instance_parameter_value pll gui_output_clock_frequency0 165
+2026.11.17.02:15:29 Info: set_instance_parameter_value pll gui_use_locked 1
+2026.11.17.02:15:29 Info: add_instance jtag altera_jtag_avalon_master
+2026.11.17.02:15:29 Info: add_instance u psv_update_internal
+2026.11.17.02:15:29 Info: add_instance rr altera_s10_user_rst_clkgate
+2026.11.17.02:15:29 Info: add_instance mem intel_onchip_memory
+2026.11.17.02:15:29 Info: set_instance_parameter_value mem dataWidth 256
+2026.11.17.02:15:29 Info: set_instance_parameter_value mem dualPort 0
+2026.11.17.02:15:29 Info: set_instance_parameter_value mem memorySize 4194304
+2026.11.17.02:15:29 Info: set_instance_parameter_value mem singleClockOperation 1
+2026.11.17.02:15:29 Info: set_instance_parameter_value mem initMemContent 0
+2026.11.17.02:15:29 Info: add_instance omem intel_onchip_memory
+2026.11.17.02:15:29 Info: set_instance_parameter_value omem dataWidth 64
+2026.11.17.02:15:29 Info: set_instance_parameter_value omem dualPort 0
+2026.11.17.02:15:29 Info: set_instance_parameter_value omem memorySize 1048576
+2026.11.17.02:15:29 Info: set_instance_parameter_value omem initMemContent 0
+2026.11.17.02:15:29 Info: add_connection clk_in.clk pll.refclk
+2026.11.17.02:15:29 Info: add_connection clk_in.clk_reset pll.reset
+2026.11.17.02:15:29 Info: add_connection pll.outclk0 jtag.clk
+2026.11.17.02:15:29 Info: add_connection pll.outclk0 u.clock
+2026.11.17.02:15:29 Info: add_connection pll.outclk0 mem.clk1
+2026.11.17.02:15:29 Info: add_connection pll.outclk0 omem.clk1
+2026.11.17.02:15:29 Info: add_connection clk_in.clk_reset jtag.clk_reset
+2026.11.17.02:15:29 Info: add_connection clk_in.clk_reset u.reset
+2026.11.17.02:15:29 Info: add_connection clk_in.clk_reset mem.reset1
+2026.11.17.02:15:29 Info: add_connection clk_in.clk_reset omem.reset1
+2026.11.17.02:15:29 Info: add_connection jtag.master mem.s1
+2026.11.17.02:15:29 Info: set_connection_parameter_value jtag.master/mem.s1 baseAddress 0x00000000
+2026.11.17.02:15:29 Info: add_connection jtag.master omem.s1
+2026.11.17.02:15:29 Info: set_connection_parameter_value jtag.master/omem.s1 baseAddress 0x00400000
+2026.11.17.02:15:29 Info: add_connection jtag.master u.avs_cra
+2026.11.17.02:15:29 Info: set_connection_parameter_value jtag.master/u.avs_cra baseAddress 0x00500000
+2026.11.17.02:15:29 Info: add_connection u.avmm_1_rw mem.s1
+2026.11.17.02:15:29 Info: set_connection_parameter_value u.avmm_1_rw/mem.s1 baseAddress 0x00000000
+2026.11.17.02:15:29 Info: add_connection u.avmm_3_rw omem.s1
+2026.11.17.02:15:29 Info: set_connection_parameter_value u.avmm_3_rw/omem.s1 baseAddress 0x00000000
+2026.11.17.02:15:29 Info: set_interface_property clk EXPORT_OF clk_in.clk_in
+2026.11.17.02:15:29 Info: set_interface_property reset EXPORT_OF clk_in.clk_in_reset
+2026.11.17.02:15:29 Info: set_interface_property pll_locked EXPORT_OF pll.locked
+2026.11.17.02:15:29 Info: set_interface_property ninit_done EXPORT_OF rr.ninit_done
+2026.11.17.02:15:29 Info: save_system psvu_sys.qsys
+2026.11.17.02:15:29 Info: Replacing psvu_sys.clk_in with generic component
+2026.11.17.02:15:30 Info: Replacing psvu_sys.pll with generic component
+2026.11.17.02:15:31 Info: Replacing psvu_sys.jtag with generic component
+2026.11.17.02:15:31 Info: Replacing psvu_sys.u with generic component
+2026.11.17.02:15:31 Info: Replacing psvu_sys.rr with generic component
+2026.11.17.02:15:32 Info: Replacing psvu_sys.mem with generic component
+2026.11.17.02:15:32 Info: Replacing psvu_sys.omem with generic component
+2026.11.17.02:15:33 Info: Info: All modules have been converted to Generic Components.

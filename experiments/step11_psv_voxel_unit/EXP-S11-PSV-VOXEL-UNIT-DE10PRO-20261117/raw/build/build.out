@@ -1,0 +1,8 @@
+qsys-script done
+qsys-generate done
+compile exit 0
+; 172.09 MHz ; 172.09 MHz      ; u0|pll|pll_outclk0 ;      ; Slow 900mV 100C Model           ;
+; 825.76 MHz ; 825.76 MHz      ; CLK_50_B3I         ;      ; 1 Slow vid1 0C Model            ;
+Logic utilization (in ALMs) : 35,117 / 933,120 ( 4 % )
+Total RAM Blocks : 3,447 / 11,721 ( 29 % )
+Total DSP Blocks : 390 / 5,760 ( 7 % )

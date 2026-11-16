@@ -1,0 +1,37 @@
+../hls/psv_update.cpp:189:44: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+  auto rnd = []() { return (float)rand() / RAND_MAX; };
+                                         ~ ^~~~~~~~
+/usr/include/stdlib.h:128:18: note: expanded from macro 'RAND_MAX'
+#define RAND_MAX        2147483647
+                        ^~~~~~~~~~
+../hls/psv_update.cpp:198:13: warning: 'mm_master' is deprecated: Use mm_host instead. [-Wdeprecated-declarations]
+    RecPort ahead(R.data(), n * sizeof(Rec));
+            ^
+/opt/intelFPGA_pro/21.3/hls/include/HLS/internal/_memory.h:209:12: note: 'mm_master' has been explicitly marked deprecated here
+  explicit mm_master(_T *data, std::size_t size = 0, bool use_socket = false);
+           ^
+../hls/psv_update.cpp:199:13: warning: 'mm_master' is deprecated: Use mm_host instead. [-Wdeprecated-declarations]
+    OutPort out(O.data(), n * sizeof(Out));
+            ^
+/opt/intelFPGA_pro/21.3/hls/include/HLS/internal/_memory.h:209:12: note: 'mm_master' has been explicitly marked deprecated here
+  explicit mm_master(_T *data, std::size_t size = 0, bool use_socket = false);
+           ^
+../hls/psv_update.cpp:215:13: warning: 'mm_master' is deprecated: Use mm_host instead. [-Wdeprecated-declarations]
+  { RecPort a2(R.data(), n * sizeof(Rec)); OutPort o2(O.data(), n * sizeof(Out));
+            ^
+/opt/intelFPGA_pro/21.3/hls/include/HLS/internal/_memory.h:209:12: note: 'mm_master' has been explicitly marked deprecated here
+  explicit mm_master(_T *data, std::size_t size = 0, bool use_socket = false);
+           ^
+../hls/psv_update.cpp:215:52: warning: 'mm_master' is deprecated: Use mm_host instead. [-Wdeprecated-declarations]
+  { RecPort a2(R.data(), n * sizeof(Rec)); OutPort o2(O.data(), n * sizeof(Out));
+                                                   ^
+/opt/intelFPGA_pro/21.3/hls/include/HLS/internal/_memory.h:209:12: note: 'mm_master' has been explicitly marked deprecated here
+  explicit mm_master(_T *data, std::size_t size = 0, bool use_socket = false);
+           ^
+5 warnings generated.
+Compiler Warning: Argument 'out' on component 'psv_update(ihc::mm_master<Rec, ihc::aspace<1>, ihc::awidth<32>, ihc::dwidth<256>, ihc::latency<0>, ihc::maxburst<1>, ihc::align<32>, ihc::waitrequest<1> >&, ihc::mm_master<Out, ihc::aspace<3>, ihc::awidth<32>, ihc::dwidth<64>, ihc::latency<0>, ihc::maxburst<1>, ihc::align<8>, ihc::waitrequest<1> >&, int, int, float, float, float, float, float, float, float, float, float, int)' is not a legal HDL identifier.  Renamed to 'out0'
+
+real	3m1.811s
+user	3m10.846s
+sys	0m1.470s
+hls exit 0
