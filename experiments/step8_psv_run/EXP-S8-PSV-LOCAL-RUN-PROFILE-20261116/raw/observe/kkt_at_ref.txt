@@ -1,0 +1,24 @@
+cuda vs cpu prior grad rel diff 2.7950117e-07
+cuda KKT residual per plane (mean |x*g/sens| / mean x):
+  z 0 6.39e-02  likelihood part 2.56e-01 prior part 2.71e-01
+  z 10 8.74e-05  likelihood part 1.17e-01 prior part 1.17e-01
+  z 11 7.54e-05  likelihood part 8.66e-02 prior part 8.66e-02
+  z 12 6.97e-05  likelihood part 6.82e-02 prior part 6.82e-02
+  z 50 2.78e-05  likelihood part 3.68e-02 prior part 3.68e-02
+  z 90 1.74e-04  likelihood part 8.16e-02 prior part 8.16e-02
+  z 91 3.89e-04  likelihood part 8.81e-02 prior part 8.80e-02
+  z 92 1.45e-03  likelihood part 9.59e-02 prior part 9.57e-02
+  z 93 6.76e-03  likelihood part 1.09e-01 prior part 1.08e-01
+  z 94 6.51e-02  likelihood part 1.60e-01 prior part 1.48e-01
+cpu KKT residual per plane (mean |x*g/sens| / mean x):
+  z 0 6.39e-02  likelihood part 2.56e-01 prior part 2.71e-01
+  z 10 8.74e-05  likelihood part 1.17e-01 prior part 1.17e-01
+  z 11 7.54e-05  likelihood part 8.66e-02 prior part 8.66e-02
+  z 12 6.97e-05  likelihood part 6.82e-02 prior part 6.82e-02
+  z 50 2.78e-05  likelihood part 3.68e-02 prior part 3.68e-02
+  z 90 1.74e-04  likelihood part 8.16e-02 prior part 8.16e-02
+  z 91 3.89e-04  likelihood part 8.81e-02 prior part 8.80e-02
+  z 92 1.45e-03  likelihood part 9.59e-02 prior part 9.57e-02
+  z 93 6.76e-03  likelihood part 1.09e-01 prior part 1.08e-01
+  z 94 6.51e-02  likelihood part 1.60e-01 prior part 1.48e-01
+sens per plane mean [322.119, 531.013, 905.012, 174.401, 125.239]

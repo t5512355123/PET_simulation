@@ -1,0 +1,26 @@
+import time, sys, numpy as np, stir
+D = sys.argv[1]
+stir.Verbosity.set(0) if hasattr(stir,'Verbosity') else None
+t=time.time()
+y = stir.ProjData.read_from_file(D+'/prompts.hs')
+a = stir.ProjData.read_from_file(D+'/additive_term.hs')
+m = stir.ProjData.read_from_file(D+'/mult_factors.hs')
+x = stir.FloatVoxelsOnCartesianGrid.read_from_file(D+'/OSEM_image.hv')
+print('read', time.time()-t, flush=True)
+yin = stir.ProjDataInMemory(y); ain = stir.ProjDataInMemory(a)
+marr = m.to_array().as_array() if hasattr(m.to_array(),'as_array') else np.asarray(m.to_array())
+inv = stir.ProjDataInMemory(m)
+inv.fill(np.where(marr>1e-20, 1/np.maximum(marr,1e-20), 0).astype(np.float32).flat)
+print('mult stats', marr.min(), marr.max(), flush=True)
+M = int(sys.argv[2])
+obj = stir.PoissonLogLikelihoodWithLinearModelForMeanAndProjData3DFloat()
+obj.set_proj_data_sptr(yin)
+obj.set_projector_pair_sptr(stir.ProjectorByBinPairUsingParallelproj())
+obj.set_normalisation_sptr(stir.BinNormalisationFromProjData(inv))
+obj.set_additive_proj_data_sptr(ain)
+obj.set_num_subsets(M)
+t=time.time(); obj.set_up(x); print('set_up (incl subset sens)', time.time()-t, flush=True)
+g = x.get_empty_copy()
+for s in range(min(M,3)) if M>1 else [0,0]:
+    t=time.time(); obj.compute_sub_gradient_without_penalty(g, x, s); print('subgrad',s, time.time()-t, flush=True)
+np.save('grad_stir_s0.npy', np.asarray(g.as_array()) if hasattr(g,'as_array') else stir.to_numpy(g))

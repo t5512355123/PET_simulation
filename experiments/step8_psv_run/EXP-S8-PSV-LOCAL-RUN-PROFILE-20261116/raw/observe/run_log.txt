@@ -1,0 +1,136 @@
+[read] 2.14 s  {'read_data': 1.5000336000230163, 'shim_convert': 0.021830499987117946, 'image_ops': 0.0017805999959819019}
+[metrics OSEM] {'RMSE_whole_object': 0.7629, 'RMSE_background': 0.5408, 'AEM_VOI_cold_air': 0.1174, 'AEM_VOI_cold_teflon': 0.1178, 'AEM_VOI_hot_cylinder': 0.0393, 'AEM_VOI_rods': 0.0238}
+[setup] 26.55 s  num_subsets=8  {'precond_rdp_diag_hessian(GPU cupy)': 0.9092579999705777, 'image_ops': 0.026827999972738326, 'gauss_filter': 0.22236510005313903, 'shim_convert': 0.10478049993980676, 'setup_objective_and_subset_sensitivities': 23.71166590001667}
+[sanity sensitivity STIR / parallelproj model] {'sens_ratio_median': 0.9999909400939941, 'sens_ratio_p1': 6.754070080994268e-10, 'sens_ratio_p99': 1.00007164478302}
+[upd    1 ep  0.12] FULL   dt= 6.588s t=  33.14s RMSEw=0.0632 RMSEb=0.0400 maxAEM=0.1298 RMSEw-2=0.0595 pass=False consec=0 pass-2=False consec2=0
+[upd    2 ep  0.25]        dt= 0.867s t=  34.00s RMSEw=0.0535 RMSEb=0.0358 maxAEM=0.1201 RMSEw-2=0.0504 pass=False consec=0 pass-2=False consec2=0
+[upd    3 ep  0.38]        dt= 0.844s t=  34.85s RMSEw=0.0471 RMSEb=0.0327 maxAEM=0.1130 RMSEw-2=0.0442 pass=False consec=0 pass-2=False consec2=0
+[upd    4 ep  0.50]        dt= 0.852s t=  35.70s RMSEw=0.0425 RMSEb=0.0298 maxAEM=0.1076 RMSEw-2=0.0396 pass=False consec=0 pass-2=False consec2=0
+[upd    5 ep  0.62]      P dt= 1.893s t=  37.59s RMSEw=0.0395 RMSEb=0.0274 maxAEM=0.1031 RMSEw-2=0.0361 pass=False consec=0 pass-2=False consec2=0
+[upd    6 ep  0.75]        dt= 0.852s t=  38.44s RMSEw=0.0362 RMSEb=0.0251 maxAEM=0.0991 RMSEw-2=0.0331 pass=False consec=0 pass-2=False consec2=0
+[upd    7 ep  0.88]        dt= 0.838s t=  39.28s RMSEw=0.0338 RMSEb=0.0232 maxAEM=0.0953 RMSEw-2=0.0306 pass=False consec=0 pass-2=False consec2=0
+[upd    8 ep  1.00]        dt= 0.850s t=  40.13s RMSEw=0.0316 RMSEb=0.0215 maxAEM=0.0913 RMSEw-2=0.0284 pass=False consec=0 pass-2=False consec2=0
+[upd    9 ep  1.12]      P dt= 1.970s t=  42.10s RMSEw=0.0296 RMSEb=0.0199 maxAEM=0.0876 RMSEw-2=0.0266 pass=False consec=0 pass-2=False consec2=0
+[upd   10 ep  1.25]        dt= 0.852s t=  42.95s RMSEw=0.0282 RMSEb=0.0186 maxAEM=0.0843 RMSEw-2=0.0249 pass=False consec=0 pass-2=False consec2=0
+[upd   11 ep  1.38]        dt= 0.854s t=  43.81s RMSEw=0.0273 RMSEb=0.0174 maxAEM=0.0809 RMSEw-2=0.0235 pass=False consec=0 pass-2=False consec2=0
+[upd   12 ep  1.50]        dt= 0.850s t=  44.66s RMSEw=0.0259 RMSEb=0.0163 maxAEM=0.0779 RMSEw-2=0.0222 pass=False consec=0 pass-2=False consec2=0
+[upd   13 ep  1.62]        dt= 0.863s t=  45.52s RMSEw=0.0248 RMSEb=0.0154 maxAEM=0.0750 RMSEw-2=0.0211 pass=False consec=0 pass-2=False consec2=0
+[upd   14 ep  1.75]        dt= 0.883s t=  46.40s RMSEw=0.0238 RMSEb=0.0145 maxAEM=0.0717 RMSEw-2=0.0200 pass=False consec=0 pass-2=False consec2=0
+[upd   15 ep  1.88]        dt= 0.865s t=  47.27s RMSEw=0.0226 RMSEb=0.0137 maxAEM=0.0692 RMSEw-2=0.0190 pass=False consec=0 pass-2=False consec2=0
+[upd   16 ep  2.00]        dt= 0.839s t=  48.11s RMSEw=0.0220 RMSEb=0.0130 maxAEM=0.0666 RMSEw-2=0.0181 pass=False consec=0 pass-2=False consec2=0
+[upd   17 ep  2.12] FULL   dt= 6.608s t=  54.72s RMSEw=0.0203 RMSEb=0.0123 maxAEM=0.0639 RMSEw-2=0.0170 pass=False consec=0 pass-2=False consec2=0
+[upd   18 ep  2.25]        dt= 0.861s t=  55.58s RMSEw=0.0196 RMSEb=0.0116 maxAEM=0.0613 RMSEw-2=0.0162 pass=False consec=0 pass-2=False consec2=0
+[upd   19 ep  2.38]        dt= 0.848s t=  56.42s RMSEw=0.0189 RMSEb=0.0111 maxAEM=0.0589 RMSEw-2=0.0155 pass=False consec=0 pass-2=False consec2=0
+[upd   20 ep  2.50]        dt= 0.842s t=  57.27s RMSEw=0.0184 RMSEb=0.0106 maxAEM=0.0566 RMSEw-2=0.0149 pass=False consec=0 pass-2=False consec2=0
+[upd   21 ep  2.62]        dt= 0.875s t=  58.14s RMSEw=0.0179 RMSEb=0.0101 maxAEM=0.0544 RMSEw-2=0.0143 pass=False consec=0 pass-2=False consec2=0
+[upd   22 ep  2.75]        dt= 0.855s t=  59.00s RMSEw=0.0174 RMSEb=0.0096 maxAEM=0.0523 RMSEw-2=0.0137 pass=False consec=0 pass-2=False consec2=0
+[upd   23 ep  2.88]        dt= 0.884s t=  59.88s RMSEw=0.0171 RMSEb=0.0092 maxAEM=0.0503 RMSEw-2=0.0132 pass=False consec=0 pass-2=False consec2=0
+[upd   24 ep  3.00]        dt= 0.851s t=  60.73s RMSEw=0.0166 RMSEb=0.0088 maxAEM=0.0483 RMSEw-2=0.0127 pass=False consec=0 pass-2=False consec2=0
+[upd   25 ep  3.12]        dt= 0.859s t=  61.59s RMSEw=0.0163 RMSEb=0.0085 maxAEM=0.0464 RMSEw-2=0.0122 pass=False consec=0 pass-2=False consec2=0
+[upd   26 ep  3.25]        dt= 0.842s t=  62.43s RMSEw=0.0157 RMSEb=0.0081 maxAEM=0.0448 RMSEw-2=0.0118 pass=False consec=0 pass-2=False consec2=0
+[upd   27 ep  3.38]        dt= 0.865s t=  63.30s RMSEw=0.0154 RMSEb=0.0078 maxAEM=0.0431 RMSEw-2=0.0114 pass=False consec=0 pass-2=False consec2=0
+[upd   28 ep  3.50]        dt= 0.850s t=  64.15s RMSEw=0.0149 RMSEb=0.0075 maxAEM=0.0416 RMSEw-2=0.0110 pass=False consec=0 pass-2=False consec2=0
+[upd   29 ep  3.62]        dt= 0.862s t=  65.01s RMSEw=0.0148 RMSEb=0.0073 maxAEM=0.0400 RMSEw-2=0.0107 pass=False consec=0 pass-2=False consec2=0
+[upd   30 ep  3.75]        dt= 0.859s t=  65.87s RMSEw=0.0148 RMSEb=0.0070 maxAEM=0.0384 RMSEw-2=0.0103 pass=False consec=0 pass-2=False consec2=0
+[upd   31 ep  3.88]        dt= 0.854s t=  66.72s RMSEw=0.0147 RMSEb=0.0068 maxAEM=0.0369 RMSEw-2=0.0100 pass=False consec=0 pass-2=False consec2=0
+[upd   32 ep  4.00]        dt= 0.863s t=  67.59s RMSEw=0.0146 RMSEb=0.0065 maxAEM=0.0356 RMSEw-2=0.0097 pass=False consec=0 pass-2=False consec2=0
+[upd   33 ep  4.12] FULL   dt= 6.501s t=  74.09s RMSEw=0.0144 RMSEb=0.0063 maxAEM=0.0343 RMSEw-2=0.0094 pass=False consec=0 pass-2=False consec2=0
+[upd   34 ep  4.25]        dt= 0.843s t=  74.93s RMSEw=0.0142 RMSEb=0.0061 maxAEM=0.0330 RMSEw-2=0.0092 pass=False consec=0 pass-2=False consec2=0
+[upd   35 ep  4.38]        dt= 0.858s t=  75.79s RMSEw=0.0141 RMSEb=0.0059 maxAEM=0.0319 RMSEw-2=0.0089 pass=False consec=0 pass-2=False consec2=0
+[upd   36 ep  4.50]        dt= 0.867s t=  76.65s RMSEw=0.0139 RMSEb=0.0057 maxAEM=0.0307 RMSEw-2=0.0087 pass=False consec=0 pass-2=False consec2=0
+[upd   37 ep  4.62]        dt= 0.844s t=  77.50s RMSEw=0.0138 RMSEb=0.0055 maxAEM=0.0296 RMSEw-2=0.0085 pass=False consec=0 pass-2=False consec2=0
+[upd   38 ep  4.75]        dt= 0.851s t=  78.35s RMSEw=0.0137 RMSEb=0.0054 maxAEM=0.0286 RMSEw-2=0.0083 pass=False consec=0 pass-2=False consec2=0
+[upd   39 ep  4.88]        dt= 0.864s t=  79.21s RMSEw=0.0136 RMSEb=0.0052 maxAEM=0.0276 RMSEw-2=0.0081 pass=False consec=0 pass-2=False consec2=0
+[upd   40 ep  5.00]        dt= 0.848s t=  80.06s RMSEw=0.0135 RMSEb=0.0051 maxAEM=0.0267 RMSEw-2=0.0079 pass=False consec=0 pass-2=False consec2=0
+[upd   41 ep  5.12]        dt= 0.849s t=  80.91s RMSEw=0.0134 RMSEb=0.0049 maxAEM=0.0257 RMSEw-2=0.0077 pass=False consec=0 pass-2=False consec2=0
+[upd   42 ep  5.25]        dt= 0.862s t=  81.77s RMSEw=0.0133 RMSEb=0.0048 maxAEM=0.0248 RMSEw-2=0.0075 pass=False consec=0 pass-2=False consec2=0
+[upd   43 ep  5.38]        dt= 0.851s t=  82.62s RMSEw=0.0133 RMSEb=0.0047 maxAEM=0.0240 RMSEw-2=0.0073 pass=False consec=0 pass-2=False consec2=0
+[upd   44 ep  5.50]        dt= 0.862s t=  83.49s RMSEw=0.0132 RMSEb=0.0045 maxAEM=0.0232 RMSEw-2=0.0072 pass=False consec=0 pass-2=False consec2=0
+[upd   45 ep  5.62]        dt= 0.855s t=  84.34s RMSEw=0.0131 RMSEb=0.0044 maxAEM=0.0224 RMSEw-2=0.0070 pass=False consec=0 pass-2=False consec2=0
+[upd   46 ep  5.75]        dt= 0.839s t=  85.18s RMSEw=0.0131 RMSEb=0.0043 maxAEM=0.0217 RMSEw-2=0.0069 pass=False consec=0 pass-2=False consec2=0
+[upd   47 ep  5.88]        dt= 0.846s t=  86.03s RMSEw=0.0130 RMSEb=0.0042 maxAEM=0.0209 RMSEw-2=0.0068 pass=False consec=0 pass-2=False consec2=0
+[upd   48 ep  6.00]        dt= 0.855s t=  86.88s RMSEw=0.0130 RMSEb=0.0041 maxAEM=0.0203 RMSEw-2=0.0066 pass=False consec=0 pass-2=False consec2=0
+[upd   49 ep  6.12] FULL   dt= 6.534s t=  93.42s RMSEw=0.0129 RMSEb=0.0040 maxAEM=0.0196 RMSEw-2=0.0065 pass=False consec=0 pass-2=False consec2=0
+[upd   50 ep  6.25]        dt= 0.840s t=  94.26s RMSEw=0.0129 RMSEb=0.0039 maxAEM=0.0190 RMSEw-2=0.0064 pass=False consec=0 pass-2=False consec2=0
+[upd   51 ep  6.38]        dt= 0.848s t=  95.10s RMSEw=0.0128 RMSEb=0.0038 maxAEM=0.0183 RMSEw-2=0.0063 pass=False consec=0 pass-2=False consec2=0
+[upd   52 ep  6.50]        dt= 0.859s t=  95.96s RMSEw=0.0128 RMSEb=0.0038 maxAEM=0.0178 RMSEw-2=0.0062 pass=False consec=0 pass-2=False consec2=0
+[upd   53 ep  6.62]        dt= 0.857s t=  96.82s RMSEw=0.0127 RMSEb=0.0037 maxAEM=0.0172 RMSEw-2=0.0061 pass=False consec=0 pass-2=False consec2=0
+[upd   54 ep  6.75]        dt= 0.874s t=  97.69s RMSEw=0.0127 RMSEb=0.0036 maxAEM=0.0166 RMSEw-2=0.0060 pass=False consec=0 pass-2=False consec2=0
+[upd   55 ep  6.88]        dt= 0.854s t=  98.55s RMSEw=0.0127 RMSEb=0.0035 maxAEM=0.0161 RMSEw-2=0.0059 pass=False consec=0 pass-2=False consec2=0
+[upd   56 ep  7.00]        dt= 0.851s t=  99.40s RMSEw=0.0126 RMSEb=0.0035 maxAEM=0.0156 RMSEw-2=0.0058 pass=False consec=0 pass-2=False consec2=0
+[upd   57 ep  7.12]        dt= 0.856s t= 100.25s RMSEw=0.0126 RMSEb=0.0034 maxAEM=0.0151 RMSEw-2=0.0057 pass=False consec=0 pass-2=False consec2=0
+[upd   58 ep  7.25]        dt= 0.851s t= 101.10s RMSEw=0.0126 RMSEb=0.0033 maxAEM=0.0147 RMSEw-2=0.0056 pass=False consec=0 pass-2=False consec2=0
+[upd   59 ep  7.38]        dt= 0.890s t= 102.00s RMSEw=0.0126 RMSEb=0.0033 maxAEM=0.0142 RMSEw-2=0.0056 pass=False consec=0 pass-2=False consec2=0
+[upd   60 ep  7.50]        dt= 0.850s t= 102.85s RMSEw=0.0125 RMSEb=0.0032 maxAEM=0.0138 RMSEw-2=0.0055 pass=False consec=0 pass-2=False consec2=0
+[upd   61 ep  7.62]        dt= 0.889s t= 103.73s RMSEw=0.0125 RMSEb=0.0032 maxAEM=0.0134 RMSEw-2=0.0054 pass=False consec=0 pass-2=False consec2=0
+[upd   62 ep  7.75]        dt= 0.862s t= 104.60s RMSEw=0.0125 RMSEb=0.0031 maxAEM=0.0130 RMSEw-2=0.0053 pass=False consec=0 pass-2=False consec2=0
+[upd   63 ep  7.88]        dt= 0.885s t= 105.48s RMSEw=0.0125 RMSEb=0.0031 maxAEM=0.0126 RMSEw-2=0.0053 pass=False consec=0 pass-2=False consec2=0
+[upd   64 ep  8.00]        dt= 0.869s t= 106.35s RMSEw=0.0125 RMSEb=0.0030 maxAEM=0.0122 RMSEw-2=0.0052 pass=False consec=0 pass-2=False consec2=0
+[upd   65 ep  8.12] FULL   dt= 6.694s t= 113.04s RMSEw=0.0124 RMSEb=0.0030 maxAEM=0.0119 RMSEw-2=0.0051 pass=False consec=0 pass-2=False consec2=0
+[upd   66 ep  8.25]        dt= 0.869s t= 113.91s RMSEw=0.0124 RMSEb=0.0029 maxAEM=0.0115 RMSEw-2=0.0051 pass=False consec=0 pass-2=False consec2=0
+[upd   67 ep  8.38]        dt= 0.887s t= 114.80s RMSEw=0.0124 RMSEb=0.0029 maxAEM=0.0112 RMSEw-2=0.0050 pass=False consec=0 pass-2=False consec2=0
+[upd   68 ep  8.50]        dt= 0.875s t= 115.68s RMSEw=0.0124 RMSEb=0.0029 maxAEM=0.0109 RMSEw-2=0.0050 pass=False consec=0 pass-2=False consec2=0
+[upd   69 ep  8.62]        dt= 0.863s t= 116.54s RMSEw=0.0124 RMSEb=0.0028 maxAEM=0.0105 RMSEw-2=0.0049 pass=False consec=0 pass-2=False consec2=0
+[upd   70 ep  8.75]        dt= 0.850s t= 117.39s RMSEw=0.0124 RMSEb=0.0028 maxAEM=0.0102 RMSEw-2=0.0049 pass=False consec=0 pass-2=False consec2=0
+[upd   71 ep  8.88]        dt= 0.855s t= 118.24s RMSEw=0.0124 RMSEb=0.0027 maxAEM=0.0100 RMSEw-2=0.0048 pass=False consec=0 pass-2=False consec2=0
+[upd   72 ep  9.00]        dt= 0.861s t= 119.10s RMSEw=0.0124 RMSEb=0.0027 maxAEM=0.0097 RMSEw-2=0.0048 pass=False consec=0 pass-2=False consec2=0
+[upd   73 ep  9.12]        dt= 0.871s t= 119.97s RMSEw=0.0123 RMSEb=0.0027 maxAEM=0.0094 RMSEw-2=0.0047 pass=False consec=0 pass-2=False consec2=0
+[upd   74 ep  9.25]        dt= 0.861s t= 120.84s RMSEw=0.0123 RMSEb=0.0026 maxAEM=0.0091 RMSEw-2=0.0047 pass=False consec=0 pass-2=False consec2=0
+[upd   75 ep  9.38]        dt= 0.870s t= 121.71s RMSEw=0.0123 RMSEb=0.0026 maxAEM=0.0089 RMSEw-2=0.0046 pass=False consec=0 pass-2=False consec2=0
+[upd   76 ep  9.50]        dt= 0.875s t= 122.58s RMSEw=0.0123 RMSEb=0.0026 maxAEM=0.0086 RMSEw-2=0.0046 pass=False consec=0 pass-2=False consec2=0
+[upd   77 ep  9.62]        dt= 0.874s t= 123.46s RMSEw=0.0123 RMSEb=0.0026 maxAEM=0.0084 RMSEw-2=0.0046 pass=False consec=0 pass-2=False consec2=0
+[upd   78 ep  9.75]        dt= 0.841s t= 124.30s RMSEw=0.0123 RMSEb=0.0025 maxAEM=0.0082 RMSEw-2=0.0045 pass=False consec=0 pass-2=False consec2=0
+[upd   79 ep  9.88]        dt= 0.875s t= 125.17s RMSEw=0.0123 RMSEb=0.0025 maxAEM=0.0080 RMSEw-2=0.0045 pass=False consec=0 pass-2=False consec2=0
+[upd   80 ep 10.00]        dt= 0.851s t= 126.02s RMSEw=0.0123 RMSEb=0.0025 maxAEM=0.0078 RMSEw-2=0.0045 pass=False consec=0 pass-2=False consec2=0
+[upd   81 ep 10.12] FULL   dt= 6.559s t= 132.58s RMSEw=0.0123 RMSEb=0.0024 maxAEM=0.0075 RMSEw-2=0.0044 pass=False consec=0 pass-2=False consec2=0
+[upd   82 ep 10.25]        dt= 0.857s t= 133.44s RMSEw=0.0123 RMSEb=0.0024 maxAEM=0.0073 RMSEw-2=0.0044 pass=False consec=0 pass-2=False consec2=0
+[upd   83 ep 10.38]        dt= 0.857s t= 134.30s RMSEw=0.0123 RMSEb=0.0024 maxAEM=0.0071 RMSEw-2=0.0043 pass=False consec=0 pass-2=False consec2=0
+[upd   84 ep 10.50]        dt= 0.847s t= 135.14s RMSEw=0.0123 RMSEb=0.0024 maxAEM=0.0070 RMSEw-2=0.0043 pass=False consec=0 pass-2=False consec2=0
+[upd   85 ep 10.62]        dt= 0.864s t= 136.01s RMSEw=0.0123 RMSEb=0.0023 maxAEM=0.0068 RMSEw-2=0.0043 pass=False consec=0 pass-2=False consec2=0
+[upd   86 ep 10.75]        dt= 0.862s t= 136.87s RMSEw=0.0122 RMSEb=0.0023 maxAEM=0.0066 RMSEw-2=0.0043 pass=False consec=0 pass-2=False consec2=0
+[upd   87 ep 10.88]        dt= 0.852s t= 137.72s RMSEw=0.0122 RMSEb=0.0023 maxAEM=0.0064 RMSEw-2=0.0042 pass=False consec=0 pass-2=False consec2=0
+[upd   88 ep 11.00]        dt= 0.856s t= 138.58s RMSEw=0.0122 RMSEb=0.0023 maxAEM=0.0063 RMSEw-2=0.0042 pass=False consec=0 pass-2=False consec2=0
+[upd   89 ep 11.12]        dt= 0.849s t= 139.42s RMSEw=0.0122 RMSEb=0.0023 maxAEM=0.0061 RMSEw-2=0.0042 pass=False consec=0 pass-2=False consec2=0
+[upd   90 ep 11.25]        dt= 0.864s t= 140.29s RMSEw=0.0122 RMSEb=0.0022 maxAEM=0.0060 RMSEw-2=0.0041 pass=False consec=0 pass-2=False consec2=0
+[upd   91 ep 11.38]        dt= 0.868s t= 141.16s RMSEw=0.0122 RMSEb=0.0022 maxAEM=0.0058 RMSEw-2=0.0041 pass=False consec=0 pass-2=False consec2=0
+[upd   92 ep 11.50]        dt= 0.851s t= 142.01s RMSEw=0.0122 RMSEb=0.0022 maxAEM=0.0057 RMSEw-2=0.0041 pass=False consec=0 pass-2=False consec2=0
+[upd   93 ep 11.62]        dt= 0.859s t= 142.87s RMSEw=0.0122 RMSEb=0.0022 maxAEM=0.0055 RMSEw-2=0.0041 pass=False consec=0 pass-2=False consec2=0
+[upd   94 ep 11.75]        dt= 0.881s t= 143.75s RMSEw=0.0122 RMSEb=0.0022 maxAEM=0.0054 RMSEw-2=0.0040 pass=False consec=0 pass-2=False consec2=0
+[upd   95 ep 11.88]        dt= 0.868s t= 144.61s RMSEw=0.0122 RMSEb=0.0022 maxAEM=0.0053 RMSEw-2=0.0040 pass=False consec=0 pass-2=False consec2=0
+[upd   96 ep 12.00]        dt= 0.868s t= 145.48s RMSEw=0.0122 RMSEb=0.0021 maxAEM=0.0051 RMSEw-2=0.0040 pass=False consec=0 pass-2=False consec2=0
+[upd   97 ep 12.12] FULL   dt= 6.562s t= 152.04s RMSEw=0.0122 RMSEb=0.0021 maxAEM=0.0050 RMSEw-2=0.0040 pass=False consec=0 pass-2=False consec2=0
+[upd   98 ep 12.25]        dt= 0.842s t= 152.89s RMSEw=0.0122 RMSEb=0.0021 maxAEM=0.0049 RMSEw-2=0.0040 pass=False consec=0 pass-2=True consec2=1
+[upd   99 ep 12.38]        dt= 0.875s t= 153.76s RMSEw=0.0122 RMSEb=0.0021 maxAEM=0.0048 RMSEw-2=0.0039 pass=False consec=0 pass-2=True consec2=2
+[upd  100 ep 12.50]        dt= 0.854s t= 154.61s RMSEw=0.0122 RMSEb=0.0021 maxAEM=0.0047 RMSEw-2=0.0039 pass=False consec=0 pass-2=True consec2=3
+[upd  101 ep 12.62]        dt= 0.850s t= 155.46s RMSEw=0.0122 RMSEb=0.0021 maxAEM=0.0045 RMSEw-2=0.0039 pass=False consec=0 pass-2=True consec2=4
+[upd  102 ep 12.75]        dt= 0.855s t= 156.32s RMSEw=0.0122 RMSEb=0.0020 maxAEM=0.0044 RMSEw-2=0.0039 pass=False consec=0 pass-2=True consec2=5
+[upd  103 ep 12.88]        dt= 0.854s t= 157.17s RMSEw=0.0122 RMSEb=0.0020 maxAEM=0.0043 RMSEw-2=0.0039 pass=False consec=0 pass-2=True consec2=6
+[upd  104 ep 13.00]        dt= 0.868s t= 158.04s RMSEw=0.0122 RMSEb=0.0020 maxAEM=0.0042 RMSEw-2=0.0038 pass=False consec=0 pass-2=True consec2=7
+[upd  105 ep 13.12]        dt= 0.853s t= 158.89s RMSEw=0.0122 RMSEb=0.0020 maxAEM=0.0041 RMSEw-2=0.0038 pass=False consec=0 pass-2=True consec2=8
+[upd  106 ep 13.25]        dt= 0.885s t= 159.78s RMSEw=0.0122 RMSEb=0.0020 maxAEM=0.0040 RMSEw-2=0.0038 pass=False consec=0 pass-2=True consec2=9
+[upd  107 ep 13.38]        dt= 0.857s t= 160.64s RMSEw=0.0122 RMSEb=0.0020 maxAEM=0.0039 RMSEw-2=0.0038 pass=False consec=0 pass-2=True consec2=10
+[upd  108 ep 13.50]        dt= 0.857s t= 161.49s RMSEw=0.0122 RMSEb=0.0020 maxAEM=0.0039 RMSEw-2=0.0038 pass=False consec=0 pass-2=True consec2=11
+[upd  109 ep 13.62]        dt= 0.860s t= 162.35s RMSEw=0.0122 RMSEb=0.0019 maxAEM=0.0038 RMSEw-2=0.0038 pass=False consec=0 pass-2=True consec2=12
+[upd  110 ep 13.75]        dt= 0.864s t= 163.22s RMSEw=0.0122 RMSEb=0.0019 maxAEM=0.0037 RMSEw-2=0.0037 pass=False consec=0 pass-2=True consec2=13
+[upd  111 ep 13.88]        dt= 0.870s t= 164.09s RMSEw=0.0122 RMSEb=0.0019 maxAEM=0.0036 RMSEw-2=0.0037 pass=False consec=0 pass-2=True consec2=14
+[upd  112 ep 14.00]        dt= 0.857s t= 164.94s RMSEw=0.0122 RMSEb=0.0019 maxAEM=0.0035 RMSEw-2=0.0037 pass=False consec=0 pass-2=True consec2=15
+[upd  113 ep 14.12] FULL   dt= 6.631s t= 171.57s RMSEw=0.0122 RMSEb=0.0019 maxAEM=0.0034 RMSEw-2=0.0037 pass=False consec=0 pass-2=True consec2=16
+[upd  114 ep 14.25]        dt= 0.861s t= 172.44s RMSEw=0.0122 RMSEb=0.0019 maxAEM=0.0034 RMSEw-2=0.0037 pass=False consec=0 pass-2=True consec2=17
+[upd  115 ep 14.38]        dt= 0.873s t= 173.31s RMSEw=0.0122 RMSEb=0.0019 maxAEM=0.0033 RMSEw-2=0.0037 pass=False consec=0 pass-2=True consec2=18
+[upd  116 ep 14.50]        dt= 0.862s t= 174.17s RMSEw=0.0122 RMSEb=0.0019 maxAEM=0.0032 RMSEw-2=0.0037 pass=False consec=0 pass-2=True consec2=19
+[upd  117 ep 14.62]        dt= 0.879s t= 175.05s RMSEw=0.0122 RMSEb=0.0018 maxAEM=0.0032 RMSEw-2=0.0036 pass=False consec=0 pass-2=True consec2=20
+[upd  118 ep 14.75]        dt= 0.884s t= 175.93s RMSEw=0.0122 RMSEb=0.0018 maxAEM=0.0031 RMSEw-2=0.0036 pass=False consec=0 pass-2=True consec2=21
+[upd  119 ep 14.88]        dt= 0.860s t= 176.79s RMSEw=0.0122 RMSEb=0.0018 maxAEM=0.0030 RMSEw-2=0.0036 pass=False consec=0 pass-2=True consec2=22
+[upd  120 ep 15.00]        dt= 0.890s t= 177.68s RMSEw=0.0122 RMSEb=0.0018 maxAEM=0.0030 RMSEw-2=0.0036 pass=False consec=0 pass-2=True consec2=23
+[upd  121 ep 15.12]        dt= 0.866s t= 178.55s RMSEw=0.0122 RMSEb=0.0018 maxAEM=0.0029 RMSEw-2=0.0036 pass=False consec=0 pass-2=True consec2=24
+[upd  122 ep 15.25]        dt= 0.858s t= 179.41s RMSEw=0.0122 RMSEb=0.0018 maxAEM=0.0028 RMSEw-2=0.0036 pass=False consec=0 pass-2=True consec2=25
+[upd  123 ep 15.38]        dt= 0.851s t= 180.26s RMSEw=0.0122 RMSEb=0.0018 maxAEM=0.0028 RMSEw-2=0.0036 pass=False consec=0 pass-2=True consec2=26
+[upd  124 ep 15.50]        dt= 0.856s t= 181.12s RMSEw=0.0122 RMSEb=0.0018 maxAEM=0.0027 RMSEw-2=0.0036 pass=False consec=0 pass-2=True consec2=27
+[upd  125 ep 15.62]        dt= 0.861s t= 181.98s RMSEw=0.0122 RMSEb=0.0018 maxAEM=0.0027 RMSEw-2=0.0035 pass=False consec=0 pass-2=True consec2=28
+[upd  126 ep 15.75]        dt= 0.867s t= 182.84s RMSEw=0.0122 RMSEb=0.0017 maxAEM=0.0026 RMSEw-2=0.0035 pass=False consec=0 pass-2=True consec2=29
+[upd  127 ep 15.88]        dt= 0.864s t= 183.71s RMSEw=0.0122 RMSEb=0.0017 maxAEM=0.0026 RMSEw-2=0.0035 pass=False consec=0 pass-2=True consec2=30
+[upd  128 ep 16.00]        dt= 0.885s t= 184.59s RMSEw=0.0122 RMSEb=0.0017 maxAEM=0.0025 RMSEw-2=0.0035 pass=False consec=0 pass-2=True consec2=31
+[upd  129 ep 16.12] FULL   dt= 6.600s t= 191.19s RMSEw=0.0122 RMSEb=0.0017 maxAEM=0.0025 RMSEw-2=0.0035 pass=False consec=0 pass-2=True consec2=32
+[upd  130 ep 16.25]        dt= 0.843s t= 192.03s RMSEw=0.0122 RMSEb=0.0017 maxAEM=0.0024 RMSEw-2=0.0035 pass=False consec=0 pass-2=True consec2=33
+[upd  131 ep 16.38]        dt= 0.865s t= 192.90s RMSEw=0.0122 RMSEb=0.0017 maxAEM=0.0024 RMSEw-2=0.0035 pass=False consec=0 pass-2=True consec2=34
+[done] {'pass_update': None, 'pass_time_competition': None, 'total_updates': 131, 't_setup': 26.54739800002426}

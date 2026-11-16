@@ -1,0 +1,30 @@
+{
+ "rep0": {
+  "fwd_set_input(GPU场щ紇+host)": 0.3226258999784477,
+  "fwd_copy_subset_viewgrams": 0.0506485000369139,
+  "(numpy锣传)": 0.4796726999920793,
+  "ratio_y_over_yhat(CPU,场bin)": 0.3406888999743387,
+  "(numpy锣传2)": 0.02044150000438094,
+  "back_project_subset": 0.10887039999943227
+ },
+ "rep1": {
+  "fwd_set_input(GPU场щ紇+host)": 0.32061529997736216,
+  "fwd_copy_subset_viewgrams": 0.04116879997309297,
+  "(numpy锣传)": 0.4889194999705069,
+  "ratio_y_over_yhat(CPU,场bin)": 0.3448466999689117,
+  "(numpy锣传2)": 0.020338700036518276,
+  "back_project_subset": 0.11037040001247078
+ },
+ "rep2": {
+  "fwd_set_input(GPU场щ紇+host)": 0.33526620001066476,
+  "fwd_copy_subset_viewgrams": 0.040349200018681586,
+  "(numpy锣传)": 0.48608310002600774,
+  "ratio_y_over_yhat(CPU,场bin)": 0.35367260000202805,
+  "(numpy锣传2)": 0.021505100012291223,
+  "back_project_subset": 0.10597409994807094
+ },
+ "full_fwd_all_views": 0.5273964999942109,
+ "full_back_all_views": 1.244305100000929,
+ "bins_total": 53084160,
+ "bins_nonzero": 2503978
+}
