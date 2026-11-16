@@ -1,0 +1,51 @@
+B batch   1/32 f=0.031 proj_ep=   2.50 RMSEw2=3.2336 RMSEb=2.6215 maxAEM=0.6604
+B batch   2/32 f=0.062 proj_ep=   4.62 RMSEw2=1.7795 RMSEb=1.2232 maxAEM=0.1628
+B batch   3/32 f=0.094 proj_ep=   6.87 RMSEw2=1.1218 RMSEb=0.6967 maxAEM=0.2375
+B batch   4/32 f=0.125 proj_ep=   9.25 RMSEw2=0.7839 RMSEb=0.4701 maxAEM=0.1663
+B batch   5/32 f=0.156 proj_ep=  11.75 RMSEw2=0.5677 RMSEb=0.3530 maxAEM=0.1107
+B batch   6/32 f=0.187 proj_ep=  14.37 RMSEw2=0.4301 RMSEb=0.2928 maxAEM=0.0921
+B batch   7/32 f=0.219 proj_ep=  17.12 RMSEw2=0.3464 RMSEb=0.2543 maxAEM=0.0508
+B batch   8/32 f=0.250 proj_ep=  20.00 RMSEw2=0.2863 RMSEb=0.2302 maxAEM=0.0560
+B batch   9/32 f=0.281 proj_ep=  23.22 RMSEw2=0.2458 RMSEb=0.2091 maxAEM=0.0559
+B batch  10/32 f=0.312 proj_ep=  26.81 RMSEw2=0.2138 RMSEb=0.1901 maxAEM=0.0370
+B batch  11/32 f=0.344 proj_ep=  30.81 RMSEw2=0.1907 RMSEb=0.1745 maxAEM=0.0514
+B batch  12/32 f=0.375 proj_ep=  35.16 RMSEw2=0.1734 RMSEb=0.1610 maxAEM=0.0455
+B batch  13/32 f=0.406 proj_ep=  39.81 RMSEw2=0.1611 RMSEb=0.1499 maxAEM=0.0582
+B batch  14/32 f=0.437 proj_ep=  44.84 RMSEw2=0.1499 RMSEb=0.1417 maxAEM=0.0696
+B batch  15/32 f=0.469 proj_ep=  50.22 RMSEw2=0.1379 RMSEb=0.1321 maxAEM=0.0602
+B batch  16/32 f=0.500 proj_ep=  55.97 RMSEw2=0.1275 RMSEb=0.1236 maxAEM=0.0669
+B batch  17/32 f=0.531 proj_ep=  62.06 RMSEw2=0.1180 RMSEb=0.1160 maxAEM=0.0869
+B batch  18/32 f=0.562 proj_ep=  68.50 RMSEw2=0.1094 RMSEb=0.1077 maxAEM=0.0918
+B batch  19/32 f=0.594 proj_ep=  75.34 RMSEw2=0.1024 RMSEb=0.1014 maxAEM=0.0881
+B batch  20/32 f=0.625 proj_ep=  82.53 RMSEw2=0.0955 RMSEb=0.0938 maxAEM=0.0669
+B batch  21/32 f=0.656 proj_ep=  90.09 RMSEw2=0.0890 RMSEb=0.0876 maxAEM=0.0464
+B batch  22/32 f=0.687 proj_ep=  98.00 RMSEw2=0.0825 RMSEb=0.0818 maxAEM=0.0372
+B batch  23/32 f=0.719 proj_ep= 106.28 RMSEw2=0.0764 RMSEb=0.0756 maxAEM=0.0350
+B batch  24/32 f=0.750 proj_ep= 114.91 RMSEw2=0.0705 RMSEb=0.0706 maxAEM=0.0284
+B batch  25/32 f=0.781 proj_ep= 123.91 RMSEw2=0.0652 RMSEb=0.0651 maxAEM=0.0296
+B batch  26/32 f=0.812 proj_ep= 133.25 RMSEw2=0.0588 RMSEb=0.0577 maxAEM=0.0317
+B batch  27/32 f=0.844 proj_ep= 142.97 RMSEw2=0.0522 RMSEb=0.0507 maxAEM=0.0327
+B batch  28/32 f=0.875 proj_ep= 153.03 RMSEw2=0.0458 RMSEb=0.0436 maxAEM=0.0322
+B batch  29/32 f=0.906 proj_ep= 163.47 RMSEw2=0.0390 RMSEb=0.0373 maxAEM=0.0270
+B batch  30/32 f=0.937 proj_ep= 174.22 RMSEw2=0.0318 RMSEb=0.0303 maxAEM=0.0184
+B batch  31/32 f=0.969 proj_ep= 185.34 RMSEw2=0.0220 RMSEb=0.0206 maxAEM=0.0134
+B after last event: first pass after 23 updates, 4.625 projection-epochs (incl. last batch gradient)
+{
+ "dataset": "NeuroLF_Esser2",
+ "method": "Br",
+ "NB": 32,
+ "U": 64,
+ "metrics_at_last_event": {
+  "RMSE_whole_object": 0.02634263465389982,
+  "RMSE_whole_object_minus2": 0.022031321105467797,
+  "RMSE_background": 0.02061700604346095,
+  "AEM_VOI_cold_air": 0.013379529970800145,
+  "AEM_VOI_cold_teflon": 0.004208122770264622,
+  "AEM_VOI_hot_cylinder": 0.003833387005718988,
+  "AEM_VOI_rods": 0.0006057279838335252
+ },
+ "acq_proj_epochs": 185.34367784807645,
+ "post_first_pass_update": 23,
+ "post_proj_epochs": 4.625000288319375,
+ "wall_s": 81.4653316999902
+}

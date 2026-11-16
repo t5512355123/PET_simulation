@@ -1,0 +1,44 @@
+A6 upd    1 ep  0.12 F t=   0.47s proj_ep= 1.00 RMSEw2=0.2568 RMSEb=0.2514 maxAEM=0.0710 
+A6 upd    2 ep  0.25   t=   0.53s proj_ep= 1.12 RMSEw2=0.2080 RMSEb=0.2035 maxAEM=0.0756 
+A6 upd    3 ep  0.38   t=   0.59s proj_ep= 1.25 RMSEw2=0.1734 RMSEb=0.1692 maxAEM=0.0770 
+A6 upd    8 ep  1.00   t=   0.89s proj_ep= 1.87 RMSEw2=0.0928 RMSEb=0.0876 maxAEM=0.0610 
+A6 upd   16 ep  2.00   t=   1.36s proj_ep= 2.88 RMSEw2=0.0474 RMSEb=0.0430 maxAEM=0.0431 
+A6 upd   17 ep  2.12 F t=   1.83s proj_ep= 3.88 RMSEw2=0.0441 RMSEb=0.0399 maxAEM=0.0414 
+A6 upd   24 ep  3.00   t=   2.24s proj_ep= 4.75 RMSEw2=0.0290 RMSEb=0.0256 maxAEM=0.0323 
+A6 upd   32 ep  4.00   t=   2.71s proj_ep= 5.75 RMSEw2=0.0199 RMSEb=0.0170 maxAEM=0.0251 
+A6 upd   33 ep  4.12 F t=   3.18s proj_ep= 6.75 RMSEw2=0.0191 RMSEb=0.0163 maxAEM=0.0243 
+A6 upd   40 ep  5.00   t=   3.59s proj_ep= 7.62 RMSEw2=0.0147 RMSEb=0.0122 maxAEM=0.0199 
+A6 upd   48 ep  6.00   t=   4.06s proj_ep= 8.63 RMSEw2=0.0116 RMSEb=0.0093 maxAEM=0.0160 
+A6 upd   49 ep  6.12 F t=   4.53s proj_ep= 9.63 RMSEw2=0.0113 RMSEb=0.0090 maxAEM=0.0156 
+A6 upd   56 ep  7.00   t=   4.94s proj_ep=10.50 RMSEw2=0.0096 RMSEb=0.0075 maxAEM=0.0130 
+A6 upd   64 ep  8.00   t=   5.41s proj_ep=11.50 RMSEw2=0.0082 RMSEb=0.0062 maxAEM=0.0107 
+A6 upd   65 ep  8.12 F t=   5.87s proj_ep=12.50 RMSEw2=0.0081 RMSEb=0.0061 maxAEM=0.0105 
+A6 upd   72 ep  9.00   t=   6.29s proj_ep=13.38 RMSEw2=0.0072 RMSEb=0.0053 maxAEM=0.0089 
+A6 upd   80 ep 10.00   t=   6.76s proj_ep=14.38 RMSEw2=0.0065 RMSEb=0.0047 maxAEM=0.0075 
+A6 upd   81 ep 10.12 F t=   7.23s proj_ep=15.38 RMSEw2=0.0064 RMSEb=0.0047 maxAEM=0.0073 
+A6 upd   88 ep 11.00   t=   7.64s proj_ep=16.25 RMSEw2=0.0060 RMSEb=0.0042 maxAEM=0.0063 
+A6 upd   96 ep 12.00   t=   8.11s proj_ep=17.25 RMSEw2=0.0056 RMSEb=0.0039 maxAEM=0.0053 
+A6 upd   97 ep 12.12 F t=   8.57s proj_ep=18.25 RMSEw2=0.0055 RMSEb=0.0038 maxAEM=0.0052 
+A6 upd  104 ep 13.00   t=   8.99s proj_ep=19.13 RMSEw2=0.0052 RMSEb=0.0036 maxAEM=0.0046 PASS
+A6 upd  109 ep 13.62   t=   9.28s proj_ep=19.75 RMSEw2=0.0050 RMSEb=0.0034 maxAEM=0.0041 PASS
+A6 upd  112 ep 14.00   t=   9.46s proj_ep=20.13 RMSEw2=0.0049 RMSEb=0.0033 maxAEM=0.0039 PASS
+A6 upd  113 ep 14.12 F t=   9.92s proj_ep=21.13 RMSEw2=0.0049 RMSEb=0.0033 maxAEM=0.0038 PASS
+{
+ "dataset": "NeuroLF_Esser2",
+ "method": "A6",
+ "NB": 32,
+ "U": 64,
+ "metrics_at_last_event": {
+  "RMSE_whole_object": 5.140772077606341,
+  "RMSE_whole_object_minus2": 5.070079516869951,
+  "RMSE_background": 5.141690627311192,
+  "AEM_VOI_cold_air": 0.11260640375461933,
+  "AEM_VOI_cold_teflon": 0.09149974374088986,
+  "AEM_VOI_hot_cylinder": 0.10393958923486842,
+  "AEM_VOI_rods": 0.023689979449143847
+ },
+ "acq_proj_epochs": 139.06244882331097,
+ "post_first_pass_update": 100,
+ "post_proj_epochs": 18.624999903893542,
+ "wall_s": 67.64721409999765
+}

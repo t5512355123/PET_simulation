@@ -1,0 +1,35 @@
+B batch   1/16 f=0.062 proj_ep=   5.00 RMSEw2=1.3946 RMSEb=0.9108 maxAEM=0.1506
+B batch   2/16 f=0.125 proj_ep=   9.25 RMSEw2=0.6967 RMSEb=0.4338 maxAEM=0.1357
+B batch   3/16 f=0.187 proj_ep=  13.75 RMSEw2=0.4265 RMSEb=0.2944 maxAEM=0.0883
+B batch   4/16 f=0.250 proj_ep=  18.50 RMSEw2=0.3002 RMSEb=0.2329 maxAEM=0.0583
+B batch   5/16 f=0.312 proj_ep=  23.50 RMSEw2=0.2256 RMSEb=0.1919 maxAEM=0.0391
+B batch   6/16 f=0.375 proj_ep=  28.75 RMSEw2=0.1800 RMSEb=0.1627 maxAEM=0.0439
+B batch   7/16 f=0.437 proj_ep=  34.25 RMSEw2=0.1524 RMSEb=0.1429 maxAEM=0.0640
+B batch   8/16 f=0.500 proj_ep=  40.00 RMSEw2=0.1293 RMSEb=0.1246 maxAEM=0.0662
+B batch   9/16 f=0.562 proj_ep=  46.44 RMSEw2=0.1107 RMSEb=0.1087 maxAEM=0.0864
+B batch  10/16 f=0.625 proj_ep=  53.62 RMSEw2=0.0962 RMSEb=0.0944 maxAEM=0.0705
+B batch  11/16 f=0.687 proj_ep=  61.62 RMSEw2=0.0831 RMSEb=0.0824 maxAEM=0.0391
+B batch  12/16 f=0.750 proj_ep=  70.31 RMSEw2=0.0711 RMSEb=0.0715 maxAEM=0.0304
+B batch  13/16 f=0.812 proj_ep=  79.62 RMSEw2=0.0592 RMSEb=0.0583 maxAEM=0.0316
+B batch  14/16 f=0.875 proj_ep=  89.69 RMSEw2=0.0463 RMSEb=0.0443 maxAEM=0.0319
+B batch  15/16 f=0.937 proj_ep= 100.44 RMSEw2=0.0324 RMSEb=0.0308 maxAEM=0.0206
+B after last event: first pass after 41 updates, 7.750 projection-epochs (incl. last batch gradient)
+{
+ "dataset": "NeuroLF_Esser2",
+ "method": "Br",
+ "NB": 16,
+ "U": 64,
+ "metrics_at_last_event": {
+  "RMSE_whole_object": 0.03651326525317492,
+  "RMSE_whole_object_minus2": 0.03237599816073292,
+  "RMSE_background": 0.030848418163927523,
+  "AEM_VOI_cold_air": 0.020620255429976773,
+  "AEM_VOI_cold_teflon": 0.008485814164930612,
+  "AEM_VOI_hot_cylinder": 0.013587761666427998,
+  "AEM_VOI_rods": 0.0004529750646270167
+ },
+ "acq_proj_epochs": 100.43745814563742,
+ "post_first_pass_update": 41,
+ "post_proj_epochs": 7.750000192212917,
+ "wall_s": 50.35676609998336
+}

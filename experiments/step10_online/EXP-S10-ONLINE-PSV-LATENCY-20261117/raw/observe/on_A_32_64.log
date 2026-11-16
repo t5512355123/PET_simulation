@@ -1,0 +1,96 @@
+A upd    1 ep  0.12 F t=   0.50s proj_ep= 1.00 RMSEw2=4.7050 RMSEb=4.7754 maxAEM=0.1370 
+A upd    2 ep  0.25   t=   0.56s proj_ep= 1.12 RMSEw2=4.3763 RMSEb=4.4501 maxAEM=0.1591 
+A upd    3 ep  0.38   t=   0.62s proj_ep= 1.25 RMSEw2=4.0829 RMSEb=4.1638 maxAEM=0.2361 
+A upd    8 ep  1.00   t=   0.92s proj_ep= 1.87 RMSEw2=3.2317 RMSEb=3.3545 maxAEM=0.4937 
+A upd   16 ep  2.00   t=   1.39s proj_ep= 2.88 RMSEw2=2.6281 RMSEb=2.7954 maxAEM=0.6488 
+A upd   17 ep  2.12 F t=   1.86s proj_ep= 3.88 RMSEw2=2.5779 RMSEb=2.7497 maxAEM=0.6598 
+A upd   24 ep  3.00   t=   2.27s proj_ep= 4.75 RMSEw2=2.3248 RMSEb=2.5207 maxAEM=0.7061 
+A upd   32 ep  4.00   t=   2.74s proj_ep= 5.75 RMSEw2=2.1800 RMSEb=2.3866 maxAEM=0.7175 
+A upd   33 ep  4.12 F t=   3.20s proj_ep= 6.75 RMSEw2=2.1672 RMSEb=2.3748 maxAEM=0.7179 
+A upd   40 ep  5.00   t=   3.62s proj_ep= 7.62 RMSEw2=2.1013 RMSEb=2.3122 maxAEM=0.7159 
+A upd   48 ep  6.00   t=   4.09s proj_ep= 8.63 RMSEw2=2.0573 RMSEb=2.2678 maxAEM=0.7097 
+A upd   49 ep  6.12 F t=   4.55s proj_ep= 9.63 RMSEw2=2.0532 RMSEb=2.2635 maxAEM=0.7088 
+A upd   56 ep  7.00   t=   4.97s proj_ep=10.50 RMSEw2=2.0306 RMSEb=2.2386 maxAEM=0.7027 
+A upd   64 ep  8.00   t=   5.44s proj_ep=11.50 RMSEw2=2.0128 RMSEb=2.2176 maxAEM=0.6961 
+A upd   65 ep  8.12 F t=   5.90s proj_ep=12.50 RMSEw2=2.0110 RMSEb=2.2154 maxAEM=0.6953 
+A upd   72 ep  9.00   t=   6.31s proj_ep=13.38 RMSEw2=2.0003 RMSEb=2.2019 maxAEM=0.6903 
+A upd   80 ep 10.00   t=   6.79s proj_ep=14.38 RMSEw2=1.9912 RMSEb=2.1896 maxAEM=0.6851 
+A upd   81 ep 10.12 F t=   7.25s proj_ep=15.38 RMSEw2=1.9903 RMSEb=2.1883 maxAEM=0.6845 
+A upd   88 ep 11.00   t=   7.66s proj_ep=16.25 RMSEw2=1.9844 RMSEb=2.1798 maxAEM=0.6805 
+A upd   96 ep 12.00   t=   8.14s proj_ep=17.25 RMSEw2=1.9791 RMSEb=2.1719 maxAEM=0.6765 
+A upd   97 ep 12.12 F t=   8.60s proj_ep=18.25 RMSEw2=1.9785 RMSEb=2.1710 maxAEM=0.6760 
+A upd  104 ep 13.00   t=   9.01s proj_ep=19.13 RMSEw2=1.9750 RMSEb=2.1654 maxAEM=0.6729 
+A upd  112 ep 14.00   t=   9.49s proj_ep=20.13 RMSEw2=1.9717 RMSEb=2.1599 maxAEM=0.6696 
+A upd  113 ep 14.12 F t=   9.95s proj_ep=21.13 RMSEw2=1.9714 RMSEb=2.1593 maxAEM=0.6692 
+A upd  120 ep 15.00   t=  10.36s proj_ep=22.00 RMSEw2=1.9691 RMSEb=2.1554 maxAEM=0.6666 
+A upd  128 ep 16.00   t=  10.83s proj_ep=23.00 RMSEw2=1.9671 RMSEb=2.1516 maxAEM=0.6639 
+A upd  129 ep 16.12 F t=  11.30s proj_ep=24.00 RMSEw2=1.9668 RMSEb=2.1511 maxAEM=0.6635 
+A upd  136 ep 17.00   t=  11.71s proj_ep=24.87 RMSEw2=1.9654 RMSEb=2.1483 maxAEM=0.6613 
+A upd  144 ep 18.00   t=  12.18s proj_ep=25.87 RMSEw2=1.9641 RMSEb=2.1456 maxAEM=0.6590 
+A upd  145 ep 18.12 F t=  12.65s proj_ep=26.87 RMSEw2=1.9640 RMSEb=2.1453 maxAEM=0.6587 
+A upd  152 ep 19.00   t=  13.06s proj_ep=27.75 RMSEw2=1.9631 RMSEb=2.1433 maxAEM=0.6568 
+A upd  160 ep 20.00   t=  13.53s proj_ep=28.75 RMSEw2=1.9622 RMSEb=2.1413 maxAEM=0.6548 
+A upd  161 ep 20.12 F t=  13.99s proj_ep=29.75 RMSEw2=1.9621 RMSEb=2.1410 maxAEM=0.6545 
+A upd  168 ep 21.00   t=  14.41s proj_ep=30.62 RMSEw2=1.9616 RMSEb=2.1396 maxAEM=0.6528 
+A upd  176 ep 22.00   t=  14.88s proj_ep=31.62 RMSEw2=1.9611 RMSEb=2.1381 maxAEM=0.6510 
+A upd  177 ep 22.12 F t=  15.34s proj_ep=32.62 RMSEw2=1.9610 RMSEb=2.1379 maxAEM=0.6508 
+A upd  184 ep 23.00   t=  15.76s proj_ep=33.50 RMSEw2=1.9607 RMSEb=2.1368 maxAEM=0.6493 
+A upd  192 ep 24.00   t=  16.23s proj_ep=34.50 RMSEw2=1.9604 RMSEb=2.1358 maxAEM=0.6477 
+A upd  193 ep 24.12 F t=  16.69s proj_ep=35.50 RMSEw2=1.9603 RMSEb=2.1356 maxAEM=0.6475 
+A upd  200 ep 25.00   t=  17.11s proj_ep=36.38 RMSEw2=1.9601 RMSEb=2.1348 maxAEM=0.6462 
+A upd  208 ep 26.00   t=  17.58s proj_ep=37.37 RMSEw2=1.9600 RMSEb=2.1340 maxAEM=0.6448 
+A upd  209 ep 26.12 F t=  18.04s proj_ep=38.37 RMSEw2=1.9599 RMSEb=2.1339 maxAEM=0.6446 
+A upd  216 ep 27.00   t=  18.46s proj_ep=39.25 RMSEw2=1.9598 RMSEb=2.1333 maxAEM=0.6435 
+A upd  224 ep 28.00   t=  18.93s proj_ep=40.25 RMSEw2=1.9598 RMSEb=2.1327 maxAEM=0.6422 
+A upd  225 ep 28.12 F t=  19.39s proj_ep=41.25 RMSEw2=1.9598 RMSEb=2.1326 maxAEM=0.6420 
+A upd  232 ep 29.00   t=  19.80s proj_ep=42.12 RMSEw2=1.9597 RMSEb=2.1322 maxAEM=0.6410 
+A upd  240 ep 30.00   t=  20.28s proj_ep=43.12 RMSEw2=1.9597 RMSEb=2.1317 maxAEM=0.6398 
+A upd  241 ep 30.12 F t=  20.74s proj_ep=44.12 RMSEw2=1.9597 RMSEb=2.1316 maxAEM=0.6397 
+A upd  248 ep 31.00   t=  21.15s proj_ep=45.00 RMSEw2=1.9598 RMSEb=2.1313 maxAEM=0.6387 
+A upd  256 ep 32.00   t=  21.63s proj_ep=46.00 RMSEw2=1.9598 RMSEb=2.1310 maxAEM=0.6376 
+A upd  257 ep 32.12 F t=  22.09s proj_ep=47.00 RMSEw2=1.9598 RMSEb=2.1309 maxAEM=0.6375 
+A upd  264 ep 33.00   t=  22.50s proj_ep=47.87 RMSEw2=1.9599 RMSEb=2.1306 maxAEM=0.6366 
+A upd  272 ep 34.00   t=  22.98s proj_ep=48.88 RMSEw2=1.9599 RMSEb=2.1304 maxAEM=0.6357 
+A upd  273 ep 34.12 F t=  23.44s proj_ep=49.88 RMSEw2=1.9599 RMSEb=2.1304 maxAEM=0.6356 
+A upd  280 ep 35.00   t=  23.85s proj_ep=50.75 RMSEw2=1.9600 RMSEb=2.1302 maxAEM=0.6347 
+A upd  288 ep 36.00   t=  24.33s proj_ep=51.75 RMSEw2=1.9601 RMSEb=2.1300 maxAEM=0.6339 
+A upd  289 ep 36.12 F t=  24.79s proj_ep=52.75 RMSEw2=1.9601 RMSEb=2.1299 maxAEM=0.6338 
+A upd  296 ep 37.00   t=  25.21s proj_ep=53.63 RMSEw2=1.9602 RMSEb=2.1298 maxAEM=0.6330 
+A upd  304 ep 38.00   t=  25.68s proj_ep=54.63 RMSEw2=1.9603 RMSEb=2.1296 maxAEM=0.6322 
+A upd  305 ep 38.12 F t=  26.14s proj_ep=55.63 RMSEw2=1.9603 RMSEb=2.1296 maxAEM=0.6321 
+A upd  312 ep 39.00   t=  26.56s proj_ep=56.50 RMSEw2=1.9604 RMSEb=2.1295 maxAEM=0.6314 
+A upd  320 ep 40.00   t=  27.03s proj_ep=57.50 RMSEw2=1.9605 RMSEb=2.1294 maxAEM=0.6307 
+A upd  321 ep 40.12 F t=  27.49s proj_ep=58.50 RMSEw2=1.9605 RMSEb=2.1294 maxAEM=0.6306 
+A upd  328 ep 41.00   t=  27.91s proj_ep=59.38 RMSEw2=1.9606 RMSEb=2.1293 maxAEM=0.6300 
+A upd  336 ep 42.00   t=  28.38s proj_ep=60.37 RMSEw2=1.9607 RMSEb=2.1292 maxAEM=0.6293 
+A upd  337 ep 42.12 F t=  28.84s proj_ep=61.37 RMSEw2=1.9607 RMSEb=2.1292 maxAEM=0.6292 
+A upd  344 ep 43.00   t=  29.26s proj_ep=62.25 RMSEw2=1.9608 RMSEb=2.1291 maxAEM=0.6286 
+A upd  352 ep 44.00   t=  29.73s proj_ep=63.25 RMSEw2=1.9609 RMSEb=2.1291 maxAEM=0.6279 
+A upd  353 ep 44.12 F t=  30.20s proj_ep=64.25 RMSEw2=1.9609 RMSEb=2.1291 maxAEM=0.6279 
+A upd  360 ep 45.00   t=  30.61s proj_ep=65.12 RMSEw2=1.9610 RMSEb=2.1290 maxAEM=0.6273 
+A upd  368 ep 46.00   t=  31.08s proj_ep=66.12 RMSEw2=1.9611 RMSEb=2.1290 maxAEM=0.6267 
+A upd  369 ep 46.12 F t=  31.55s proj_ep=67.12 RMSEw2=1.9611 RMSEb=2.1290 maxAEM=0.6266 
+A upd  376 ep 47.00   t=  31.96s proj_ep=68.00 RMSEw2=1.9612 RMSEb=2.1289 maxAEM=0.6261 
+A upd  384 ep 48.00   t=  32.43s proj_ep=69.00 RMSEw2=1.9613 RMSEb=2.1289 maxAEM=0.6256 
+A upd  385 ep 48.12 F t=  32.90s proj_ep=70.00 RMSEw2=1.9613 RMSEb=2.1289 maxAEM=0.6255 
+A upd  392 ep 49.00   t=  33.31s proj_ep=70.88 RMSEw2=1.9614 RMSEb=2.1289 maxAEM=0.6250 
+A upd  400 ep 50.00   t=  33.78s proj_ep=71.88 RMSEw2=1.9615 RMSEb=2.1289 maxAEM=0.6245 
+{
+ "dataset": "NeuroLF_Esser2",
+ "method": "A",
+ "NB": 32,
+ "U": 64,
+ "metrics_at_last_event": {
+  "RMSE_whole_object": 5.140772077606341,
+  "RMSE_whole_object_minus2": 5.070079516869951,
+  "RMSE_background": 5.141690627311192,
+  "AEM_VOI_cold_air": 0.11260640375461933,
+  "AEM_VOI_cold_teflon": 0.09149974374088986,
+  "AEM_VOI_hot_cylinder": 0.10393958923486842,
+  "AEM_VOI_rods": 0.023689979449143847
+ },
+ "acq_proj_epochs": 139.06244882331097,
+ "post_first_pass_update": null,
+ "post_proj_epochs": null,
+ "wall_s": 92.78737779997755
+}
