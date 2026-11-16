@@ -1,0 +1,665 @@
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+WARNING: Interfile warning: num_transaxial_blocks_per_bucket (1) is expected to be 2.
+
+
+WARNING: Interfile warning: num_axial_blocks_per_bucket (2) is expected to be 1.
+
+
+WARNING: Interfile warning: axial crystals per singles unit (16) is expected to be 8.
+
+
+WARNING: Interfile warning: transaxial crystals per singles unit (9) is expected to be 18.
+
+
+WARNING: Interfile warning: I have used all explicit settings for the scanner
+	from the Interfile header, and remaining fields set from the
+	Siemens mMR model.
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+
+INFO: Interfile parsing ended up with the following scanner:
+Scanner parameters:=
+  Scanner type := Siemens mMR
+  Number of rings                          := 64
+  Number of detectors per ring             := 504
+  Inner ring diameter (cm)                 := 65.6
+  Average depth of interaction (cm)        := 0.7
+  Distance between rings (cm)              := 0.40625
+  Default bin size (cm)                    := 0.208626
+  View offset (degrees)                    := 0
+  Maximum number of non-arc-corrected bins := 344
+  Default number of arc-corrected bins     := 344
+  Energy resolution         := 0.145
+  Reference energy (in keV) := 511
+  Number of blocks per bucket in transaxial direction         := 1
+  Number of blocks per bucket in axial direction              := 2
+  Number of crystals per block in axial direction             := 8
+  Number of crystals per block in transaxial direction        := 9
+  Number of detector layers                                   := 1
+  Number of crystals per singles unit in axial direction      := 16
+  Number of crystals per singles unit in transaxial direction := 9
+  Scanner geometry (BlocksOnCylindrical/Cylindrical/Generic)  := Cylindrical
+End scanner parameters:=
+
+
+{
+ "dataset": "Siemens_mMR_ACR2",
+ "seed": 20261116,
+ "events": 2026156,
+ "nonzero_bins": 1964805,
+ "sinogram_bins": 72557856,
+ "events_per_nonzero_bin": 1.0312249816139516,
+ "max_count": 4,
+ "rehistogram_equals_prompts": true,
+ "bytes_events": 40523120,
+ "bytes_prompts_mult_additive_fp32": 870694272,
+ "lor_seconds": 64.3,
+ "total_seconds": 78.2,
+ "time_stamps": "synthetic: uniform in [0,1), sorted (sinogram has no time order)",
+ "source_sha256": {
+  "prompts.s": "038e59738ae29781a540e91a41a0d3a1207978027f536fd059a064a28499958c",
+  "mult_factors.s": "356550f98d9f3aac946d4644d1791d079674ba7042eb12ff384f306dae05d352",
+  "additive_term.s": "c1360a6cbae14b646b630a911ae875319a53833dcdc1d732452059ef6e994ad3"
+ }
+}

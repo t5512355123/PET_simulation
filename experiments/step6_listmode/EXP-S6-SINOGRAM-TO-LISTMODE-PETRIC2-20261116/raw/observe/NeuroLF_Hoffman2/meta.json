@@ -1,0 +1,20 @@
+{
+ "dataset": "NeuroLF_Hoffman2",
+ "seed": 20261116,
+ "events": 6882698,
+ "nonzero_bins": 6024882,
+ "sinogram_bins": 53084160,
+ "events_per_nonzero_bin": 1.1423788880844472,
+ "max_count": 7,
+ "rehistogram_equals_prompts": true,
+ "bytes_events": 137653960,
+ "bytes_prompts_mult_additive_fp32": 637009920,
+ "lor_seconds": 42.7,
+ "total_seconds": 56.3,
+ "time_stamps": "synthetic: uniform in [0,1), sorted (sinogram has no time order)",
+ "source_sha256": {
+  "prompts.s": "810fd63839b3d7b384eef568976742529b9618fc53e21b686258985175cc4182",
+  "mult_factors.s": "5777c63045840bb804b9516878672a8200fe2224a679bb8fd6b117ef4e5b1f5c",
+  "additive_term.s": "0d66c5cc967885cc39716db3813c2e6bc4e941f454979027a5ee47ed15f6563b"
+ }
+}

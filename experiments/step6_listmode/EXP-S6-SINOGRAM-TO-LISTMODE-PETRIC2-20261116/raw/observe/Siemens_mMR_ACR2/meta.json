@@ -1,0 +1,20 @@
+{
+ "dataset": "Siemens_mMR_ACR2",
+ "seed": 20261116,
+ "events": 2026156,
+ "nonzero_bins": 1964805,
+ "sinogram_bins": 72557856,
+ "events_per_nonzero_bin": 1.0312249816139516,
+ "max_count": 4,
+ "rehistogram_equals_prompts": true,
+ "bytes_events": 40523120,
+ "bytes_prompts_mult_additive_fp32": 870694272,
+ "lor_seconds": 64.3,
+ "total_seconds": 78.2,
+ "time_stamps": "synthetic: uniform in [0,1), sorted (sinogram has no time order)",
+ "source_sha256": {
+  "prompts.s": "038e59738ae29781a540e91a41a0d3a1207978027f536fd059a064a28499958c",
+  "mult_factors.s": "356550f98d9f3aac946d4644d1791d079674ba7042eb12ff384f306dae05d352",
+  "additive_term.s": "c1360a6cbae14b646b630a911ae875319a53833dcdc1d732452059ef6e994ad3"
+ }
+}

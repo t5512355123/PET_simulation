@@ -1,0 +1,22 @@
+{
+ "dataset": "Siemens_mMR_ACR2",
+ "image_shape": [
+  127,
+  285,
+  285
+ ],
+ "voxel_mm": [
+  2.03125,
+  2.0862600803375244,
+  2.0862600803375244
+ ],
+ "c": 0.47932663559913635,
+ "events": 2026156,
+ "sinogram_bins": 72557856,
+ "grad_max_abs_diff_over_max": 2.2021139853836884e-06,
+ "grad_rel_l2": 1.1662459655781277e-06,
+ "t_dense_gradient_s": 11.92,
+ "t_listmode_gradient_s": 1.74,
+ "note": "times include host-device copies of this script; not a tuned benchmark",
+ "fpga_events_bytes": 64836992
+}

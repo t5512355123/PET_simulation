@@ -1,0 +1,22 @@
+{
+ "dataset": "NeuroLF_Hoffman2",
+ "image_shape": [
+  95,
+  163,
+  163
+ ],
+ "voxel_mm": [
+  1.656499981880188,
+  1.656499981880188,
+  1.656499981880188
+ ],
+ "c": 0.6036824584007263,
+ "events": 6882698,
+ "sinogram_bins": 53084160,
+ "grad_max_abs_diff_over_max": 5.5161326006716566e-06,
+ "grad_rel_l2": 6.803288670198526e-06,
+ "t_dense_gradient_s": 6.79,
+ "t_listmode_gradient_s": 3.67,
+ "note": "times include host-device copies of this script; not a tuned benchmark",
+ "fpga_events_bytes": 220246336
+}

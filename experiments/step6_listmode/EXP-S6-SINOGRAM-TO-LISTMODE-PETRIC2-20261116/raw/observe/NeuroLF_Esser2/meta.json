@@ -1,0 +1,20 @@
+{
+ "dataset": "NeuroLF_Esser2",
+ "seed": 20261116,
+ "events": 2601282,
+ "nonzero_bins": 2503978,
+ "sinogram_bins": 53084160,
+ "events_per_nonzero_bin": 1.0388597663398,
+ "max_count": 5,
+ "rehistogram_equals_prompts": true,
+ "bytes_events": 52025640,
+ "bytes_prompts_mult_additive_fp32": 637009920,
+ "lor_seconds": 44.6,
+ "total_seconds": 54.8,
+ "time_stamps": "synthetic: uniform in [0,1), sorted (sinogram has no time order)",
+ "source_sha256": {
+  "prompts.s": "22a639c241ca02ca84e1fc5bd5629c791981dcf87d49bccc2d2da8bfc8d99199",
+  "mult_factors.s": "2a3018289f0a01b698867a0a70716439ec749542cf51b736d5d2ef9debf2c189",
+  "additive_term.s": "a72a1bae195ad07ce4052f17a4f7b52d16d0cab24be31a9266c0655509a6d592"
+ }
+}
