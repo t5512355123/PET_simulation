@@ -1,0 +1,5 @@
+lanes 32 SP 4 HAZ 64: events 8000, tokens 8003 (NOP 3, bubbles 130), real steps 933537 (116.7/event)
+lane iterations per pass: max 39578, mean 37180 -> efficiency (steps / lanes / max) 0.737, balance 0.939
+max rel err forward ratio s: 1.570e-07
+max abs err back / max back: 9.046e-08
+PASSED

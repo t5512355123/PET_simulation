@@ -1,0 +1,575 @@
+***************************************************************
+Quartus is a registered trademark of Intel Corporation in the
+US and other countries.  Portions of the Quartus Prime software
+code, and other portions of the code included in this download
+or on this DVD, are licensed to Intel Corporation and are the
+copyrighted property of third parties. For license details,
+refer to the End User License Agreement at
+http://fpgasoftware.intel.com/eula.
+***************************************************************
+
+2026.11.17.08:02:06 Info: Doing: qsys-script --script=slab_sys.tcl --quartus-project=slab_top.qpf --search-path=/home/b10504072/claude_bsrem/slab/h32/slab.prj/components/**/*,$
+2026.11.17.08:02:09 Info: create_system slab_sys
+2026.11.17.08:02:09 Info: set_project_property DEVICE_FAMILY Stratix 10
+2026.11.17.08:02:09 Info: set_project_property DEVICE 1SX280HU2F50E1VG
+2026.11.17.08:02:09 Info: add_instance clk_in clock_source
+2026.11.17.08:02:10 Info: set_instance_parameter_value clk_in clockFrequency 50000000.0
+2026.11.17.08:02:10 Info: set_instance_parameter_value clk_in clockFrequencyKnown 1
+2026.11.17.08:02:10 Info: set_instance_parameter_value clk_in resetSynchronousEdges DEASSERT
+2026.11.17.08:02:10 Info: add_instance pll altera_iopll
+2026.11.17.08:02:10 Info: set_instance_parameter_value pll gui_reference_clock_frequency 50.0
+2026.11.17.08:02:10 Info: set_instance_parameter_value pll gui_number_of_clocks 1
+2026.11.17.08:02:10 Info: set_instance_parameter_value pll gui_output_clock_frequency0 150
+2026.11.17.08:02:10 Info: set_instance_parameter_value pll gui_use_locked 1
+2026.11.17.08:02:10 Info: add_instance jtag altera_jtag_avalon_master
+2026.11.17.08:02:11 Info: add_instance rr altera_s10_user_rst_clkgate
+2026.11.17.08:02:11 Info: add_instance src slab_src_internal
+2026.11.17.08:02:11 Info: add_instance sink slab_sink_internal
+2026.11.17.08:02:11 Info: add_connection clk_in.clk pll.refclk
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset pll.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 jtag.clk
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset jtag.clk_reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 src.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset src.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 sink.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset sink.reset
+2026.11.17.08:02:11 Info: add_instance exp0 slab_exp_internal
+2026.11.17.08:02:11 Info: add_instance eng0 slab_eng_internal
+2026.11.17.08:02:11 Info: add_instance padd0 padd_internal
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 exp0.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset exp0.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 eng0.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset eng0.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 padd0.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset padd0.reset
+2026.11.17.08:02:11 Info: add_connection exp0.wq eng0.wq
+2026.11.17.08:02:11 Info: add_connection eng0.fl padd0.fl
+2026.11.17.08:02:11 Info: add_instance exp1 slab_exp_internal
+2026.11.17.08:02:11 Info: add_instance eng1 slab_eng_internal
+2026.11.17.08:02:11 Info: add_instance padd1 padd_internal
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 exp1.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset exp1.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 eng1.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset eng1.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 padd1.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset padd1.reset
+2026.11.17.08:02:11 Info: add_connection exp1.wq eng1.wq
+2026.11.17.08:02:11 Info: add_connection eng1.fl padd1.fl
+2026.11.17.08:02:11 Info: add_instance exp2 slab_exp_internal
+2026.11.17.08:02:11 Info: add_instance eng2 slab_eng_internal
+2026.11.17.08:02:11 Info: add_instance padd2 padd_internal
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 exp2.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset exp2.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 eng2.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset eng2.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 padd2.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset padd2.reset
+2026.11.17.08:02:11 Info: add_connection exp2.wq eng2.wq
+2026.11.17.08:02:11 Info: add_connection eng2.fl padd2.fl
+2026.11.17.08:02:11 Info: add_instance exp3 slab_exp_internal
+2026.11.17.08:02:11 Info: add_instance eng3 slab_eng_internal
+2026.11.17.08:02:11 Info: add_instance padd3 padd_internal
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 exp3.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset exp3.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 eng3.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset eng3.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 padd3.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset padd3.reset
+2026.11.17.08:02:11 Info: add_connection exp3.wq eng3.wq
+2026.11.17.08:02:11 Info: add_connection eng3.fl padd3.fl
+2026.11.17.08:02:11 Info: add_instance exp4 slab_exp_internal
+2026.11.17.08:02:11 Info: add_instance eng4 slab_eng_internal
+2026.11.17.08:02:11 Info: add_instance padd4 padd_internal
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 exp4.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset exp4.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 eng4.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset eng4.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 padd4.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset padd4.reset
+2026.11.17.08:02:11 Info: add_connection exp4.wq eng4.wq
+2026.11.17.08:02:11 Info: add_connection eng4.fl padd4.fl
+2026.11.17.08:02:11 Info: add_instance exp5 slab_exp_internal
+2026.11.17.08:02:11 Info: add_instance eng5 slab_eng_internal
+2026.11.17.08:02:11 Info: add_instance padd5 padd_internal
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 exp5.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset exp5.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 eng5.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset eng5.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 padd5.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset padd5.reset
+2026.11.17.08:02:11 Info: add_connection exp5.wq eng5.wq
+2026.11.17.08:02:11 Info: add_connection eng5.fl padd5.fl
+2026.11.17.08:02:11 Info: add_instance exp6 slab_exp_internal
+2026.11.17.08:02:11 Info: add_instance eng6 slab_eng_internal
+2026.11.17.08:02:11 Info: add_instance padd6 padd_internal
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 exp6.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset exp6.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 eng6.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset eng6.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 padd6.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset padd6.reset
+2026.11.17.08:02:11 Info: add_connection exp6.wq eng6.wq
+2026.11.17.08:02:11 Info: add_connection eng6.fl padd6.fl
+2026.11.17.08:02:11 Info: add_instance exp7 slab_exp_internal
+2026.11.17.08:02:11 Info: add_instance eng7 slab_eng_internal
+2026.11.17.08:02:11 Info: add_instance padd7 padd_internal
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 exp7.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset exp7.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 eng7.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset eng7.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 padd7.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset padd7.reset
+2026.11.17.08:02:11 Info: add_connection exp7.wq eng7.wq
+2026.11.17.08:02:11 Info: add_connection eng7.fl padd7.fl
+2026.11.17.08:02:11 Info: add_instance exp8 slab_exp_internal
+2026.11.17.08:02:11 Info: add_instance eng8 slab_eng_internal
+2026.11.17.08:02:11 Info: add_instance padd8 padd_internal
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 exp8.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset exp8.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 eng8.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset eng8.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 padd8.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset padd8.reset
+2026.11.17.08:02:11 Info: add_connection exp8.wq eng8.wq
+2026.11.17.08:02:11 Info: add_connection eng8.fl padd8.fl
+2026.11.17.08:02:11 Info: add_instance exp9 slab_exp_internal
+2026.11.17.08:02:11 Info: add_instance eng9 slab_eng_internal
+2026.11.17.08:02:11 Info: add_instance padd9 padd_internal
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 exp9.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset exp9.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 eng9.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset eng9.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 padd9.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset padd9.reset
+2026.11.17.08:02:11 Info: add_connection exp9.wq eng9.wq
+2026.11.17.08:02:11 Info: add_connection eng9.fl padd9.fl
+2026.11.17.08:02:11 Info: add_instance exp10 slab_exp_internal
+2026.11.17.08:02:11 Info: add_instance eng10 slab_eng_internal
+2026.11.17.08:02:11 Info: add_instance padd10 padd_internal
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 exp10.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset exp10.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 eng10.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset eng10.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 padd10.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset padd10.reset
+2026.11.17.08:02:11 Info: add_connection exp10.wq eng10.wq
+2026.11.17.08:02:11 Info: add_connection eng10.fl padd10.fl
+2026.11.17.08:02:11 Info: add_instance exp11 slab_exp_internal
+2026.11.17.08:02:11 Info: add_instance eng11 slab_eng_internal
+2026.11.17.08:02:11 Info: add_instance padd11 padd_internal
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 exp11.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset exp11.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 eng11.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset eng11.reset
+2026.11.17.08:02:11 Info: add_connection pll.outclk0 padd11.clock
+2026.11.17.08:02:11 Info: add_connection clk_in.clk_reset padd11.reset
+2026.11.17.08:02:11 Info: add_connection exp11.wq eng11.wq
+2026.11.17.08:02:11 Info: add_connection eng11.fl padd11.fl
+2026.11.17.08:02:12 Info: add_instance exp12 slab_exp_internal
+2026.11.17.08:02:12 Info: add_instance eng12 slab_eng_internal
+2026.11.17.08:02:12 Info: add_instance padd12 padd_internal
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 exp12.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset exp12.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 eng12.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset eng12.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 padd12.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset padd12.reset
+2026.11.17.08:02:12 Info: add_connection exp12.wq eng12.wq
+2026.11.17.08:02:12 Info: add_connection eng12.fl padd12.fl
+2026.11.17.08:02:12 Info: add_instance exp13 slab_exp_internal
+2026.11.17.08:02:12 Info: add_instance eng13 slab_eng_internal
+2026.11.17.08:02:12 Info: add_instance padd13 padd_internal
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 exp13.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset exp13.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 eng13.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset eng13.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 padd13.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset padd13.reset
+2026.11.17.08:02:12 Info: add_connection exp13.wq eng13.wq
+2026.11.17.08:02:12 Info: add_connection eng13.fl padd13.fl
+2026.11.17.08:02:12 Info: add_instance exp14 slab_exp_internal
+2026.11.17.08:02:12 Info: add_instance eng14 slab_eng_internal
+2026.11.17.08:02:12 Info: add_instance padd14 padd_internal
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 exp14.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset exp14.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 eng14.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset eng14.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 padd14.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset padd14.reset
+2026.11.17.08:02:12 Info: add_connection exp14.wq eng14.wq
+2026.11.17.08:02:12 Info: add_connection eng14.fl padd14.fl
+2026.11.17.08:02:12 Info: add_instance exp15 slab_exp_internal
+2026.11.17.08:02:12 Info: add_instance eng15 slab_eng_internal
+2026.11.17.08:02:12 Info: add_instance padd15 padd_internal
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 exp15.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset exp15.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 eng15.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset eng15.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 padd15.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset padd15.reset
+2026.11.17.08:02:12 Info: add_connection exp15.wq eng15.wq
+2026.11.17.08:02:12 Info: add_connection eng15.fl padd15.fl
+2026.11.17.08:02:12 Info: add_instance exp16 slab_exp_internal
+2026.11.17.08:02:12 Info: add_instance eng16 slab_eng_internal
+2026.11.17.08:02:12 Info: add_instance padd16 padd_internal
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 exp16.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset exp16.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 eng16.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset eng16.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 padd16.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset padd16.reset
+2026.11.17.08:02:12 Info: add_connection exp16.wq eng16.wq
+2026.11.17.08:02:12 Info: add_connection eng16.fl padd16.fl
+2026.11.17.08:02:12 Info: add_instance exp17 slab_exp_internal
+2026.11.17.08:02:12 Info: add_instance eng17 slab_eng_internal
+2026.11.17.08:02:12 Info: add_instance padd17 padd_internal
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 exp17.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset exp17.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 eng17.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset eng17.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 padd17.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset padd17.reset
+2026.11.17.08:02:12 Info: add_connection exp17.wq eng17.wq
+2026.11.17.08:02:12 Info: add_connection eng17.fl padd17.fl
+2026.11.17.08:02:12 Info: add_instance exp18 slab_exp_internal
+2026.11.17.08:02:12 Info: add_instance eng18 slab_eng_internal
+2026.11.17.08:02:12 Info: add_instance padd18 padd_internal
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 exp18.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset exp18.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 eng18.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset eng18.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 padd18.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset padd18.reset
+2026.11.17.08:02:12 Info: add_connection exp18.wq eng18.wq
+2026.11.17.08:02:12 Info: add_connection eng18.fl padd18.fl
+2026.11.17.08:02:12 Info: add_instance exp19 slab_exp_internal
+2026.11.17.08:02:12 Info: add_instance eng19 slab_eng_internal
+2026.11.17.08:02:12 Info: add_instance padd19 padd_internal
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 exp19.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset exp19.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 eng19.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset eng19.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 padd19.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset padd19.reset
+2026.11.17.08:02:12 Info: add_connection exp19.wq eng19.wq
+2026.11.17.08:02:12 Info: add_connection eng19.fl padd19.fl
+2026.11.17.08:02:12 Info: add_instance exp20 slab_exp_internal
+2026.11.17.08:02:12 Info: add_instance eng20 slab_eng_internal
+2026.11.17.08:02:12 Info: add_instance padd20 padd_internal
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 exp20.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset exp20.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 eng20.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset eng20.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 padd20.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset padd20.reset
+2026.11.17.08:02:12 Info: add_connection exp20.wq eng20.wq
+2026.11.17.08:02:12 Info: add_connection eng20.fl padd20.fl
+2026.11.17.08:02:12 Info: add_instance exp21 slab_exp_internal
+2026.11.17.08:02:12 Info: add_instance eng21 slab_eng_internal
+2026.11.17.08:02:12 Info: add_instance padd21 padd_internal
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 exp21.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset exp21.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 eng21.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset eng21.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 padd21.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset padd21.reset
+2026.11.17.08:02:12 Info: add_connection exp21.wq eng21.wq
+2026.11.17.08:02:12 Info: add_connection eng21.fl padd21.fl
+2026.11.17.08:02:12 Info: add_instance exp22 slab_exp_internal
+2026.11.17.08:02:12 Info: add_instance eng22 slab_eng_internal
+2026.11.17.08:02:12 Info: add_instance padd22 padd_internal
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 exp22.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset exp22.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 eng22.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset eng22.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 padd22.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset padd22.reset
+2026.11.17.08:02:12 Info: add_connection exp22.wq eng22.wq
+2026.11.17.08:02:12 Info: add_connection eng22.fl padd22.fl
+2026.11.17.08:02:12 Info: add_instance exp23 slab_exp_internal
+2026.11.17.08:02:12 Info: add_instance eng23 slab_eng_internal
+2026.11.17.08:02:12 Info: add_instance padd23 padd_internal
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 exp23.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset exp23.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 eng23.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset eng23.reset
+2026.11.17.08:02:12 Info: add_connection pll.outclk0 padd23.clock
+2026.11.17.08:02:12 Info: add_connection clk_in.clk_reset padd23.reset
+2026.11.17.08:02:12 Info: add_connection exp23.wq eng23.wq
+2026.11.17.08:02:12 Info: add_connection eng23.fl padd23.fl
+2026.11.17.08:02:12 Info: add_instance exp24 slab_exp_internal
+2026.11.17.08:02:12 Info: add_instance eng24 slab_eng_internal
+2026.11.17.08:02:13 Info: add_instance padd24 padd_internal
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 exp24.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset exp24.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 eng24.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset eng24.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 padd24.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset padd24.reset
+2026.11.17.08:02:13 Info: add_connection exp24.wq eng24.wq
+2026.11.17.08:02:13 Info: add_connection eng24.fl padd24.fl
+2026.11.17.08:02:13 Info: add_instance exp25 slab_exp_internal
+2026.11.17.08:02:13 Info: add_instance eng25 slab_eng_internal
+2026.11.17.08:02:13 Info: add_instance padd25 padd_internal
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 exp25.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset exp25.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 eng25.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset eng25.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 padd25.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset padd25.reset
+2026.11.17.08:02:13 Info: add_connection exp25.wq eng25.wq
+2026.11.17.08:02:13 Info: add_connection eng25.fl padd25.fl
+2026.11.17.08:02:13 Info: add_instance exp26 slab_exp_internal
+2026.11.17.08:02:13 Info: add_instance eng26 slab_eng_internal
+2026.11.17.08:02:13 Info: add_instance padd26 padd_internal
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 exp26.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset exp26.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 eng26.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset eng26.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 padd26.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset padd26.reset
+2026.11.17.08:02:13 Info: add_connection exp26.wq eng26.wq
+2026.11.17.08:02:13 Info: add_connection eng26.fl padd26.fl
+2026.11.17.08:02:13 Info: add_instance exp27 slab_exp_internal
+2026.11.17.08:02:13 Info: add_instance eng27 slab_eng_internal
+2026.11.17.08:02:13 Info: add_instance padd27 padd_internal
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 exp27.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset exp27.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 eng27.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset eng27.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 padd27.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset padd27.reset
+2026.11.17.08:02:13 Info: add_connection exp27.wq eng27.wq
+2026.11.17.08:02:13 Info: add_connection eng27.fl padd27.fl
+2026.11.17.08:02:13 Info: add_instance exp28 slab_exp_internal
+2026.11.17.08:02:13 Info: add_instance eng28 slab_eng_internal
+2026.11.17.08:02:13 Info: add_instance padd28 padd_internal
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 exp28.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset exp28.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 eng28.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset eng28.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 padd28.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset padd28.reset
+2026.11.17.08:02:13 Info: add_connection exp28.wq eng28.wq
+2026.11.17.08:02:13 Info: add_connection eng28.fl padd28.fl
+2026.11.17.08:02:13 Info: add_instance exp29 slab_exp_internal
+2026.11.17.08:02:13 Info: add_instance eng29 slab_eng_internal
+2026.11.17.08:02:13 Info: add_instance padd29 padd_internal
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 exp29.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset exp29.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 eng29.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset eng29.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 padd29.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset padd29.reset
+2026.11.17.08:02:13 Info: add_connection exp29.wq eng29.wq
+2026.11.17.08:02:13 Info: add_connection eng29.fl padd29.fl
+2026.11.17.08:02:13 Info: add_instance exp30 slab_exp_internal
+2026.11.17.08:02:13 Info: add_instance eng30 slab_eng_internal
+2026.11.17.08:02:13 Info: add_instance padd30 padd_internal
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 exp30.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset exp30.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 eng30.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset eng30.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 padd30.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset padd30.reset
+2026.11.17.08:02:13 Info: add_connection exp30.wq eng30.wq
+2026.11.17.08:02:13 Info: add_connection eng30.fl padd30.fl
+2026.11.17.08:02:13 Info: add_instance exp31 slab_exp_internal
+2026.11.17.08:02:13 Info: add_instance eng31 slab_eng_internal
+2026.11.17.08:02:13 Info: add_instance padd31 padd_internal
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 exp31.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset exp31.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 eng31.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset eng31.reset
+2026.11.17.08:02:13 Info: add_connection pll.outclk0 padd31.clock
+2026.11.17.08:02:13 Info: add_connection clk_in.clk_reset padd31.reset
+2026.11.17.08:02:13 Info: add_connection exp31.wq eng31.wq
+2026.11.17.08:02:13 Info: add_connection eng31.fl padd31.fl
+2026.11.17.08:02:13 Info: add_connection src.tout exp0.in0
+2026.11.17.08:02:13 Info: add_connection src.pout padd0.pin
+2026.11.17.08:02:13 Info: add_connection eng0.out0 exp1.in0
+2026.11.17.08:02:13 Info: add_connection padd0.pout padd1.pin
+2026.11.17.08:02:13 Info: add_connection eng1.out0 exp2.in0
+2026.11.17.08:02:13 Info: add_connection padd1.pout padd2.pin
+2026.11.17.08:02:13 Info: add_connection eng2.out0 exp3.in0
+2026.11.17.08:02:13 Info: add_connection padd2.pout padd3.pin
+2026.11.17.08:02:13 Info: add_connection eng3.out0 exp4.in0
+2026.11.17.08:02:13 Info: add_connection padd3.pout padd4.pin
+2026.11.17.08:02:13 Info: add_connection eng4.out0 exp5.in0
+2026.11.17.08:02:13 Info: add_connection padd4.pout padd5.pin
+2026.11.17.08:02:13 Info: add_connection eng5.out0 exp6.in0
+2026.11.17.08:02:13 Info: add_connection padd5.pout padd6.pin
+2026.11.17.08:02:13 Info: add_connection eng6.out0 exp7.in0
+2026.11.17.08:02:13 Info: add_connection padd6.pout padd7.pin
+2026.11.17.08:02:13 Info: add_connection eng7.out0 exp8.in0
+2026.11.17.08:02:13 Info: add_connection padd7.pout padd8.pin
+2026.11.17.08:02:13 Info: add_connection eng8.out0 exp9.in0
+2026.11.17.08:02:13 Info: add_connection padd8.pout padd9.pin
+2026.11.17.08:02:13 Info: add_connection eng9.out0 exp10.in0
+2026.11.17.08:02:13 Info: add_connection padd9.pout padd10.pin
+2026.11.17.08:02:13 Info: add_connection eng10.out0 exp11.in0
+2026.11.17.08:02:13 Info: add_connection padd10.pout padd11.pin
+2026.11.17.08:02:13 Info: add_connection eng11.out0 exp12.in0
+2026.11.17.08:02:13 Info: add_connection padd11.pout padd12.pin
+2026.11.17.08:02:13 Info: add_connection eng12.out0 exp13.in0
+2026.11.17.08:02:13 Info: add_connection padd12.pout padd13.pin
+2026.11.17.08:02:13 Info: add_connection eng13.out0 exp14.in0
+2026.11.17.08:02:13 Info: add_connection padd13.pout padd14.pin
+2026.11.17.08:02:14 Info: add_connection eng14.out0 exp15.in0
+2026.11.17.08:02:14 Info: add_connection padd14.pout padd15.pin
+2026.11.17.08:02:14 Info: add_connection eng15.out0 exp16.in0
+2026.11.17.08:02:14 Info: add_connection padd15.pout padd16.pin
+2026.11.17.08:02:14 Info: add_connection eng16.out0 exp17.in0
+2026.11.17.08:02:14 Info: add_connection padd16.pout padd17.pin
+2026.11.17.08:02:14 Info: add_connection eng17.out0 exp18.in0
+2026.11.17.08:02:14 Info: add_connection padd17.pout padd18.pin
+2026.11.17.08:02:14 Info: add_connection eng18.out0 exp19.in0
+2026.11.17.08:02:14 Info: add_connection padd18.pout padd19.pin
+2026.11.17.08:02:14 Info: add_connection eng19.out0 exp20.in0
+2026.11.17.08:02:14 Info: add_connection padd19.pout padd20.pin
+2026.11.17.08:02:14 Info: add_connection eng20.out0 exp21.in0
+2026.11.17.08:02:14 Info: add_connection padd20.pout padd21.pin
+2026.11.17.08:02:14 Info: add_connection eng21.out0 exp22.in0
+2026.11.17.08:02:14 Info: add_connection padd21.pout padd22.pin
+2026.11.17.08:02:14 Info: add_connection eng22.out0 exp23.in0
+2026.11.17.08:02:14 Info: add_connection padd22.pout padd23.pin
+2026.11.17.08:02:14 Info: add_connection eng23.out0 exp24.in0
+2026.11.17.08:02:14 Info: add_connection padd23.pout padd24.pin
+2026.11.17.08:02:14 Info: add_connection eng24.out0 exp25.in0
+2026.11.17.08:02:14 Info: add_connection padd24.pout padd25.pin
+2026.11.17.08:02:14 Info: add_connection eng25.out0 exp26.in0
+2026.11.17.08:02:14 Info: add_connection padd25.pout padd26.pin
+2026.11.17.08:02:14 Info: add_connection eng26.out0 exp27.in0
+2026.11.17.08:02:14 Info: add_connection padd26.pout padd27.pin
+2026.11.17.08:02:14 Info: add_connection eng27.out0 exp28.in0
+2026.11.17.08:02:14 Info: add_connection padd27.pout padd28.pin
+2026.11.17.08:02:14 Info: add_connection eng28.out0 exp29.in0
+2026.11.17.08:02:14 Info: add_connection padd28.pout padd29.pin
+2026.11.17.08:02:14 Info: add_connection eng29.out0 exp30.in0
+2026.11.17.08:02:14 Info: add_connection padd29.pout padd30.pin
+2026.11.17.08:02:14 Info: add_connection eng30.out0 exp31.in0
+2026.11.17.08:02:14 Info: add_connection padd30.pout padd31.pin
+2026.11.17.08:02:14 Info: add_connection eng31.out0 sink.tin
+2026.11.17.08:02:14 Info: add_connection padd31.pout sink.pin
+2026.11.17.08:02:14 Info: add_connection jtag.master src.avs_cra
+2026.11.17.08:02:14 Info: set_connection_parameter_value jtag.master/src.avs_cra baseAddress 0x00000000
+2026.11.17.08:02:14 Info: add_connection jtag.master src.avs_s_in
+2026.11.17.08:02:14 Info: set_connection_parameter_value jtag.master/src.avs_s_in baseAddress 0x00020000
+2026.11.17.08:02:14 Info: add_connection jtag.master src.avs_io
+2026.11.17.08:02:14 Info: set_connection_parameter_value jtag.master/src.avs_io baseAddress 0x00040000
+2026.11.17.08:02:14 Info: add_connection jtag.master src.avs_ev
+2026.11.17.08:02:14 Info: set_connection_parameter_value jtag.master/src.avs_ev baseAddress 0x00100000
+2026.11.17.08:02:14 Info: add_connection jtag.master sink.avs_cra
+2026.11.17.08:02:14 Info: set_connection_parameter_value jtag.master/sink.avs_cra baseAddress 0x00010000
+2026.11.17.08:02:14 Info: add_connection jtag.master sink.avs_s_out
+2026.11.17.08:02:14 Info: set_connection_parameter_value jtag.master/sink.avs_s_out baseAddress 0x00060000
+2026.11.17.08:02:14 Info: add_connection jtag.master sink.avs_io
+2026.11.17.08:02:14 Info: set_connection_parameter_value jtag.master/sink.avs_io baseAddress 0x00080000
+2026.11.17.08:02:14 Info: set_interface_property clk EXPORT_OF clk_in.clk_in
+2026.11.17.08:02:14 Info: set_interface_property reset EXPORT_OF clk_in.clk_in_reset
+2026.11.17.08:02:14 Info: set_interface_property pll_locked EXPORT_OF pll.locked
+2026.11.17.08:02:14 Info: set_interface_property ninit_done EXPORT_OF rr.ninit_done
+2026.11.17.08:02:14 Info: save_system slab_sys.qsys
+2026.11.17.08:02:14 Info: Replacing slab_sys.clk_in with generic component
+2026.11.17.08:02:15 Info: Replacing slab_sys.pll with generic component
+2026.11.17.08:02:15 Info: Replacing slab_sys.jtag with generic component
+2026.11.17.08:02:16 Info: Replacing slab_sys.rr with generic component
+2026.11.17.08:02:16 Info: Replacing slab_sys.src with generic component
+2026.11.17.08:02:16 Info: Replacing slab_sys.sink with generic component
+2026.11.17.08:02:17 Info: Replacing slab_sys.exp0 with generic component
+2026.11.17.08:02:17 Info: Replacing slab_sys.eng0 with generic component
+2026.11.17.08:02:17 Info: Replacing slab_sys.padd0 with generic component
+2026.11.17.08:02:18 Info: Replacing slab_sys.exp1 with generic component
+2026.11.17.08:02:18 Info: Replacing slab_sys.eng1 with generic component
+2026.11.17.08:02:18 Info: Replacing slab_sys.padd1 with generic component
+2026.11.17.08:02:19 Info: Replacing slab_sys.exp2 with generic component
+2026.11.17.08:02:19 Info: Replacing slab_sys.eng2 with generic component
+2026.11.17.08:02:19 Info: Replacing slab_sys.padd2 with generic component
+2026.11.17.08:02:20 Info: Replacing slab_sys.exp3 with generic component
+2026.11.17.08:02:20 Info: Replacing slab_sys.eng3 with generic component
+2026.11.17.08:02:20 Info: Replacing slab_sys.padd3 with generic component
+2026.11.17.08:02:20 Info: Replacing slab_sys.exp4 with generic component
+2026.11.17.08:02:21 Info: Replacing slab_sys.eng4 with generic component
+2026.11.17.08:02:21 Info: Replacing slab_sys.padd4 with generic component
+2026.11.17.08:02:21 Info: Replacing slab_sys.exp5 with generic component
+2026.11.17.08:02:22 Info: Replacing slab_sys.eng5 with generic component
+2026.11.17.08:02:22 Info: Replacing slab_sys.padd5 with generic component
+2026.11.17.08:02:22 Info: Replacing slab_sys.exp6 with generic component
+2026.11.17.08:02:23 Info: Replacing slab_sys.eng6 with generic component
+2026.11.17.08:02:23 Info: Replacing slab_sys.padd6 with generic component
+2026.11.17.08:02:23 Info: Replacing slab_sys.exp7 with generic component
+2026.11.17.08:02:24 Info: Replacing slab_sys.eng7 with generic component
+2026.11.17.08:02:24 Info: Replacing slab_sys.padd7 with generic component
+2026.11.17.08:02:24 Info: Replacing slab_sys.exp8 with generic component
+2026.11.17.08:02:25 Info: Replacing slab_sys.eng8 with generic component
+2026.11.17.08:02:25 Info: Replacing slab_sys.padd8 with generic component
+2026.11.17.08:02:25 Info: Replacing slab_sys.exp9 with generic component
+2026.11.17.08:02:25 Info: Replacing slab_sys.eng9 with generic component
+2026.11.17.08:02:26 Info: Replacing slab_sys.padd9 with generic component
+2026.11.17.08:02:26 Info: Replacing slab_sys.exp10 with generic component
+2026.11.17.08:02:26 Info: Replacing slab_sys.eng10 with generic component
+2026.11.17.08:02:27 Info: Replacing slab_sys.padd10 with generic component
+2026.11.17.08:02:27 Info: Replacing slab_sys.exp11 with generic component
+2026.11.17.08:02:27 Info: Replacing slab_sys.eng11 with generic component
+2026.11.17.08:02:28 Info: Replacing slab_sys.padd11 with generic component
+2026.11.17.08:02:28 Info: Replacing slab_sys.exp12 with generic component
+2026.11.17.08:02:28 Info: Replacing slab_sys.eng12 with generic component
+2026.11.17.08:02:29 Info: Replacing slab_sys.padd12 with generic component
+2026.11.17.08:02:29 Info: Replacing slab_sys.exp13 with generic component
+2026.11.17.08:02:29 Info: Replacing slab_sys.eng13 with generic component
+2026.11.17.08:02:29 Info: Replacing slab_sys.padd13 with generic component
+2026.11.17.08:02:30 Info: Replacing slab_sys.exp14 with generic component
+2026.11.17.08:02:30 Info: Replacing slab_sys.eng14 with generic component
+2026.11.17.08:02:30 Info: Replacing slab_sys.padd14 with generic component
+2026.11.17.08:02:31 Info: Replacing slab_sys.exp15 with generic component
+2026.11.17.08:02:31 Info: Replacing slab_sys.eng15 with generic component
+2026.11.17.08:02:31 Info: Replacing slab_sys.padd15 with generic component
+2026.11.17.08:02:32 Info: Replacing slab_sys.exp16 with generic component
+2026.11.17.08:02:32 Info: Replacing slab_sys.eng16 with generic component
+2026.11.17.08:02:32 Info: Replacing slab_sys.padd16 with generic component
+2026.11.17.08:02:33 Info: Replacing slab_sys.exp17 with generic component
+2026.11.17.08:02:33 Info: Replacing slab_sys.eng17 with generic component
+2026.11.17.08:02:33 Info: Replacing slab_sys.padd17 with generic component
+2026.11.17.08:02:33 Info: Replacing slab_sys.exp18 with generic component
+2026.11.17.08:02:34 Info: Replacing slab_sys.eng18 with generic component
+2026.11.17.08:02:34 Info: Replacing slab_sys.padd18 with generic component
+2026.11.17.08:02:35 Info: Replacing slab_sys.exp19 with generic component
+2026.11.17.08:02:35 Info: Replacing slab_sys.eng19 with generic component
+2026.11.17.08:02:35 Info: Replacing slab_sys.padd19 with generic component
+2026.11.17.08:02:36 Info: Replacing slab_sys.exp20 with generic component
+2026.11.17.08:02:36 Info: Replacing slab_sys.eng20 with generic component
+2026.11.17.08:02:36 Info: Replacing slab_sys.padd20 with generic component
+2026.11.17.08:02:36 Info: Replacing slab_sys.exp21 with generic component
+2026.11.17.08:02:37 Info: Replacing slab_sys.eng21 with generic component
+2026.11.17.08:02:37 Info: Replacing slab_sys.padd21 with generic component
+2026.11.17.08:02:37 Info: Replacing slab_sys.exp22 with generic component
+2026.11.17.08:02:38 Info: Replacing slab_sys.eng22 with generic component
+2026.11.17.08:02:38 Info: Replacing slab_sys.padd22 with generic component
+2026.11.17.08:02:38 Info: Replacing slab_sys.exp23 with generic component
+2026.11.17.08:02:39 Info: Replacing slab_sys.eng23 with generic component
+2026.11.17.08:02:39 Info: Replacing slab_sys.padd23 with generic component
+2026.11.17.08:02:39 Info: Replacing slab_sys.exp24 with generic component
+2026.11.17.08:02:39 Info: Replacing slab_sys.eng24 with generic component
+2026.11.17.08:02:40 Info: Replacing slab_sys.padd24 with generic component
+2026.11.17.08:02:40 Info: Replacing slab_sys.exp25 with generic component
+2026.11.17.08:02:40 Info: Replacing slab_sys.eng25 with generic component
+2026.11.17.08:02:41 Info: Replacing slab_sys.padd25 with generic component
+2026.11.17.08:02:41 Info: Replacing slab_sys.exp26 with generic component
+2026.11.17.08:02:41 Info: Replacing slab_sys.eng26 with generic component
+2026.11.17.08:02:42 Info: Replacing slab_sys.padd26 with generic component
+2026.11.17.08:02:42 Info: Replacing slab_sys.exp27 with generic component
+2026.11.17.08:02:42 Info: Replacing slab_sys.eng27 with generic component
+2026.11.17.08:02:43 Info: Replacing slab_sys.padd27 with generic component
+2026.11.17.08:02:43 Info: Replacing slab_sys.exp28 with generic component
+2026.11.17.08:02:43 Info: Replacing slab_sys.eng28 with generic component
+2026.11.17.08:02:44 Info: Replacing slab_sys.padd28 with generic component
+2026.11.17.08:02:44 Info: Replacing slab_sys.exp29 with generic component
+2026.11.17.08:02:44 Info: Replacing slab_sys.eng29 with generic component
+2026.11.17.08:02:44 Info: Replacing slab_sys.padd29 with generic component
+2026.11.17.08:02:45 Info: Replacing slab_sys.exp30 with generic component
+2026.11.17.08:02:45 Info: Replacing slab_sys.eng30 with generic component
+2026.11.17.08:02:45 Info: Replacing slab_sys.padd30 with generic component
+2026.11.17.08:02:46 Info: Replacing slab_sys.exp31 with generic component
+2026.11.17.08:02:46 Info: Replacing slab_sys.eng31 with generic component
+2026.11.17.08:02:46 Info: Replacing slab_sys.padd31 with generic component
+2026.11.17.08:02:47 Info: Info: All modules have been converted to Generic Components.

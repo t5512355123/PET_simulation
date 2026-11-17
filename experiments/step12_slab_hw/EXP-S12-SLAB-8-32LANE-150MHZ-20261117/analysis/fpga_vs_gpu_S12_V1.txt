@@ -1,0 +1,7 @@
+voxel unit: 1.034 cycles/voxel on the full image, 15.8 ms per pass (V=1, 165.0 MHz)
+offline LM-psv (time 1)    GPU RTX 3070 Ti Laptop (measured, list-mode)            8.62 s     745 J
+offline LM-psv (time 1)    FPGA v10 8 lanes (board) + voxel unit V=1              14.89 s     203 J  (projection 12.39 s + voxel 2.50 s, 13.6 W)
+offline LM-psv (time 1)    FPGA slab 32 lanes (board, EXP-S12) + voxel unit V=1    6.39 s     106 J  (projection 3.89 s + voxel 2.50 s, 16.5 W)
+online Br 64/64 (time 2)   GPU RTX 3070 Ti Laptop (measured, list-mode)            0.70 s      61 J
+online Br 64/64 (time 2)   FPGA v10 8 lanes (board) + voxel unit V=1               1.25 s      17 J  (projection 1.01 s + voxel 0.24 s, 13.6 W)
+online Br 64/64 (time 2)   FPGA slab 32 lanes (board, EXP-S12) + voxel unit V=1    0.55 s       9 J  (projection 0.32 s + voxel 0.24 s, 16.5 W)

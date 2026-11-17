@@ -1,0 +1,61 @@
+{
+ "inputs": {
+  "cyc_per_voxel_board_nz4": 1.28,
+  "f_unit_MHz": 165.0,
+  "P_unit_W": 8.61,
+  "P_unit_static_W": 6.1,
+  "V": 4
+ },
+ "cyc_per_voxel_full": 1.0335695178521755,
+ "t_pass_s": 0.003952706529367232,
+ "rows": [
+  {
+   "work": "offline LM-psv (time 1)",
+   "device": "GPU RTX 3070 Ti Laptop (measured, list-mode)",
+   "t_s": 8.62,
+   "E_J": 744.768
+  },
+  {
+   "work": "offline LM-psv (time 1)",
+   "device": "FPGA v10 8 lanes (board) + voxel unit V=4",
+   "t_proj_s": 12.394779453797469,
+   "t_voxel_s": 0.6245276316400226,
+   "t_s": 13.019307085437491,
+   "P_W": 13.61,
+   "E_J": 177.19276943280425
+  },
+  {
+   "work": "offline LM-psv (time 1)",
+   "device": "FPGA slab 32 lanes (board, EXP-S12) + voxel unit V=4",
+   "t_proj_s": 3.891179697956287,
+   "t_voxel_s": 0.6245276316400226,
+   "t_s": 4.51570732959631,
+   "P_W": 16.549999999999997,
+   "E_J": 74.73495630481892
+  },
+  {
+   "work": "online Br 64/64 (time 2)",
+   "device": "GPU RTX 3070 Ti Laptop (measured, list-mode)",
+   "t_s": 0.7036734693877551,
+   "E_J": 60.797387755102044
+  },
+  {
+   "work": "online Br 64/64 (time 2)",
+   "device": "FPGA v10 8 lanes (board) + voxel unit V=4",
+   "t_proj_s": 1.0118187309222424,
+   "t_voxel_s": 0.05929059794050848,
+   "t_s": 1.071109328862751,
+   "P_W": 13.61,
+   "E_J": 14.57779796582204
+  },
+  {
+   "work": "online Br 64/64 (time 2)",
+   "device": "FPGA slab 32 lanes (board, EXP-S12) + voxel unit V=4",
+   "t_proj_s": 0.3176473222821459,
+   "t_voxel_s": 0.05929059794050848,
+   "t_s": 0.3769379202226544,
+   "P_W": 16.549999999999997,
+   "E_J": 6.238322579684929
+  }
+ ]
+}

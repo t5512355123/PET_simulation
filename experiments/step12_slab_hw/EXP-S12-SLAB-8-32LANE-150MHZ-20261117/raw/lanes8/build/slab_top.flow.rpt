@@ -1,0 +1,270 @@
+Flow report for slab_top
+Tue Nov 17 16:18:54 2026
+Quartus Prime Version 21.3.0 Build 170 09/23/2021 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Parallel Compilation
+  2. Legal Notice
+  3. Flow Summary
+  4. Flow Settings
+  5. Flow Non-Default Global Settings
+  6. Flow Elapsed Time
+  7. Flow OS Summary
+  8. Flow Log
+
+
+
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 8      ;
++----------------------------+--------+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++---------------------------------+--------------------------------------------+
+; Flow Status                     ; Successful - Tue Nov 17 16:18:54 2026      ;
+; Quartus Prime Version           ; 21.3.0 Build 170 09/23/2021 SC Pro Edition ;
+; Revision Name                   ; slab_top                                   ;
+; Top-level Entity Name           ; slab_top                                   ;
+; Family                          ; Stratix 10                                 ;
+; Top-level Entity Name           ; slab_top                                   ;
+; Device                          ; 1SX280HU2F50E1VG                           ;
+; Timing Models                   ; Final                                      ;
+; Power Models                    ; Final                                      ;
+; Device Status                   ; Final                                      ;
+; Logic utilization (in ALMs)     ; 68,896 / 933,120 ( 7 % )                   ;
+; Total dedicated logic registers ; 135549                                     ;
+; Total pins                      ; 6 / 1,152 ( < 1 % )                        ;
+; Total block memory bits         ; 76,556,288 / 240,046,080 ( 32 % )          ;
+; Total RAM Blocks                ; 4,654 / 11,721 ( 40 % )                    ;
+; Total DSP Blocks                ; 181 / 5,760 ( 3 % )                        ;
+; Total DIB Channels              ; 0 / 75 ( 0 % )                             ;
+; Total HSSI RX channels          ; 0 / 96 ( 0 % )                             ;
+; Total HSSI TX channels          ; 0 / 96 ( 0 % )                             ;
+; Total HSSI HPS                  ; 0 / 1 ( 0 % )                              ;
+; Total HSSI EHIPs                ; 0 / 4 ( 0 % )                              ;
+; Total PLLs                      ; 1 / 184 ( < 1 % )                          ;
+; Top-level Entity Name           ; slab_top                                   ;
+; Top-level Entity Name           ; slab_top                                   ;
+; Top-level Entity Name           ; slab_top                                   ;
++---------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 11/17/2026 08:04:40 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; slab_top            ;
++-------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                        ;
++-----------------------+-----------------------------------------------------------------------------------------------------------+---------------+----------------------------------------+------------+
+; Assignment Name       ; Value                                                                                                     ; Default Value ; Entity Name                            ; Section Id ;
++-----------------------+-----------------------------------------------------------------------------------------------------------+---------------+----------------------------------------+------------+
+; COMPILER_SIGNATURE_ID ; 49410870064769.179487388012527                                                                            ; --            ; --                                     ; --         ;
+; IP_SEARCH_PATHS       ; /home/b10504072/claude_bsrem/slab/h8/slab.prj/components/**/*                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_clk_in/slab_sys_clk_in.cmp                                                           ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_clk_in/../slab_sys_clk_in.ip                                                         ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng0/slab_sys_eng0.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng0/../slab_sys_eng0.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng1/slab_sys_eng1.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng1/../slab_sys_eng1.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng2/slab_sys_eng2.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng2/../slab_sys_eng2.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng3/slab_sys_eng3.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng3/../slab_sys_eng3.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng4/slab_sys_eng4.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng4/../slab_sys_eng4.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng5/slab_sys_eng5.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng5/../slab_sys_eng5.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng6/slab_sys_eng6.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng6/../slab_sys_eng6.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng7/slab_sys_eng7.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_eng7/../slab_sys_eng7.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp0/slab_sys_exp0.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp0/../slab_sys_exp0.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp1/slab_sys_exp1.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp1/../slab_sys_exp1.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp2/slab_sys_exp2.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp2/../slab_sys_exp2.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp3/slab_sys_exp3.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp3/../slab_sys_exp3.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp4/slab_sys_exp4.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp4/../slab_sys_exp4.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp5/slab_sys_exp5.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp5/../slab_sys_exp5.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp6/slab_sys_exp6.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp6/../slab_sys_exp6.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp7/slab_sys_exp7.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_exp7/../slab_sys_exp7.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_jtag/slab_sys_jtag.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_jtag/../slab_sys_jtag.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd0/slab_sys_padd0.cmp                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd0/../slab_sys_padd0.ip                                                           ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd1/slab_sys_padd1.cmp                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd1/../slab_sys_padd1.ip                                                           ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd2/slab_sys_padd2.cmp                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd2/../slab_sys_padd2.ip                                                           ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd3/slab_sys_padd3.cmp                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd3/../slab_sys_padd3.ip                                                           ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd4/slab_sys_padd4.cmp                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd4/../slab_sys_padd4.ip                                                           ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd5/slab_sys_padd5.cmp                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd5/../slab_sys_padd5.ip                                                           ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd6/slab_sys_padd6.cmp                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd6/../slab_sys_padd6.ip                                                           ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd7/slab_sys_padd7.cmp                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_padd7/../slab_sys_padd7.ip                                                           ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_pll/slab_sys_pll.cmp                                                                 ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_pll/../slab_sys_pll.ip                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_rr/slab_sys_rr.cmp                                                                   ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_rr/../slab_sys_rr.ip                                                                 ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_sink/slab_sys_sink.cmp                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_sink/../slab_sys_sink.ip                                                             ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_src/slab_sys_src.cmp                                                                 ; --            ; --                                     ; --         ;
+; MISC_FILE             ; ip/slab_sys/slab_sys_src/../slab_sys_src.ip                                                               ; --            ; --                                     ; --         ;
+; MISC_FILE             ; slab_sys/slab_sys.cmp                                                                                     ; --            ; --                                     ; --         ;
+; MISC_FILE             ; slab_sys/../slab_sys.qsys                                                                                 ; --            ; --                                     ; --         ;
+; SDC_ENTITY_FILE       ; ip/slab_sys/slab_sys_jtag/altera_jtag_dc_streaming_191/synth/altera_avalon_st_jtag_interface.sdc          ; --            ; altera_avalon_st_jtag_interface        ; --         ;
+; SDC_ENTITY_FILE       ; ip/slab_sys/slab_sys_jtag/altera_reset_controller_1921/synth/altera_reset_controller.sdc                  ; --            ; altera_reset_controller                ; --         ;
+; SDC_ENTITY_FILE       ; slab_sys/altera_reset_controller_1921/synth/altera_reset_controller.sdc                                   ; --            ; altera_reset_controller                ; --         ;
+; SDC_ENTITY_FILE       ; ip/slab_sys/slab_sys_pll/altera_iopll_1931/synth/slab_sys_pll_altera_iopll_1931_275hhty.sdc               ; --            ; slab_sys_pll_altera_iopll_1931_275hhty ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys HAS_SOPCINFO 1 GENERATION_ID 0                                                         ; --            ; slab_sys                               ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_clk_in HAS_SOPCINFO 1 GENERATION_ID 0                                                  ; --            ; slab_sys_clk_in                        ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_eng0 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_eng0                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_eng1 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_eng1                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_eng2 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_eng2                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_eng3 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_eng3                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_eng4 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_eng4                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_eng5 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_eng5                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_eng6 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_eng6                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_eng7 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_eng7                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_exp0 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_exp0                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_exp1 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_exp1                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_exp2 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_exp2                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_exp3 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_exp3                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_exp4 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_exp4                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_exp5 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_exp5                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_exp6 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_exp6                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_exp7 HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_exp7                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_jtag HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_jtag                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_padd0 HAS_SOPCINFO 1 GENERATION_ID 0                                                   ; --            ; slab_sys_padd0                         ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_padd1 HAS_SOPCINFO 1 GENERATION_ID 0                                                   ; --            ; slab_sys_padd1                         ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_padd2 HAS_SOPCINFO 1 GENERATION_ID 0                                                   ; --            ; slab_sys_padd2                         ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_padd3 HAS_SOPCINFO 1 GENERATION_ID 0                                                   ; --            ; slab_sys_padd3                         ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_padd4 HAS_SOPCINFO 1 GENERATION_ID 0                                                   ; --            ; slab_sys_padd4                         ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_padd5 HAS_SOPCINFO 1 GENERATION_ID 0                                                   ; --            ; slab_sys_padd5                         ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_padd6 HAS_SOPCINFO 1 GENERATION_ID 0                                                   ; --            ; slab_sys_padd6                         ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_padd7 HAS_SOPCINFO 1 GENERATION_ID 0                                                   ; --            ; slab_sys_padd7                         ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_pll HAS_SOPCINFO 1 GENERATION_ID 0                                                     ; --            ; slab_sys_pll                           ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_rr HAS_SOPCINFO 1 GENERATION_ID 0                                                      ; --            ; slab_sys_rr                            ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_sink HAS_SOPCINFO 1 GENERATION_ID 0                                                    ; --            ; slab_sys_sink                          ; --         ;
+; SLD_INFO              ; QSYS_NAME slab_sys_src HAS_SOPCINFO 1 GENERATION_ID 0                                                     ; --            ; slab_sys_src                           ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_clk_in/slab_sys_clk_in.sopcinfo                                                      ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_eng0/slab_sys_eng0.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_eng1/slab_sys_eng1.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_eng2/slab_sys_eng2.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_eng3/slab_sys_eng3.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_eng4/slab_sys_eng4.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_eng5/slab_sys_eng5.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_eng6/slab_sys_eng6.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_eng7/slab_sys_eng7.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_exp0/slab_sys_exp0.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_exp1/slab_sys_exp1.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_exp2/slab_sys_exp2.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_exp3/slab_sys_exp3.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_exp4/slab_sys_exp4.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_exp5/slab_sys_exp5.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_exp6/slab_sys_exp6.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_exp7/slab_sys_exp7.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_jtag/slab_sys_jtag.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_padd0/slab_sys_padd0.sopcinfo                                                        ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_padd1/slab_sys_padd1.sopcinfo                                                        ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_padd2/slab_sys_padd2.sopcinfo                                                        ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_padd3/slab_sys_padd3.sopcinfo                                                        ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_padd4/slab_sys_padd4.sopcinfo                                                        ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_padd5/slab_sys_padd5.sopcinfo                                                        ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_padd6/slab_sys_padd6.sopcinfo                                                        ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_padd7/slab_sys_padd7.sopcinfo                                                        ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_pll/slab_sys_pll.sopcinfo                                                            ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_rr/slab_sys_rr.sopcinfo                                                              ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_sink/slab_sys_sink.sopcinfo                                                          ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; ip/slab_sys/slab_sys_src/slab_sys_src.sopcinfo                                                            ; --            ; --                                     ; --         ;
+; SOPCINFO_FILE         ; slab_sys/slab_sys.sopcinfo                                                                                ; --            ; --                                     ; --         ;
+; TCL_ENTITY_FILE       ; ip/slab_sys/slab_sys_pll/altera_iopll_1931/synth/slab_sys_pll_altera_iopll_1931_275hhty_all_ip_params.tcl ; --            ; slab_sys_pll_altera_iopll_1931_275hhty ; --         ;
+; TCL_ENTITY_FILE       ; ip/slab_sys/slab_sys_pll/altera_iopll_1931/synth/slab_sys_pll_altera_iopll_1931_275hhty_parameters.tcl    ; --            ; slab_sys_pll_altera_iopll_1931_275hhty ; --         ;
+; TCL_ENTITY_FILE       ; ip/slab_sys/slab_sys_pll/altera_iopll_1931/synth/slab_sys_pll_altera_iopll_1931_275hhty_pin_map.tcl       ; --            ; slab_sys_pll_altera_iopll_1931_275hhty ; --         ;
++-----------------------+-----------------------------------------------------------------------------------------------------------+---------------+----------------------------------------+------------+
+
+
++------------------------------------------------------+
+; Flow Elapsed Time                                    ;
++-----------------+--------------+---------------------+
+; Module Name     ; Elapsed Time ; Peak Virtual Memory ;
++-----------------+--------------+---------------------+
+; Synthesis       ; 00:03:13     ; 5409 MB             ;
+; Fitter          ; 00:30:37     ; 25714 MB            ;
+; Timing Analyzer ; 00:01:03     ; 13801 MB            ;
+; Assembler       ; 00:00:58     ; 12096 MB            ;
+; Power Analyzer  ; 00:02:01     ; 18704 MB            ;
+; Total           ; 00:37:52     ; --                  ;
++-----------------+--------------+---------------------+
+
+
++---------------------------------------------------------------------------------+
+; Flow OS Summary                                                                 ;
++-----------------+------------------+--------------+------------+----------------+
+; Module Name     ; Machine Hostname ; OS Name      ; OS Version ; Processor type ;
++-----------------+------------------+--------------+------------+----------------+
+; Synthesis       ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
+; Fitter          ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
+; Timing Analyzer ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
+; Assembler       ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
+; Power Analyzer  ; snoopy           ; CentOS Linux ; 7          ; x86_64         ;
++-----------------+------------------+--------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_syn --read_settings_files=on --write_settings_files=off slab_top -c slab_top
+quartus_fit --read_settings_files=on --write_settings_files=off slab_top -c slab_top
+quartus_sta slab_top -c slab_top --mode=finalize
+quartus_asm --read_settings_files=on --write_settings_files=off slab_top -c slab_top
+quartus_pow slab_top
+
+
+

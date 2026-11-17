@@ -1,0 +1,9 @@
+nev 8000
+nf 8000
+voxels 1048576
+real_steps 933537
+lanes 8
+max_lane_iters 133351
+haz 64
+nops 0
+bubbles 0
