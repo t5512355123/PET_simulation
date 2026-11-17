@@ -1,0 +1,79 @@
+{
+ "t_batch": 0.0012435,
+ "samples_per_s": 3692130277.442702,
+ "t_epoch": 0.20245942085497906,
+ "compare": {
+  "time 1 (offline, competition definition) V=1 serial load (as built)": {
+   "t_fpga": 16.16684865821024,
+   "E_fpga": 322.69029921787643,
+   "t_proj": 3.7201918582102405,
+   "t_vox": 2.49166,
+   "t_io": 9.9549968,
+   "t_gpu": 8.62,
+   "E_gpu": 744.768
+  },
+  "time 1 (offline, competition definition) V=4 serial load (as built)": {
+   "t_fpga": 14.298103658210241,
+   "E_fpga": 285.3901490178764,
+   "t_proj": 3.7201918582102405,
+   "t_vox": 0.622915,
+   "t_io": 9.9549968,
+   "t_gpu": 8.62,
+   "E_gpu": 744.768
+  },
+  "time 1 (offline, competition definition) V=1 per-lane load (model)": {
+   "t_fpga": 6.52294550821024,
+   "E_fpga": 130.1979923438764,
+   "t_proj": 3.7201918582102405,
+   "t_vox": 2.49166,
+   "t_io": 0.31109365,
+   "t_gpu": 8.62,
+   "E_gpu": 744.768
+  },
+  "time 1 (offline, competition definition) V=4 per-lane load (model)": {
+   "t_fpga": 4.6542005082102405,
+   "E_fpga": 92.8978421438764,
+   "t_proj": 3.7201918582102405,
+   "t_vox": 0.622915,
+   "t_io": 0.31109365,
+   "t_gpu": 8.62,
+   "E_gpu": 744.768
+  },
+  "time 2 (online Br 64/64, after last event) V=1 serial load (as built)": {
+   "t_fpga": 1.3528919312824685,
+   "E_fpga": 27.003722948398075,
+   "t_proj": 0.3036891312824686,
+   "t_vox": 0.23654999999999998,
+   "t_io": 0.8126528,
+   "t_gpu": 0.7036734693877551,
+   "E_gpu": 60.797387755102044
+  },
+  "time 2 (online Br 64/64, after last event) V=4 serial load (as built)": {
+   "t_fpga": 1.1754794312824686,
+   "E_fpga": 23.462569448398074,
+   "t_proj": 0.3036891312824686,
+   "t_vox": 0.059137499999999996,
+   "t_io": 0.8126528,
+   "t_gpu": 0.7036734693877551,
+   "E_gpu": 60.797387755102044
+  },
+  "time 2 (online Br 64/64, after last event) V=1 per-lane load (model)": {
+   "t_fpga": 0.5656345312824685,
+   "E_fpga": 11.290065244398072,
+   "t_proj": 0.3036891312824686,
+   "t_vox": 0.23654999999999998,
+   "t_io": 0.0253954,
+   "t_gpu": 0.7036734693877551,
+   "E_gpu": 60.797387755102044
+  },
+  "time 2 (online Br 64/64, after last event) V=4 per-lane load (model)": {
+   "t_fpga": 0.3882220312824686,
+   "E_fpga": 7.748911744398074,
+   "t_proj": 0.3036891312824686,
+   "t_vox": 0.059137499999999996,
+   "t_io": 0.0253954,
+   "t_gpu": 0.7036734693877551,
+   "E_gpu": 60.797387755102044
+  }
+ }
+}

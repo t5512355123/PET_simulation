@@ -1,0 +1,9 @@
+events 15977, real steps 2295582 (143.7/event), lanes 32, NPP 82, SPMAX 3, SLABSZ 11808
+pass 0 (axis 0 half 0): fwd 7909 tokens, busiest lane 23457 (mean 18975); back 7923 tokens (NOP 14, bubbles 335), busiest lane 23484 (mean 18999); steps in pass 581220
+pass 1 (axis 0 half 1): fwd 8046 tokens, busiest lane 23595 (mean 18914); back 7931 tokens (NOP 18, bubbles 263), busiest lane 23482 (mean 18807); steps in pass 575758
+pass 2 (axis 1 half 0): fwd 7806 tokens, busiest lane 23184 (mean 18659); back 7815 tokens (NOP 9, bubbles 170), busiest lane 23193 (mean 18673); steps in pass 570092
+pass 3 (axis 1 half 1): fwd 7931 tokens, busiest lane 23304 (mean 18662); back 7834 tokens (NOP 15, bubbles 246), busiest lane 23225 (mean 18572); steps in pass 568512
+vs GPU parallelproj: max rel err s 3.037e-05, max abs err back / max back 7.927e-05
+lane iterations per full forward + back (sum over 4 passes of the busiest lane): fwd 93540 + back 93384 = 186924
+efficiency = 2 * steps / lanes / iterations = 0.768
+PASSED

@@ -1,0 +1,21 @@
+pass 0 fwd :  7909 tokens, 0.1560 ms =    23400 cycles, busiest lane 23457 iterations -> 0.998 cycles/iteration
+pass 0 back:  7923 tokens, 0.1565 ms =    23475 cycles, busiest lane 23484 iterations -> 1.000 cycles/iteration
+pass 1 fwd :  8046 tokens, 0.1570 ms =    23550 cycles, busiest lane 23595 iterations -> 0.998 cycles/iteration
+pass 1 back:  7931 tokens, 0.1560 ms =    23400 cycles, busiest lane 23482 iterations -> 0.997 cycles/iteration
+pass 2 fwd :  7806 tokens, 0.1540 ms =    23100 cycles, busiest lane 23184 iterations -> 0.996 cycles/iteration
+pass 2 back:  7815 tokens, 0.1545 ms =    23175 cycles, busiest lane 23193 iterations -> 0.999 cycles/iteration
+pass 3 fwd :  7931 tokens, 0.1550 ms =    23250 cycles, busiest lane 23304 iterations -> 0.998 cycles/iteration
+pass 3 back:  7834 tokens, 0.1545 ms =    23175 cycles, busiest lane 23225 iterations -> 0.998 cycles/iteration
+all 4 passes, forward + back: 1.2435 ms for 15977 events (2295582 Joseph steps) -> 0.998 cycles/iteration, 3.692 G samples/s, 4.73 nJ/sample at 17.45 W
+one projection epoch (all 2601282 Esser2 events, forward + back): 0.2025 s
+image/accumulator transfer per subset: 10158160 voxels -> as built (serial chain) 67.7 ms; per-lane parallel (model, 19.2 GB/s from DDR) 2.12 ms
+time 1 (offline, competition definition): GPU 8.62 s / 745 J
+   FPGA slab32 + voxel V=1, serial load (as built): 16.17 s (projection 3.72 + voxel 2.49 + image/acc transfer 9.95) / 323 J at 20.0 W
+   FPGA slab32 + voxel V=4, serial load (as built): 14.30 s (projection 3.72 + voxel 0.62 + image/acc transfer 9.95) / 285 J at 20.0 W
+   FPGA slab32 + voxel V=1, per-lane load (model): 6.52 s (projection 3.72 + voxel 2.49 + image/acc transfer 0.31) / 130 J at 20.0 W
+   FPGA slab32 + voxel V=4, per-lane load (model): 4.65 s (projection 3.72 + voxel 0.62 + image/acc transfer 0.31) / 93 J at 20.0 W
+time 2 (online Br 64/64, after last event): GPU 0.70 s / 61 J
+   FPGA slab32 + voxel V=1, serial load (as built): 1.35 s (projection 0.30 + voxel 0.24 + image/acc transfer 0.81) / 27 J at 20.0 W
+   FPGA slab32 + voxel V=4, serial load (as built): 1.18 s (projection 0.30 + voxel 0.06 + image/acc transfer 0.81) / 23 J at 20.0 W
+   FPGA slab32 + voxel V=1, per-lane load (model): 0.57 s (projection 0.30 + voxel 0.24 + image/acc transfer 0.03) / 11 J at 20.0 W
+   FPGA slab32 + voxel V=4, per-lane load (model): 0.39 s (projection 0.30 + voxel 0.06 + image/acc transfer 0.03) / 8 J at 20.0 W

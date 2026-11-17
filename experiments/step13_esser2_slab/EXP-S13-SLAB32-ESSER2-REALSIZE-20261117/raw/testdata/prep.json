@@ -1,0 +1,25 @@
+{
+ "first_event": 0,
+ "n_events": 16000,
+ "kept": 15977,
+ "z_dominant": 18,
+ "miss_image": 5,
+ "axis1_fraction": 0.49640107654753707,
+ "mean_steps": 143.6804155974213,
+ "total_steps": 2295582,
+ "frac": 20,
+ "conversion_check_events": 2000,
+ "F_rel_diff_max": 4.259572798420519e-05,
+ "F_rel_diff_median": 1.7737309295302785e-06,
+ "image_shape": [
+  95,
+  163,
+  163
+ ],
+ "voxel_mm": [
+  1.656499981880188,
+  1.656499981880188,
+  1.656499981880188
+ ],
+ "fpga_events_sha256": "12cab2775d6cdd9332c6477cca06a5c954bdd66c382727eb4c25a83e483edd49"
+}
