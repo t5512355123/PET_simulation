@@ -1,0 +1,5 @@
+tokens 8000, lanes 8, real steps 933537, busiest lane 133351 iterations per pass
+forward ratio s: max rel diff 1.189e-07; bit-identical 7472/8000
+back projection: max abs diff / max 8.677e-08; bit-identical 991618/1048576
+timing: 4.380 ms per forward+back pass at 150.0 MHz = 657000 cycles (busiest lane 2 x 133351 = 266702 iterations -> 2.463 cycles/iteration)
+throughput: 426.3 M samples/s (0.355 samples per lane per cycle)
