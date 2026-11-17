@@ -17,6 +17,8 @@
 | 9 list-mode psv | `EXP-S9-LISTMODE-PSV-GPU-20261117` | PASS | 依時間切子集、s/M：98 次更新 / 12.25 epoch（和原版相同）；3070 Ti 8.62 s、約 745 J |
 | 10 online | `EXP-S10-ONLINE-PSV-LATENCY-20261117` | PASS | 成長資料 psv + 步長重新開始：最後事件後 1.5–4.6 epoch（原版 18.4） |
 | 11 voxel 單元 | `EXP-S11-PSV-VOXEL-UNIT-DE10PRO-20261117` | PASS | RDP stencil + SVRG + 更新：1.0 cycle/voxel、165 MHz、8.6 W；整機比較：能量少 3.7 倍，時間要 32-lane slab 才贏 |
+| 12 slab 硬體 | `EXP-S12-SLAB-8LANE-NOFIFO-150MHZ-20261117` | FAIL | 結果正確；2.46 cycles/iteration（部分和鏈沒有 FIFO，所有 lane 被鎖成同步） |
+| 12 slab 硬體 | `EXP-S12-SLAB-8-32LANE-150MHZ-20261117` | PASS | 1.00 cycle/iteration；32 lanes 3.54 G/s、14.0 W、4.0 nJ/樣本；加 voxel 單元到門檻 6.4 s / 106 J（GPU 8.6 s / 745 J） |
 | 基準 | `EXP-B-CPU-XEON8559C-PARALLELPROJ-20261115` | 量測 | 1 執行緒 44 M/s；24 執行緒約 500 M/s |
 | 基準 | `EXP-B-GPU-RTX3070TI-LAPTOP-20261115` | 量測 | 2660 M/s；約 95 W；36 nJ/樣本 |
 
