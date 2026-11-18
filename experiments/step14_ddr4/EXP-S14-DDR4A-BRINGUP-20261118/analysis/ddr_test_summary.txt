@@ -1,0 +1,7 @@
+VERIFY base 0x0: write 2 ms, mismatches 0x00000000
+VERIFY base 0x10000000: write 2 ms, mismatches 0x00000000
+VERIFY base 0x80000000: write 3 ms, mismatches 0x00000000
+VERIFY base 0xF0000000: write 3 ms, mismatches 0x00000000
+VERIFY wrong seed (expect many mismatches): 0x00100000
+BW write: 34 ms (64 MB), 526 ms (1 GB) -> 2.05 GB/s
+BW read: 35 ms (64 MB), 565 ms (1 GB) -> 1.90 GB/s

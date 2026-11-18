@@ -1,0 +1,38 @@
+Info (19848): Regular SEU info => 105 sector(s), 8 thread(s), 10000000 interval time in microsecond(s)
+Info (19848): IO hash is A329432CEE3C8A781D5F98B95184B328ECAAC4193EA95FA380FCEAB1AB60C259
+Info (19848): Keyed hash is 9B6C57142E30B0432EB4B3533D74BA974B1F136513E7F4D4AAAB9C2C71533D7D
+Info (19848): Design hash is 503D96571DB37BD443B0BE84D3FBB058BF6945F214E0DA10376B0F72C695DA32
+Info (19848): IO hash is A329432CEE3C8A781D5F98B95184B328ECAAC4193EA95FA380FCEAB1AB60C259
+Info (19848): Keyed hash is A31FBAE509DE107E6B3CBF7ADA42FEA35EB29E42619AA3E0308A0B3831F61BB7
+Info: *******************************************************************
+Info: Running Quartus Prime Programmer
+    Info: Version 21.3.0 Build 170 09/23/2021 SC Pro Edition
+    Info: Copyright (C) 2021  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Wed Nov 18 09:29:40 2026
+    Info: System process ID: 2511
+Info: Command: quartus_pgm -c 1 -m jtag -o p;ddr_top.sof@1
+Info (213045): Using programming cable "DE10-Pro [1-9]"
+Info (213011): Using programming file ddr_top.sof with checksum 0x3FF4381D for device 1SX280HU2F50@1
+Info (209060): Started Programmer operation at Wed Nov 18 09:29:46 2026
+Info (18942): Configuring device index 1
+Info (18943): Configuration succeeded at device index 1
+Info (209011): Successfully performed operation(s)
+Info (209061): Ended Programmer operation at Wed Nov 18 09:29:48 2026
+Info: Quartus Prime Programmer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 3240 megabytes
+    Info: Processing ended: Wed Nov 18 09:29:48 2026
+    Info: Elapsed time: 00:00:08
+    Info: System process ID: 2511

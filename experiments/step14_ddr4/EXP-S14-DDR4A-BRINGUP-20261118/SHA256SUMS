@@ -1,0 +1,14 @@
+e6824b235484ab1778fb85e1d4721b8ec3a564be2a60639c8a77904d30cec5b7  ./analysis/ddr_test_summary.txt
+19f70c5b80033cadfb0d464c4ea1936fee82b9f69b069f564cb06c6514cee350  ./raw/build/ddr_top.fit.summary
+585b30dcce641ca4a8f34bbe55f059a1cb9ebf96f2d5e39e126446466ba98b6f  ./raw/build/ddr_top.sta.summary
+b1b8d9d898d7aa83a9cd9b6dac16beffc6539d9e39b9c5b06314c4a31c9a140a  ./raw/build/pgm.log
+ef485bcb466c099a9d0202e776fe8e0afff4296d1b065b7dccea4102dc853f7e  ./raw/observe/ddr_test.log
+6534547b6d8d2570be1cc05baaa7c33d2d2ee306d1a1cc666732fc3b138c920f  ./REPORT.md
+35828d920795e0e824d615f6bf14d9192a9a0ea7c98c124501ffbc40948fe5bb  ./source/ddr4a_pins.qsf
+2e979d379c68687afbce425826854dca9b9a1d66ba9fee54d8f39e3a20611861  ./source/ddr_build.sh
+4d53bdebce49100ebb78051cc4d3ec255ef6739ea5801630a414abb16bc08829  ./source/ddrbw.cpp
+e3b2a2b247f45c51ce222e0e624b9862202d53c790bc04fdd0315c2bc2cdbe76  ./source/ddr_sys.tcl
+38323117463df5dd4e5c70ef615bb78761608f8571800b74337a34b3ebb610f8  ./source/ddr_sys_v1.qsys
+64563a1b8dc8b7f95cad828806c17a32df6c96a0ff11bad37caf5dfb2585aafc  ./source/ddr_test.tcl
+bd03bd47551d7bd1b520539bc9f0b2ab96b482fe6e5bdb680ca646c5ebc8d7fa  ./source/ddr_top.v
+f08e8f213873778eb1fa74bfb797a9da643f966b97938e87cd1838cf595f2b2e  ./source/emif_params.tcl
