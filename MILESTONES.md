@@ -20,6 +20,8 @@
 | 12 slab 硬體 | `EXP-S12-SLAB-8LANE-NOFIFO-150MHZ-20261117` | FAIL | 結果正確；2.46 cycles/iteration（部分和鏈沒有 FIFO，所有 lane 被鎖成同步） |
 | 12 slab 硬體 | `EXP-S12-SLAB-8-32LANE-150MHZ-20261117` | PASS | 1.00 cycle/iteration；32 lanes 3.54 G/s、14.0 W、4.0 nJ/樣本；加 voxel 單元到門檻 6.4 s / 106 J（GPU 8.6 s / 745 J） |
 | 13 Esser2 實際大小 | `EXP-S13-SLAB32-ESSER2-REALSIZE-20261117` | PASS（投影）/ FAIL（整機時間） | 實際影像 4 次 pass、真實事件：3.69 G/s、4.7 nJ/樣本、對 GPU 差 3×10⁻⁵；串列載入影像使整機 16.2 s（GPU 8.6 s），平行載入模型 6.5 s；更正 S12 比較 |
+| 14 DDR4 | `EXP-S14-DDR4A-BRINGUP-20261118` | PASS | DDR4A 校正通過、4 區讀寫正確；handshake 跨時脈只有 2 GB/s |
+| 15 平行載入 | `EXP-S15-SLAB32-DDR4-WIDECHAIN-20261118` | PASS | DDR4 寬鏈：每子集搬移 9.86 ms（串列 67.7 ms）；到門檻 7.67 s / 236 J（筆電 GPU 8.62 s / 745 J） |
 | 基準 | `EXP-B-CPU-XEON8559C-PARALLELPROJ-20261115` | 量測 | 1 執行緒 44 M/s；24 執行緒約 500 M/s |
 | 基準 | `EXP-B-GPU-RTX3070TI-LAPTOP-20261115` | 量測 | 2660 M/s；約 95 W；36 nJ/樣本 |
 
