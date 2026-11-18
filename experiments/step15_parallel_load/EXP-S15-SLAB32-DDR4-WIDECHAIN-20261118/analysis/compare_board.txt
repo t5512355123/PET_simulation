@@ -1,0 +1,5 @@
+pass 0: forward raw sum max rel diff vs model 2.405e-07 (bit-identical 6677/7909); back acc max abs diff / max 1.349e-07 (bit-identical 1145602/1269770)
+pass 1: forward ratio s max rel diff vs model 2.934e-07 (bit-identical 6963/8046); back acc max abs diff / max 1.194e-07 (bit-identical 1146791/1269770)
+pass 2: forward raw sum max rel diff vs model 2.454e-07 (bit-identical 6603/7806); back acc max abs diff / max 6.526e-08 (bit-identical 1147225/1269770)
+pass 3: forward ratio s max rel diff vs model 2.383e-07 (bit-identical 6868/7931); back acc max abs diff / max 1.432e-07 (bit-identical 1149752/1269770)
+all passes: s vs GPU parallelproj max rel 3.038e-05 (median 9.152e-07); back vs GPU max abs / max 7.927e-05; back vs model 1.509e-07

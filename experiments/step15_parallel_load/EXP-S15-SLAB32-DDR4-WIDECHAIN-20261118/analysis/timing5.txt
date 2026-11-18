@@ -1,0 +1,18 @@
+pass 0 fwd : 0.1560 ms = 23400 cycles, busiest lane 23457 -> 0.998 cycles/iteration
+pass 0 back: 0.1565 ms = 23475 cycles, busiest lane 23484 -> 1.000 cycles/iteration
+pass 1 fwd : 0.1570 ms = 23550 cycles, busiest lane 23595 -> 0.998 cycles/iteration
+pass 1 back: 0.1570 ms = 23550 cycles, busiest lane 23482 -> 1.003 cycles/iteration
+pass 2 fwd : 0.1545 ms = 23175 cycles, busiest lane 23184 -> 1.000 cycles/iteration
+pass 2 back: 0.1550 ms = 23250 cycles, busiest lane 23193 -> 1.002 cycles/iteration
+pass 3 fwd : 0.1550 ms = 23250 cycles, busiest lane 23304 -> 0.998 cycles/iteration
+pass 3 back: 0.1550 ms = 23250 cycles, busiest lane 23225 -> 1.001 cycles/iteration
+wide load: 80688 words (5.16 MB) in 1.0415 ms = 0.516 words/cycle, 4.96 GB/s
+wide read: 80688 words (5.16 MB) in 1.4240 ms = 0.378 words/cycle, 3.63 GB/s
+events: 4 passes forward + back 1.2460 ms for 15977 events -> 3.685 G samples/s; one projection epoch 0.2029 s
+image/accumulator transfer per subset (4 loads + 4 reads, measured): 9.86 ms (EXP-S13 serial chain 67.7 ms; per-lane model 2.12 ms)
+time 1 (offline, competition definition): GPU 8.62 s / 745 J
+   FPGA slab32 + DDR wide chain + voxel V=1: 7.67 s (projection 3.73 + voxel 2.49 + transfer 1.45) / 236 J at 30.8 W
+   FPGA slab32 + DDR wide chain + voxel V=4: 5.80 s (projection 3.73 + voxel 0.62 + transfer 1.45) / 178 J at 30.8 W
+time 2 (online Br 64/64, after last event): GPU 0.70 s / 61 J
+   FPGA slab32 + DDR wide chain + voxel V=1: 0.66 s (projection 0.30 + voxel 0.24 + transfer 0.12) / 20 J at 30.8 W
+   FPGA slab32 + DDR wide chain + voxel V=4: 0.48 s (projection 0.30 + voxel 0.06 + transfer 0.12) / 15 J at 30.8 W
