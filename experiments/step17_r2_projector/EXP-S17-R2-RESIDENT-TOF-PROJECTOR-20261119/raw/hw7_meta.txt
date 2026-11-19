@@ -1,0 +1,9 @@
+nev 2010
+nf 2000
+nsweep 2970024
+nrowt 398
+nraw 1505
+haz 16
+max_lane_items 2062
+events 2000
+nops 10

@@ -1,0 +1,4 @@
+forward ratio s: max rel diff 2.729e-07; bit-identical 1404/2010
+back projection (both copies, 2970024 voxels): max abs diff / max 6.425e-08; bit-identical 2746293/2970024
+fwd: 0.0138 ms per pass = 2063 cycles for 2010 tokens -> 1.026 cycles/token (busiest lane items 2062)
+back: 0.0138 ms per pass = 2063 cycles for 2010 tokens -> 1.026 cycles/token (busiest lane items 2062)
