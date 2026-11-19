@@ -1,0 +1,54 @@
+{
+ "nsig": 5.0,
+ "steps_per_event": 93.65900688446595,
+ "steps_full_lor": 181.48229314113584,
+ "samples_per_subset": 30089524.75,
+ "L32_p2_ovh": {
+  "busiest_iters_per_subset": 988936.5,
+  "efficiency": 0.47540850622739683
+ },
+ "L32_p2_skip": {
+  "busiest_iters_per_subset": 962985.375,
+  "efficiency": 0.4882201084505048
+ },
+ "L32_p3_ovh": {
+  "busiest_iters_per_subset": 932146.5,
+  "efficiency": 0.5043722464427534
+ },
+ "L32_p3_skip": {
+  "busiest_iters_per_subset": 896764.75,
+  "efficiency": 0.5242721953764908
+ },
+ "L64_p2_ovh": {
+  "busiest_iters_per_subset": 511738.5,
+  "efficiency": 0.4593643278928105
+ },
+ "L64_p2_skip": {
+  "busiest_iters_per_subset": 485322.875,
+  "efficiency": 0.4843670558684772
+ },
+ "L64_p3_ovh": {
+  "busiest_iters_per_subset": 635652.625,
+  "efficiency": 0.3698158441639016
+ },
+ "L64_p3_skip": {
+  "busiest_iters_per_subset": 598572.125,
+  "efficiency": 0.39272529122430316
+ },
+ "L96_p2_ovh": {
+  "busiest_iters_per_subset": 510614.875,
+  "efficiency": 0.30691678290724167
+ },
+ "L96_p2_skip": {
+  "busiest_iters_per_subset": 483041.75,
+  "efficiency": 0.32443629301107685
+ },
+ "L96_p3_ovh": {
+  "busiest_iters_per_subset": 338461.625,
+  "efficiency": 0.4630252387979977
+ },
+ "L96_p3_skip": {
+  "busiest_iters_per_subset": 310816.375,
+  "efficiency": 0.5042085531677131
+ }
+}

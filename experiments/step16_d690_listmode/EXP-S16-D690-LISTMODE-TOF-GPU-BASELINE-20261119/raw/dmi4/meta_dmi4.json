@@ -1,0 +1,31 @@
+{
+ "dataset": "GE_DMI4_NEMA_IQ2",
+ "seed": 20261119,
+ "events": 1285067,
+ "lors": 23140400,
+ "segments": [
+  -1,
+  0,
+  1
+ ],
+ "tof_positions": [
+  -14,
+  14
+ ],
+ "views": 272,
+ "tangential": 415,
+ "axial": {
+  "-1": 67,
+  "0": 71,
+  "1": 67
+ },
+ "lor_seconds": 15.1,
+ "total_seconds": 145.1,
+ "rehistogram_equals_prompts": true,
+ "time_stamps": "synthetic: uniform in [0,1), sorted (sinogram has no time order)",
+ "source_sha256": {
+  "prompts.s": "177cb8c8e0d01c42157b4acb3d8599de5276c19d2621340d44c7baed1d835ee3",
+  "mult_factors.s": "6b64818ddfc0d2bf25fa536b81b625ef8fa181cc2e7ca83b9dd21817a9801820",
+  "additive_term.s": "8d38b82fb1adabef7dc99d94de444df753925950fade2308a9147532f4a87095"
+ }
+}

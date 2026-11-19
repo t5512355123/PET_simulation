@@ -1,0 +1,32 @@
+{
+ "L32_W1_150MHz": {
+  "cycles_fwd": 2108512.625,
+  "t_sub_ms": 28.113501666666664,
+  "x_gpu_projection": 1.5970973851769086
+ },
+ "L32_W1_200MHz": {
+  "cycles_fwd": 2108512.625,
+  "t_sub_ms": 21.08512625,
+  "x_gpu_projection": 2.129463180235878
+ },
+ "L32_W2_150MHz": {
+  "cycles_fwd": 1188894.75,
+  "t_sub_ms": 15.85193,
+  "x_gpu_projection": 2.832462671737763
+ },
+ "L32_W2_200MHz": {
+  "cycles_fwd": 1188894.75,
+  "t_sub_ms": 11.8889475,
+  "x_gpu_projection": 3.7766168956503505
+ },
+ "L32_W4_150MHz": {
+  "cycles_fwd": 702474.375,
+  "t_sub_ms": 9.366325,
+  "x_gpu_projection": 4.793769167736545
+ },
+ "L32_W4_200MHz": {
+  "cycles_fwd": 702474.375,
+  "t_sub_ms": 7.024743750000001,
+  "x_gpu_projection": 6.391692223648726
+ }
+}

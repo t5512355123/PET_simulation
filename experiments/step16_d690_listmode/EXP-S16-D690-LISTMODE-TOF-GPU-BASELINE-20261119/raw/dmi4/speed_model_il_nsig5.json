@@ -1,0 +1,38 @@
+{
+ "nsig": 5.0,
+ "steps_per_event": 93.65900688446595,
+ "steps_full_lor": 181.48229314113584,
+ "samples_per_subset": 30089524.75,
+ "IL32_p2_ovh": {
+  "busiest_iters_per_subset": 595669.625,
+  "efficiency": 0.7892778219449246
+ },
+ "IL32_p2_skip": {
+  "busiest_iters_per_subset": 593272.0,
+  "efficiency": 0.7924675767923482
+ },
+ "IL32_p3_ovh": {
+  "busiest_iters_per_subset": 654001.75,
+  "efficiency": 0.7188800706095205
+ },
+ "IL32_p3_skip": {
+  "busiest_iters_per_subset": 651474.875,
+  "efficiency": 0.7216683900798937
+ },
+ "IL64_p2_ovh": {
+  "busiest_iters_per_subset": 363988.875,
+  "efficiency": 0.6458285630553269
+ },
+ "IL64_p2_skip": {
+  "busiest_iters_per_subset": 357370.25,
+  "efficiency": 0.6577895393065735
+ },
+ "IL64_p3_ovh": {
+  "busiest_iters_per_subset": 424955.625,
+  "efficiency": 0.5531740216625559
+ },
+ "IL64_p3_skip": {
+  "busiest_iters_per_subset": 421714.625,
+  "efficiency": 0.5574253255015166
+ }
+}

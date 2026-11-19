@@ -1,0 +1,40 @@
+{
+ "ref_median_rel_residual_whole_object": 5.39017200935632e-05,
+ "ref_per_plane_first_mid_last": [
+  null,
+  null,
+  8.535892266081646e-05,
+  4.751985761686228e-05,
+  6.612825382035226e-05,
+  null,
+  null
+ ],
+ "osem_median_rel_residual_whole_object": 0.446724534034729,
+ "osem_per_plane_first_mid_last": [
+  null,
+  null,
+  0.5541546940803528,
+  0.3562406301498413,
+  0.5254323482513428,
+  null,
+  null
+ ],
+ "ref_metrics_self": {
+  "RMSE_whole_object": 0.0,
+  "RMSE_whole_object_minus2": 0.0,
+  "RMSE_background": 0.0,
+  "AEM_VOI_sphere2": 0.0,
+  "AEM_VOI_sphere3": 0.0,
+  "AEM_VOI_sphere4": 0.0
+ },
+ "osem_metrics": {
+  "RMSE_whole_object": 1.5810085453031795,
+  "RMSE_whole_object_minus2": 1.5810085453031795,
+  "RMSE_background": 1.5209442491210448,
+  "AEM_VOI_sphere2": 1.1132510681628973,
+  "AEM_VOI_sphere3": 1.048955574055854,
+  "AEM_VOI_sphere4": 0.5482094080898289
+ },
+ "events": 1285067,
+ "sens_max": 1538.5147705078125
+}

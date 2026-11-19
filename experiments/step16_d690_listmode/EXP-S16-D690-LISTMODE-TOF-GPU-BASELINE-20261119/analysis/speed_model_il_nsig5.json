@@ -1,0 +1,22 @@
+{
+ "nsig": 5.0,
+ "steps_per_event": 139.29667775774047,
+ "steps_full_lor": 174.46684140155222,
+ "samples_per_subset": 106942865.25,
+ "IL32_p2_ovh": {
+  "busiest_iters_per_subset": 2108512.625,
+  "efficiency": 0.7924933669919335
+ },
+ "IL32_p2_skip": {
+  "busiest_iters_per_subset": 2106919.25,
+  "efficiency": 0.7930926966143814
+ },
+ "IL64_p2_ovh": {
+  "busiest_iters_per_subset": 1176285.75,
+  "efficiency": 0.7102790582693236
+ },
+ "IL64_p2_skip": {
+  "busiest_iters_per_subset": 1169499.5,
+  "efficiency": 0.7144005916767172
+ }
+}

@@ -1,0 +1,9 @@
+﻿{
+ "fwd_subset_ms": 9.761089999665273,
+ "back_subset_ms": 35.061594999569934,
+ "lik_grad_subset_ms": 38.75992000030237,
+ "prior_grad_ms": 0.6371950003085658,
+ "update_arith_ms": 0.40123500002664514,
+ "precond_ms": 1.5029000001959503,
+ "events_per_subset": 383867
+}
