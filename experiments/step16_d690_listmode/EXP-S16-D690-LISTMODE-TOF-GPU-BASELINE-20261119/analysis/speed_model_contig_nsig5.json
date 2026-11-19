@@ -1,0 +1,14 @@
+{
+ "nsig": 5.0,
+ "steps_per_event": 139.29667775774047,
+ "steps_full_lor": 174.46684140155222,
+ "samples_per_subset": 106942865.25,
+ "IL32_p2_ovh": {
+  "busiest_iters_per_subset": 2702541.25,
+  "efficiency": 0.6183003754452406
+ },
+ "IL32_p2_skip": {
+  "busiest_iters_per_subset": 2670422.375,
+  "efficiency": 0.6257370688527316
+ }
+}
