@@ -1,0 +1,21 @@
+Fitter Status : Successful - Sat Nov 21 10:41:09 2026
+Quartus Prime Version : 21.3.0 Build 170 09/23/2021 SC Pro Edition
+Revision Name : slab_top
+Top-level Entity Name : slab_top
+Family : Stratix 10
+Device : 1SX280HU2F50E1VG
+Timing Models : Final
+Power Models : Final
+Device Status : Final
+Logic utilization (in ALMs) : 818,653 / 933,120 ( 88 % )
+Total dedicated logic registers : 1722305
+Total pins : 538 / 1,152 ( 47 % )
+Total block memory bits : 177,002,112 / 240,046,080 ( 74 % )
+Total RAM Blocks : 11,004 / 11,721 ( 94 % )
+Total DSP Blocks : 4,812 / 5,760 ( 84 % )
+Total DIB Channels : 0 / 75 ( 0 % )
+Total HSSI RX channels : 0 / 96 ( 0 % )
+Total HSSI TX channels : 0 / 96 ( 0 % )
+Total HSSI HPS : 0 / 1 ( 0 % )
+Total HSSI EHIPs : 0 / 4 ( 0 % )
+Total PLLs : 13 / 184 ( 7 % )

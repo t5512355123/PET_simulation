@@ -1,0 +1,44 @@
+; Fmax Summary                                                                                      ;
++------------+-----------------+---------------------------+------+---------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                ; Note ; Worst-Case Operating Conditions ;
++------------+-----------------+---------------------------+------+---------------------------------+
+; 151.63 MHz ; 151.63 MHz      ; u0|pll|pll_outclk0        ;      ; Slow 900mV 100C Model           ;
+; 291.04 MHz ; 291.04 MHz      ; u0|pll|pll_outclk1        ;      ; Slow 900mV 100C Model           ;
+; 298.51 MHz ; 298.51 MHz      ; u0|ddrd|ddrd_core_usr_clk ;      ; 1 Slow vid1 100C Model          ;
+; 311.62 MHz ; 311.62 MHz      ; u0|ddrb|ddrb_core_usr_clk ;      ; Slow 900mV 100C Model           ;
+; 316.26 MHz ; 316.26 MHz      ; u0|ddrc|ddrc_core_usr_clk ;      ; Slow 900mV 100C Model           ;
+; 320.51 MHz ; 320.51 MHz      ; u0|ddra|ddra_core_usr_clk ;      ; Slow 900mV 100C Model           ;
+; 736.38 MHz ; 736.38 MHz      ; CLK_50_B3I                ;      ; 1 Slow vid1 0C Model            ;
++------------+-----------------+---------------------------+------+---------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Intel recommends that you always use clock constraints and other slack reports for sign-off analysis.
+; Setup Summary                                                                                             ;
++---------------------------+--------+---------------+--------------------+---------------------------------+
+; Clock                     ; Slack  ; End Point TNS ; Failing End Points ; Worst-Case Operating Conditions ;
++---------------------------+--------+---------------+--------------------+---------------------------------+
+; u0|pll|pll_outclk1        ; -0.103 ; -0.417        ; 9                  ; Slow 900mV 100C Model           ;
+; u0|ddrd|ddrd_core_usr_clk ; -0.017 ; -0.027        ; 3                  ; 1 Slow vid1 100C Model          ;
+; u0|ddra|ddra_phy_clk_l_1  ; 0.008  ; 0.000         ; 0                  ; 1 Slow vid1 100C Model          ;
+; u0|ddra|ddra_phy_clk_l_2  ; 0.011  ; 0.000         ; 0                  ; 1 Slow vid1 100C Model          ;
+; u0|ddrc|ddrc_phy_clk_l_1  ; 0.024  ; 0.000         ; 0                  ; 1 Slow vid1 100C Model          ;
+; u0|ddrb|ddrb_phy_clk_l_2  ; 0.027  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; u0|ddrc|ddrc_phy_clk_l_2  ; 0.061  ; 0.000         ; 0                  ; 1 Slow vid1 100C Model          ;
+; u0|pll|pll_outclk0        ; 0.071  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; u0|ddrd|ddrd_phy_clk_l_1  ; 0.090  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; u0|ddrb|ddrb_phy_clk_l_1  ; 0.099  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; u0|ddrb|ddrb_core_usr_clk ; 0.124  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; u0|ddrd|ddrd_phy_clk_l_2  ; 0.157  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; u0|ddrc|ddrc_core_usr_clk ; 0.171  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; u0|ddra|ddra_core_usr_clk ; 0.213  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; u0|ddrc|ddrc_phy_clk_l_0  ; 0.294  ; 0.000         ; 0                  ; 1 Slow vid1 100C Model          ;
+; u0|ddrb|ddrb_phy_clk_l_0  ; 0.300  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; u0|ddra|ddra_phy_clk_l_0  ; 0.436  ; 0.000         ; 0                  ; 1 Slow vid1 100C Model          ;
+; u0|ddrd|ddrd_phy_clk_l_0  ; 0.649  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; u0|ddrd|ddrd_phy_clk_0    ; 1.669  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; u0|ddrc|ddrc_phy_clk_0    ; 1.673  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; u0|ddrb|ddrb_phy_clk_0    ; 1.749  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; u0|ddra|ddra_phy_clk_0    ; 1.751  ; 0.000         ; 0                  ; Slow 900mV 100C Model           ;
+; CLK_50_B3I                ; 18.642 ; 0.000         ; 0                  ; 1 Slow vid1 0C Model            ;
++---------------------------+--------+---------------+--------------------+---------------------------------+
+Delay Models:
+1 Slow vid1 100C Model
+1 Slow vid1 0C Model

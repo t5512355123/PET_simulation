@@ -1,0 +1,511 @@
+{
+ "first_pass_update": 41,
+ "updates_read": 50,
+ "history": [
+  {
+   "update": 1,
+   "passed": false,
+   "RMSE_whole_object": 0.08571436002887167,
+   "RMSE_whole_object_minus2": 0.08571436002887167,
+   "RMSE_background": 0.06322914362661732,
+   "AEM_VOI_sphere2": 0.06811850877257905,
+   "AEM_VOI_sphere3": 0.16403249264224934,
+   "AEM_VOI_sphere5": 0.15508246856432348
+  },
+  {
+   "update": 2,
+   "passed": false,
+   "RMSE_whole_object": 0.07360623904011519,
+   "RMSE_whole_object_minus2": 0.07360623904011519,
+   "RMSE_background": 0.047777283341436154,
+   "AEM_VOI_sphere2": 0.0463204937546022,
+   "AEM_VOI_sphere3": 0.11668057309952731,
+   "AEM_VOI_sphere5": 0.10857257877922429
+  },
+  {
+   "update": 3,
+   "passed": false,
+   "RMSE_whole_object": 0.06640177358887521,
+   "RMSE_whole_object_minus2": 0.06640177358887521,
+   "RMSE_background": 0.03950044324858963,
+   "AEM_VOI_sphere2": 0.03400283596593007,
+   "AEM_VOI_sphere3": 0.09044928354065991,
+   "AEM_VOI_sphere5": 0.07212724986650673
+  },
+  {
+   "update": 4,
+   "passed": false,
+   "RMSE_whole_object": 0.06086348286196451,
+   "RMSE_whole_object_minus2": 0.06086348286196451,
+   "RMSE_background": 0.03395329164477167,
+   "AEM_VOI_sphere2": 0.028360751270112106,
+   "AEM_VOI_sphere3": 0.06929492383452586,
+   "AEM_VOI_sphere5": 0.05295906121689801
+  },
+  {
+   "update": 5,
+   "passed": false,
+   "RMSE_whole_object": 0.05532337597757046,
+   "RMSE_whole_object_minus2": 0.05532337597757046,
+   "RMSE_background": 0.029590168556400644,
+   "AEM_VOI_sphere2": 0.02251179903297614,
+   "AEM_VOI_sphere3": 0.05147252683787858,
+   "AEM_VOI_sphere5": 0.03752104012757115
+  },
+  {
+   "update": 6,
+   "passed": false,
+   "RMSE_whole_object": 0.05096382833075851,
+   "RMSE_whole_object_minus2": 0.05096382833075851,
+   "RMSE_background": 0.025478437304393392,
+   "AEM_VOI_sphere2": 0.015349935555604358,
+   "AEM_VOI_sphere3": 0.037977483347769576,
+   "AEM_VOI_sphere5": 0.026791833864374243
+  },
+  {
+   "update": 7,
+   "passed": false,
+   "RMSE_whole_object": 0.047365637408640075,
+   "RMSE_whole_object_minus2": 0.047365637408640075,
+   "RMSE_background": 0.02274122825509716,
+   "AEM_VOI_sphere2": 0.009911321162889201,
+   "AEM_VOI_sphere3": 0.030434886530423665,
+   "AEM_VOI_sphere5": 0.02638052538046338
+  },
+  {
+   "update": 8,
+   "passed": false,
+   "RMSE_whole_object": 0.04454952408939153,
+   "RMSE_whole_object_minus2": 0.04454952408939153,
+   "RMSE_background": 0.020567750317914767,
+   "AEM_VOI_sphere2": 0.007547935334541214,
+   "AEM_VOI_sphere3": 0.025397267577037533,
+   "AEM_VOI_sphere5": 0.020790369897363367
+  },
+  {
+   "update": 9,
+   "passed": false,
+   "RMSE_whole_object": 0.04165362875393306,
+   "RMSE_whole_object_minus2": 0.04165362875393306,
+   "RMSE_background": 0.01850099343435183,
+   "AEM_VOI_sphere2": 0.008302728867995334,
+   "AEM_VOI_sphere3": 0.018868989026799236,
+   "AEM_VOI_sphere5": 0.01308688958454082
+  },
+  {
+   "update": 10,
+   "passed": false,
+   "RMSE_whole_object": 0.038580470381603275,
+   "RMSE_whole_object_minus2": 0.038580470381603275,
+   "RMSE_background": 0.01624805007626193,
+   "AEM_VOI_sphere2": 0.008935828475383795,
+   "AEM_VOI_sphere3": 0.01339167038441813,
+   "AEM_VOI_sphere5": 0.012471989467590894
+  },
+  {
+   "update": 11,
+   "passed": false,
+   "RMSE_whole_object": 0.03560815614410551,
+   "RMSE_whole_object_minus2": 0.03560815614410551,
+   "RMSE_background": 0.015080882630394192,
+   "AEM_VOI_sphere2": 0.007240606606002507,
+   "AEM_VOI_sphere3": 0.009746433779516086,
+   "AEM_VOI_sphere5": 0.007584819635163309
+  },
+  {
+   "update": 12,
+   "passed": false,
+   "RMSE_whole_object": 0.03328371722529598,
+   "RMSE_whole_object_minus2": 0.03328371722529598,
+   "RMSE_background": 0.013625505399849478,
+   "AEM_VOI_sphere2": 0.0027395086307443507,
+   "AEM_VOI_sphere3": 0.00593182058359942,
+   "AEM_VOI_sphere5": 0.003843247060873292
+  },
+  {
+   "update": 13,
+   "passed": false,
+   "RMSE_whole_object": 0.031417985088308176,
+   "RMSE_whole_object_minus2": 0.031417985088308176,
+   "RMSE_background": 0.012930900045789917,
+   "AEM_VOI_sphere2": 0.00021912186487994584,
+   "AEM_VOI_sphere3": 0.006963125041782997,
+   "AEM_VOI_sphere5": 0.0093945769643711
+  },
+  {
+   "update": 14,
+   "passed": false,
+   "RMSE_whole_object": 0.030171941809191933,
+   "RMSE_whole_object_minus2": 0.030171941809191933,
+   "RMSE_background": 0.012051743327672483,
+   "AEM_VOI_sphere2": 0.002445040875448875,
+   "AEM_VOI_sphere3": 0.005883288609096663,
+   "AEM_VOI_sphere5": 0.0031608874993645343
+  },
+  {
+   "update": 15,
+   "passed": false,
+   "RMSE_whole_object": 0.02800927740257843,
+   "RMSE_whole_object_minus2": 0.02800927740257843,
+   "RMSE_background": 0.010963578732330266,
+   "AEM_VOI_sphere2": 0.0051197593202320455,
+   "AEM_VOI_sphere3": 0.0047231317586082676,
+   "AEM_VOI_sphere5": 0.003584571636773599
+  },
+  {
+   "update": 16,
+   "passed": false,
+   "RMSE_whole_object": 0.02738038453157363,
+   "RMSE_whole_object_minus2": 0.02738038453157363,
+   "RMSE_background": 0.010172099955180721,
+   "AEM_VOI_sphere2": 0.004083116344853166,
+   "AEM_VOI_sphere3": 0.0039208982200777025,
+   "AEM_VOI_sphere5": 0.0009053639843489235
+  },
+  {
+   "update": 17,
+   "passed": false,
+   "RMSE_whole_object": 0.025107023620148,
+   "RMSE_whole_object_minus2": 0.025107023620148,
+   "RMSE_background": 0.008583692032651342,
+   "AEM_VOI_sphere2": 0.002996121445927676,
+   "AEM_VOI_sphere3": 0.003217184589787732,
+   "AEM_VOI_sphere5": 0.0022419345621548393
+  },
+  {
+   "update": 18,
+   "passed": false,
+   "RMSE_whole_object": 0.02378202109345208,
+   "RMSE_whole_object_minus2": 0.02378202109345208,
+   "RMSE_background": 0.00804977680448251,
+   "AEM_VOI_sphere2": 0.002023904666701205,
+   "AEM_VOI_sphere3": 0.0014850784197843506,
+   "AEM_VOI_sphere5": 0.0010114063486374467
+  },
+  {
+   "update": 19,
+   "passed": false,
+   "RMSE_whole_object": 0.022422204458171443,
+   "RMSE_whole_object_minus2": 0.022422204458171443,
+   "RMSE_background": 0.007706159524266534,
+   "AEM_VOI_sphere2": 0.0006836941908075829,
+   "AEM_VOI_sphere3": 0.0014278106898710978,
+   "AEM_VOI_sphere5": 0.0003911677144922178
+  },
+  {
+   "update": 20,
+   "passed": false,
+   "RMSE_whole_object": 0.021267556745101213,
+   "RMSE_whole_object_minus2": 0.021267556745101213,
+   "RMSE_background": 0.0072330737231631834,
+   "AEM_VOI_sphere2": 0.00011587008912533127,
+   "AEM_VOI_sphere3": 0.00010313044581835768,
+   "AEM_VOI_sphere5": 0.00016233945471172067
+  },
+  {
+   "update": 21,
+   "passed": false,
+   "RMSE_whole_object": 0.020351771656695973,
+   "RMSE_whole_object_minus2": 0.020351771656695973,
+   "RMSE_background": 0.006762351012146462,
+   "AEM_VOI_sphere2": 0.00015263305981116936,
+   "AEM_VOI_sphere3": 0.000608833620137081,
+   "AEM_VOI_sphere5": 0.00015530231840882097
+  },
+  {
+   "update": 22,
+   "passed": false,
+   "RMSE_whole_object": 0.01936133074188767,
+   "RMSE_whole_object_minus2": 0.01936133074188767,
+   "RMSE_background": 0.006273179041642739,
+   "AEM_VOI_sphere2": 0.0005616362749331503,
+   "AEM_VOI_sphere3": 0.0011121101957306664,
+   "AEM_VOI_sphere5": 0.0003644751285157017
+  },
+  {
+   "update": 23,
+   "passed": false,
+   "RMSE_whole_object": 0.01842287401742468,
+   "RMSE_whole_object_minus2": 0.01842287401742468,
+   "RMSE_background": 0.00592355640352711,
+   "AEM_VOI_sphere2": 0.0005319104405502119,
+   "AEM_VOI_sphere3": 0.00027347767632303317,
+   "AEM_VOI_sphere5": 0.00014050006618548022
+  },
+  {
+   "update": 24,
+   "passed": false,
+   "RMSE_whole_object": 0.017834008650703125,
+   "RMSE_whole_object_minus2": 0.017834008650703125,
+   "RMSE_background": 0.00558759144030646,
+   "AEM_VOI_sphere2": 0.00046857621382411456,
+   "AEM_VOI_sphere3": 0.0001603981757316104,
+   "AEM_VOI_sphere5": 0.0003261348686585241
+  },
+  {
+   "update": 25,
+   "passed": false,
+   "RMSE_whole_object": 0.016946654578767335,
+   "RMSE_whole_object_minus2": 0.016946654578767335,
+   "RMSE_background": 0.005381927719449759,
+   "AEM_VOI_sphere2": 0.00040305804824539317,
+   "AEM_VOI_sphere3": 0.0009114304811617682,
+   "AEM_VOI_sphere5": 0.0005930607284236852
+  },
+  {
+   "update": 26,
+   "passed": false,
+   "RMSE_whole_object": 0.01662088369991758,
+   "RMSE_whole_object_minus2": 0.01662088369991758,
+   "RMSE_background": 0.005031911706931421,
+   "AEM_VOI_sphere2": 0.0007162106137244299,
+   "AEM_VOI_sphere3": 9.29387311727788e-05,
+   "AEM_VOI_sphere5": 0.0005547204685665074
+  },
+  {
+   "update": 27,
+   "passed": false,
+   "RMSE_whole_object": 0.015873129198546613,
+   "RMSE_whole_object_minus2": 0.015873129198546613,
+   "RMSE_background": 0.004828074096404399,
+   "AEM_VOI_sphere2": 0.00011708338848790019,
+   "AEM_VOI_sphere3": 0.0008262568659094304,
+   "AEM_VOI_sphere5": 0.0003586512915753709
+  },
+  {
+   "update": 28,
+   "passed": false,
+   "RMSE_whole_object": 0.015631227638134435,
+   "RMSE_whole_object_minus2": 0.015631227638134435,
+   "RMSE_background": 0.004786298682726948,
+   "AEM_VOI_sphere2": 0.0005126189806853661,
+   "AEM_VOI_sphere3": 0.0001674353120345101,
+   "AEM_VOI_sphere5": 0.0008061160964907863
+  },
+  {
+   "update": 29,
+   "passed": false,
+   "RMSE_whole_object": 0.015127828784714466,
+   "RMSE_whole_object_minus2": 0.015127828784714466,
+   "RMSE_background": 0.004436019630698367,
+   "AEM_VOI_sphere2": 0.00033450663426024956,
+   "AEM_VOI_sphere3": 7.279796175413484e-06,
+   "AEM_VOI_sphere5": 1.7714170693506144e-05
+  },
+  {
+   "update": 30,
+   "passed": false,
+   "RMSE_whole_object": 0.01447799702080408,
+   "RMSE_whole_object_minus2": 0.01447799702080408,
+   "RMSE_background": 0.004144525406731312,
+   "AEM_VOI_sphere2": 0.0001589422164965277,
+   "AEM_VOI_sphere3": 0.0010582397040326066,
+   "AEM_VOI_sphere5": 0.0002860959896937499
+  },
+  {
+   "update": 31,
+   "passed": false,
+   "RMSE_whole_object": 0.013785213511568627,
+   "RMSE_whole_object_minus2": 0.013785213511568627,
+   "RMSE_background": 0.004092285286051704,
+   "AEM_VOI_sphere2": 0.0007814861194306374,
+   "AEM_VOI_sphere3": 0.0017003177267040758,
+   "AEM_VOI_sphere5": 0.0007058975691425941
+  },
+  {
+   "update": 32,
+   "passed": false,
+   "RMSE_whole_object": 0.013247641323289802,
+   "RMSE_whole_object_minus2": 0.013247641323289802,
+   "RMSE_background": 0.003848591028436825,
+   "AEM_VOI_sphere2": 0.00027372033619554696,
+   "AEM_VOI_sphere3": 0.002465666964612547,
+   "AEM_VOI_sphere5": 0.0009085185626916027
+  },
+  {
+   "update": 33,
+   "passed": false,
+   "RMSE_whole_object": 0.012646946287783204,
+   "RMSE_whole_object_minus2": 0.012646946287783204,
+   "RMSE_background": 0.0029197236344437006,
+   "AEM_VOI_sphere2": 0.00022858559990798338,
+   "AEM_VOI_sphere3": 0.0018383911941644183,
+   "AEM_VOI_sphere5": 0.0006884260583216018
+  },
+  {
+   "update": 34,
+   "passed": false,
+   "RMSE_whole_object": 0.012276234042231797,
+   "RMSE_whole_object_minus2": 0.012276234042231797,
+   "RMSE_background": 0.0032740364329077606,
+   "AEM_VOI_sphere2": 0.0003178844329930554,
+   "AEM_VOI_sphere3": 0.001828684799263867,
+   "AEM_VOI_sphere5": 0.0002829414113510707
+  },
+  {
+   "update": 35,
+   "passed": false,
+   "RMSE_whole_object": 0.011870335167275764,
+   "RMSE_whole_object_minus2": 0.011870335167275764,
+   "RMSE_background": 0.003387667842525633,
+   "AEM_VOI_sphere2": 0.0003114539463714402,
+   "AEM_VOI_sphere3": 0.001445524860564604,
+   "AEM_VOI_sphere5": 0.0002266443209278731
+  },
+  {
+   "update": 36,
+   "passed": false,
+   "RMSE_whole_object": 0.011481223426469024,
+   "RMSE_whole_object_minus2": 0.011481223426469024,
+   "RMSE_background": 0.003286141463774703,
+   "AEM_VOI_sphere2": 1.4438262414570076e-05,
+   "AEM_VOI_sphere3": 0.0010279072199683838,
+   "AEM_VOI_sphere5": 0.00012084461651186383
+  },
+  {
+   "update": 37,
+   "passed": false,
+   "RMSE_whole_object": 0.011112272360773594,
+   "RMSE_whole_object_minus2": 0.011112272360773594,
+   "RMSE_background": 0.0031187656318456625,
+   "AEM_VOI_sphere2": 5.459847131560112e-06,
+   "AEM_VOI_sphere3": 0.0012506689829360365,
+   "AEM_VOI_sphere5": 0.0006129588379698153
+  },
+  {
+   "update": 38,
+   "passed": false,
+   "RMSE_whole_object": 0.010783150690324872,
+   "RMSE_whole_object_minus2": 0.010783150690324872,
+   "RMSE_background": 0.0028807485251739597,
+   "AEM_VOI_sphere2": 0.00042865866479559726,
+   "AEM_VOI_sphere3": 0.0009337551894330361,
+   "AEM_VOI_sphere5": 0.0015117710057608667
+  },
+  {
+   "update": 39,
+   "passed": false,
+   "RMSE_whole_object": 0.010476710134835171,
+   "RMSE_whole_object_minus2": 0.010476710134835171,
+   "RMSE_background": 0.0032339522921894215,
+   "AEM_VOI_sphere2": 0.0004909009220953825,
+   "AEM_VOI_sphere3": 0.0007316195156290551,
+   "AEM_VOI_sphere5": 0.0005234173450122295
+  },
+  {
+   "update": 40,
+   "passed": false,
+   "RMSE_whole_object": 0.01014167173421367,
+   "RMSE_whole_object_minus2": 0.01014167173421367,
+   "RMSE_background": 0.003049240497727551,
+   "AEM_VOI_sphere2": 3.093913374550731e-05,
+   "AEM_VOI_sphere3": 0.0012336827918600717,
+   "AEM_VOI_sphere5": 0.000520505426542064
+  },
+  {
+   "update": 41,
+   "passed": true,
+   "RMSE_whole_object": 0.00983506340217149,
+   "RMSE_whole_object_minus2": 0.00983506340217149,
+   "RMSE_background": 0.00303907011060983,
+   "AEM_VOI_sphere2": 0.00023040554895183675,
+   "AEM_VOI_sphere3": 0.0008801273576074901,
+   "AEM_VOI_sphere5": 0.000383159938699263
+  },
+  {
+   "update": 42,
+   "passed": true,
+   "RMSE_whole_object": 0.009567537527955933,
+   "RMSE_whole_object_minus2": 0.009567537527955933,
+   "RMSE_background": 0.0030063837783877168,
+   "AEM_VOI_sphere2": 0.00027723890434699683,
+   "AEM_VOI_sphere3": 6.964338341145566e-05,
+   "AEM_VOI_sphere5": 0.001002185273481923
+  },
+  {
+   "update": 43,
+   "passed": true,
+   "RMSE_whole_object": 0.009269682961236663,
+   "RMSE_whole_object_minus2": 0.009269682961236663,
+   "RMSE_background": 0.0029010615736231875,
+   "AEM_VOI_sphere2": 0.00014207735535681982,
+   "AEM_VOI_sphere3": 0.0005763171972202341,
+   "AEM_VOI_sphere5": 0.00027833087377330883
+  },
+  {
+   "update": 44,
+   "passed": true,
+   "RMSE_whole_object": 0.00911670866097977,
+   "RMSE_whole_object_minus2": 0.00911670866097977,
+   "RMSE_background": 0.003551642170733909,
+   "AEM_VOI_sphere2": 7.61951999693278e-05,
+   "AEM_VOI_sphere3": 0.000873575541049618,
+   "AEM_VOI_sphere5": 2.5721946486460974e-05
+  },
+  {
+   "update": 45,
+   "passed": true,
+   "RMSE_whole_object": 0.008792471468355515,
+   "RMSE_whole_object_minus2": 0.008792471468355515,
+   "RMSE_background": 0.003171501262089163,
+   "AEM_VOI_sphere2": 3.8946909538462134e-05,
+   "AEM_VOI_sphere3": 0.0007039562901624838,
+   "AEM_VOI_sphere5": 9.536532989791663e-05
+  },
+  {
+   "update": 46,
+   "passed": true,
+   "RMSE_whole_object": 0.008542082499746117,
+   "RMSE_whole_object_minus2": 0.008542082499746117,
+   "RMSE_background": 0.002803697143447413,
+   "AEM_VOI_sphere2": 0.000435695801098497,
+   "AEM_VOI_sphere3": 0.0006525123971895619,
+   "AEM_VOI_sphere5": 0.0011783563409269292
+  },
+  {
+   "update": 47,
+   "passed": true,
+   "RMSE_whole_object": 0.008323687666593586,
+   "RMSE_whole_object_minus2": 0.008323687666593586,
+   "RMSE_background": 0.0029255484192741584,
+   "AEM_VOI_sphere2": 0.0005168655284543573,
+   "AEM_VOI_sphere3": 0.0004845917654100242,
+   "AEM_VOI_sphere5": 0.00027080841772538156
+  },
+  {
+   "update": 48,
+   "passed": true,
+   "RMSE_whole_object": 0.008096308730817282,
+   "RMSE_whole_object_minus2": 0.008096308730817282,
+   "RMSE_background": 0.002847683747818639,
+   "AEM_VOI_sphere2": 5.362783182554599e-05,
+   "AEM_VOI_sphere3": 0.0009335125295605223,
+   "AEM_VOI_sphere5": 0.00023198283812317635
+  },
+  {
+   "update": 49,
+   "passed": true,
+   "RMSE_whole_object": 0.007732051143085728,
+   "RMSE_whole_object_minus2": 0.007732051143085728,
+   "RMSE_background": 0.0018115591498529663,
+   "AEM_VOI_sphere2": 0.00016391674388306027,
+   "AEM_VOI_sphere3": 0.000729435576776431,
+   "AEM_VOI_sphere5": 0.00041324976289097205
+  },
+  {
+   "update": 50,
+   "passed": true,
+   "RMSE_whole_object": 0.0076443172766003445,
+   "RMSE_whole_object_minus2": 0.0076443172766003445,
+   "RMSE_background": 0.002472893441968316,
+   "AEM_VOI_sphere2": 0.0002382919948085347,
+   "AEM_VOI_sphere3": 0.0013246802440527402,
+   "AEM_VOI_sphere5": 0.0009990306951392436
+  }
+ ],
+ "fpga_time_40_updates_s": 1.71207,
+ "gpu_time_s": 2.33,
+ "speedup": 1.3609256630862057,
+ "gpu_hwformat_first_pass": 41,
+ "max_metric_diff_vs_gpu_hwformat": 0.0009239274645962279
+}
